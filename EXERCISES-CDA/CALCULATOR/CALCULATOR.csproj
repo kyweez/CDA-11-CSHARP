@@ -54,6 +54,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Additionneur.fr.resx">
+      <DependentUpon>Additionneur.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Additionneur.resx">
       <DependentUpon>Additionneur.cs</DependentUpon>
     </EmbeddedResource>

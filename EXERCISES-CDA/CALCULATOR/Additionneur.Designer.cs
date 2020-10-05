@@ -48,7 +48,9 @@
             // 
             resources.ApplyResources(this.buttonZero, "buttonZero");
             this.buttonZero.BackColor = System.Drawing.Color.Snow;
-            this.buttonZero.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.buttonZero.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonZero.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonZero.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.buttonZero.Name = "buttonZero";
             this.buttonZero.Tag = "0";
             this.buttonZero.UseVisualStyleBackColor = false;
@@ -58,7 +60,9 @@
             // 
             resources.ApplyResources(this.buttonOne, "buttonOne");
             this.buttonOne.BackColor = System.Drawing.Color.Snow;
-            this.buttonOne.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.buttonOne.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonOne.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonOne.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.buttonOne.Name = "buttonOne";
             this.buttonOne.Tag = "1";
             this.buttonOne.UseVisualStyleBackColor = false;
@@ -68,7 +72,9 @@
             // 
             resources.ApplyResources(this.buttonTwo, "buttonTwo");
             this.buttonTwo.BackColor = System.Drawing.Color.Snow;
-            this.buttonTwo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.buttonTwo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonTwo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonTwo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.buttonTwo.Name = "buttonTwo";
             this.buttonTwo.Tag = "2";
             this.buttonTwo.UseVisualStyleBackColor = false;
@@ -78,7 +84,9 @@
             // 
             resources.ApplyResources(this.buttonThree, "buttonThree");
             this.buttonThree.BackColor = System.Drawing.Color.Snow;
-            this.buttonThree.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.buttonThree.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonThree.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonThree.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.buttonThree.Name = "buttonThree";
             this.buttonThree.Tag = "3";
             this.buttonThree.UseVisualStyleBackColor = false;
@@ -88,7 +96,9 @@
             // 
             resources.ApplyResources(this.buttonFour, "buttonFour");
             this.buttonFour.BackColor = System.Drawing.Color.Snow;
-            this.buttonFour.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.buttonFour.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonFour.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonFour.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.buttonFour.Name = "buttonFour";
             this.buttonFour.Tag = "4";
             this.buttonFour.UseVisualStyleBackColor = false;
@@ -98,7 +108,9 @@
             // 
             resources.ApplyResources(this.buttonFive, "buttonFive");
             this.buttonFive.BackColor = System.Drawing.Color.Snow;
-            this.buttonFive.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.buttonFive.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonFive.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonFive.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.buttonFive.Name = "buttonFive";
             this.buttonFive.Tag = "5";
             this.buttonFive.UseVisualStyleBackColor = false;
@@ -108,7 +120,9 @@
             // 
             resources.ApplyResources(this.buttonSix, "buttonSix");
             this.buttonSix.BackColor = System.Drawing.Color.Snow;
-            this.buttonSix.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.buttonSix.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonSix.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonSix.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.buttonSix.Name = "buttonSix";
             this.buttonSix.Tag = "6";
             this.buttonSix.UseVisualStyleBackColor = false;
@@ -118,7 +132,9 @@
             // 
             resources.ApplyResources(this.buttonSeven, "buttonSeven");
             this.buttonSeven.BackColor = System.Drawing.Color.Snow;
-            this.buttonSeven.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.buttonSeven.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonSeven.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonSeven.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.buttonSeven.Name = "buttonSeven";
             this.buttonSeven.Tag = "7";
             this.buttonSeven.UseVisualStyleBackColor = false;
@@ -128,7 +144,9 @@
             // 
             resources.ApplyResources(this.buttonEight, "buttonEight");
             this.buttonEight.BackColor = System.Drawing.Color.Snow;
-            this.buttonEight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.buttonEight.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonEight.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonEight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.buttonEight.Name = "buttonEight";
             this.buttonEight.Tag = "8";
             this.buttonEight.UseVisualStyleBackColor = false;
@@ -138,7 +156,9 @@
             // 
             resources.ApplyResources(this.buttonNine, "buttonNine");
             this.buttonNine.BackColor = System.Drawing.Color.Snow;
-            this.buttonNine.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.buttonNine.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonNine.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonNine.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.buttonNine.Name = "buttonNine";
             this.buttonNine.Tag = "9";
             this.buttonNine.UseVisualStyleBackColor = false;
@@ -148,7 +168,9 @@
             // 
             resources.ApplyResources(this.buttonEmpty, "buttonEmpty");
             this.buttonEmpty.BackColor = System.Drawing.Color.Snow;
-            this.buttonEmpty.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.buttonEmpty.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonEmpty.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonEmpty.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.buttonEmpty.Name = "buttonEmpty";
             this.buttonEmpty.UseVisualStyleBackColor = false;
             this.buttonEmpty.Click += new System.EventHandler(this.buttonEmpty_Click);
@@ -157,7 +179,9 @@
             // 
             resources.ApplyResources(this.buttonCalculate, "buttonCalculate");
             this.buttonCalculate.BackColor = System.Drawing.Color.Snow;
-            this.buttonCalculate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.buttonCalculate.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonCalculate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonCalculate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.buttonCalculate.Name = "buttonCalculate";
             this.buttonCalculate.UseVisualStyleBackColor = false;
             this.buttonCalculate.Click += new System.EventHandler(this.buttonCalculate_Click);
