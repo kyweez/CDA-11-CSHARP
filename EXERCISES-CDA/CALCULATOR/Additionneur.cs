@@ -12,73 +12,29 @@ namespace CALCULATOR
 {
     public partial class Additionneur : Form
     {
+        private Int32 result = 0;
+
         public Additionneur()
         {
             InitializeComponent();
         }
 
-        private void textBoxResult_TextChanged(object sender, EventArgs e)
+        private void button_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void buttonZero_Click(object sender, EventArgs e)
-        {
-            textBoxResult.Text += "0+";
-        }
-
-        private void buttonOne_Click(object sender, EventArgs e)
-        {
-            textBoxResult.Text += "1+";
-        }
-
-        private void buttonTwo_Click(object sender, EventArgs e)
-        {
-            textBoxResult.Text += "2+";
-        }
-
-        private void buttonThree_Click(object sender, EventArgs e)
-        {
-            textBoxResult.Text += "3+";
-        }
-
-        private void buttonFour_Click(object sender, EventArgs e)
-        {
-            textBoxResult.Text += "4+";
-        }
-
-        private void buttonFive_Click(object sender, EventArgs e)
-        {
-            textBoxResult.Text += "5+";
-        }
-
-        private void buttonSix_Click(object sender, EventArgs e)
-        {
-            textBoxResult.Text += "6+";
-        }
-
-        private void buttonSeven_Click(object sender, EventArgs e)
-        {
-            textBoxResult.Text += "7+";
-        }
-
-        private void buttonEight_Click(object sender, EventArgs e)
-        {
-            textBoxResult.Text += "8+";
-        }
-
-        private void buttonNine_Click(object sender, EventArgs e)
-        {
-            textBoxResult.Text += "9+";
+            Button button = (Button)sender;
+            textBoxResult.Text += (button.Tag.ToString() + "+");
+            result += Int32.Parse(button.Tag.ToString());
         }
 
         private void buttonEmpty_Click(object sender, EventArgs e)
         {
-            textBoxResult.Text = "";
+            textBoxResult.Clear();
+            result = 0;
         }
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
+            textBoxResult.Text += (" = " + result.ToString() + "+");
 
         }
     }

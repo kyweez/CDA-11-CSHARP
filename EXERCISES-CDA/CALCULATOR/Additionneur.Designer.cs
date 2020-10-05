@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Additionneur));
             this.buttonZero = new System.Windows.Forms.Button();
             this.buttonOne = new System.Windows.Forms.Button();
             this.buttonTwo = new System.Windows.Forms.Button();
@@ -45,139 +46,134 @@
             // 
             // buttonZero
             // 
-            this.buttonZero.Location = new System.Drawing.Point(12, 175);
+            resources.ApplyResources(this.buttonZero, "buttonZero");
+            this.buttonZero.BackColor = System.Drawing.Color.Snow;
+            this.buttonZero.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.buttonZero.Name = "buttonZero";
-            this.buttonZero.Size = new System.Drawing.Size(50, 45);
-            this.buttonZero.TabIndex = 1;
-            this.buttonZero.Text = "0";
-            this.buttonZero.UseVisualStyleBackColor = true;
-            this.buttonZero.Click += new System.EventHandler(this.buttonZero_Click);
+            this.buttonZero.Tag = "0";
+            this.buttonZero.UseVisualStyleBackColor = false;
+            this.buttonZero.Click += new System.EventHandler(this.button_Click);
             // 
             // buttonOne
             // 
-            this.buttonOne.Location = new System.Drawing.Point(93, 175);
+            resources.ApplyResources(this.buttonOne, "buttonOne");
+            this.buttonOne.BackColor = System.Drawing.Color.Snow;
+            this.buttonOne.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.buttonOne.Name = "buttonOne";
-            this.buttonOne.Size = new System.Drawing.Size(50, 45);
-            this.buttonOne.TabIndex = 2;
-            this.buttonOne.Text = "1";
-            this.buttonOne.UseVisualStyleBackColor = true;
-            this.buttonOne.Click += new System.EventHandler(this.buttonOne_Click);
+            this.buttonOne.Tag = "1";
+            this.buttonOne.UseVisualStyleBackColor = false;
+            this.buttonOne.Click += new System.EventHandler(this.button_Click);
             // 
             // buttonTwo
             // 
-            this.buttonTwo.Location = new System.Drawing.Point(174, 175);
+            resources.ApplyResources(this.buttonTwo, "buttonTwo");
+            this.buttonTwo.BackColor = System.Drawing.Color.Snow;
+            this.buttonTwo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.buttonTwo.Name = "buttonTwo";
-            this.buttonTwo.Size = new System.Drawing.Size(50, 45);
-            this.buttonTwo.TabIndex = 3;
-            this.buttonTwo.Text = "2";
-            this.buttonTwo.UseVisualStyleBackColor = true;
-            this.buttonTwo.Click += new System.EventHandler(this.buttonTwo_Click);
+            this.buttonTwo.Tag = "2";
+            this.buttonTwo.UseVisualStyleBackColor = false;
+            this.buttonTwo.Click += new System.EventHandler(this.button_Click);
             // 
             // buttonThree
             // 
-            this.buttonThree.Location = new System.Drawing.Point(255, 175);
+            resources.ApplyResources(this.buttonThree, "buttonThree");
+            this.buttonThree.BackColor = System.Drawing.Color.Snow;
+            this.buttonThree.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.buttonThree.Name = "buttonThree";
-            this.buttonThree.Size = new System.Drawing.Size(50, 45);
-            this.buttonThree.TabIndex = 4;
-            this.buttonThree.Text = "3";
-            this.buttonThree.UseVisualStyleBackColor = true;
-            this.buttonThree.Click += new System.EventHandler(this.buttonThree_Click);
+            this.buttonThree.Tag = "3";
+            this.buttonThree.UseVisualStyleBackColor = false;
+            this.buttonThree.Click += new System.EventHandler(this.button_Click);
             // 
             // buttonFour
             // 
-            this.buttonFour.Location = new System.Drawing.Point(336, 175);
+            resources.ApplyResources(this.buttonFour, "buttonFour");
+            this.buttonFour.BackColor = System.Drawing.Color.Snow;
+            this.buttonFour.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.buttonFour.Name = "buttonFour";
-            this.buttonFour.Size = new System.Drawing.Size(50, 45);
-            this.buttonFour.TabIndex = 5;
-            this.buttonFour.Text = "4";
-            this.buttonFour.UseVisualStyleBackColor = true;
-            this.buttonFour.Click += new System.EventHandler(this.buttonFour_Click);
+            this.buttonFour.Tag = "4";
+            this.buttonFour.UseVisualStyleBackColor = false;
+            this.buttonFour.Click += new System.EventHandler(this.button_Click);
             // 
             // buttonFive
             // 
-            this.buttonFive.Location = new System.Drawing.Point(12, 226);
+            resources.ApplyResources(this.buttonFive, "buttonFive");
+            this.buttonFive.BackColor = System.Drawing.Color.Snow;
+            this.buttonFive.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.buttonFive.Name = "buttonFive";
-            this.buttonFive.Size = new System.Drawing.Size(50, 43);
-            this.buttonFive.TabIndex = 6;
-            this.buttonFive.Text = "5";
-            this.buttonFive.UseVisualStyleBackColor = true;
-            this.buttonFive.Click += new System.EventHandler(this.buttonFive_Click);
+            this.buttonFive.Tag = "5";
+            this.buttonFive.UseVisualStyleBackColor = false;
+            this.buttonFive.Click += new System.EventHandler(this.button_Click);
             // 
             // buttonSix
             // 
-            this.buttonSix.Location = new System.Drawing.Point(93, 226);
+            resources.ApplyResources(this.buttonSix, "buttonSix");
+            this.buttonSix.BackColor = System.Drawing.Color.Snow;
+            this.buttonSix.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.buttonSix.Name = "buttonSix";
-            this.buttonSix.Size = new System.Drawing.Size(50, 43);
-            this.buttonSix.TabIndex = 7;
-            this.buttonSix.Text = "6";
-            this.buttonSix.UseVisualStyleBackColor = true;
-            this.buttonSix.Click += new System.EventHandler(this.buttonSix_Click);
+            this.buttonSix.Tag = "6";
+            this.buttonSix.UseVisualStyleBackColor = false;
+            this.buttonSix.Click += new System.EventHandler(this.button_Click);
             // 
             // buttonSeven
             // 
-            this.buttonSeven.Location = new System.Drawing.Point(174, 226);
+            resources.ApplyResources(this.buttonSeven, "buttonSeven");
+            this.buttonSeven.BackColor = System.Drawing.Color.Snow;
+            this.buttonSeven.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.buttonSeven.Name = "buttonSeven";
-            this.buttonSeven.Size = new System.Drawing.Size(50, 43);
-            this.buttonSeven.TabIndex = 8;
-            this.buttonSeven.Text = "7";
-            this.buttonSeven.UseVisualStyleBackColor = true;
-            this.buttonSeven.Click += new System.EventHandler(this.buttonSeven_Click);
+            this.buttonSeven.Tag = "7";
+            this.buttonSeven.UseVisualStyleBackColor = false;
+            this.buttonSeven.Click += new System.EventHandler(this.button_Click);
             // 
             // buttonEight
             // 
-            this.buttonEight.Location = new System.Drawing.Point(255, 226);
+            resources.ApplyResources(this.buttonEight, "buttonEight");
+            this.buttonEight.BackColor = System.Drawing.Color.Snow;
+            this.buttonEight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.buttonEight.Name = "buttonEight";
-            this.buttonEight.Size = new System.Drawing.Size(50, 43);
-            this.buttonEight.TabIndex = 9;
-            this.buttonEight.Text = "8";
-            this.buttonEight.UseVisualStyleBackColor = true;
-            this.buttonEight.Click += new System.EventHandler(this.buttonEight_Click);
+            this.buttonEight.Tag = "8";
+            this.buttonEight.UseVisualStyleBackColor = false;
+            this.buttonEight.Click += new System.EventHandler(this.button_Click);
             // 
             // buttonNine
             // 
-            this.buttonNine.Location = new System.Drawing.Point(336, 226);
+            resources.ApplyResources(this.buttonNine, "buttonNine");
+            this.buttonNine.BackColor = System.Drawing.Color.Snow;
+            this.buttonNine.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.buttonNine.Name = "buttonNine";
-            this.buttonNine.Size = new System.Drawing.Size(50, 43);
-            this.buttonNine.TabIndex = 10;
-            this.buttonNine.Text = "9";
-            this.buttonNine.UseVisualStyleBackColor = true;
-            this.buttonNine.Click += new System.EventHandler(this.buttonNine_Click);
+            this.buttonNine.Tag = "9";
+            this.buttonNine.UseVisualStyleBackColor = false;
+            this.buttonNine.Click += new System.EventHandler(this.button_Click);
             // 
             // buttonEmpty
             // 
-            this.buttonEmpty.Location = new System.Drawing.Point(12, 275);
+            resources.ApplyResources(this.buttonEmpty, "buttonEmpty");
+            this.buttonEmpty.BackColor = System.Drawing.Color.Snow;
+            this.buttonEmpty.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.buttonEmpty.Name = "buttonEmpty";
-            this.buttonEmpty.Size = new System.Drawing.Size(131, 45);
-            this.buttonEmpty.TabIndex = 11;
-            this.buttonEmpty.Text = "Vider";
-            this.buttonEmpty.UseVisualStyleBackColor = true;
+            this.buttonEmpty.UseVisualStyleBackColor = false;
             this.buttonEmpty.Click += new System.EventHandler(this.buttonEmpty_Click);
             // 
             // buttonCalculate
             // 
-            this.buttonCalculate.Location = new System.Drawing.Point(255, 275);
+            resources.ApplyResources(this.buttonCalculate, "buttonCalculate");
+            this.buttonCalculate.BackColor = System.Drawing.Color.Snow;
+            this.buttonCalculate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.buttonCalculate.Name = "buttonCalculate";
-            this.buttonCalculate.Size = new System.Drawing.Size(131, 45);
-            this.buttonCalculate.TabIndex = 12;
-            this.buttonCalculate.Text = "Calculer";
-            this.buttonCalculate.UseVisualStyleBackColor = true;
+            this.buttonCalculate.UseVisualStyleBackColor = false;
             this.buttonCalculate.Click += new System.EventHandler(this.buttonCalculate_Click);
             // 
             // textBoxResult
             // 
-            this.textBoxResult.Location = new System.Drawing.Point(12, 13);
-            this.textBoxResult.Multiline = true;
+            resources.ApplyResources(this.textBoxResult, "textBoxResult");
+            this.textBoxResult.BackColor = System.Drawing.SystemColors.Info;
             this.textBoxResult.Name = "textBoxResult";
-            this.textBoxResult.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxResult.Size = new System.Drawing.Size(374, 132);
-            this.textBoxResult.TabIndex = 0;
-            this.textBoxResult.TextChanged += new System.EventHandler(this.textBoxResult_TextChanged);
+            this.textBoxResult.ReadOnly = true;
             // 
             // Additionneur
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(956, 450);
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Controls.Add(this.textBoxResult);
             this.Controls.Add(this.buttonCalculate);
             this.Controls.Add(this.buttonEmpty);
@@ -192,8 +188,6 @@
             this.Controls.Add(this.buttonOne);
             this.Controls.Add(this.buttonZero);
             this.Name = "Additionneur";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Additionneur";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,4 +210,3 @@
         private System.Windows.Forms.TextBox textBoxResult;
     }
 }
-
