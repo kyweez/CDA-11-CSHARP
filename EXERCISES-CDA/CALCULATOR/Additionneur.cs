@@ -18,11 +18,10 @@ namespace CALCULATOR
         {
             InitializeComponent();
         }
-
         private void button_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            textBoxResult.Text += (button.Tag.ToString() + "+");
+            textBoxResult.Text += $"{button.Tag}+";
             result += Int32.Parse(button.Tag.ToString());
         }
 
@@ -34,8 +33,7 @@ namespace CALCULATOR
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
-            textBoxResult.Text += (" = " + result.ToString() + "+");
-
+            textBoxResult.Text += $" = {result}+";
         }
     }
 }
