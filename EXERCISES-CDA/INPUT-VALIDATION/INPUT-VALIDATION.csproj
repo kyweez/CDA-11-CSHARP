@@ -54,6 +54,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controles.dje.resx">
+      <DependentUpon>Controles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controles.resx">
       <DependentUpon>Controles.cs</DependentUpon>
     </EmbeddedResource>
