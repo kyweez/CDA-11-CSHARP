@@ -66,7 +66,6 @@
             // 
             resources.ApplyResources(this.textName, "textName");
             this.textName.Name = "textName";
-            this.textName.Validating += new System.ComponentModel.CancelEventHandler(this.textName_Validating);
             // 
             // textZipCode
             // 
@@ -121,7 +120,6 @@
             this.Name = "Controles";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
@@ -139,4 +137,3 @@
         private System.Windows.Forms.Button buttonReset;
     }
 }
-

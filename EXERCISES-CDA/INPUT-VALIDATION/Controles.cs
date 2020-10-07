@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace INPUT_VALIDATION
 {
     public partial class Controles : Form
     {
+        public const string nameCheck = "^[a-zA-Z]{1,30}$";
         public string name;
         public DateTime date;
         public float amount;
@@ -22,12 +24,14 @@ namespace INPUT_VALIDATION
             InitializeComponent();
         }
 
-        private void textName_Validating(object sender, CancelEventArgs e)
+        private void textBox_has_input(object sender, CancelEventArgs e)
         {
-            if(string.IsNullOrWhiteSpace(textName.Text))
+            TextBox textToCheck = (TextBox)sender;
+
+            if(string.IsNullOrWhiteSpace(textToCheck.Text))
             {
                 e.Cancel = true;
-                textName.Focus();
+                textToCheck.Focus();
                 ErrorProvider.Equals(textName, "Please insert your name");
             }
             else
