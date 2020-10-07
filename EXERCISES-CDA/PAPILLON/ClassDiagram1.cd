@@ -1,2 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="PAPILLON.Lepidoptera">
+    <Position X="4.75" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAQAAAAAEIAAAAAAAiA=</HashCode>
+      <FileName>Lepidoptera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAPILLON.Chenille">
+    <Position X="3.25" Y="4" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Chenille.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAPILLON.Chrysalide">
+    <Position X="7" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Chrysalide.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAPILLON.Papillon">
+    <Position X="9.5" Y="4" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAEAAAAAAAAAEAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Papillon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAPILLON.Oeuf">
+    <Position X="0.75" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Oeuf.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAPILLON.PapillonMale">
+    <Position X="8.5" Y="7.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PapillonMale.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAPILLON.PapillonFemelle">
+    <Position X="10.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>PapillonFemelle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

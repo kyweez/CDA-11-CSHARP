@@ -5,15 +5,8 @@ using System.Text;
 
 namespace PAPILLON
 {
-    public class PapillonMale
+    public class PapillonMale : Papillon
     {
-        public PapillonFemelle Feconde
-        {
-            get => default;
-            set
-            {
-            }
-        }
 
         public void FeconderFemelle()
         {

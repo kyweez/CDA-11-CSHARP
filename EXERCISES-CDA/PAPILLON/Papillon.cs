@@ -10,11 +10,6 @@ namespace PAPILLON
         private byte nbrAile;
         private byte nbrPatte;
 
-        public void Reproduction()
-        {
-            throw new System.NotImplementedException();
-        }
-
         public void Marcher(int longueurEnMm)
         {
             throw new System.NotImplementedException();
