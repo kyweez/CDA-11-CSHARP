@@ -1,4 +1,4 @@
-﻿namespace PAPILLON
+﻿namespace BUTTERFLY
 {
     public abstract class LifeCycleStage
     {

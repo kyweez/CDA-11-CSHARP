@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PAPILLON
+namespace BUTTERFLY
 {
     public class Chrysalis : LifeCycleStage
     {
