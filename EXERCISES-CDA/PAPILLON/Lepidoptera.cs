@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace PAPILLON
 {
@@ -39,12 +36,12 @@ namespace PAPILLON
 
         public bool Move()
         {
-            throw new System.NotImplementedException();
+            return CurrentStage.Move();
         }
 
         public bool Evolve()
         {
-            throw new System.NotImplementedException();
+            return CurrentStage.Evolve(this);
         }
     }
 }
