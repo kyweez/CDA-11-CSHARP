@@ -5,21 +5,18 @@ namespace PAPILLON
     public class Egg : LifeCycleStage
     {
         /*********************************** FIELDS ***********************************/
-
-        /// None
+        // None
 
         /******************************** CONSTRUCTORS ********************************/
-
-        /// None
+        // None
 
         /********************************* PROPERTIES *********************************/
-
-        /// None
+        // None
 
         /*********************************** METHODS **********************************/
 
         /// <summary>
-        ///     This method writes on the stdout that an egg can't move and returns false.
+        ///     Prints on the stdout that an egg can't move and returns false.
         /// </summary>
         /// <returns>bool</returns>
         public override bool Move()
@@ -29,13 +26,13 @@ namespace PAPILLON
         }
 
         /// <summary>
-        ///     This method evolves the egg into a caterpillar and returns true.
+        ///     Evolves the egg into a caterpillar and returns the new object.
         /// </summary>
         /// <returns>bool</returns>
-        public override bool Evolve(Lepidoptera _lepidoptera)
+        public override LifeCycleStage Evolve()
         {
-            _lepidoptera.CurrentStage = new Caterpillar();
-            return true;
+            Console.WriteLine("Youhou I'm a caterpillar !");
+            return new Caterpillar();
         }
     }
 }

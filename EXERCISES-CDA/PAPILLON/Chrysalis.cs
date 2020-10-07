@@ -5,16 +5,13 @@ namespace PAPILLON
     public class Chrysalis : LifeCycleStage
     {
         /*********************************** FIELDS ***********************************/
-
-        /// None
+        // None
 
         /******************************** CONSTRUCTORS ********************************/
-
-        /// None
+        // None
 
         /********************************* PROPERTIES *********************************/
-
-        /// None
+        // None
 
         /*********************************** METHODS **********************************/
 
@@ -29,13 +26,13 @@ namespace PAPILLON
         }
 
         /// <summary>
-        ///     This method evolves the chrysalis into a butterfly and returns true.
+        ///     This method evolves the chrysalis into a butterfly and returns the new object.
         /// </summary>
         /// <returns>bool</returns>
-        public override bool Evolve(Lepidoptera _lepidoptera)
+        public override LifeCycleStage Evolve()
         {
-            _lepidoptera.CurrentStage = new Butterfly();
-            return true;
+            Console.WriteLine("Youhou I'm a butterfly !");
+            return new Butterfly();
         }
     }
 }

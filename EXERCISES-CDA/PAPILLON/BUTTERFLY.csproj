@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{DE87720F-2AE9-492A-9D71-4CD10709C03B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>PAPILLON</RootNamespace>
-    <AssemblyName>PAPILLON</AssemblyName>
+    <RootNamespace>BUTTERFLY</RootNamespace>
+    <AssemblyName>BUTTERFLY</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

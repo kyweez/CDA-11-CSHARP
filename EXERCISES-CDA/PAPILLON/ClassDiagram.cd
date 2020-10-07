@@ -1,7 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="PAPILLON.Lepidoptera">
-    <Position X="4.75" Y="1.75" Width="3" />
+    <Position X="2" Y="1.25" Width="3" />
+    <AssociationLine Name="currentStage" Type="PAPILLON.LifeCycleStage" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="4.026" />
+        <Point X="4.75" Y="4.357" />
+        <Point X="6.5" Y="4.357" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>EAAAAAAAAIAAAAAAAAAAAAAAAAAQAAAAYAAAAEAAAAA=</HashCode>
       <FileName>Lepidoptera.cs</FileName>
@@ -11,37 +18,37 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="PAPILLON.LifeCycleStage">
-    <Position X="10.5" Y="2" Width="2.75" />
+    <Position X="6.5" Y="4" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
       <FileName>LifeCycleStage.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PAPILLON.Egg">
-    <Position X="0.5" Y="6.25" Width="2.75" />
+    <Position X="3" Y="4.75" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
       <FileName>Egg.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PAPILLON.Caterpillar">
-    <Position X="4" Y="6.25" Width="2.75" />
+    <Position X="6.5" Y="6" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
       <FileName>Caterpillar.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PAPILLON.Chrysalis">
-    <Position X="7.5" Y="6.25" Width="2.75" />
+    <Position X="6.5" Y="2" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
       <FileName>Chrysalis.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PAPILLON.Butterfly">
-    <Position X="11" Y="6.25" Width="2.75" />
+    <Position X="10" Y="3.25" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAEAAIAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAQAAAAEAAIAAAAAAAAAA=</HashCode>
       <FileName>Butterfly.cs</FileName>
     </TypeIdentifier>
   </Class>

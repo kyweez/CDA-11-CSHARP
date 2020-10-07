@@ -6,7 +6,7 @@ namespace PAPILLON
     {
         /*********************************** FIELDS ***********************************/
 
-        private readonly DateTime dateOfBirth;
+        private DateTime dateOfBirth;
         private LifeCycleStage currentStage;
 
         /******************************** CONSTRUCTORS ********************************/
@@ -14,34 +14,57 @@ namespace PAPILLON
         public Lepidoptera()
         {
             dateOfBirth = DateTime.Now;
-            CurrentStage = new Egg();
+            currentStage = new Egg();
         }
 
         public Lepidoptera(Lepidoptera _lepidoptera)
         {
             dateOfBirth = _lepidoptera.DateOfBirth;
-            CurrentStage = _lepidoptera.CurrentStage;
+            currentStage = _lepidoptera.CurrentStage;
+
         }
 
         /********************************* PROPERTIES *********************************/
 
         public DateTime DateOfBirth
         {
-            get => default;
+            get
+            {
+                return dateOfBirth;
+            }
         }
 
-        public LifeCycleStage CurrentStage { get; set; }
+        public LifeCycleStage CurrentStage
+        {
+            get
+            {
+                return currentStage;
+            }
+
+            set
+            {
+                currentStage = value;
+            }
+        }
 
         /*********************************** METHODS **********************************/
 
+        /// <summary>
+        ///     Move the lepidopteria (if it can) and returns a boolean
+        /// </summary>
+        /// <returns>bool</returns>
         public bool Move()
         {
             return CurrentStage.Move();
         }
 
-        public bool Evolve()
+        /// <summary>
+        ///     Evolve the lepidopteria to its next evolution stage (unless it's a butterfly)
+        /// </summary>
+        /// <returns>LifeCycleStage</returns>
+        public LifeCycleStage Evolve()
         {
-            return CurrentStage.Evolve(this);
+            return CurrentStage = CurrentStage.Evolve();
         }
     }
 }

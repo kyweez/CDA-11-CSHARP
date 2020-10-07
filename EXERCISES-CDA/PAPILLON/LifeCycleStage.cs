@@ -13,6 +13,6 @@
         /// This abstract method call needs to be defined by children classes
         /// It's called in order to evolve the lepidoptera
         /// </summary>
-        public abstract bool Evolve(Lepidoptera _lepidotera);
+        public abstract LifeCycleStage Evolve();
     }
 }

@@ -4,24 +4,32 @@ namespace PAPILLON
 {
     public class Butterfly : LifeCycleStage
     {
-        /******************************** CONSTRUCTORS ********************************/
+        /********************************* ATTRIBUTES *********************************/
+        private bool isFlying;
 
-        public Butterfly()
-        {
-            IsFlying = false;
-        }
+        /******************************** CONSTRUCTORS ********************************/
+        public Butterfly() => isFlying = false;
+
+        public Butterfly(bool _isFlying) => IsFlying = _isFlying;
 
         /********************************* PROPERTIES *********************************/
+        public bool IsFlying
+        {
+            get
+            {
+                return isFlying;
+            }
 
-        /// <summary>
-        ///     Property (get/set) of the boolean field : isFlying
-        /// </summary>
-        public bool IsFlying { get; set; }
+            set
+            {
+                isFlying = value;
+            }
+        }
 
         /*********************************** METHODS **********************************/
 
         /// <summary>
-        ///     The method writes on the stdout if the butterfly is moving either by flying 
+        ///     This method prints on the stdout if the butterfly is moving either by flying 
         ///     or walking. The the method returns true
         /// </summary>
         /// <returns>bool</returns>
@@ -29,7 +37,7 @@ namespace PAPILLON
         {
             if (IsFlying)
             {
-                Console.WriteLine("The butterfly is moving by the air");
+                Console.WriteLine("The butterfly is flying");
                 return true;
             }
             else
@@ -40,13 +48,13 @@ namespace PAPILLON
         }
 
         /// <summary>
-        ///     This prints on the stdout that a butterfly can't evolve and returns false.
+        ///     Prints on the stdout that a butterfly can't evolve and returns the same object
         /// </summary>
         /// <returns>bool</returns>
-        public override bool Evolve(Lepidoptera _lepidoptera)
+        public override LifeCycleStage Evolve()
         {
-            Console.WriteLine("A butterfly can't evolve, or maybe to the death ? =)");
-            return false;
+            Console.WriteLine("I can't evolve, do you want me to die ???");
+            return this;
         }
     }
 }
