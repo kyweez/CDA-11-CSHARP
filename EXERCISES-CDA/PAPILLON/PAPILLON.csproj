@@ -43,11 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Butterfly.cs" />
+    <Compile Include="Caterpillar.cs" />
+    <Compile Include="Chrysalis.cs" />
+    <Compile Include="Egg.cs" />
+    <Compile Include="Lepidoptera.cs" />
+    <Compile Include="LifeCycleStage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

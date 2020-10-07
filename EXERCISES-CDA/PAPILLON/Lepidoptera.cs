@@ -7,17 +7,42 @@ namespace PAPILLON
 {
     public class Lepidoptera
     {
-        private DateTime dateNaissance;
-        private bool peutSeDeplacer;
-        private bool peutSeNourir;
-        private short masseEnMg;
+        /*********************************** FIELDS ***********************************/
 
-        public void Grandir(short longueurEnMm)
+        private readonly DateTime dateOfBirth;
+        private LifeCycleStage currentStage;
+
+        /******************************** CONSTRUCTORS ********************************/
+
+        public Lepidoptera()
+        {
+            dateOfBirth = DateTime.Now;
+            CurrentStage = new Egg();
+        }
+
+        public Lepidoptera(Lepidoptera _lepidoptera)
+        {
+            dateOfBirth = _lepidoptera.DateOfBirth;
+            CurrentStage = _lepidoptera.CurrentStage;
+        }
+
+        /********************************* PROPERTIES *********************************/
+
+        public DateTime DateOfBirth
+        {
+            get => default;
+        }
+
+        public LifeCycleStage CurrentStage { get; set; }
+
+        /*********************************** METHODS **********************************/
+
+        public bool Move()
         {
             throw new System.NotImplementedException();
         }
 
-        public void PrendreDeLaMasse(short masseEnMg)
+        public bool Evolve()
         {
             throw new System.NotImplementedException();
         }
