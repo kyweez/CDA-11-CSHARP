@@ -24,6 +24,8 @@ namespace PAPILLON
             Console.WriteLine("Egg date of birth : " + lepidoptereCutty.DateOfBirth);
             Console.WriteLine("\nPress any key to continue\n");
             Console.ReadKey();
+            Console.Clear();
+
 
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.ForegroundColor = ConsoleColor.White;
@@ -33,6 +35,8 @@ namespace PAPILLON
             lepidoptereCutty.Move();
             Console.WriteLine("\nPress any key to continue\n");
             Console.ReadKey();
+            Console.Clear();
+
 
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.ForegroundColor = ConsoleColor.White;
@@ -45,6 +49,8 @@ namespace PAPILLON
             Console.WriteLine("Egg date of birth : " + lepidoptereCutty.DateOfBirth);
             Console.WriteLine("\nPress any key to continue\n");
             Console.ReadKey();
+            Console.Clear();
+
 
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.ForegroundColor = ConsoleColor.White;
@@ -54,6 +60,8 @@ namespace PAPILLON
             lepidoptereCutty.Move();
             Console.WriteLine("\nPress any key to continue\n");
             Console.ReadKey();
+            Console.Clear();
+
 
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.ForegroundColor = ConsoleColor.White;
@@ -66,6 +74,8 @@ namespace PAPILLON
             Console.WriteLine("Egg date of birth : " + lepidoptereCutty.DateOfBirth);
             Console.WriteLine("\nPress any key to continue\n");
             Console.ReadKey();
+            Console.Clear();
+
 
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.ForegroundColor = ConsoleColor.White;
@@ -75,6 +85,8 @@ namespace PAPILLON
             lepidoptereCutty.Move();
             Console.WriteLine("\nPress any key to continue\n");
             Console.ReadKey();
+            Console.Clear();
+
 
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.ForegroundColor = ConsoleColor.White;
@@ -87,6 +99,8 @@ namespace PAPILLON
             Console.WriteLine("Egg date of birth : " + lepidoptereCutty.DateOfBirth);
             Console.WriteLine("\nPress any key to continue\n");
             Console.ReadKey();
+            Console.Clear();
+
 
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.ForegroundColor = ConsoleColor.White;
@@ -96,6 +110,8 @@ namespace PAPILLON
             lepidoptereCutty.Move();
             Console.WriteLine("\nPress any key to continue\n");
             Console.ReadKey();
+            Console.Clear();
+
 
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.ForegroundColor = ConsoleColor.White;
@@ -108,6 +124,8 @@ namespace PAPILLON
             lepidoptereCutty.Move();
             Console.WriteLine("\nPress any key to continue\n");
             Console.ReadKey();
+            Console.Clear();
+
 
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.ForegroundColor = ConsoleColor.White;
@@ -118,6 +136,7 @@ namespace PAPILLON
             Console.WriteLine("\nEgg class         : " + lepidoptereCutty.ToString());
             Console.WriteLine("Egg stage class   : " + lepidoptereCutty.CurrentStage.ToString());
             Console.WriteLine("Egg date of birth : " + lepidoptereCutty.DateOfBirth);
+
 
             Console.BackgroundColor = ConsoleColor.DarkRed;
             Console.ForegroundColor = ConsoleColor.White;
