@@ -8,7 +8,13 @@ namespace ZOO
         // NONE
 
         /**************************** CONSTRUCTORS ***************************/
-        // NONE
+        public Parrot() : base()
+        {
+        }
+
+        public Parrot(DateTime _dateOfBirth, bool _isBornInZoo) : base(_dateOfBirth, _isBornInZoo)
+        {
+        }
 
         /***************************** PROPERTIES ****************************/
         // NONE

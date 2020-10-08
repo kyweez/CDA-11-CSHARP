@@ -39,6 +39,20 @@ namespace ZOO
             Console.ReadKey();
             Console.Clear();
 
+            Console.WriteLine("TEST 5 : Parrots initialization");
+            Console.WriteLine("______________________________\n");
+            TestParrot.InitializingParrots();
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
+            Console.Clear();
+
+            Console.WriteLine("TEST 6 : Parrots methods");
+            Console.WriteLine("______________________________\n");
+            TestParrot.TestParrotMethods();
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
+            Console.Clear();
+
         }
     }
 }
