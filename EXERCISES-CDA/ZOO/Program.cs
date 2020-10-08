@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ZOO.ClassTest;
 
 namespace ZOO
@@ -53,6 +49,19 @@ namespace ZOO
             Console.ReadKey();
             Console.Clear();
 
+            Console.WriteLine("TEST 7 : Rabbits initialization");
+            Console.WriteLine("______________________________\n");
+            TestRabbit.InitializingRabbits();
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
+            Console.Clear();
+
+            Console.WriteLine("TEST 8 : Rabbits methods");
+            Console.WriteLine("______________________________\n");
+            TestRabbit.TestRabbitMethods();
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
+            Console.Clear();
         }
     }
 }
