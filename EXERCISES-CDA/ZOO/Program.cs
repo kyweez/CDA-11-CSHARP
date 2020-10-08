@@ -1,4 +1,5 @@
 ﻿using ZOO.ClassTest;
+using ZOO.Utils.Script;
 
 namespace ZOO
 {
@@ -10,7 +11,9 @@ namespace ZOO
             /*## UNCOMMENT THE DESIRED TEST TO LAUCNCH IT ##*/
             /*##############################################*/
 
-            TestAllClasses.All();
+            /// TestAllClasses.All();
+
+            ScriptClass.Script();
         }
     }
 }
