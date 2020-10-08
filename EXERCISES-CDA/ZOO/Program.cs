@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ZOO.ClassTest;
 
 namespace ZOO
 {
@@ -10,16 +11,19 @@ namespace ZOO
     {
         static void Main(string[] args)
         {
-            Rabbit lapin1 = new Rabbit();
-            Rabbit lapin2 = new Rabbit(DateTime.Parse("2025-05-31"), true, 10);
-            Console.WriteLine("DATE     : " + lapin1.DateOfBirth);
-            Console.WriteLine("BORN     : " + lapin1.IsBornInZoo);
-            Console.WriteLine("LONGUEUR : " + lapin1.EarLengthCm);
-            Console.ReadKey();            
-            Console.WriteLine("DATE     : " + lapin2.DateOfBirth);
-            Console.WriteLine("BORN     : " + lapin2.IsBornInZoo);
-            Console.WriteLine("LONGUEUR : " + lapin2.EarLengthCm);
+            Console.WriteLine("TEST 1 : Guards initialization");
+            Console.WriteLine("______________________________\n");
+            TestGuard.InitializingGuards();
+            Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
+            Console.Clear();
+
+            Console.WriteLine("TEST 2 : Guards methods");
+            Console.WriteLine("______________________________\n");
+            TestGuard.TestGuardMethods();
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
+            Console.Clear();
 
         }
     }

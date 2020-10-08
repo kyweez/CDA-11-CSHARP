@@ -45,19 +45,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animal.cs" />
-    <Compile Include="Guard.cs" />
-    <Compile Include="IMovable.cs" />
-    <Compile Include="ITalkable.cs" />
-    <Compile Include="Lion.cs" />
-    <Compile Include="Parrot.cs" />
+    <Compile Include="ClassTest\TestGuard.cs" />
+    <Compile Include="ClassZoo\Animals\Animal.cs" />
+    <Compile Include="ClassZoo\Employees\Guard.cs" />
+    <Compile Include="Interfaces\IMovable.cs" />
+    <Compile Include="Interfaces\ITalkable.cs" />
+    <Compile Include="ClassZoo\Animals\Lion.cs" />
+    <Compile Include="ClassZoo\Animals\Parrot.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rabbit.cs" />
+    <Compile Include="ClassZoo\Animals\Rabbit.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
