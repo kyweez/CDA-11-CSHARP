@@ -2,7 +2,7 @@
 
 namespace ZOO
 {
-    public abstract class Animal : IMovable
+    public abstract class Animal : IMovable, IComparable, IComparable<Animal>
     {
         /***************************** ATTRIBUTES ****************************/
         private DateTime dateOfBirth;
@@ -50,5 +50,17 @@ namespace ZOO
 
         /****************************** METHODS ******************************/
         public abstract bool Move();
+
+        public int CompareTo(object obj)
+        {
+            if (!(obj is Animal animalToCompare))
+                throw new ArgumentException("obj is not the same type as this instance", "obj");
+            return DateOfBirth.CompareTo(animalToCompare.DateOfBirth);
+        }
+
+        public int CompareTo(Animal other)
+        {
+            return DateOfBirth.CompareTo(other.DateOfBirth);
+        }
     }
 }

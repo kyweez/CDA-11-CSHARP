@@ -39,6 +39,34 @@ namespace ZOO.Utils.Script
             Console.WriteLine("\nPress any key to continue the story...\n");
             Console.WriteLine("......................................\n");
             Console.ReadKey();
+
+            Console.WriteLine("It's a huge mess, we need the zoo guardian to arrange animals from older to younger");
+            Guard georges = new Guard("O'MALLEY", "Georges", DateTime.Parse("1970-12-01"));
+            Console.WriteLine("But, by the way, here is the guard :");
+            Console.WriteLine("Guard last name     : " + georges.LastName);
+            Console.WriteLine("Guard first name    : " + georges.FirstName);
+            Console.WriteLine("Guard date of birth : " + georges.DateOfBirth.ToString("dd / MM / yyyy"));
+            Console.WriteLine("Suddenly, " + georges.FirstName + " shouted :\n");
+            georges.Talk();
+            Console.WriteLine("\nPress any key to continue the story...\n");
+            Console.WriteLine("......................................\n");
+            Console.ReadKey();
+
+            Console.WriteLine("Animal are sorted by " + georges.FirstName);
+            animalTab.Sort();
+            Console.WriteLine("\nSummary of the new order:");
+            for (int i = 0; i < animalTab.Count; i++)
+            {
+                Console.WriteLine($"Animal {i + 1} was born on the {animalTab[i].DateOfBirth:dd/MM/yyyy}");
+            }
+            Console.WriteLine("\nAnimals can finally move out :");
+            foreach (Animal dontWannaBurn in animalTab)
+            {
+                dontWannaBurn.Move();
+            }
+            Console.ReadKey();
+            Console.WriteLine("\nPress any key to continue the story...\n");
+            Console.WriteLine("......................................\n");
         }
     }
 }
