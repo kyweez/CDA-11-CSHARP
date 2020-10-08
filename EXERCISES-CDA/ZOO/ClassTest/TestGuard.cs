@@ -64,7 +64,7 @@ namespace ZOO.ClassTest
         {
             Guard guard = TestGuard.InitializingGuardWithGoodParameter();
             Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Console.WriteLine("\nLet's try to move the gard :\n");
+            Console.WriteLine("\nLet's try to move the guard :\n");
             Console.ResetColor();
             guard.Move();
         }
@@ -73,7 +73,7 @@ namespace ZOO.ClassTest
         {
             Guard guard = TestGuard.InitializingGuardWithGoodParameter();
             Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Console.WriteLine("\nLet's try to talk with the gard :\n");
+            Console.WriteLine("\nLet's try to talk with the guard :\n");
             Console.ResetColor();
             guard.Talk();
         }
