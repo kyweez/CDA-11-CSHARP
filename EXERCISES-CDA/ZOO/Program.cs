@@ -25,6 +25,20 @@ namespace ZOO
             Console.ReadKey();
             Console.Clear();
 
+            Console.WriteLine("TEST 3 : Lions initialization");
+            Console.WriteLine("______________________________\n");
+            TestLion.InitializingLions();
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
+            Console.Clear();
+
+            Console.WriteLine("TEST 4 : Lions methods");
+            Console.WriteLine("______________________________\n");
+            TestLion.TestLionMethods();
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
+            Console.Clear();
+
         }
     }
 }

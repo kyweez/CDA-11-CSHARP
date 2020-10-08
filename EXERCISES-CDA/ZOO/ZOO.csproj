@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassTest\TestLion.cs" />
     <Compile Include="ClassTest\TestGuard.cs" />
     <Compile Include="ClassZoo\Animals\Animal.cs" />
     <Compile Include="ClassZoo\Employees\Guard.cs" />
