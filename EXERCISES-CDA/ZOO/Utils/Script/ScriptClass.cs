@@ -46,7 +46,7 @@ namespace ZOO.Utils.Script
             Console.WriteLine("Guard last name     : " + georges.LastName);
             Console.WriteLine("Guard first name    : " + georges.FirstName);
             Console.WriteLine("Guard date of birth : " + georges.DateOfBirth.ToString("dd / MM / yyyy"));
-            Console.WriteLine("Suddenly, " + georges.FirstName + " shouted :\n");
+            Console.WriteLine("\nSuddenly, " + georges.FirstName + " shouts :\n");
             georges.Talk();
             Console.WriteLine("\nPress any key to continue the story...\n");
             Console.WriteLine("......................................\n");
@@ -63,6 +63,22 @@ namespace ZOO.Utils.Script
             foreach (Animal dontWannaBurn in animalTab)
             {
                 dontWannaBurn.Move();
+            }
+            Console.ReadKey();
+            Console.WriteLine("\nPress any key to continue the story...\n");
+            Console.WriteLine("......................................\n");
+
+            Console.WriteLine("Well, all animals are safe ! Now " + georges.FirstName + "needs to leave though \n");
+            georges.Move();
+            Console.ReadKey();
+            Console.WriteLine("\nPress any key to continue the story...\n");
+            Console.WriteLine("......................................\n");
+
+            Console.WriteLine("Lets try to stop the fire and ask for help... Can we count on the parrot ?\n");
+            foreach (Animal canHeTalk in animalTab)
+            {
+                if (canHeTalk is Parrot theNoisyParrot)
+                    theNoisyParrot.Talk();
             }
             Console.ReadKey();
             Console.WriteLine("\nPress any key to continue the story...\n");

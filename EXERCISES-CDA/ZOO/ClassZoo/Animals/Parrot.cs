@@ -32,7 +32,7 @@ namespace ZOO
         }
         public void Talk()
         {
-            Console.WriteLine("The parrot is calling for help !");
+            Console.WriteLine("PLEEEAAAASE FIREGUARDS, WE NEED HELP!");
         }
     }
 }

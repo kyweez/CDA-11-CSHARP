@@ -73,7 +73,7 @@ namespace ZOO
 
         public void Talk()
         {
-            Console.WriteLine("Please animals, it might be weird, but listen to me and run from the older to the younger !");
+            Console.WriteLine("PLEASE ANIMALS, IT MIGHT BE WEIRD, BUT LISTEN TO ME AND RUN FROM THE OLDER TO THE YOUNGER !");
         }
     }
 }
