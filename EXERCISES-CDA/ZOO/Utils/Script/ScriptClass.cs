@@ -83,6 +83,11 @@ namespace ZOO.Utils.Script
             Console.ReadKey();
             Console.WriteLine("\nPress any key to continue the story...\n");
             Console.WriteLine("......................................\n");
+
+            Console.WriteLine("Fireguards finally came, the zoo is safe !");
+            Console.ReadKey();
+            Console.WriteLine("\nPress any key to close the program\n");
+            Console.WriteLine("......................................\n");
         }
     }
 }
