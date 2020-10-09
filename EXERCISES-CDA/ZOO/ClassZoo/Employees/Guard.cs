@@ -75,5 +75,10 @@ namespace ZOO
         {
             Console.WriteLine("PLEASE ANIMALS, IT MIGHT BE WEIRD, BUT LISTEN TO ME AND RUN FROM THE OLDER TO THE YOUNGER !");
         }
+
+        public void Talk(string message)
+        {
+            Console.WriteLine(message);
+        }
     }
 }

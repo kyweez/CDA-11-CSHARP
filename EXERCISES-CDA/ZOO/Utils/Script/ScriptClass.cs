@@ -68,17 +68,23 @@ namespace ZOO.Utils.Script
             Console.WriteLine("\nPress any key to continue the story...\n");
             Console.WriteLine("......................................\n");
 
-            Console.WriteLine("Well, all animals are safe ! Now " + georges.FirstName + "needs to leave though \n");
+            Console.WriteLine("Well, all animals are safe ! Now " + georges.FirstName + " needs to leave though \n");
             georges.Move();
             Console.ReadKey();
             Console.WriteLine("\nPress any key to continue the story...\n");
             Console.WriteLine("......................................\n");
 
             Console.WriteLine("Lets try to stop the fire and ask for help... Can we count on the parrot ?\n");
+            string sos = "PLEASE, CALL THE FIREGUARDS";
             foreach (Animal canHeTalk in animalTab)
             {
                 if (canHeTalk is Parrot theNoisyParrot)
-                    theNoisyParrot.Talk();
+                {
+                    Console.Write("Parrot : ");
+                    theNoisyParrot.Talk(sos);
+                    Console.Write($"{georges.FirstName} : ");
+                    georges.Talk($"He's right {sos}");
+                }
             }
             Console.ReadKey();
             Console.WriteLine("\nPress any key to continue the story...\n");
