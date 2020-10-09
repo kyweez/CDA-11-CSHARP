@@ -51,6 +51,8 @@ namespace ZOO
         /****************************** METHODS ******************************/
         public abstract bool Move();
 
+        public abstract void Eat();
+
         public int CompareTo(object obj)
         {
             if (!(obj is Animal animalToCompare))

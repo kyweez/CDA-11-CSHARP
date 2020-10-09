@@ -1,52 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="ZOO.Animal">
-    <Position X="0.75" Y="2.25" Width="3.5" />
+    <Position X="12" Y="3" Width="3.5" />
     <TypeIdentifier>
-      <HashCode>FAAAAAAAAIAAAAQABAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>FAAAAAAAEIAAAAQABAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ClassZoo\Animals\Animal.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Orientation="Right" Position="0.264" />
+    <Lollipop Orientation="Left" Position="0.1" />
   </Class>
   <Class Name="ZOO.Lion">
-    <Position X="1.5" Y="6" Width="2" />
+    <Position X="13.75" Y="7.5" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ClassZoo\Animals\Lion.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ZOO.Guard">
-    <Position X="8.5" Y="0.5" Width="4.5" />
+    <Position X="2.5" Y="3" Width="4.5" />
     <TypeIdentifier>
       <HashCode>EAAAAEAAAIBAAAAAAAAAAAAAAAAQAAAAAEAACAAAAAg=</HashCode>
       <FileName>ClassZoo\Employees\Guard.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Orientation="Left" Position="0.18" />
+    <Lollipop Orientation="Right" Position="1.482" />
   </Class>
-  <Class Name="ZOO.Rabbit" Collapsed="true">
-    <Position X="5" Y="4" Width="1.5" />
+  <Class Name="ZOO.Rabbit">
+    <Position X="8.25" Y="7.5" Width="4.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAEAEIAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ClassZoo\Animals\Rabbit.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ZOO.Parrot" Collapsed="true">
-    <Position X="1.75" Y="0.5" Width="1.5" />
+  <Class Name="ZOO.Parrot">
+    <Position X="3.75" Y="7.5" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAEIAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
       <FileName>ClassZoo\Animals\Parrot.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Orientation="Right" Position="0.227" />
+    <Lollipop Position="0.186" />
   </Class>
   <Interface Name="ZOO.IMovable">
-    <Position X="5.75" Y="2" Width="1.5" />
+    <Position X="7.75" Y="5.25" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\IMovable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="ZOO.ITalkable">
-    <Position X="5.75" Y="0.5" Width="1.5" />
+    <Position X="7.75" Y="3" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
       <FileName>Interfaces\ITalkable.cs</FileName>

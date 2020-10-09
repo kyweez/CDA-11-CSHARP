@@ -20,7 +20,7 @@ namespace ZOO
         // NONE
 
         /****************************** METHODS ******************************/
-        public void Eat()
+        public override void Eat()
         {
             Console.WriteLine("The parrot is eating !");
         }

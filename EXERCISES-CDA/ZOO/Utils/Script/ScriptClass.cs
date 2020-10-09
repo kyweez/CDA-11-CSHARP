@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -64,15 +65,15 @@ namespace ZOO.Utils.Script
             {
                 dontWannaBurn.Move();
             }
-            Console.ReadKey();
             Console.WriteLine("\nPress any key to continue the story...\n");
             Console.WriteLine("......................................\n");
+            Console.ReadKey();
 
             Console.WriteLine("Well, all animals are safe ! Now " + georges.FirstName + " needs to leave though \n");
             georges.Move();
-            Console.ReadKey();
             Console.WriteLine("\nPress any key to continue the story...\n");
             Console.WriteLine("......................................\n");
+            Console.ReadKey();
 
             Console.WriteLine("Lets try to stop the fire and ask for help... Can we count on the parrot ?\n");
             string sos = "PLEASE, CALL THE FIREGUARDS";
@@ -86,14 +87,40 @@ namespace ZOO.Utils.Script
                     georges.Talk($"He's right {sos}");
                 }
             }
-            Console.ReadKey();
             Console.WriteLine("\nPress any key to continue the story...\n");
             Console.WriteLine("......................................\n");
-
-            Console.WriteLine("Fireguards finally came, the zoo is safe !");
             Console.ReadKey();
+
+            Console.WriteLine("It's time to feed the animals :");
+            foreach (Animal wannaEatTheParrot in animalTab)
+            {
+                wannaEatTheParrot.Eat();
+            }
+            Console.WriteLine("\nPress any key to continue the story...\n");
+            Console.WriteLine("......................................\n");
+            Console.ReadKey();
+
+            Console.WriteLine("Fireguards finally came, the zoo is safe, let's sing a song !\n");
+            ArrayList parrotAndGeorge = new ArrayList();
+            parrotAndGeorge.Add(animalTab[2]);
+            parrotAndGeorge.Add(georges);
+            string song = "Ah Ah Ah staying aliiiiive !!!";
+            foreach (Object singer in parrotAndGeorge)
+            {
+                if (singer is Parrot theNoisyParrot)
+                {
+                    Console.Write("Parrot : ");
+                    theNoisyParrot.Talk(song);
+                }
+                else if (singer is Guard georgesWannaBeMadonna)
+                {
+                    Console.Write($"{georges.FirstName} : ");
+                    georgesWannaBeMadonna.Talk(song);
+                }
+            }
             Console.WriteLine("\nPress any key to close the program\n");
             Console.WriteLine("......................................\n");
+            Console.ReadKey();
         }
     }
 }

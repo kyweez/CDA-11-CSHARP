@@ -13,7 +13,7 @@ namespace ZOO
 
             /// TestAllClasses.All();
 
-            /// ScriptClass.Script();
+            ScriptClass.Script();
         }
     }
 }

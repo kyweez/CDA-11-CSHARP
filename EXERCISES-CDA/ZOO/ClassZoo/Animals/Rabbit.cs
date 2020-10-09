@@ -34,7 +34,7 @@ namespace ZOO
 
 
         /****************************** METHODS ******************************/
-        public void Eat()
+        public override void Eat()
         {
             Console.WriteLine("The rabbit is eating !");
         }
