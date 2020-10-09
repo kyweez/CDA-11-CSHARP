@@ -3,15 +3,15 @@
   <Class Name="ZOO.Animal">
     <Position X="0.75" Y="2.25" Width="3.5" />
     <TypeIdentifier>
-      <HashCode>FAAAAAAAAIAAAAAABAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>FAAAAAAAAIAAAAQABAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ClassZoo\Animals\Animal.cs</FileName>
     </TypeIdentifier>
     <Lollipop Orientation="Right" Position="0.264" />
   </Class>
   <Class Name="ZOO.Lion">
-    <Position X="1.5" Y="5.5" Width="2" />
+    <Position X="1.5" Y="6" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ClassZoo\Animals\Lion.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -39,14 +39,14 @@
     <Lollipop Orientation="Right" Position="0.227" />
   </Class>
   <Interface Name="ZOO.IMovable">
-    <Position X="5.75" Y="2.25" Width="1.5" />
+    <Position X="5.75" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\IMovable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="ZOO.ITalkable">
-    <Position X="5.25" Y="0.5" Width="1.5" />
+    <Position X="5.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
       <FileName>Interfaces\ITalkable.cs</FileName>
