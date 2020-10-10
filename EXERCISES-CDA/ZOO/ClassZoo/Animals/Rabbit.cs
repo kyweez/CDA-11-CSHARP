@@ -34,11 +34,20 @@ namespace ZOO
 
 
         /****************************** METHODS ******************************/
+
+        /// <summary>
+        /// Redifining Eat method for the Rabbit. The method doesn't return anything and print something on the stdout
+        /// </summary>
+        /// <returns>void</returns>
         public override void Eat()
         {
             Console.WriteLine("The rabbit is eating !");
         }
 
+        /// <summary>
+        /// Redifining Move method for the Rabbit. The method returns a boolean and print something on the stdout
+        /// </summary>
+        /// <returns>bool</returns>
         public override bool Move()
         {
             Console.WriteLine("The rabbit is running !");

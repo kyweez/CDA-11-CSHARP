@@ -42,24 +42,43 @@ namespace ZOO
                 return isBornInZoo;
             }
 
-            set
+            private set
             {
                 isBornInZoo = value;
             }
         }
 
         /****************************** METHODS ******************************/
+        
+        /// <summary>
+        /// This abstract method has to be implemented in children classes
+        /// </summary>
+        /// <returns>bool</returns>
         public abstract bool Move();
 
+        /// <summary>
+        /// This abstract method has to be implemented in children classes
+        /// </summary>
+        /// <returns>bool</returns>
         public abstract void Eat();
 
+        /// <summary>
+        /// Interface implementation : Compare the local instance date of birth with the input object date of birth
+        /// </summary>
+        /// <param name="obj">object</param>
+        /// <returns>int</returns>
         public int CompareTo(object obj)
         {
-            if (!(obj is Animal animalToCompare))
+            if (!(obj is Animal _animalToCompare))
                 throw new ArgumentException("obj is not the same type as this instance", "obj");
-            return DateOfBirth.CompareTo(animalToCompare.DateOfBirth);
+            return DateOfBirth.CompareTo(_animalToCompare.DateOfBirth);
         }
 
+        /// <summary>
+        /// Interface implementation : Compare the local instance date of birth with the input object date of birth
+        /// </summary>
+        /// <param name="other">object</param>
+        /// <returns>int</returns>
         public int CompareTo(Animal other)
         {
             return DateOfBirth.CompareTo(other.DateOfBirth);

@@ -12,7 +12,7 @@ namespace ZOO
             /*##############################################*/
 
             /// TestAllClasses.All();
-
+            int 
             /// ScriptClass.Script();
         }
     }

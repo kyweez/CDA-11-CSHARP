@@ -1,5 +1,8 @@
 ﻿namespace ZOO
 {
+    /// <summary>
+    ///     Defines a generalized type-specific talking method that a class implements
+    /// </summary>
     public interface ITalkable
     {
         public void Talk();
