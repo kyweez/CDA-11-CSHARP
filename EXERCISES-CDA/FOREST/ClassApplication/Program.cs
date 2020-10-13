@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FOREST.ClassLibrary
 {
@@ -12,7 +8,7 @@ namespace FOREST.ClassLibrary
         {
             /***************************** Spring tree creation *****************************/
             Tree springTree = new Tree(15000);
-            springTree.AddLeaf(EnumColor.Green, EnumLeafShape.Oblong, 4);
+            springTree.AddLeaf(EnumColor.Green, EnumLeafShape.Oblong, 3);
             Console.WriteLine("\nPress any key to continue...");
             Console.WriteLine("____________________________\n");
             Console.ReadKey();
@@ -40,17 +36,23 @@ namespace FOREST.ClassLibrary
             Console.Clear();
 
             /******************************* Winter is coming *******************************/
-            Console.WriteLine("WINTER IS COMING");
-            for (int i = 0; i < springTree.Count; i++) //Count -> Propriete
-            {
-                Leaf f = springTree[i];
-                Console.WriteLine(f.ToString());
-            }
+            
+            // This exemple has no sense, the only goal was to work on class indexer
+            Console.WriteLine("WINTER IS COMING\n################\n");
+            for (int i = springTree.Count - 1; i >= 0; i--)
+                springTree.LeafFall(springTree[i]);
             Console.WriteLine("Press any key to continue...");
             Console.WriteLine("____________________________\n");
             Console.ReadKey();
             Console.Clear();
 
+            /**************************** Print Tree information ****************************/
+            Console.WriteLine("The tree is nude");
+            Console.WriteLine(springTree.ToString());
+            Console.WriteLine("Press any key to continue...");
+            Console.WriteLine("____________________________\n");
+            Console.ReadKey();
+            Console.Clear();
         }
     }
 }

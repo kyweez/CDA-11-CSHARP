@@ -10,11 +10,6 @@ namespace FOREST.ClassLibrary
         EnumLeafShape leafShape;
 
         /**************************** CONSTRUCTORS ***************************/
-        public Leaf(int _veinNumber, EnumLeafShape _leafShape) : this(_veinNumber, EnumColor.Green, _leafShape)
-        {
-
-        }
-
         public Leaf(int _veinNumber, EnumColor _leafColor, EnumLeafShape _leafShape)
         {
             veinNumber = _veinNumber;
@@ -23,39 +18,45 @@ namespace FOREST.ClassLibrary
         }
 
         /***************************** PROPERTIES ****************************/
-        public int NbNervures
-        {
-            get => veinNumber;
-        }
+        // NONE
 
         /****************************** METHODS ******************************/
-        public void Fall()
-        {
-            Console.WriteLine("I'm falling");
-        }
+        /// <summary>
+        /// This methods simulates the leaf fall by writting it on the stdout.
+        /// </summary>
+        /// <returns>void</returns>
+        public void Fall() => Console.WriteLine($"I'm falling, I was a :\n{ToString()}\n");
 
+        /// <summary>
+        /// This method will transform any leaf in an autumn leaf
+        /// It simulates the change by writting it on the stdout
+        /// </summary>
+        /// <param name="_randomColor">int</param>
+        /// <returns>void</returns>
         public void ChangeToAutumnColors(int _randomColor)
         {
-            // Ca ne marche pas car ce n'est pas la meme instance de random
-            // int randomColor = new Random().Next(1, 4);
-
             switch (_randomColor)
             {
                 case 1:
-                    Console.WriteLine("I'm changing from green to yellow");
+                    Console.WriteLine("I'm changing to yellow");
                     leafColor = EnumColor.Yellow;
                     break;
                 case 2:
-                    Console.WriteLine("I'm changing from green to orange");
+                    Console.WriteLine("I'm changing to orange");
                     leafColor = EnumColor.Orange;
                     break;
                 default:
-                    Console.WriteLine("I'm changing from green to red");
+                    Console.WriteLine("I'm changing to red");
                     leafColor = EnumColor.Red;
                     break;
             }
         }
 
+        /// <summary>
+        /// This method overrides the native ToString methods
+        /// The aim is having a readable display of the object fields
+        /// </summary>
+        /// <returns>string</returns>
         public override string ToString()
         {
             return
