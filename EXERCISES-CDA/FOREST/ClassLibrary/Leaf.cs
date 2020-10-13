@@ -26,7 +26,6 @@ namespace FOREST.ClassLibrary
         public int NbNervures
         {
             get => veinNumber;
-            //set => veinNumber = value; 
         }
 
         /****************************** METHODS ******************************/
@@ -35,21 +34,35 @@ namespace FOREST.ClassLibrary
             Console.WriteLine("I'm falling");
         }
 
-        public void PrendsTesCouleursDAutomne()
+        public void ChangeToAutumnColors(int _randomColor)
         {
-            if (this.leafColor.Equals(EnumColor.Yellow))
+            // Ca ne marche pas car ce n'est pas la meme instance de random
+            // int randomColor = new Random().Next(1, 4);
+
+            switch (_randomColor)
             {
-                this.leafColor = EnumColor.Red;
-            }
-            else
-            {
-                this.leafColor = EnumColor.Yellow;
+                case 1:
+                    Console.WriteLine("I'm changing from green to yellow");
+                    leafColor = EnumColor.Yellow;
+                    break;
+                case 2:
+                    Console.WriteLine("I'm changing from green to orange");
+                    leafColor = EnumColor.Orange;
+                    break;
+                default:
+                    Console.WriteLine("I'm changing from green to red");
+                    leafColor = EnumColor.Red;
+                    break;
             }
         }
 
         public override string ToString()
         {
-            return $"{base.ToString()}\nVein Number : {veinNumber}\nLeaf Color : {leafColor}\nLeaf Shape : {leafShape}";
+            return
+                $"Leaf Class  : {base.ToString()}\n" +
+                $"Vein Number : {veinNumber}\n" +
+                $"Leaf Color  : {leafColor}\n" +
+                $"Leaf Shape  : {leafShape}";
         }
     }
 }
