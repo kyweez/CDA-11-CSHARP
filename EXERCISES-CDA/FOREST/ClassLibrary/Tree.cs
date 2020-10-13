@@ -9,7 +9,7 @@ namespace FOREST.ClassLibrary
     {
 
         /***************************** ATTRIBUTES ****************************/
-        int heightInMm;
+        private int heightInMm;
         private List<Leaf> leafTab;
 
         /**************************** CONSTRUCTORS ***************************/
@@ -55,24 +55,6 @@ namespace FOREST.ClassLibrary
         }
 
         /// <summary>
-        /// This method overrides the parent ToString method
-        /// The aim is having a readable display of the object fields
-        /// </summary>
-        /// <returns>string</returns>
-        public override string ToString()
-        {
-            String info;
-
-            info = $"Tree Class  : {base.ToString()}\n" +
-                   $"Tree height : {HeightInMm} mm\n";
-
-            foreach (Leaf leafOccurence in leafTab)
-                info += $"\n{leafOccurence}\n";
-            
-            return info;
-        }
-
-        /// <summary>
         /// This method changes randomly the color of the green leafs
         /// </summary>
         /// <returns>void</returns>
@@ -95,6 +77,27 @@ namespace FOREST.ClassLibrary
             _leaf.Fall();
             Remove(_leaf);
         }
+
+        /************************* METHODS REDEFINING ************************/
+
+        /// <summary>
+        /// This method overrides the parent ToString method
+        /// The aim is having a readable display of the object fields
+        /// </summary>
+        /// <returns>string</returns>
+        public override string ToString()
+        {
+            String info;
+
+            info = $"Tree Class  : {base.ToString()}\n" +
+                   $"Tree height : {HeightInMm} mm\n";
+
+            foreach (Leaf leafOccurence in leafTab)
+                info += $"\n{leafOccurence}\n";
+            
+            return info;
+        }
+
 
         /// <summary>
         /// Get the element at the specified index
