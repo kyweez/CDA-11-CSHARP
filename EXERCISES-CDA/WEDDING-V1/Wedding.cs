@@ -7,6 +7,6 @@ namespace WEDDING_V1
 {
     public class Relationship
     {
-
+        private int dateMariage;
     }
 }
