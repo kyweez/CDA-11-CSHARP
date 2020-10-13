@@ -39,7 +39,7 @@ namespace FOREST.ClassLibrary
         /// <param name="_leafShape">EnumLeafShape</param>
         /// <param name="_leafNumber">int</param>
         /// <returns>void</returns>
-        public void AddLeaf(EnumColor _leafColor, EnumLeafShape _leafShape, int _leafNumber)
+        public void AddLeaf(EnumLeafColor _leafColor, EnumLeafShape _leafShape, int _leafNumber)
         {
             int i;
             Random randomNumber;

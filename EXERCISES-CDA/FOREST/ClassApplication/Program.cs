@@ -8,7 +8,7 @@ namespace FOREST.ClassLibrary
         {
             /***************************** Spring tree creation *****************************/
             Tree springTree = new Tree(15000);
-            springTree.AddLeaf(EnumColor.Green, EnumLeafShape.Oblong, 3);
+            springTree.AddLeaf(EnumLeafColor.Green, EnumLeafShape.Oblong, 6);
             Console.WriteLine("\nPress any key to continue...");
             Console.WriteLine("____________________________\n");
             Console.ReadKey();

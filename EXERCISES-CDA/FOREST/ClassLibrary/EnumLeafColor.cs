@@ -1,6 +1,6 @@
 ﻿namespace FOREST.ClassLibrary
 {
-    public enum EnumColor
+    public enum EnumLeafColor
     {
         Green,
         Yellow,

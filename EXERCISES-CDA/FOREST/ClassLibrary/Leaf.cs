@@ -6,11 +6,11 @@ namespace FOREST.ClassLibrary
     {
         /***************************** ATTRIBUTES ****************************/
         int veinNumber;
-        EnumColor leafColor;
+        EnumLeafColor leafColor;
         EnumLeafShape leafShape;
 
         /**************************** CONSTRUCTORS ***************************/
-        public Leaf(int _veinNumber, EnumColor _leafColor, EnumLeafShape _leafShape)
+        public Leaf(int _veinNumber, EnumLeafColor _leafColor, EnumLeafShape _leafShape)
         {
             veinNumber = _veinNumber;
             leafColor = _leafColor;
@@ -39,15 +39,15 @@ namespace FOREST.ClassLibrary
             {
                 case 1:
                     Console.WriteLine("I'm changing to yellow");
-                    leafColor = EnumColor.Yellow;
+                    leafColor = EnumLeafColor.Yellow;
                     break;
                 case 2:
                     Console.WriteLine("I'm changing to orange");
-                    leafColor = EnumColor.Orange;
+                    leafColor = EnumLeafColor.Orange;
                     break;
                 default:
                     Console.WriteLine("I'm changing to red");
-                    leafColor = EnumColor.Red;
+                    leafColor = EnumLeafColor.Red;
                     break;
             }
         }

@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassLibrary\EnumColor.cs" />
+    <Compile Include="ClassLibrary\EnumLeafColor.cs" />
     <Compile Include="ClassLibrary\EnumLeafShape.cs" />
     <Compile Include="ClassLibrary\Leaf.cs" />
     <Compile Include="ClassLibrary\Tree.cs" />
