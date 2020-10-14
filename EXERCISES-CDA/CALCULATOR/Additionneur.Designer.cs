@@ -211,7 +211,9 @@
             this.Controls.Add(this.buttonTwo);
             this.Controls.Add(this.buttonOne);
             this.Controls.Add(this.buttonZero);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Additionneur";
+            this.Load += new System.EventHandler(this.Additionneur_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

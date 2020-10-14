@@ -127,8 +127,8 @@
   <data name="&gt;&gt;buttonCalculate.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;buttonCalculate.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="buttonFive.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
   <data name="&gt;&gt;buttonOne.Parent" xml:space="preserve">
     <value>$this</value>
@@ -210,17 +210,17 @@
   <data name="&gt;&gt;buttonThree.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;buttonSeven.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;buttonNine.Name" xml:space="preserve">
     <value>buttonNine</value>
-  </data>
-  <data name="&gt;&gt;buttonOne.Name" xml:space="preserve">
-    <value>buttonOne</value>
   </data>
   <data name="&gt;&gt;textBoxResult.Name" xml:space="preserve">
     <value>textBoxResult</value>
   </data>
-  <data name="&gt;&gt;buttonNine.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;buttonEmpty.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="buttonFour.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
@@ -267,9 +267,6 @@
   <data name="buttonEmpty.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="&gt;&gt;buttonEmpty.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="buttonTwo.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
@@ -294,9 +291,6 @@
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
-  <data name="buttonEmpty.Text" xml:space="preserve">
-    <value>Vider</value>
-  </data>
   <data name="buttonCalculate.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
@@ -308,6 +302,9 @@
   </data>
   <data name="&gt;&gt;textBoxResult.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonEmpty.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 33</value>
   </data>
   <data name="buttonOne.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 45</value>
@@ -342,6 +339,9 @@
   <data name="buttonZero.Text" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="buttonFour.Text" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="buttonZero.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
@@ -363,8 +363,8 @@
   <data name="&gt;&gt;buttonEight.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="buttonFour.Text" xml:space="preserve">
-    <value>4</value>
+  <data name="buttonEmpty.Text" xml:space="preserve">
+    <value>Vider</value>
   </data>
   <data name="buttonSix.Text" xml:space="preserve">
     <value>6</value>
@@ -378,8 +378,8 @@
   <data name="buttonEight.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 43</value>
   </data>
-  <data name="&gt;&gt;buttonSeven.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;buttonNine.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;buttonZero.ZOrder" xml:space="preserve">
     <value>12</value>
@@ -429,8 +429,8 @@
   <data name="&gt;&gt;buttonThree.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="buttonFive.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="&gt;&gt;buttonCalculate.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;buttonThree.Name" xml:space="preserve">
     <value>buttonThree</value>
@@ -441,8 +441,8 @@
   <data name="textBoxResult.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="buttonEmpty.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 33</value>
+  <data name="&gt;&gt;buttonOne.Name" xml:space="preserve">
+    <value>buttonOne</value>
   </data>
   <data name="buttonSeven.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>

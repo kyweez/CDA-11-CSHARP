@@ -12,7 +12,7 @@ namespace CALCULATOR
 {
     public partial class Additionneur : Form
     {
-        private Int32 result = 0;
+        private static Int32 result = 0;
 
         public Additionneur()
         {
@@ -29,11 +29,18 @@ namespace CALCULATOR
         {
             textBoxResult.Clear();
             result = 0;
+            Additionneur a = new Additionneur();
+            a.ShowDialog();
         }
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
             textBoxResult.Text += $" = {result}+";
+        }
+
+        private void Additionneur_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
