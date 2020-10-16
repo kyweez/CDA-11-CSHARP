@@ -1,4 +1,4 @@
-﻿namespace ZOO
+﻿namespace ZOO.InterfaceLibrary
 {
     /// <summary>
     ///     Defines a generalized type-specific moving method that a or class implements

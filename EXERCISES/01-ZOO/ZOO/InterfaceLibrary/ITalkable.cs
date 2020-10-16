@@ -1,4 +1,4 @@
-﻿namespace ZOO
+﻿namespace ZOO.InterfaceLibrary
 {
     /// <summary>
     ///     Defines a generalized type-specific talking method that a class implements

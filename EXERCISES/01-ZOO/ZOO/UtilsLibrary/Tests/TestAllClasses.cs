@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ZOO.ClassTest
+namespace ZOO.UtilsLibrary.Tests
 {
     class TestAllClasses
     {

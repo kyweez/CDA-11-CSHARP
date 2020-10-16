@@ -1,6 +1,7 @@
 ﻿using System;
+using ZOO.ClassLibrary.Employees;
 
-namespace ZOO.ClassTest
+namespace ZOO.UtilsLibrary.Tests
 {
     class TestGuard
     {

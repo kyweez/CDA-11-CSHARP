@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using ZOO.ClassLibrary.Animals;
+using ZOO.ClassLibrary.Employees;
 
-namespace ZOO.Utils.Script
+namespace ZOO.UtilsLibrary.Script
 {
     class ScriptClass
     {

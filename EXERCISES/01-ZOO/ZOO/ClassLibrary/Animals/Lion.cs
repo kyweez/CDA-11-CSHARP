@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ZOO
+namespace ZOO.ClassLibrary.Animals
 {
     public class Lion : Animal
     {

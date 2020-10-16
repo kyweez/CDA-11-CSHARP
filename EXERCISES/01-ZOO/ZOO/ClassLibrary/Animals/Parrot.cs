@@ -1,6 +1,7 @@
 ﻿using System;
+using ZOO.InterfaceLibrary;
 
-namespace ZOO
+namespace ZOO.ClassLibrary.Animals
 {
     public class Parrot : Animal, ITalkable
     {
