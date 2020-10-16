@@ -10,9 +10,9 @@ namespace TOOLS.ClassLibrary
 {
     public static class CheckData
     {
-        private const string regexName = @"^[[:alpha:]]+([\-\' ][[:alpha:]]+)*$";
+        private const string regexName = @"^[a-zA-Z]+([\-\' ][a-zA-Z]+)*$";
         private const string regexDate = @"^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$";
-        private const string regexZipCode = @"/^(?:[0-8]\d|9[0-8])\d{3}$/";
+        private const string regexZipCode = @"^(?:[0-8][0-9]|9[0-8])[0-9]{3}$";
 
         /// <summary>
         /// Checks if the input name match to the name regular expression
@@ -51,7 +51,7 @@ namespace TOOLS.ClassLibrary
         /// </summary>
         /// <param name="_valueToCheck">string</param>
         /// <returns>bool</returns>
-        public static bool CheckZipCode(string _valueToCheck)
+        public static bool IsValidZipCode(string _valueToCheck)
         {
             return Regex.IsMatch(_valueToCheck, regexZipCode);
         }

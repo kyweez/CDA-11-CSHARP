@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BILL.ClassLibrary
 {
-    class Bill
+    public class Bill
     {
         private string name;
         private DateTime date;
@@ -20,6 +20,15 @@ namespace BILL.ClassLibrary
             date = DateTime.Parse(_date);
             amount = double.Parse(_amount);
             zipCode = _zipcode;
+        }
+
+        public override string ToString()
+        {
+            return 
+                $"Name : {name}\n" +
+                $"Date : {date.ToString("dd/MM/yyyy")}\n" +
+                $"Amount : {Math.Round(amount, 2)}\n" +
+                $"Zip Code : {zipCode}";
         }
     }
 }

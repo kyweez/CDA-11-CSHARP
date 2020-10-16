@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tbName = new System.Windows.Forms.TextBox();
             this.tbDate = new System.Windows.Forms.TextBox();
             this.tbAmount = new System.Windows.Forms.TextBox();
@@ -39,6 +40,8 @@
             this.labelDateTip = new System.Windows.Forms.Label();
             this.labelAmount = new System.Windows.Forms.Label();
             this.labelZipCode = new System.Windows.Forms.Label();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // tbName
@@ -83,6 +86,7 @@
             this.btnValidate.TabIndex = 4;
             this.btnValidate.Text = "OK";
             this.btnValidate.UseVisualStyleBackColor = true;
+            this.btnValidate.Click += new System.EventHandler(this.BtnValidate_Click);
             // 
             // btnDelete
             // 
@@ -139,11 +143,16 @@
             this.labelZipCode.TabIndex = 10;
             this.labelZipCode.Text = "Zip Code";
             // 
+            // errorProvider
+            // 
+            this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider.ContainerControl = this;
+            // 
             // InputValidation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(383, 263);
+            this.ClientSize = new System.Drawing.Size(393, 263);
             this.Controls.Add(this.labelZipCode);
             this.Controls.Add(this.labelAmount);
             this.Controls.Add(this.labelDateTip);
@@ -159,6 +168,8 @@
             this.Name = "InputValidation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Controls";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.InputValidation_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,6 +188,6 @@
         private System.Windows.Forms.Label labelDateTip;
         private System.Windows.Forms.Label labelAmount;
         private System.Windows.Forms.Label labelZipCode;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
-
