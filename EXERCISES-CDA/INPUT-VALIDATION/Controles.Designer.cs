@@ -33,11 +33,11 @@
             this.labelDate = new System.Windows.Forms.Label();
             this.labelAmount = new System.Windows.Forms.Label();
             this.labelZipCode = new System.Windows.Forms.Label();
-            this.textName = new System.Windows.Forms.TextBox();
-            this.textZipCode = new System.Windows.Forms.TextBox();
-            this.textAmount = new System.Windows.Forms.TextBox();
-            this.textDate = new System.Windows.Forms.TextBox();
             this.labelDateTip = new System.Windows.Forms.Label();
+            this.textName = new System.Windows.Forms.TextBox();
+            this.textDate = new System.Windows.Forms.TextBox();
+            this.textAmount = new System.Windows.Forms.TextBox();
+            this.textZipCode = new System.Windows.Forms.TextBox();
             this.buttonValidate = new System.Windows.Forms.Button();
             this.buttonReset = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -62,30 +62,34 @@
             resources.ApplyResources(this.labelZipCode, "labelZipCode");
             this.labelZipCode.Name = "labelZipCode";
             // 
+            // labelDateTip
+            // 
+            resources.ApplyResources(this.labelDateTip, "labelDateTip");
+            this.labelDateTip.Name = "labelDateTip";
+            // 
             // textName
             // 
             resources.ApplyResources(this.textName, "textName");
             this.textName.Name = "textName";
-            // 
-            // textZipCode
-            // 
-            resources.ApplyResources(this.textZipCode, "textZipCode");
-            this.textZipCode.Name = "textZipCode";
-            // 
-            // textAmount
-            // 
-            resources.ApplyResources(this.textAmount, "textAmount");
-            this.textAmount.Name = "textAmount";
+            this.textName.TextChanged += new System.EventHandler(this.textBox_Changed);
             // 
             // textDate
             // 
             resources.ApplyResources(this.textDate, "textDate");
             this.textDate.Name = "textDate";
+            this.textDate.TextChanged += new System.EventHandler(this.textBox_Changed);
             // 
-            // labelDateTip
+            // textAmount
             // 
-            resources.ApplyResources(this.labelDateTip, "labelDateTip");
-            this.labelDateTip.Name = "labelDateTip";
+            resources.ApplyResources(this.textAmount, "textAmount");
+            this.textAmount.Name = "textAmount";
+            this.textAmount.TextChanged += new System.EventHandler(this.textBox_Changed);
+            // 
+            // textZipCode
+            // 
+            resources.ApplyResources(this.textZipCode, "textZipCode");
+            this.textZipCode.Name = "textZipCode";
+            this.textZipCode.TextChanged += new System.EventHandler(this.textBox_Changed);
             // 
             // buttonValidate
             // 
@@ -120,6 +124,7 @@
             this.Name = "Controles";
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

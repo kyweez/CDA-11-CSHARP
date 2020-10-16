@@ -8,17 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using INPUT_VALIDATION.UtilsLibrary;
 
 namespace INPUT_VALIDATION
 {
     public partial class Controles : Form
     {
-        public const string nameCheck = "^[a-zA-Z]{1,30}$";
-        public string name;
-        public DateTime date;
-        public float amount;
-        public string zipcode;
-
         public Controles()
         {
             InitializeComponent();
@@ -51,7 +46,26 @@ namespace INPUT_VALIDATION
 
         private void buttonReset_Click(object sender, EventArgs e)
         {
+            textName.Clear();
+            textDate.Clear();
+            textAmount.Clear();
+            textZipCode.Clear();
+        }
 
+        private void textBox_Changed(object sender, EventArgs e)
+        {
+            List<TextBox> allFields = new List<TextBox>
+            {
+                textName,
+                textDate,
+                textAmount,
+                textZipCode
+            };
+
+            if (!SecurityCheck.FieldsAreFilled(allFields))
+                buttonValidate.Enabled = false;
+            else
+                buttonValidate.Enabled = true;
         }
 
     }

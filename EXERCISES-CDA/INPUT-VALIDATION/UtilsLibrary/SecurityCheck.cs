@@ -1,4 +1,14 @@
 ﻿using System.Text.RegularExpressions;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using INPUT_VALIDATION;
 
 namespace INPUT_VALIDATION.UtilsLibrary
 {
@@ -49,6 +59,16 @@ namespace INPUT_VALIDATION.UtilsLibrary
         public static bool CheckZipCode(string _valueToCheck)
         {
             return Regex.IsMatch(_valueToCheck, regexZipCode);
+        }
+
+        public static bool FieldsAreFilled(List<TextBox> _allFields)
+        {
+            foreach (TextBox field in _allFields)
+            {
+                if (field.Text.Length == 0)
+                    return false;
+            }
+            return true;
         }
     }
 }
