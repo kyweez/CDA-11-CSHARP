@@ -6,7 +6,6 @@ namespace WEDDING_V1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
         }
     }
 }
