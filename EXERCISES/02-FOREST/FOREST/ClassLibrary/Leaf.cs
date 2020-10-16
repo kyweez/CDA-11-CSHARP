@@ -22,14 +22,14 @@ namespace FOREST.ClassLibrary
 
         /****************************** METHODS ******************************/
         /// <summary>
-        /// This methods simulates the leaf fall by writting it on the stdout.
+        ///     This methods simulates the leaf fall by writting it on the stdout.
         /// </summary>
         /// <returns>void</returns>
         public void Fall() => Console.WriteLine($"I'm falling, I was a :\n{ToString()}\n");
 
         /// <summary>
-        /// This method will transform any leaf in an autumn leaf
-        /// It simulates the change by writting it on the stdout
+        ///     This method will transform any leaf in an autumn leaf
+        ///     It simulates the change by writting it on the stdout
         /// </summary>
         /// <param name="_randomColor">int</param>
         /// <returns>void</returns>
@@ -53,8 +53,8 @@ namespace FOREST.ClassLibrary
         }
 
         /// <summary>
-        /// This method overrides the native ToString methods
-        /// The aim is having a readable display of the object fields
+        ///     This method overrides the native ToString methods
+        ///     The aim is having a readable display of the object fields
         /// </summary>
         /// <returns>string</returns>
         public override string ToString()
