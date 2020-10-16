@@ -6,4 +6,8 @@
     <RootNamespace>WEDDING_V2</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="LibraryClass\" />
+  </ItemGroup>
+
 </Project>
