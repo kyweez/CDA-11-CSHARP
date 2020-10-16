@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9AC87CA0-781A-437E-9188-B5051B75A21F}</ProjectGuid>
+    <ProjectGuid>{729AD72D-6172-405D-B262-F6C31DF26C34}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>TOOLS</RootNamespace>
     <AssemblyName>TOOLS</AssemblyName>
@@ -35,7 +35,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,8 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassLibrary\CheckData.cs" />
-    <Compile Include="ClassLibrary\Error.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
