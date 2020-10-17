@@ -21,6 +21,12 @@ namespace INPUT_VALIDATION_V1
             InitializeComponent();
         }
 
+        /// <summary>
+        ///     This method is triggered when a textbox change
+        ///     Checks if all textboxes are filled. If so, enable the validate button
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="e">EventArgs</param>
         private void TextBox_TextChanged(object sender, EventArgs e)
         {
             List<TextBox> allFields = new List<TextBox>
@@ -37,6 +43,12 @@ namespace INPUT_VALIDATION_V1
                 btnValidate.Enabled = true;
         }
 
+        /// <summary>
+        ///     This method is triggered when the "delete" button is clicked
+        ///     Clear all the textboxes and the errorProvider
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="e">EventArgs</param>
         private void BtnDelete_Click(object sender, EventArgs e)
         {
             tbName.Clear();
@@ -46,6 +58,12 @@ namespace INPUT_VALIDATION_V1
             errorProvider.Clear();
         }
 
+        /// <summary>
+        ///     This method is triggered when the "validate" button is clicked
+        ///     Create the object with the provided data and display it in a new window
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="e">EventArgs</param>
         private void BtnValidate_Click(object sender, EventArgs e)
         {
             bool inputIsInvalid;
@@ -75,6 +93,12 @@ namespace INPUT_VALIDATION_V1
             }
         }
 
+        /// <summary>
+        ///     This method is triggered when the program is closed
+        ///     Display a window to validate the exit
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="e">EventArgs</param>
         private void InputValidation_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show
