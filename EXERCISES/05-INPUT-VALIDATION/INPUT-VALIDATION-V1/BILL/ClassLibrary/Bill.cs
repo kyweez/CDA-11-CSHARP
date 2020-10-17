@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using TOOLS.ClassLibrary;
 
 namespace BILL.ClassLibrary
 {
@@ -15,16 +12,38 @@ namespace BILL.ClassLibrary
 
         public Bill(string _name, string _date, string _amount, string _zipcode)
         {
-            // TODO: Implementer Securite
-            name = _name;
-            date = DateTime.Parse(_date);
-            amount = double.Parse(_amount);
-            zipCode = _zipcode;
+            // NAME
+            if (_name == null || !CheckData.IsValidName(_name))
+                name = "";
+            else
+                name = _name;
+
+            // DATE
+            if (_date == null || !CheckData.IsValidDate(_date))
+                date = DateTime.Now;
+            else
+                date = DateTime.Parse(_date);
+
+            // AMOUNT
+            if (_amount == null || !CheckData.IsValidAmount(_amount))
+                amount = 0;
+            else
+                amount = double.Parse(_amount);
+            
+            // ZIPCODE
+            if (_zipcode == null || !CheckData.IsValidZipCode(_zipcode))
+                zipCode = "00000";
+            else
+                zipCode = _zipcode;
         }
 
+        /// <summary>
+        ///     This methods overrides the original Tostring method
+        ///     Display the current object state
+        /// </summary>
         public override string ToString()
         {
-            return 
+            return
                 $"Name : {name}\n" +
                 $"Date : {date.ToString("dd/MM/yyyy")}\n" +
                 $"Amount : {Math.Round(amount, 2)}\n" +
