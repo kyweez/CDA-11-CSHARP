@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TOOLS.ClassLibrary
@@ -15,7 +12,7 @@ namespace TOOLS.ClassLibrary
         private const string regexZipCode = @"^(?:[0-8][0-9]|9[0-8])[0-9]{3}$";
 
         /// <summary>
-        /// Checks if the input name match to the name regular expression
+        ///     Checks if the input name match to the name regular expression
         /// </summary>
         /// <param name="_valueToCheck">string</param>
         /// <returns>bool</returns>
@@ -25,7 +22,7 @@ namespace TOOLS.ClassLibrary
         }
 
         /// <summary>
-        /// Checks if the input date is a valid date
+        ///     Checks if the input date is a valid date
         /// </summary>
         /// <param name="_valueToCheck">string</param>
         /// <returns>bool</returns>
@@ -37,7 +34,7 @@ namespace TOOLS.ClassLibrary
         }
 
         /// <summary>
-        /// Checks if the input amount is a valid double number
+        ///     Checks if the input amount is a valid double number
         /// </summary>
         /// <param name="_valueToCheck">string</param>
         /// <returns>bool</returns>
@@ -47,7 +44,7 @@ namespace TOOLS.ClassLibrary
         }
 
         /// <summary>
-        /// Checks if the input zipcode match to the zipcode regular expression
+        ///     Checks if the input zipcode match to the zipcode regular expression
         /// </summary>
         /// <param name="_valueToCheck">string</param>
         /// <returns>bool</returns>
@@ -56,6 +53,11 @@ namespace TOOLS.ClassLibrary
             return Regex.IsMatch(_valueToCheck, regexZipCode);
         }
 
+        /// <summary>
+        ///     Checks if all fields are filled
+        /// </summary>
+        /// <param name="_allFields"></param>
+        /// <returns>bool</returns>
         public static bool FieldsAreFilled(List<TextBox> _allFields)
         {
             foreach (TextBox field in _allFields)

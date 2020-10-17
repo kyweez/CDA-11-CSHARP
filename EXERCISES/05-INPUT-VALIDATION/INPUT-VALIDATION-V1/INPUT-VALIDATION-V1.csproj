@@ -80,13 +80,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\TOOLS\TOOLS.csproj">
-      <Project>{9ac87ca0-781a-437e-9188-b5051b75a21f}</Project>
-      <Name>TOOLS</Name>
-    </ProjectReference>
     <ProjectReference Include="BILL\BILL.csproj">
       <Project>{18be2d85-6d35-475f-af0b-b885c1fa7d8c}</Project>
       <Name>BILL</Name>
+    </ProjectReference>
+    <ProjectReference Include="TOOLS\TOOLS.csproj">
+      <Project>{729ad72d-6172-405d-b262-f6c31df26c34}</Project>
+      <Name>TOOLS</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
