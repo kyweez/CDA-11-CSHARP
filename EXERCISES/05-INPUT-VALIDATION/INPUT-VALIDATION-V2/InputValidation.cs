@@ -22,28 +22,6 @@ namespace INPUT_VALIDATION_V2
         }
 
         /// <summary>
-        ///     This method is triggered when a textbox change
-        ///     Checks if all textboxes are filled. If so, enable the validate button
-        /// </summary>
-        /// <param name="sender">object</param>
-        /// <param name="e">EventArgs</param>
-        private void TextBox_TextChanged(object sender, EventArgs e)
-        {
-            List<TextBox> allFields = new List<TextBox>
-            {
-                tbName,
-                tbDate,
-                tbAmount,
-                tbZipCode
-            };
-
-            if (!CheckData.FieldsAreFilled(allFields))
-                btnValidate.Enabled = false;
-            else
-                btnValidate.Enabled = true;
-        }
-
-        /// <summary>
         ///     This method is triggered when the "delete" button is clicked
         ///     Clear all the textboxes and the errorProvider
         /// </summary>
@@ -68,6 +46,13 @@ namespace INPUT_VALIDATION_V2
         {
             bool inputIsInvalid;
             string error;
+            List<TextBox> allFields = new List<TextBox>
+            {
+                tbName,
+                tbDate,
+                tbAmount,
+                tbZipCode
+            };
 
             inputIsInvalid = false;
             error = "Invalid input";
@@ -80,6 +65,8 @@ namespace INPUT_VALIDATION_V2
             if (ErrorCheck.HasDateError(tbDate, error, errorProvider))
                 inputIsInvalid = true;
             if (ErrorCheck.HasNameError(tbName, error, errorProvider))
+                inputIsInvalid = true;
+            if (!CheckData.FieldsAreFilled(allFields, errorProvider))
                 inputIsInvalid = true;
 
             if (inputIsInvalid)

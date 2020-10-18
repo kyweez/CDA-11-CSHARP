@@ -51,7 +51,6 @@
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(261, 20);
             this.tbName.TabIndex = 0;
-            this.tbName.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // tbDate
             // 
@@ -59,7 +58,6 @@
             this.tbDate.Name = "tbDate";
             this.tbDate.Size = new System.Drawing.Size(154, 20);
             this.tbDate.TabIndex = 1;
-            this.tbDate.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // tbAmount
             // 
@@ -67,7 +65,6 @@
             this.tbAmount.Name = "tbAmount";
             this.tbAmount.Size = new System.Drawing.Size(154, 20);
             this.tbAmount.TabIndex = 2;
-            this.tbAmount.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // tbZipCode
             // 
@@ -75,7 +72,6 @@
             this.tbZipCode.Name = "tbZipCode";
             this.tbZipCode.Size = new System.Drawing.Size(71, 20);
             this.tbZipCode.TabIndex = 3;
-            this.tbZipCode.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // btnValidate
             // 
