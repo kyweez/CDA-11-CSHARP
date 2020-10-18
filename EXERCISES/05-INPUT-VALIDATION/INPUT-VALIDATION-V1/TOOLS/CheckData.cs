@@ -44,13 +44,34 @@ namespace TOOLS.ClassLibrary
         }
 
         /// <summary>
-        ///     Checks if the input zipcode match to the zipcode regular expression
+        ///     Checks if the input zipcode match to the zipcode regular expression (v1)
         /// </summary>
         /// <param name="_valueToCheck">string</param>
         /// <returns>bool</returns>
         public static bool IsValidZipCode(string _valueToCheck)
         {
             return Regex.IsMatch(_valueToCheck, regexZipCode);
+        }
+
+        /// <summary>
+        ///     Checks if all fields are filled and set the errorProvider (v2)
+        /// </summary>
+        /// <param name="_allFields"></param>
+        /// <returns>bool</returns>
+        public static bool FieldsAreFilled(List<TextBox> _allFields, ErrorProvider _errorProvider)
+        {
+            bool result;
+
+            result = true;
+            foreach (TextBox field in _allFields)
+            {
+                if (field.Text.Length == 0)
+                {
+                    result = false;
+                    _errorProvider.SetError(field, "This field is empty");
+                }
+            }
+            return result;
         }
 
         /// <summary>
