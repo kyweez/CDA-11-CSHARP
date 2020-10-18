@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="InputValidation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="InputValidation.Designer.cs">
+      <DependentUpon>InputValidation.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,6 +75,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\INPUT-VALIDATION-V1\BILL\BILL.csproj">
+      <Project>{18be2d85-6d35-475f-af0b-b885c1fa7d8c}</Project>
+      <Name>BILL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\INPUT-VALIDATION-V1\TOOLS\TOOLS.csproj">
+      <Project>{729ad72d-6172-405d-b262-f6c31df26c34}</Project>
+      <Name>TOOLS</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
