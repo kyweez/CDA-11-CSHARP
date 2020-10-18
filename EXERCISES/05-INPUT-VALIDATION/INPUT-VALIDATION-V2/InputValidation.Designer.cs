@@ -79,7 +79,6 @@
             // 
             // btnValidate
             // 
-            this.btnValidate.Enabled = false;
             this.btnValidate.Location = new System.Drawing.Point(279, 176);
             this.btnValidate.Name = "btnValidate";
             this.btnValidate.Size = new System.Drawing.Size(75, 23);
