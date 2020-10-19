@@ -64,6 +64,7 @@
             this.gbxChoice.Controls.Add(this.cbCase);
             this.gbxChoice.Controls.Add(this.cbFontColor);
             this.gbxChoice.Controls.Add(this.cbBackgroundColor);
+            this.gbxChoice.Enabled = false;
             this.gbxChoice.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.gbxChoice.Location = new System.Drawing.Point(308, 13);
             this.gbxChoice.Name = "gbxChoice";
@@ -110,6 +111,7 @@
             this.gbxBackgroundColor.Controls.Add(this.radioButtonBgBlue);
             this.gbxBackgroundColor.Controls.Add(this.radioButtonBgGreen);
             this.gbxBackgroundColor.Controls.Add(this.radioButtonBgRed);
+            this.gbxBackgroundColor.Enabled = false;
             this.gbxBackgroundColor.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.gbxBackgroundColor.Location = new System.Drawing.Point(30, 127);
             this.gbxBackgroundColor.Name = "gbxBackgroundColor";
@@ -117,6 +119,7 @@
             this.gbxBackgroundColor.TabIndex = 2;
             this.gbxBackgroundColor.TabStop = false;
             this.gbxBackgroundColor.Text = "Background";
+            this.gbxBackgroundColor.Visible = false;
             // 
             // radioButtonBgRed
             // 
@@ -159,6 +162,7 @@
             this.gbxFontColor.Controls.Add(this.radioButtonFontColorBlack);
             this.gbxFontColor.Controls.Add(this.radioButtonFontColorWhite);
             this.gbxFontColor.Controls.Add(this.radioButtonFontColorRed);
+            this.gbxFontColor.Enabled = false;
             this.gbxFontColor.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.gbxFontColor.Location = new System.Drawing.Point(130, 127);
             this.gbxFontColor.Name = "gbxFontColor";
@@ -166,6 +170,7 @@
             this.gbxFontColor.TabIndex = 3;
             this.gbxFontColor.TabStop = false;
             this.gbxFontColor.Text = "Font";
+            this.gbxFontColor.Visible = false;
             // 
             // radioButtonFontColorRed
             // 
@@ -207,6 +212,7 @@
             // 
             this.gbxCase.Controls.Add(this.radioButtonUpperCase);
             this.gbxCase.Controls.Add(this.radioButtonLowerCase);
+            this.gbxCase.Enabled = false;
             this.gbxCase.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.gbxCase.Location = new System.Drawing.Point(230, 152);
             this.gbxCase.Name = "gbxCase";
@@ -214,6 +220,7 @@
             this.gbxCase.TabIndex = 4;
             this.gbxCase.TabStop = false;
             this.gbxCase.Text = "Case";
+            this.gbxCase.Visible = false;
             // 
             // radioButtonLowerCase
             // 
@@ -251,13 +258,15 @@
             // labOutput
             // 
             this.labOutput.AutoSize = true;
-            this.labOutput.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.labOutput.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labOutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labOutput.Location = new System.Drawing.Point(30, 85);
             this.labOutput.MaximumSize = new System.Drawing.Size(255, 20);
             this.labOutput.MinimumSize = new System.Drawing.Size(255, 20);
             this.labOutput.Name = "labOutput";
             this.labOutput.Size = new System.Drawing.Size(255, 20);
             this.labOutput.TabIndex = 6;
+            this.labOutput.Visible = false;
             // 
             // CheckBoxExo
             // 
