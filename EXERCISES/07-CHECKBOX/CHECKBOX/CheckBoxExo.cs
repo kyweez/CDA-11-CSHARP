@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UTILS;
 
 namespace CHECKBOX
 {
@@ -17,8 +18,27 @@ namespace CHECKBOX
             InitializeComponent();
         }
 
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        private void TextBox_TextChanged(object sender, EventArgs e)
         {
+            if (TextBoxControls.TextBoxIsEmpty(tbInput))
+                gbxChoice.Enabled = false;
+            else
+                gbxChoice.Enabled = true;
+        }
+
+        private void CheckBox_Click(object sender, EventArgs e)
+        {
+            CheckBox currentCheckBox = (CheckBox)sender;
+            if (!currentCheckBox.Checked)
+                currentCheckBox.Checked = true;
+            else
+                currentCheckBox.Checked = false;
+        }
+
+        private void CheckBox_CheckStateChanged(object sender, EventArgs e)
+        {
+            CheckBox currentCheckBox = (CheckBox)sender;
+
 
         }
     }

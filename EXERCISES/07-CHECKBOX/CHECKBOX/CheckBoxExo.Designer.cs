@@ -58,6 +58,7 @@
             this.tbInput.Name = "tbInput";
             this.tbInput.Size = new System.Drawing.Size(255, 20);
             this.tbInput.TabIndex = 0;
+            this.tbInput.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // gbxChoice
             // 
@@ -76,6 +77,8 @@
             // cbBackgroundColor
             // 
             this.cbBackgroundColor.AutoSize = true;
+            this.cbBackgroundColor.Checked = true;
+            this.cbBackgroundColor.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbBackgroundColor.ForeColor = System.Drawing.SystemColors.ControlText;
             this.cbBackgroundColor.Location = new System.Drawing.Point(15, 21);
             this.cbBackgroundColor.Name = "cbBackgroundColor";
