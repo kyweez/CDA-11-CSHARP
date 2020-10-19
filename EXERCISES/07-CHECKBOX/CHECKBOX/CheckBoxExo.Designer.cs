@@ -193,6 +193,7 @@
             this.radioButtonFontColorBlack.Tag = "Black";
             this.radioButtonFontColorBlack.Text = "Black";
             this.radioButtonFontColorBlack.UseVisualStyleBackColor = true;
+            this.radioButtonFontColorBlack.CheckedChanged += new System.EventHandler(this.RadioButtonFontColor_CheckedChanged);
             // 
             // radioButtonFontColorWhite
             // 
@@ -206,6 +207,7 @@
             this.radioButtonFontColorWhite.Tag = "White";
             this.radioButtonFontColorWhite.Text = "White";
             this.radioButtonFontColorWhite.UseVisualStyleBackColor = true;
+            this.radioButtonFontColorWhite.CheckedChanged += new System.EventHandler(this.RadioButtonFontColor_CheckedChanged);
             // 
             // radioButtonFontColorRed
             // 
@@ -219,6 +221,7 @@
             this.radioButtonFontColorRed.Tag = "Red";
             this.radioButtonFontColorRed.Text = "Red";
             this.radioButtonFontColorRed.UseVisualStyleBackColor = true;
+            this.radioButtonFontColorRed.CheckedChanged += new System.EventHandler(this.RadioButtonFontColor_CheckedChanged);
             // 
             // gbxCase
             // 
@@ -244,6 +247,7 @@
             this.radioButtonUpperCase.TabStop = true;
             this.radioButtonUpperCase.Text = "Upper case";
             this.radioButtonUpperCase.UseVisualStyleBackColor = true;
+            this.radioButtonUpperCase.CheckedChanged += new System.EventHandler(this.RadioButtonCase_CheckedChanged);
             // 
             // radioButtonLowerCase
             // 
@@ -256,6 +260,7 @@
             this.radioButtonLowerCase.TabStop = true;
             this.radioButtonLowerCase.Text = "Lower case";
             this.radioButtonLowerCase.UseVisualStyleBackColor = true;
+            this.radioButtonLowerCase.CheckedChanged += new System.EventHandler(this.RadioButtonCase_CheckedChanged);
             // 
             // labInput
             // 

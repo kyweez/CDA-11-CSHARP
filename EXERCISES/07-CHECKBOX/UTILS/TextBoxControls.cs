@@ -7,6 +7,9 @@ using System.Windows.Forms;
 
 namespace UTILS
 {
+    /// <summary>
+    ///     Checks if the given TextBox is empty
+    /// </summary>
     public static class TextBoxControls
     {
         public static bool TextBoxIsEmpty(TextBox _textBox)
