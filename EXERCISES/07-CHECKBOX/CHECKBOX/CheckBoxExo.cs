@@ -18,15 +18,28 @@ namespace CHECKBOX
             InitializeComponent();
         }
 
+        /// <summary>
+        ///     This is triggered when the textBox changes
+        ///     If it's empty, disable all groupBox
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="e">EventArgs</param>
         private void TextBox_TextChanged(object sender, EventArgs e)
         {
+            labOutput.Text = tbInput.Text;
             if (TextBoxControls.TextBoxIsEmpty(tbInput))
+            {
+                labOutput.Visible = false;
                 gbxChoice.Enabled = false;
+            }
             else
+            {
+                labOutput.Visible = true;
                 gbxChoice.Enabled = true;
+            }
         }
 
-        private void CheckBox_CheckStateChanged(object sender, EventArgs e)
+        private void CheckBox_CheckChanged(object sender, EventArgs e)
         {
             CheckBox currentCheckBox = (CheckBox)sender;
 
@@ -48,6 +61,26 @@ namespace CHECKBOX
                 _groupBox.Visible = false;
         }
 
+        private void GroupBox_EnabledChanged(object sender, EventArgs e)
+        {
+            List<GroupBox> radioButtonGroupBoxes = new List<GroupBox>
+            {
+                gbxBackgroundColor,
+                gbxFontColor,
+                gbxCase
+            };
 
+            if (!gbxChoice.Visible)
+            {
+                foreach (GroupBox groupBox in radioButtonGroupBoxes)
+                    groupBox.Visible = true;
+            }
+        }
+
+        private void RadioButtonBackGround_CheckedChanged(object sender, EventArgs e)
+        {
+
+            labOutput.BackColor = Color.Red;
+        }
     }
 }

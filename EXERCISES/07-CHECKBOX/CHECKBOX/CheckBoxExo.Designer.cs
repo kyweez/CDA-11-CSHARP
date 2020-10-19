@@ -30,20 +30,20 @@
         {
             this.tbInput = new System.Windows.Forms.TextBox();
             this.gbxChoice = new System.Windows.Forms.GroupBox();
-            this.cbBackgroundColor = new System.Windows.Forms.CheckBox();
-            this.cbFontColor = new System.Windows.Forms.CheckBox();
             this.cbCase = new System.Windows.Forms.CheckBox();
+            this.cbFontColor = new System.Windows.Forms.CheckBox();
+            this.cbBackgroundColor = new System.Windows.Forms.CheckBox();
             this.gbxBackgroundColor = new System.Windows.Forms.GroupBox();
-            this.radioButtonBgRed = new System.Windows.Forms.RadioButton();
-            this.radioButtonBgGreen = new System.Windows.Forms.RadioButton();
             this.radioButtonBgBlue = new System.Windows.Forms.RadioButton();
+            this.radioButtonBgGreen = new System.Windows.Forms.RadioButton();
+            this.radioButtonBgRed = new System.Windows.Forms.RadioButton();
             this.gbxFontColor = new System.Windows.Forms.GroupBox();
-            this.radioButtonFontColorRed = new System.Windows.Forms.RadioButton();
-            this.radioButtonFontColorWhite = new System.Windows.Forms.RadioButton();
             this.radioButtonFontColorBlack = new System.Windows.Forms.RadioButton();
+            this.radioButtonFontColorWhite = new System.Windows.Forms.RadioButton();
+            this.radioButtonFontColorRed = new System.Windows.Forms.RadioButton();
             this.gbxCase = new System.Windows.Forms.GroupBox();
-            this.radioButtonLowerCase = new System.Windows.Forms.RadioButton();
             this.radioButtonUpperCase = new System.Windows.Forms.RadioButton();
+            this.radioButtonLowerCase = new System.Windows.Forms.RadioButton();
             this.labInput = new System.Windows.Forms.Label();
             this.labOutput = new System.Windows.Forms.Label();
             this.gbxChoice.SuspendLayout();
@@ -73,30 +73,7 @@
             this.gbxChoice.TabIndex = 1;
             this.gbxChoice.TabStop = false;
             this.gbxChoice.Text = "Choices";
-            // 
-            // cbBackgroundColor
-            // 
-            this.cbBackgroundColor.AutoSize = true;
-            this.cbBackgroundColor.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cbBackgroundColor.Location = new System.Drawing.Point(15, 21);
-            this.cbBackgroundColor.Name = "cbBackgroundColor";
-            this.cbBackgroundColor.Size = new System.Drawing.Size(110, 17);
-            this.cbBackgroundColor.TabIndex = 0;
-            this.cbBackgroundColor.Text = "Background color";
-            this.cbBackgroundColor.UseVisualStyleBackColor = true;
-            this.cbBackgroundColor.CheckedChanged += new System.EventHandler(this.CheckBox_CheckStateChanged);
-            // 
-            // cbFontColor
-            // 
-            this.cbFontColor.AutoSize = true;
-            this.cbFontColor.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cbFontColor.Location = new System.Drawing.Point(15, 44);
-            this.cbFontColor.Name = "cbFontColor";
-            this.cbFontColor.Size = new System.Drawing.Size(73, 17);
-            this.cbFontColor.TabIndex = 1;
-            this.cbFontColor.Text = "Font color";
-            this.cbFontColor.UseVisualStyleBackColor = true;
-            this.cbFontColor.CheckedChanged += new System.EventHandler(this.CheckBox_CheckStateChanged);
+            this.gbxChoice.EnabledChanged += new System.EventHandler(this.GroupBox_EnabledChanged);
             // 
             // cbCase
             // 
@@ -108,7 +85,31 @@
             this.cbCase.TabIndex = 2;
             this.cbCase.Text = "Case";
             this.cbCase.UseVisualStyleBackColor = true;
-            this.cbCase.CheckedChanged += new System.EventHandler(this.CheckBox_CheckStateChanged);
+            this.cbCase.CheckedChanged += new System.EventHandler(this.CheckBox_CheckChanged);
+            // 
+            // cbFontColor
+            // 
+            this.cbFontColor.AutoSize = true;
+            this.cbFontColor.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.cbFontColor.Location = new System.Drawing.Point(15, 44);
+            this.cbFontColor.Name = "cbFontColor";
+            this.cbFontColor.Size = new System.Drawing.Size(73, 17);
+            this.cbFontColor.TabIndex = 1;
+            this.cbFontColor.Text = "Font color";
+            this.cbFontColor.UseVisualStyleBackColor = true;
+            this.cbFontColor.CheckedChanged += new System.EventHandler(this.CheckBox_CheckChanged);
+            // 
+            // cbBackgroundColor
+            // 
+            this.cbBackgroundColor.AutoSize = true;
+            this.cbBackgroundColor.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.cbBackgroundColor.Location = new System.Drawing.Point(15, 21);
+            this.cbBackgroundColor.Name = "cbBackgroundColor";
+            this.cbBackgroundColor.Size = new System.Drawing.Size(110, 17);
+            this.cbBackgroundColor.TabIndex = 0;
+            this.cbBackgroundColor.Text = "Background color";
+            this.cbBackgroundColor.UseVisualStyleBackColor = true;
+            this.cbBackgroundColor.CheckedChanged += new System.EventHandler(this.CheckBox_CheckChanged);
             // 
             // gbxBackgroundColor
             // 
@@ -124,17 +125,19 @@
             this.gbxBackgroundColor.Text = "Background";
             this.gbxBackgroundColor.Visible = false;
             // 
-            // radioButtonBgRed
+            // radioButtonBgBlue
             // 
-            this.radioButtonBgRed.AutoSize = true;
-            this.radioButtonBgRed.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.radioButtonBgRed.Location = new System.Drawing.Point(13, 21);
-            this.radioButtonBgRed.Name = "radioButtonBgRed";
-            this.radioButtonBgRed.Size = new System.Drawing.Size(45, 17);
-            this.radioButtonBgRed.TabIndex = 0;
-            this.radioButtonBgRed.TabStop = true;
-            this.radioButtonBgRed.Text = "Red";
-            this.radioButtonBgRed.UseVisualStyleBackColor = true;
+            this.radioButtonBgBlue.AutoSize = true;
+            this.radioButtonBgBlue.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.radioButtonBgBlue.Location = new System.Drawing.Point(13, 69);
+            this.radioButtonBgBlue.Name = "radioButtonBgBlue";
+            this.radioButtonBgBlue.Size = new System.Drawing.Size(46, 17);
+            this.radioButtonBgBlue.TabIndex = 2;
+            this.radioButtonBgBlue.TabStop = true;
+            this.radioButtonBgBlue.Tag = "Blue";
+            this.radioButtonBgBlue.Text = "Blue";
+            this.radioButtonBgBlue.UseVisualStyleBackColor = true;
+            this.radioButtonBgBlue.CheckedChanged += new System.EventHandler(this.RadioButtonBackGround_CheckedChanged);
             // 
             // radioButtonBgGreen
             // 
@@ -145,20 +148,24 @@
             this.radioButtonBgGreen.Size = new System.Drawing.Size(54, 17);
             this.radioButtonBgGreen.TabIndex = 1;
             this.radioButtonBgGreen.TabStop = true;
+            this.radioButtonBgGreen.Tag = "Green";
             this.radioButtonBgGreen.Text = "Green";
             this.radioButtonBgGreen.UseVisualStyleBackColor = true;
+            this.radioButtonBgGreen.CheckedChanged += new System.EventHandler(this.RadioButtonBackGround_CheckedChanged);
             // 
-            // radioButtonBgBlue
+            // radioButtonBgRed
             // 
-            this.radioButtonBgBlue.AutoSize = true;
-            this.radioButtonBgBlue.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.radioButtonBgBlue.Location = new System.Drawing.Point(13, 69);
-            this.radioButtonBgBlue.Name = "radioButtonBgBlue";
-            this.radioButtonBgBlue.Size = new System.Drawing.Size(46, 17);
-            this.radioButtonBgBlue.TabIndex = 2;
-            this.radioButtonBgBlue.TabStop = true;
-            this.radioButtonBgBlue.Text = "Blue";
-            this.radioButtonBgBlue.UseVisualStyleBackColor = true;
+            this.radioButtonBgRed.AutoSize = true;
+            this.radioButtonBgRed.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.radioButtonBgRed.Location = new System.Drawing.Point(13, 21);
+            this.radioButtonBgRed.Name = "radioButtonBgRed";
+            this.radioButtonBgRed.Size = new System.Drawing.Size(45, 17);
+            this.radioButtonBgRed.TabIndex = 0;
+            this.radioButtonBgRed.TabStop = true;
+            this.radioButtonBgRed.Tag = "Red";
+            this.radioButtonBgRed.Text = "Red";
+            this.radioButtonBgRed.UseVisualStyleBackColor = true;
+            this.radioButtonBgRed.CheckedChanged += new System.EventHandler(this.RadioButtonBackGround_CheckedChanged);
             // 
             // gbxFontColor
             // 
@@ -174,17 +181,18 @@
             this.gbxFontColor.Text = "Font";
             this.gbxFontColor.Visible = false;
             // 
-            // radioButtonFontColorRed
+            // radioButtonFontColorBlack
             // 
-            this.radioButtonFontColorRed.AutoSize = true;
-            this.radioButtonFontColorRed.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.radioButtonFontColorRed.Location = new System.Drawing.Point(15, 21);
-            this.radioButtonFontColorRed.Name = "radioButtonFontColorRed";
-            this.radioButtonFontColorRed.Size = new System.Drawing.Size(45, 17);
-            this.radioButtonFontColorRed.TabIndex = 0;
-            this.radioButtonFontColorRed.TabStop = true;
-            this.radioButtonFontColorRed.Text = "Red";
-            this.radioButtonFontColorRed.UseVisualStyleBackColor = true;
+            this.radioButtonFontColorBlack.AutoSize = true;
+            this.radioButtonFontColorBlack.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.radioButtonFontColorBlack.Location = new System.Drawing.Point(15, 69);
+            this.radioButtonFontColorBlack.Name = "radioButtonFontColorBlack";
+            this.radioButtonFontColorBlack.Size = new System.Drawing.Size(52, 17);
+            this.radioButtonFontColorBlack.TabIndex = 2;
+            this.radioButtonFontColorBlack.TabStop = true;
+            this.radioButtonFontColorBlack.Tag = "Black";
+            this.radioButtonFontColorBlack.Text = "Black";
+            this.radioButtonFontColorBlack.UseVisualStyleBackColor = true;
             // 
             // radioButtonFontColorWhite
             // 
@@ -195,20 +203,22 @@
             this.radioButtonFontColorWhite.Size = new System.Drawing.Size(53, 17);
             this.radioButtonFontColorWhite.TabIndex = 1;
             this.radioButtonFontColorWhite.TabStop = true;
+            this.radioButtonFontColorWhite.Tag = "White";
             this.radioButtonFontColorWhite.Text = "White";
             this.radioButtonFontColorWhite.UseVisualStyleBackColor = true;
             // 
-            // radioButtonFontColorBlack
+            // radioButtonFontColorRed
             // 
-            this.radioButtonFontColorBlack.AutoSize = true;
-            this.radioButtonFontColorBlack.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.radioButtonFontColorBlack.Location = new System.Drawing.Point(15, 69);
-            this.radioButtonFontColorBlack.Name = "radioButtonFontColorBlack";
-            this.radioButtonFontColorBlack.Size = new System.Drawing.Size(52, 17);
-            this.radioButtonFontColorBlack.TabIndex = 2;
-            this.radioButtonFontColorBlack.TabStop = true;
-            this.radioButtonFontColorBlack.Text = "Black";
-            this.radioButtonFontColorBlack.UseVisualStyleBackColor = true;
+            this.radioButtonFontColorRed.AutoSize = true;
+            this.radioButtonFontColorRed.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.radioButtonFontColorRed.Location = new System.Drawing.Point(15, 21);
+            this.radioButtonFontColorRed.Name = "radioButtonFontColorRed";
+            this.radioButtonFontColorRed.Size = new System.Drawing.Size(45, 17);
+            this.radioButtonFontColorRed.TabIndex = 0;
+            this.radioButtonFontColorRed.TabStop = true;
+            this.radioButtonFontColorRed.Tag = "Red";
+            this.radioButtonFontColorRed.Text = "Red";
+            this.radioButtonFontColorRed.UseVisualStyleBackColor = true;
             // 
             // gbxCase
             // 
@@ -223,18 +233,6 @@
             this.gbxCase.Text = "Case";
             this.gbxCase.Visible = false;
             // 
-            // radioButtonLowerCase
-            // 
-            this.radioButtonLowerCase.AutoSize = true;
-            this.radioButtonLowerCase.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.radioButtonLowerCase.Location = new System.Drawing.Point(14, 21);
-            this.radioButtonLowerCase.Name = "radioButtonLowerCase";
-            this.radioButtonLowerCase.Size = new System.Drawing.Size(80, 17);
-            this.radioButtonLowerCase.TabIndex = 0;
-            this.radioButtonLowerCase.TabStop = true;
-            this.radioButtonLowerCase.Text = "Lower case";
-            this.radioButtonLowerCase.UseVisualStyleBackColor = true;
-            // 
             // radioButtonUpperCase
             // 
             this.radioButtonUpperCase.AutoSize = true;
@@ -246,6 +244,18 @@
             this.radioButtonUpperCase.TabStop = true;
             this.radioButtonUpperCase.Text = "Upper case";
             this.radioButtonUpperCase.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonLowerCase
+            // 
+            this.radioButtonLowerCase.AutoSize = true;
+            this.radioButtonLowerCase.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.radioButtonLowerCase.Location = new System.Drawing.Point(14, 21);
+            this.radioButtonLowerCase.Name = "radioButtonLowerCase";
+            this.radioButtonLowerCase.Size = new System.Drawing.Size(80, 17);
+            this.radioButtonLowerCase.TabIndex = 0;
+            this.radioButtonLowerCase.TabStop = true;
+            this.radioButtonLowerCase.Text = "Lower case";
+            this.radioButtonLowerCase.UseVisualStyleBackColor = true;
             // 
             // labInput
             // 
