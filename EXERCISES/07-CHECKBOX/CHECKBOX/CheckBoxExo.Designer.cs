@@ -55,6 +55,7 @@
             // tbInput
             // 
             this.tbInput.Location = new System.Drawing.Point(30, 31);
+            this.tbInput.MaxLength = 30;
             this.tbInput.Name = "tbInput";
             this.tbInput.Size = new System.Drawing.Size(255, 20);
             this.tbInput.TabIndex = 0;
@@ -277,7 +278,7 @@
             this.labOutput.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.labOutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labOutput.Location = new System.Drawing.Point(30, 85);
-            this.labOutput.MinimumSize = new System.Drawing.Size(0, 20);
+            this.labOutput.MinimumSize = new System.Drawing.Size(2, 20);
             this.labOutput.Name = "labOutput";
             this.labOutput.Size = new System.Drawing.Size(2, 20);
             this.labOutput.TabIndex = 6;
