@@ -28,179 +28,196 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.tbNewElement = new System.Windows.Forms.TextBox();
+            this.btnAddFirstName = new System.Windows.Forms.Button();
+            this.tbIndexElement = new System.Windows.Forms.TextBox();
+            this.btnSelect = new System.Windows.Forms.Button();
+            this.btnEmptyList = new System.Windows.Forms.Button();
+            this.listBox = new System.Windows.Forms.ListBox();
+            this.tbItemsCount = new System.Windows.Forms.TextBox();
+            this.tbSelectedIndex = new System.Windows.Forms.TextBox();
+            this.tbText = new System.Windows.Forms.TextBox();
+            this.labelNewFirstName = new System.Windows.Forms.Label();
+            this.labelFirstNameIndex = new System.Windows.Forms.Label();
+            this.labelFirstNameList = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.labelCount = new System.Windows.Forms.Label();
+            this.labelSelectedIndex = new System.Windows.Forms.Label();
+            this.labelText = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tbNewElement
             // 
-            this.textBox1.Location = new System.Drawing.Point(27, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(138, 20);
-            this.textBox1.TabIndex = 0;
+            this.tbNewElement.Location = new System.Drawing.Point(27, 50);
+            this.tbNewElement.MinimumSize = new System.Drawing.Size(12, 30);
+            this.tbNewElement.Name = "tbNewElement";
+            this.tbNewElement.Size = new System.Drawing.Size(138, 20);
+            this.tbNewElement.TabIndex = 0;
             // 
-            // button1
+            // btnAddFirstName
             // 
-            this.button1.Location = new System.Drawing.Point(27, 92);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAddFirstName.Location = new System.Drawing.Point(27, 92);
+            this.btnAddFirstName.MinimumSize = new System.Drawing.Size(0, 30);
+            this.btnAddFirstName.Name = "btnAddFirstName";
+            this.btnAddFirstName.Size = new System.Drawing.Size(138, 30);
+            this.btnAddFirstName.TabIndex = 1;
+            this.btnAddFirstName.Text = "Add first name";
+            this.btnAddFirstName.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // tbIndexElement
             // 
-            this.textBox2.Location = new System.Drawing.Point(232, 50);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(56, 20);
-            this.textBox2.TabIndex = 2;
+            this.tbIndexElement.Location = new System.Drawing.Point(232, 50);
+            this.tbIndexElement.MinimumSize = new System.Drawing.Size(12, 30);
+            this.tbIndexElement.Name = "tbIndexElement";
+            this.tbIndexElement.Size = new System.Drawing.Size(56, 20);
+            this.tbIndexElement.TabIndex = 2;
             // 
-            // button2
+            // btnSelect
             // 
-            this.button2.Location = new System.Drawing.Point(295, 50);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(146, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSelect.Location = new System.Drawing.Point(295, 44);
+            this.btnSelect.MinimumSize = new System.Drawing.Size(0, 30);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(146, 30);
+            this.btnSelect.TabIndex = 3;
+            this.btnSelect.Text = "Select";
+            this.btnSelect.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnEmptyList
             // 
-            this.button3.Location = new System.Drawing.Point(295, 80);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(146, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnEmptyList.Location = new System.Drawing.Point(295, 92);
+            this.btnEmptyList.MinimumSize = new System.Drawing.Size(0, 30);
+            this.btnEmptyList.Name = "btnEmptyList";
+            this.btnEmptyList.Size = new System.Drawing.Size(146, 30);
+            this.btnEmptyList.TabIndex = 4;
+            this.btnEmptyList.Text = "Empty list";
+            this.btnEmptyList.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // listBox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(27, 180);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(138, 95);
-            this.listBox1.TabIndex = 5;
+            this.listBox.FormattingEnabled = true;
+            this.listBox.Location = new System.Drawing.Point(27, 180);
+            this.listBox.Name = "listBox";
+            this.listBox.Size = new System.Drawing.Size(138, 95);
+            this.listBox.TabIndex = 5;
             // 
-            // textBox3
+            // tbItemsCount
             // 
-            this.textBox3.Location = new System.Drawing.Point(346, 180);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(46, 20);
-            this.textBox3.TabIndex = 6;
+            this.tbItemsCount.Enabled = false;
+            this.tbItemsCount.Location = new System.Drawing.Point(346, 180);
+            this.tbItemsCount.MinimumSize = new System.Drawing.Size(12, 30);
+            this.tbItemsCount.Name = "tbItemsCount";
+            this.tbItemsCount.Size = new System.Drawing.Size(46, 20);
+            this.tbItemsCount.TabIndex = 6;
             // 
-            // textBox4
+            // tbSelectedIndex
             // 
-            this.textBox4.Location = new System.Drawing.Point(346, 218);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(46, 20);
-            this.textBox4.TabIndex = 7;
+            this.tbSelectedIndex.Enabled = false;
+            this.tbSelectedIndex.Location = new System.Drawing.Point(346, 218);
+            this.tbSelectedIndex.MinimumSize = new System.Drawing.Size(12, 30);
+            this.tbSelectedIndex.Name = "tbSelectedIndex";
+            this.tbSelectedIndex.Size = new System.Drawing.Size(46, 20);
+            this.tbSelectedIndex.TabIndex = 7;
             // 
-            // textBox5
+            // tbText
             // 
-            this.textBox5.Location = new System.Drawing.Point(346, 254);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 8;
+            this.tbText.Enabled = false;
+            this.tbText.Location = new System.Drawing.Point(346, 254);
+            this.tbText.MinimumSize = new System.Drawing.Size(12, 30);
+            this.tbText.Name = "tbText";
+            this.tbText.Size = new System.Drawing.Size(100, 20);
+            this.tbText.TabIndex = 8;
             // 
-            // label1
+            // labelNewFirstName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "label1";
+            this.labelNewFirstName.AutoSize = true;
+            this.labelNewFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNewFirstName.Location = new System.Drawing.Point(27, 20);
+            this.labelNewFirstName.Name = "labelNewFirstName";
+            this.labelNewFirstName.Size = new System.Drawing.Size(109, 16);
+            this.labelNewFirstName.TabIndex = 9;
+            this.labelNewFirstName.Text = "New first name";
             // 
-            // label2
+            // labelFirstNameIndex
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(232, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "label2";
+            this.labelFirstNameIndex.AutoSize = true;
+            this.labelFirstNameIndex.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFirstNameIndex.Location = new System.Drawing.Point(232, 19);
+            this.labelFirstNameIndex.Name = "labelFirstNameIndex";
+            this.labelFirstNameIndex.Size = new System.Drawing.Size(121, 16);
+            this.labelFirstNameIndex.TabIndex = 10;
+            this.labelFirstNameIndex.Text = "First name index";
             // 
-            // label3
+            // labelFirstNameList
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 150);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "label3";
+            this.labelFirstNameList.AutoSize = true;
+            this.labelFirstNameList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFirstNameList.Location = new System.Drawing.Point(27, 150);
+            this.labelFirstNameList.Name = "labelFirstNameList";
+            this.labelFirstNameList.Size = new System.Drawing.Size(104, 16);
+            this.labelFirstNameList.TabIndex = 11;
+            this.labelFirstNameList.Text = "First name list";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(232, 149);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.Size = new System.Drawing.Size(80, 16);
             this.label4.TabIndex = 12;
-            this.label4.Text = "label4";
+            this.label4.Text = "Properties";
             // 
-            // label5
+            // labelCount
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(232, 186);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "label5";
+            this.labelCount.AutoSize = true;
+            this.labelCount.Location = new System.Drawing.Point(232, 186);
+            this.labelCount.Name = "labelCount";
+            this.labelCount.Size = new System.Drawing.Size(63, 13);
+            this.labelCount.TabIndex = 13;
+            this.labelCount.Text = "Items.Count";
             // 
-            // label6
+            // labelSelectedIndex
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(232, 224);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "label6";
+            this.labelSelectedIndex.AutoSize = true;
+            this.labelSelectedIndex.Location = new System.Drawing.Point(232, 224);
+            this.labelSelectedIndex.Name = "labelSelectedIndex";
+            this.labelSelectedIndex.Size = new System.Drawing.Size(75, 13);
+            this.labelSelectedIndex.TabIndex = 14;
+            this.labelSelectedIndex.Text = "SelectedIndex";
             // 
-            // label7
+            // labelText
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(232, 260);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "label7";
+            this.labelText.AutoSize = true;
+            this.labelText.Location = new System.Drawing.Point(232, 260);
+            this.labelText.Name = "labelText";
+            this.labelText.Size = new System.Drawing.Size(28, 13);
+            this.labelText.TabIndex = 15;
+            this.labelText.Text = "Text";
             // 
             // ListBoxExo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(470, 307);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.labelText);
+            this.Controls.Add(this.labelSelectedIndex);
+            this.Controls.Add(this.labelCount);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.labelFirstNameList);
+            this.Controls.Add(this.labelFirstNameIndex);
+            this.Controls.Add(this.labelNewFirstName);
+            this.Controls.Add(this.tbText);
+            this.Controls.Add(this.tbSelectedIndex);
+            this.Controls.Add(this.tbItemsCount);
+            this.Controls.Add(this.listBox);
+            this.Controls.Add(this.btnEmptyList);
+            this.Controls.Add(this.btnSelect);
+            this.Controls.Add(this.tbIndexElement);
+            this.Controls.Add(this.btnAddFirstName);
+            this.Controls.Add(this.tbNewElement);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ListBoxExo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lists and their properties";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -209,22 +226,22 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox tbNewElement;
+        private System.Windows.Forms.Button btnAddFirstName;
+        private System.Windows.Forms.TextBox tbIndexElement;
+        private System.Windows.Forms.Button btnSelect;
+        private System.Windows.Forms.Button btnEmptyList;
+        private System.Windows.Forms.ListBox listBox;
+        private System.Windows.Forms.TextBox tbItemsCount;
+        private System.Windows.Forms.TextBox tbSelectedIndex;
+        private System.Windows.Forms.TextBox tbText;
+        private System.Windows.Forms.Label labelNewFirstName;
+        private System.Windows.Forms.Label labelFirstNameIndex;
+        private System.Windows.Forms.Label labelFirstNameList;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label labelCount;
+        private System.Windows.Forms.Label labelSelectedIndex;
+        private System.Windows.Forms.Label labelText;
     }
 }
 
