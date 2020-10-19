@@ -77,8 +77,6 @@
             // cbBackgroundColor
             // 
             this.cbBackgroundColor.AutoSize = true;
-            this.cbBackgroundColor.Checked = true;
-            this.cbBackgroundColor.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbBackgroundColor.ForeColor = System.Drawing.SystemColors.ControlText;
             this.cbBackgroundColor.Location = new System.Drawing.Point(15, 21);
             this.cbBackgroundColor.Name = "cbBackgroundColor";
@@ -86,6 +84,7 @@
             this.cbBackgroundColor.TabIndex = 0;
             this.cbBackgroundColor.Text = "Background color";
             this.cbBackgroundColor.UseVisualStyleBackColor = true;
+            this.cbBackgroundColor.CheckedChanged += new System.EventHandler(this.CheckBox_CheckStateChanged);
             // 
             // cbFontColor
             // 
@@ -97,6 +96,7 @@
             this.cbFontColor.TabIndex = 1;
             this.cbFontColor.Text = "Font color";
             this.cbFontColor.UseVisualStyleBackColor = true;
+            this.cbFontColor.CheckedChanged += new System.EventHandler(this.CheckBox_CheckStateChanged);
             // 
             // cbCase
             // 
@@ -108,13 +108,13 @@
             this.cbCase.TabIndex = 2;
             this.cbCase.Text = "Case";
             this.cbCase.UseVisualStyleBackColor = true;
+            this.cbCase.CheckedChanged += new System.EventHandler(this.CheckBox_CheckStateChanged);
             // 
             // gbxBackgroundColor
             // 
             this.gbxBackgroundColor.Controls.Add(this.radioButtonBgBlue);
             this.gbxBackgroundColor.Controls.Add(this.radioButtonBgGreen);
             this.gbxBackgroundColor.Controls.Add(this.radioButtonBgRed);
-            this.gbxBackgroundColor.Enabled = false;
             this.gbxBackgroundColor.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.gbxBackgroundColor.Location = new System.Drawing.Point(30, 127);
             this.gbxBackgroundColor.Name = "gbxBackgroundColor";
@@ -165,7 +165,6 @@
             this.gbxFontColor.Controls.Add(this.radioButtonFontColorBlack);
             this.gbxFontColor.Controls.Add(this.radioButtonFontColorWhite);
             this.gbxFontColor.Controls.Add(this.radioButtonFontColorRed);
-            this.gbxFontColor.Enabled = false;
             this.gbxFontColor.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.gbxFontColor.Location = new System.Drawing.Point(130, 127);
             this.gbxFontColor.Name = "gbxFontColor";
@@ -215,7 +214,6 @@
             // 
             this.gbxCase.Controls.Add(this.radioButtonUpperCase);
             this.gbxCase.Controls.Add(this.radioButtonLowerCase);
-            this.gbxCase.Enabled = false;
             this.gbxCase.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.gbxCase.Location = new System.Drawing.Point(230, 152);
             this.gbxCase.Name = "gbxCase";

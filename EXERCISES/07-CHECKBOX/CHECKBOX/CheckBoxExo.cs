@@ -26,20 +26,28 @@ namespace CHECKBOX
                 gbxChoice.Enabled = true;
         }
 
-        private void CheckBox_Click(object sender, EventArgs e)
-        {
-            CheckBox currentCheckBox = (CheckBox)sender;
-            if (!currentCheckBox.Checked)
-                currentCheckBox.Checked = true;
-            else
-                currentCheckBox.Checked = false;
-        }
-
         private void CheckBox_CheckStateChanged(object sender, EventArgs e)
         {
             CheckBox currentCheckBox = (CheckBox)sender;
 
-
+            if (currentCheckBox == cbBackgroundColor)
+                TriggerRadioButtonDisplay(gbxBackgroundColor);
+         
+            if (currentCheckBox == cbFontColor)
+                TriggerRadioButtonDisplay(gbxFontColor);
+         
+            if (currentCheckBox == cbCase)
+                TriggerRadioButtonDisplay(gbxCase);
         }
+
+        private void TriggerRadioButtonDisplay(GroupBox _groupBox)
+        {
+            if (!_groupBox.Visible)
+                _groupBox.Visible = true;
+            else
+                _groupBox.Visible = false;
+        }
+
+
     }
 }
