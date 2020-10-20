@@ -29,7 +29,7 @@ namespace BILL
             if (_amount == null || !CheckData.IsValidAmount(_amount))
                 amount = 0;
             else
-                amount = double.Parse(_amount);
+                amount = double.Parse(_amount, CultureInfo.CurrentCulture);
 
             // ZIPCODE
             if (_zipcode == null || !CheckData.IsValidZipCode(_zipcode))
@@ -46,7 +46,7 @@ namespace BILL
         {
             return
                 $"Name : {name}\n" +
-                $"Date : {date:dd/MM/yyyy}\n" +
+                $"Date : {date}\n" +
                 $"Amount : {Math.Round(amount, 2)}\n" +
                 $"Zip Code : {zipCode}";
         }

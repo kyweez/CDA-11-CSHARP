@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -8,7 +9,6 @@ namespace TOOLS
     public static class CheckData
     {
         private const string regexName = @"^[a-zA-Z]+([\-\' ][a-zA-Z]+)*$";
-        private const string regexDate = @"^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$";
         private const string regexZipCode = @"^(?:[0-8][0-9]|9[0-8])[0-9]{3}$";
 
         /// <summary>
@@ -28,9 +28,7 @@ namespace TOOLS
         /// <returns>bool</returns>
         public static bool IsValidDate(string _valueToCheck)
         {
-            if (!Regex.IsMatch(_valueToCheck, regexDate))
-                return false;
-            return DateTime.TryParse(_valueToCheck, out DateTime result) && result > DateTime.Now;
+            return DateTime.TryParseExact(_valueToCheck, "dd/MM/YYYY", CultureInfo.CurrentCulture, DateTimeStyles.AllowWhiteSpaces, out DateTime result) && result > DateTime.Now;
         }
 
         /// <summary>
