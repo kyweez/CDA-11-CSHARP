@@ -48,14 +48,16 @@
             // 
             // tbNewElement
             // 
-            this.tbNewElement.Location = new System.Drawing.Point(27, 50);
+            this.tbNewElement.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNewElement.Location = new System.Drawing.Point(27, 44);
             this.tbNewElement.MinimumSize = new System.Drawing.Size(12, 30);
             this.tbNewElement.Name = "tbNewElement";
-            this.tbNewElement.Size = new System.Drawing.Size(138, 20);
+            this.tbNewElement.Size = new System.Drawing.Size(138, 22);
             this.tbNewElement.TabIndex = 0;
             // 
             // btnAddFirstName
             // 
+            this.btnAddFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddFirstName.Location = new System.Drawing.Point(27, 92);
             this.btnAddFirstName.MinimumSize = new System.Drawing.Size(0, 30);
             this.btnAddFirstName.Name = "btnAddFirstName";
@@ -66,14 +68,16 @@
             // 
             // tbIndexElement
             // 
-            this.tbIndexElement.Location = new System.Drawing.Point(232, 50);
+            this.tbIndexElement.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbIndexElement.Location = new System.Drawing.Point(233, 44);
             this.tbIndexElement.MinimumSize = new System.Drawing.Size(12, 30);
             this.tbIndexElement.Name = "tbIndexElement";
-            this.tbIndexElement.Size = new System.Drawing.Size(56, 20);
+            this.tbIndexElement.Size = new System.Drawing.Size(56, 22);
             this.tbIndexElement.TabIndex = 2;
             // 
             // btnSelect
             // 
+            this.btnSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelect.Location = new System.Drawing.Point(295, 44);
             this.btnSelect.MinimumSize = new System.Drawing.Size(0, 30);
             this.btnSelect.Name = "btnSelect";
@@ -84,6 +88,7 @@
             // 
             // btnEmptyList
             // 
+            this.btnEmptyList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmptyList.Location = new System.Drawing.Point(295, 92);
             this.btnEmptyList.MinimumSize = new System.Drawing.Size(0, 30);
             this.btnEmptyList.Name = "btnEmptyList";
@@ -94,44 +99,49 @@
             // 
             // listBox
             // 
+            this.listBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox.FormattingEnabled = true;
+            this.listBox.ItemHeight = 16;
             this.listBox.Location = new System.Drawing.Point(27, 180);
             this.listBox.Name = "listBox";
-            this.listBox.Size = new System.Drawing.Size(138, 95);
+            this.listBox.Size = new System.Drawing.Size(138, 100);
             this.listBox.TabIndex = 5;
             // 
             // tbItemsCount
             // 
             this.tbItemsCount.Enabled = false;
-            this.tbItemsCount.Location = new System.Drawing.Point(346, 180);
+            this.tbItemsCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbItemsCount.Location = new System.Drawing.Point(346, 178);
             this.tbItemsCount.MinimumSize = new System.Drawing.Size(12, 30);
             this.tbItemsCount.Name = "tbItemsCount";
-            this.tbItemsCount.Size = new System.Drawing.Size(46, 20);
+            this.tbItemsCount.Size = new System.Drawing.Size(46, 22);
             this.tbItemsCount.TabIndex = 6;
             // 
             // tbSelectedIndex
             // 
             this.tbSelectedIndex.Enabled = false;
-            this.tbSelectedIndex.Location = new System.Drawing.Point(346, 218);
+            this.tbSelectedIndex.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSelectedIndex.Location = new System.Drawing.Point(346, 216);
             this.tbSelectedIndex.MinimumSize = new System.Drawing.Size(12, 30);
             this.tbSelectedIndex.Name = "tbSelectedIndex";
-            this.tbSelectedIndex.Size = new System.Drawing.Size(46, 20);
+            this.tbSelectedIndex.Size = new System.Drawing.Size(46, 22);
             this.tbSelectedIndex.TabIndex = 7;
             // 
             // tbText
             // 
             this.tbText.Enabled = false;
-            this.tbText.Location = new System.Drawing.Point(346, 254);
+            this.tbText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbText.Location = new System.Drawing.Point(346, 252);
             this.tbText.MinimumSize = new System.Drawing.Size(12, 30);
             this.tbText.Name = "tbText";
-            this.tbText.Size = new System.Drawing.Size(100, 20);
+            this.tbText.Size = new System.Drawing.Size(100, 22);
             this.tbText.TabIndex = 8;
             // 
             // labelNewFirstName
             // 
             this.labelNewFirstName.AutoSize = true;
             this.labelNewFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNewFirstName.Location = new System.Drawing.Point(27, 20);
+            this.labelNewFirstName.Location = new System.Drawing.Point(27, 17);
             this.labelNewFirstName.Name = "labelNewFirstName";
             this.labelNewFirstName.Size = new System.Drawing.Size(109, 16);
             this.labelNewFirstName.TabIndex = 9;
@@ -141,7 +151,7 @@
             // 
             this.labelFirstNameIndex.AutoSize = true;
             this.labelFirstNameIndex.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFirstNameIndex.Location = new System.Drawing.Point(232, 19);
+            this.labelFirstNameIndex.Location = new System.Drawing.Point(232, 16);
             this.labelFirstNameIndex.Name = "labelFirstNameIndex";
             this.labelFirstNameIndex.Size = new System.Drawing.Size(121, 16);
             this.labelFirstNameIndex.TabIndex = 10;
@@ -170,27 +180,30 @@
             // labelCount
             // 
             this.labelCount.AutoSize = true;
-            this.labelCount.Location = new System.Drawing.Point(232, 186);
+            this.labelCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCount.Location = new System.Drawing.Point(232, 181);
             this.labelCount.Name = "labelCount";
-            this.labelCount.Size = new System.Drawing.Size(63, 13);
+            this.labelCount.Size = new System.Drawing.Size(77, 16);
             this.labelCount.TabIndex = 13;
             this.labelCount.Text = "Items.Count";
             // 
             // labelSelectedIndex
             // 
             this.labelSelectedIndex.AutoSize = true;
-            this.labelSelectedIndex.Location = new System.Drawing.Point(232, 224);
+            this.labelSelectedIndex.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSelectedIndex.Location = new System.Drawing.Point(232, 219);
             this.labelSelectedIndex.Name = "labelSelectedIndex";
-            this.labelSelectedIndex.Size = new System.Drawing.Size(75, 13);
+            this.labelSelectedIndex.Size = new System.Drawing.Size(94, 16);
             this.labelSelectedIndex.TabIndex = 14;
             this.labelSelectedIndex.Text = "SelectedIndex";
             // 
             // labelText
             // 
             this.labelText.AutoSize = true;
-            this.labelText.Location = new System.Drawing.Point(232, 260);
+            this.labelText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelText.Location = new System.Drawing.Point(232, 255);
             this.labelText.Name = "labelText";
-            this.labelText.Size = new System.Drawing.Size(28, 13);
+            this.labelText.Size = new System.Drawing.Size(34, 16);
             this.labelText.TabIndex = 15;
             this.labelText.Text = "Text";
             // 
