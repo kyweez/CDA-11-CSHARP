@@ -29,18 +29,10 @@ namespace BUSINESS_CLASS_LIBRARY
         /// <returns>bool</returns>
         public bool Create(Person _person)
         {
-            if (_person == null || IsUniqueFirstName(personTab, _person.FirstName))
+            if (_person == null || !IsUniqueFirstName(personTab, _person.FirstName))
                 return false;
             personTab.Add(_person);
             return true;
-        }
-
-        /// <summary>
-        ///     This methods delete all elements in the person table
-        /// </summary>
-        public void DeleteAll()
-        {
-            personTab.Clear();
         }
 
         /// <summary>
@@ -57,6 +49,7 @@ namespace BUSINESS_CLASS_LIBRARY
         }
 
         /// <summary>
+        ///     IList implementation :
         ///     Get the element at the specified index
         /// </summary>
         /// <param name="index">int </param>
@@ -67,6 +60,7 @@ namespace BUSINESS_CLASS_LIBRARY
         }
 
         /// <summary>
+        ///     IList implementation :
         ///     Gets the number of elements contained in the System.Collections.ICollection.
         /// </summary>
         /// <returns>int</returns>
@@ -74,6 +68,16 @@ namespace BUSINESS_CLASS_LIBRARY
         {
             get => personTab.Count;
         }
+
+        /// <summary>
+        ///     IList implementation :
+        ///     This methods delete all elements in the person table
+        /// </summary>
+        public void Clear()
+        {
+            personTab.Clear();
+        }
+
 
         /************************** UNUSED INTERFACES **************************/
         public bool IsReadOnly => throw new NotImplementedException();
@@ -83,7 +87,6 @@ namespace BUSINESS_CLASS_LIBRARY
         object IList.this[int index] { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public int Add(object value) => throw new NotImplementedException();
         public bool Contains(object value) => throw new NotImplementedException();
-        public void Clear() => throw new NotImplementedException();
         public int IndexOf(object value) => throw new NotImplementedException();
         public void Insert(int index, object value) => throw new NotImplementedException();
         public void CopyTo(Array array, int index) => throw new NotImplementedException();

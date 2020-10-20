@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tbNewElement = new System.Windows.Forms.TextBox();
             this.btnAddFirstName = new System.Windows.Forms.Button();
             this.tbIndexElement = new System.Windows.Forms.TextBox();
@@ -44,12 +45,15 @@
             this.labelCount = new System.Windows.Forms.Label();
             this.labelSelectedIndex = new System.Windows.Forms.Label();
             this.labelText = new System.Windows.Forms.Label();
+            this.errorProviderSelectIndex = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderSelectIndex)).BeginInit();
             this.SuspendLayout();
             // 
             // tbNewElement
             // 
             this.tbNewElement.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNewElement.Location = new System.Drawing.Point(27, 44);
+            this.tbNewElement.MaxLength = 20;
             this.tbNewElement.MinimumSize = new System.Drawing.Size(12, 30);
             this.tbNewElement.Name = "tbNewElement";
             this.tbNewElement.Size = new System.Drawing.Size(138, 22);
@@ -71,6 +75,7 @@
             // 
             // tbIndexElement
             // 
+            this.tbIndexElement.Enabled = false;
             this.tbIndexElement.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbIndexElement.Location = new System.Drawing.Point(233, 44);
             this.tbIndexElement.MinimumSize = new System.Drawing.Size(12, 30);
@@ -83,7 +88,7 @@
             // 
             this.btnSelect.Enabled = false;
             this.btnSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSelect.Location = new System.Drawing.Point(295, 44);
+            this.btnSelect.Location = new System.Drawing.Point(332, 44);
             this.btnSelect.MinimumSize = new System.Drawing.Size(0, 30);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(146, 30);
@@ -96,7 +101,7 @@
             // 
             this.btnEmptyList.Enabled = false;
             this.btnEmptyList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmptyList.Location = new System.Drawing.Point(295, 92);
+            this.btnEmptyList.Location = new System.Drawing.Point(332, 92);
             this.btnEmptyList.MinimumSize = new System.Drawing.Size(0, 30);
             this.btnEmptyList.Name = "btnEmptyList";
             this.btnEmptyList.Size = new System.Drawing.Size(146, 30);
@@ -107,6 +112,7 @@
             // 
             // listBox
             // 
+            this.listBox.Enabled = false;
             this.listBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox.FormattingEnabled = true;
             this.listBox.ItemHeight = 16;
@@ -139,10 +145,10 @@
             // 
             this.tbText.Enabled = false;
             this.tbText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbText.Location = new System.Drawing.Point(346, 252);
+            this.tbText.Location = new System.Drawing.Point(346, 249);
             this.tbText.MinimumSize = new System.Drawing.Size(12, 30);
             this.tbText.Name = "tbText";
-            this.tbText.Size = new System.Drawing.Size(100, 22);
+            this.tbText.Size = new System.Drawing.Size(132, 30);
             this.tbText.TabIndex = 8;
             // 
             // labelNewFirstName
@@ -215,11 +221,16 @@
             this.labelText.TabIndex = 15;
             this.labelText.Text = "Text";
             // 
+            // errorProviderSelectIndex
+            // 
+            this.errorProviderSelectIndex.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderSelectIndex.ContainerControl = this;
+            // 
             // ListBoxExo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(470, 307);
+            this.ClientSize = new System.Drawing.Size(490, 307);
             this.Controls.Add(this.labelText);
             this.Controls.Add(this.labelSelectedIndex);
             this.Controls.Add(this.labelCount);
@@ -240,6 +251,7 @@
             this.Name = "ListBoxExo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lists and their properties";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderSelectIndex)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,6 +275,7 @@
         private System.Windows.Forms.Label labelCount;
         private System.Windows.Forms.Label labelSelectedIndex;
         private System.Windows.Forms.Label labelText;
+        private System.Windows.Forms.ErrorProvider errorProviderSelectIndex;
     }
 }
 
