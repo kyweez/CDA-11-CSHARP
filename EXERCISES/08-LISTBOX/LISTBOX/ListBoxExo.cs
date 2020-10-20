@@ -33,7 +33,23 @@ namespace LISTBOX
         /****************************** METHODS ******************************/
         private void AddFirstname()
         {
-            MessageBox.Show("Coucou Addfirstname");
+            if (listBox.FindStringExact(tbNewElement.Text) == ListBox.NoMatches)
+            {
+                listBox.Items.Add(tbNewElement.Text);
+                StudentTab.Create(new Person(tbNewElement.Text));
+                tbNewElement.Clear();
+            }
+            else
+            {
+                string title;
+                string errorMessage;
+
+                title = "Operation aborted";
+                errorMessage = "This firstname is already in the list !";
+                MessageBox.Show(errorMessage, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnAddFirstName.Enabled = false;
+            }
+
         }
 
         private void SelectIndex()
