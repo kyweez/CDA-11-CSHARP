@@ -28,7 +28,12 @@ namespace TOOLS
         /// <returns>bool</returns>
         public static bool IsValidDate(string _valueToCheck)
         {
-            return DateTime.TryParseExact(_valueToCheck, "dd/MM/YYYY", CultureInfo.CurrentCulture, DateTimeStyles.AllowWhiteSpaces, out DateTime result) && result > DateTime.Now;
+            bool dateTest;
+            DateTime result;
+
+            dateTest = DateTime.TryParseExact(_valueToCheck, "dd/MM/yyyy", CultureInfo.CurrentCulture, DateTimeStyles.None, out result);
+            
+            return (dateTest && result > DateTime.Now);
         }
 
         /// <summary>

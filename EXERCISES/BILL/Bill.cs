@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Globalization;
-using TOOLS.ClassLibrary;
+using TOOLS;
 
 namespace BILL
 {
@@ -23,7 +23,7 @@ namespace BILL
             if (_date == null || !CheckData.IsValidDate(_date))
                 date = DateTime.Now;
             else
-                date = DateTime.ParseExact(_date, "dd/MM/yyyy", CultureInfo.CurrentCulture);
+                date = DateTime.Parse(_date);
 
             // AMOUNT
             if (_amount == null || !CheckData.IsValidAmount(_amount))
@@ -46,7 +46,7 @@ namespace BILL
         {
             return
                 $"Name : {name}\n" +
-                $"Date : {date}\n" +
+                $"Date : {date:dd/MM/yyyy}\n" +
                 $"Amount : {Math.Round(amount, 2)}\n" +
                 $"Zip Code : {zipCode}";
         }

@@ -45,8 +45,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\05-INPUT-VALIDATION\INPUT-VALIDATION-V1\TOOLS\TOOLS.csproj">
-      <Project>{729AD72D-6172-405D-B262-F6C31DF26C34}</Project>
+    <ProjectReference Include="..\TOOLS\TOOLS.csproj">
+      <Project>{534EC4EB-7A01-49C9-8D71-C799E94E472A}</Project>
       <Name>TOOLS</Name>
     </ProjectReference>
   </ItemGroup>

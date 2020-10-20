@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BILL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,9 +9,7 @@ using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TOOLS.ClassLibrary;
-using BILL.ClassLibrary;
-
+using TOOLS;
 
 namespace INPUT_VALIDATION_V1
 {
