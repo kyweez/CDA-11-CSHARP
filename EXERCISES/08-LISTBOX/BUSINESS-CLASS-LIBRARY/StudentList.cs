@@ -1,8 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace BUSINESS_CLASS_LIBRARY
 {
-    class StudentList
+    public class StudentList : IList
     {
         /***************************** ATTRIBUTES ****************************/
         private List<Person> personTab;
@@ -14,12 +17,10 @@ namespace BUSINESS_CLASS_LIBRARY
         }
 
         /***************************** PROPERTIES ****************************/
-        public List<Person> PersonTab
-        {
-            get => personTab;
-        }
+        // NONE
 
         /****************************** METHODS ******************************/
+
         /// <summary>
         ///     This method creat a new entry in le personTab List
         ///     Return false if the given argument is null or if the entry already exists
@@ -54,5 +55,40 @@ namespace BUSINESS_CLASS_LIBRARY
                 return false;
             return true;
         }
+
+        /// <summary>
+        ///     Get the element at the specified index
+        /// </summary>
+        /// <param name="index">int </param>
+        /// <returns>Leaf</returns>
+        public Person this[int index]
+        {
+            get => personTab.ElementAt(index);
+        }
+
+        /// <summary>
+        ///     Gets the number of elements contained in the System.Collections.ICollection.
+        /// </summary>
+        /// <returns>int</returns>
+        public int Count
+        {
+            get => personTab.Count;
+        }
+
+        /************************** UNUSED INTERFACES **************************/
+        public bool IsReadOnly => throw new NotImplementedException();
+        public bool IsFixedSize => throw new NotImplementedException();
+        public object SyncRoot => throw new NotImplementedException();
+        public bool IsSynchronized => throw new NotImplementedException();
+        object IList.this[int index] { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int Add(object value) => throw new NotImplementedException();
+        public bool Contains(object value) => throw new NotImplementedException();
+        public void Clear() => throw new NotImplementedException();
+        public int IndexOf(object value) => throw new NotImplementedException();
+        public void Insert(int index, object value) => throw new NotImplementedException();
+        public void CopyTo(Array array, int index) => throw new NotImplementedException();
+        public IEnumerator GetEnumerator() => throw new NotImplementedException();
+        public void RemoveAt(int index) => throw new NotImplementedException();
+        public void Remove(object value) => throw new NotImplementedException();
     }
 }
