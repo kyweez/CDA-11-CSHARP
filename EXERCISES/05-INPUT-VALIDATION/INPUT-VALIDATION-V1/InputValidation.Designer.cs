@@ -79,6 +79,7 @@
             // 
             // btnValidate
             // 
+            this.btnValidate.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnValidate.Enabled = false;
             this.btnValidate.Location = new System.Drawing.Point(279, 176);
             this.btnValidate.Name = "btnValidate";

@@ -16,7 +16,7 @@ namespace INPUT_VALIDATION_V1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new InputValidation());
+            Application.Run(new Form2());
         }
     }
 }

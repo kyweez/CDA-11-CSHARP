@@ -11,6 +11,14 @@ namespace BILL
         private double amount;
         private string zipCode;
 
+        public Bill()
+        {
+            name = "";
+            date = DateTime.Now;
+            amount = 0;
+            zipCode = "00000";
+        }
+
         public Bill(string _name, string _date, string _amount, string _zipcode)
         {
             // NAME

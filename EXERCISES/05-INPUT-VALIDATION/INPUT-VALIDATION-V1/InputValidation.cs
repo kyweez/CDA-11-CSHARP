@@ -15,9 +15,16 @@ namespace INPUT_VALIDATION_V1
 {
     public partial class InputValidation : Form
     {
+        private Bill currentBill;
         public InputValidation()
         {
             InitializeComponent();
+            currentBill = new Bill();
+        }
+
+        public Bill CurrentBill
+        {
+            get => currentBill;
         }
 
         /// <summary>
@@ -50,6 +57,11 @@ namespace INPUT_VALIDATION_V1
         /// <param name="e">EventArgs</param>
         private void BtnDelete_Click(object sender, EventArgs e)
         {
+            DeleteAllFields();
+        }
+
+        private void DeleteAllFields()
+        {
             tbName.Clear();
             tbDate.Clear();
             tbAmount.Clear();
@@ -68,6 +80,10 @@ namespace INPUT_VALIDATION_V1
             bool inputIsInvalid;
             string error;
 
+            //Form1 fenetre = new Form1();
+            //DialogResult dr = fenetre.ShowDialog();
+            //int result = fenetre.Coucou;
+
             inputIsInvalid = false;
             error = "Invalid input";
             errorProvider.Clear();
@@ -85,10 +101,10 @@ namespace INPUT_VALIDATION_V1
                 SystemSounds.Beep.Play();
             else
             {
-                Bill bill = new Bill(tbName.Text, tbDate.Text, tbAmount.Text, tbZipCode.Text);
+                 currentBill = new Bill(tbName.Text, tbDate.Text, tbAmount.Text, tbZipCode.Text);
 
-                MessageBox.Show(bill.ToString(), "Validation completed", MessageBoxButtons.OK);
-                BtnDelete_Click(this, e);
+                MessageBox.Show(currentBill.ToString(), "Validation completed", MessageBoxButtons.OK);
+                DeleteAllFields();
             }
         }
 
