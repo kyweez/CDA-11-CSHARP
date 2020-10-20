@@ -12,10 +12,20 @@ namespace LISTBOX
 {
     public partial class ListBoxExo : Form
     {
+        /***************************** ATTRIBUTES ****************************/
+        private StudentList()
+        /**************************** CONSTRUCTORS ***************************/
         public ListBoxExo()
         {
             InitializeComponent();
         }
+
+        /***************************** PROPERTIES ****************************/
+
+        /****************************** METHODS ******************************/
+
+        /******************************* EVENTS ******************************/
+
 
 
     }
