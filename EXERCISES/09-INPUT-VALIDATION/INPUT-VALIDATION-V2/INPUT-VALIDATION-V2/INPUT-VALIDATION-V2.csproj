@@ -76,5 +76,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\05-INPUT-VALIDATION\INPUT-VALIDATION-V1\BILL\BILL.csproj">
+      <Project>{18BE2D85-6D35-475F-AF0B-B885C1FA7D8C}</Project>
+      <Name>BILL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\05-INPUT-VALIDATION\INPUT-VALIDATION-V1\TOOLS\TOOLS.csproj">
+      <Project>{729AD72D-6172-405D-B262-F6C31DF26C34}</Project>
+      <Name>TOOLS</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
