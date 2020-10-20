@@ -1,6 +1,7 @@
 ﻿using System.Windows.Forms;
+using TOOLS;
 
-namespace TOOLS
+namespace ERROR_MANAGEMENT
 {
     public class ErrorCheck
     {

@@ -1,4 +1,5 @@
 ﻿using BILL;
+using ERROR_MANAGEMENT;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -60,6 +61,9 @@ namespace INPUT_VALIDATION_V1
             DeleteAllFields();
         }
 
+        /// <summary>
+        /// This method delete all fields and reset error providers
+        /// </summary>
         private void DeleteAllFields()
         {
             tbName.Clear();
@@ -101,7 +105,7 @@ namespace INPUT_VALIDATION_V1
                 SystemSounds.Beep.Play();
             else
             {
-                 currentBill = new Bill(tbName.Text, tbDate.Text, tbAmount.Text, tbZipCode.Text);
+                currentBill = new Bill(tbName.Text, tbDate.Text, tbAmount.Text, tbZipCode.Text);
 
                 MessageBox.Show(currentBill.ToString(), "Validation completed", MessageBoxButtons.OK);
                 DeleteAllFields();
