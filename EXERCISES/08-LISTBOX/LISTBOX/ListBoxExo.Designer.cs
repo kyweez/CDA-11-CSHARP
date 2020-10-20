@@ -54,9 +54,11 @@
             this.tbNewElement.Name = "tbNewElement";
             this.tbNewElement.Size = new System.Drawing.Size(138, 22);
             this.tbNewElement.TabIndex = 0;
+            this.tbNewElement.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // btnAddFirstName
             // 
+            this.btnAddFirstName.Enabled = false;
             this.btnAddFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddFirstName.Location = new System.Drawing.Point(27, 92);
             this.btnAddFirstName.MinimumSize = new System.Drawing.Size(0, 30);
@@ -65,6 +67,7 @@
             this.btnAddFirstName.TabIndex = 1;
             this.btnAddFirstName.Text = "Add first name";
             this.btnAddFirstName.UseVisualStyleBackColor = true;
+            this.btnAddFirstName.Click += new System.EventHandler(this.Button_Click);
             // 
             // tbIndexElement
             // 
@@ -74,9 +77,11 @@
             this.tbIndexElement.Name = "tbIndexElement";
             this.tbIndexElement.Size = new System.Drawing.Size(56, 22);
             this.tbIndexElement.TabIndex = 2;
+            this.tbIndexElement.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // btnSelect
             // 
+            this.btnSelect.Enabled = false;
             this.btnSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelect.Location = new System.Drawing.Point(295, 44);
             this.btnSelect.MinimumSize = new System.Drawing.Size(0, 30);
@@ -85,9 +90,11 @@
             this.btnSelect.TabIndex = 3;
             this.btnSelect.Text = "Select";
             this.btnSelect.UseVisualStyleBackColor = true;
+            this.btnSelect.Click += new System.EventHandler(this.Button_Click);
             // 
             // btnEmptyList
             // 
+            this.btnEmptyList.Enabled = false;
             this.btnEmptyList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmptyList.Location = new System.Drawing.Point(295, 92);
             this.btnEmptyList.MinimumSize = new System.Drawing.Size(0, 30);
@@ -96,6 +103,7 @@
             this.btnEmptyList.TabIndex = 4;
             this.btnEmptyList.Text = "Empty list";
             this.btnEmptyList.UseVisualStyleBackColor = true;
+            this.btnEmptyList.Click += new System.EventHandler(this.Button_Click);
             // 
             // listBox
             // 
