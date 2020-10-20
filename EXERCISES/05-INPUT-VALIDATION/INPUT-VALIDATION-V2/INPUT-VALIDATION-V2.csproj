@@ -81,6 +81,10 @@
       <Project>{697C76BA-1495-452A-9B63-135932BA1BA1}</Project>
       <Name>BILL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ERROR-MANAGEMENT\ERROR-MANAGEMENT.csproj">
+      <Project>{92d8eca9-31c1-400a-9775-48b0b0616778}</Project>
+      <Name>ERROR-MANAGEMENT</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TOOLS\TOOLS.csproj">
       <Project>{534EC4EB-7A01-49C9-8D71-C799E94E472A}</Project>
       <Name>TOOLS</Name>
