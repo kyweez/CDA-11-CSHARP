@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUSINESS_CLASS_LIBRARY;
+using TOOLS;
 
 namespace LISTBOX
 {
@@ -31,7 +32,7 @@ namespace LISTBOX
         }
 
         /****************************** METHODS ******************************/
-        
+
         /// <summary>
         ///     This method adds the input first name in the list box and in the studentTab
         ///     If the first name already extists, a dialog box appears and the adding is canceled
@@ -47,6 +48,7 @@ namespace LISTBOX
                 StudentTab.Create(new Person(tbNewElement.Text));
                 tbNewElement.Clear();
                 tbNewElement.Focus();
+                tbItemsCount.Text = StudentTab.Count.ToString();
             }
             else
             {
@@ -63,6 +65,15 @@ namespace LISTBOX
         }
 
         /// <summary>
+        ///     Clear information in textboxes 
+        /// </summary>
+        private void ClearInformation()
+        {
+            tbSelectedIndex.Clear();
+            tbText.Clear();
+        }
+
+        /// <summary>
         ///     This method clears the List box and the StudentTab list.
         /// </summary>
         private void ClearListBox()
@@ -72,22 +83,78 @@ namespace LISTBOX
             listBox.Enabled = false;
             tbIndexElement.Enabled = false;
             tbIndexElement.Clear();
+            btnEmptyList.Enabled = false;
             if (tbNewElement.Text.Length != 0)
             {
                 btnAddFirstName.Enabled = true;
                 btnAddFirstName.Focus();
             }
+            tbItemsCount.Clear();
+            ClearInformation();
         }
 
+        /// <summary>
+        ///     This method displays the information related to the selected item in the list Box
+        /// </summary>
+        /// <param name="index">int</param>
+        private void DisplayInformation(int index)
+        {
+            tbSelectedIndex.Text = index.ToString();
+            tbText.Text = StudentTab[index].FirstName;
+        }
 
+        /// <summary>
+        ///     This method selects the given index. If it doesn't exists an error message appears
+        /// </summary>
         private void SelectIndex()
         {
-            MessageBox.Show("Coucou SelectIndex");
+            if (!int.TryParse(tbIndexElement.Text, out int index) || index < 0 || index >= StudentTab.Count)
+            {
+                string title;
+                string errorMessage;
+                listBox.SelectedIndex = -1;
+                title = "Operation aborted";
+                errorMessage = $"The value must be betweeen 0 and {StudentTab.Count - 1}";
 
+                MessageBox.Show(errorMessage, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnAddFirstName.Enabled = false;
+                tbIndexElement.Focus();
+            }
+            else
+                listBox.SelectedIndex = index;
         }
 
-
         /******************************* EVENTS ******************************/
+
+        /// <summary>
+        ///     This function is triggered when a button is clicked
+        ///     Call method related to this button
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="e">EventArgs</param>
+        private void Button_Click(object sender, EventArgs e)
+        {
+            if (sender == (object)btnAddFirstName)
+                AddFirstname();
+            if (sender == (object)btnSelect)
+                SelectIndex();
+            if (sender == (object)btnEmptyList)
+                ClearListBox();
+        }
+
+        /// <summary>
+        ///     This method is triggered when the selected index in the list box changes
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="e">EventArgs</param>
+        private void ListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBox.SelectedIndex >= 0 && listBox.SelectedIndex < StudentTab.Count)
+                DisplayInformation(listBox.SelectedIndex);
+            else
+                ClearInformation();
+        }
+
         /// <summary>
         ///     This method is triggered when a text box changes
         ///     Enable or disable the associated button
@@ -108,40 +175,26 @@ namespace LISTBOX
             else
             {
                 if (sender == (object)tbNewElement)
-                    btnAddFirstName.Enabled = true;
+                {
+                    if (!DataValidity.IsValidString(tbNewElement.Text, @"^[a-zA-Z]+([\-\' ][a-zA-Z]+)*$"))
+                    {
+                        errorProviderSelectIndex.SetError(tbNewElement, "Invalid first name");
+                        btnAddFirstName.Enabled = false;
+                    }
+                    else
+                        btnAddFirstName.Enabled = true;
+                }
                 if (sender == (object)tbIndexElement)
                 {
-                    if (!int.TryParse(tbIndexElement.Text, out int result) || result <= 0)
+                    if (!int.TryParse(tbIndexElement.Text, out int result) || result < 0)
                     {
-                        string errorString;
-
-                        errorString = $"Please insert a value between 0 and {StudentTab.Count - 1}";
+                        string errorString = $"Please insert a value between 0 and {StudentTab.Count - 1}";
                         errorProviderSelectIndex.SetError(tbIndexElement, errorString);
                     }
                     else
-                    {
                         btnSelect.Enabled = true;
-                    }
                 }
             }
         }
-
-        /// <summary>
-        ///     This function is triggered when a button is clicked
-        ///     Call method related to this button
-        /// </summary>
-        /// <param name="sender">object</param>
-        /// <param name="e">EventArgs</param>
-        private void Button_Click(object sender, EventArgs e)
-        {
-            if (sender == (object)btnAddFirstName)
-                AddFirstname();
-            if (sender == (object)btnSelect)
-                SelectIndex();
-            if (sender == (object)btnEmptyList)
-                ClearListBox();
-        }
-
-
     }
 }

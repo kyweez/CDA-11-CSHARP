@@ -120,6 +120,7 @@
             this.listBox.Name = "listBox";
             this.listBox.Size = new System.Drawing.Size(138, 100);
             this.listBox.TabIndex = 5;
+            this.listBox.SelectedIndexChanged += new System.EventHandler(this.ListBox_SelectedIndexChanged);
             // 
             // tbItemsCount
             // 
@@ -148,7 +149,7 @@
             this.tbText.Location = new System.Drawing.Point(346, 249);
             this.tbText.MinimumSize = new System.Drawing.Size(12, 30);
             this.tbText.Name = "tbText";
-            this.tbText.Size = new System.Drawing.Size(132, 30);
+            this.tbText.Size = new System.Drawing.Size(132, 22);
             this.tbText.TabIndex = 8;
             // 
             // labelNewFirstName
