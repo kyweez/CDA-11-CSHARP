@@ -6,10 +6,10 @@ using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUSINESS_CLASS_LIBRARY;
-using TOOLS;
 
 namespace LISTBOX
 {
@@ -176,7 +176,7 @@ namespace LISTBOX
             {
                 if (sender == (object)tbNewElement)
                 {
-                    if (!DataValidity.IsValidString(tbNewElement.Text, @"^[a-zA-Z]+([\-\' ][a-zA-Z]+)*$"))
+                    if (!Regex.IsMatch(tbNewElement.Text, @"^[a-zA-Z]+([\-\' ][a-zA-Z]+)*$"))
                     {
                         errorProviderSelectIndex.SetError(tbNewElement, "Invalid first name");
                         btnAddFirstName.Enabled = false;

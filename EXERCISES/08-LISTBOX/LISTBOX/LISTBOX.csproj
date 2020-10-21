@@ -84,10 +84,6 @@
       <Project>{6cdb7e24-c945-4e20-bfbc-9c7a0397c06b}</Project>
       <Name>BUSINESS-CLASS-LIBRARY</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TOOLS\TOOLS.csproj">
-      <Project>{2ca0e61f-172e-42f1-9cd9-0f277886490e}</Project>
-      <Name>TOOLS</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

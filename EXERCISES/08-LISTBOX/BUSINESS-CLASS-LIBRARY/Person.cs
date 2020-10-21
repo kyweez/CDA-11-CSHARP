@@ -1,4 +1,4 @@
-﻿using TOOLS;
+﻿using System.Text.RegularExpressions;
 
 namespace BUSINESS_CLASS_LIBRARY
 {
@@ -12,7 +12,7 @@ namespace BUSINESS_CLASS_LIBRARY
         /**************************** CONSTRUCTORS ***************************/
         public Person(string _firstName)
         {
-            firstName = DataValidity.IsValidString(_firstName, regexFirstName) ? _firstName : "Undefined";
+            firstName = Regex.IsMatch(_firstName, regexFirstName) ? _firstName : "Undefined";
         }
 
         /***************************** PROPERTIES ****************************/
