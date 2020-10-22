@@ -51,11 +51,14 @@
             this.cbSource.Location = new System.Drawing.Point(23, 48);
             this.cbSource.Name = "cbSource";
             this.cbSource.Size = new System.Drawing.Size(208, 24);
+            this.cbSource.Sorted = true;
             this.cbSource.TabIndex = 0;
             this.cbSource.TextChanged += new System.EventHandler(this.CbSource_TextChanged);
+            this.cbSource.Click += new System.EventHandler(this.CbSource_Click);
             // 
             // btnRightShift
             // 
+            this.btnRightShift.Enabled = false;
             this.btnRightShift.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRightShift.Location = new System.Drawing.Point(308, 48);
             this.btnRightShift.Name = "btnRightShift";
@@ -110,6 +113,7 @@
             this.lbTarget.Name = "lbTarget";
             this.lbTarget.Size = new System.Drawing.Size(203, 180);
             this.lbTarget.TabIndex = 5;
+            this.lbTarget.SelectedIndexChanged += new System.EventHandler(this.LbTarget_SelectedIndexChanged);
             // 
             // btnMoveUp
             // 

@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -22,7 +24,8 @@ namespace ComboBoxApp
             InitializeComponent();
             countryTab = new List<string> { "France", "Belgique", "Allemagne", "Japon", "Portugal", "Grece", "Bulgarie", "Espagne" };
             countryTab.Sort();
-            CopyAllToSource();
+            foreach (string country in countryTab)
+                cbSource.Items.Add(country);
         }
 
         /***************************** PROPERTIES ****************************/
@@ -41,8 +44,9 @@ namespace ComboBoxApp
                 errorProvider.SetError(cbSource, "Doesn't respect the classical country name convention");
             else
             {
-                lbTarget.Items.Add(_country);
-                countryTab.Add(_country);
+                lbTarget.Items.Add(FormatCountryName(_country));
+                countryTab.Add(FormatCountryName(_country));
+                cbSource.Text = "";
             }
         }
 
@@ -54,7 +58,13 @@ namespace ComboBoxApp
             if (cbSource.Items.Count == 0)
                 btnRightShiftAll.Enabled = false;
             else
-                btnRightShiftAll.Enabled = true;
+            {
+                if (cbSource.Text.Length == 0)
+                    btnRightShift.Enabled = false;
+                else
+                    btnRightShift.Enabled = true;
+            }
+
             if (lbTarget.Items.Count == 0)
             {
                 btnLeftShift.Enabled = false;
@@ -64,7 +74,6 @@ namespace ComboBoxApp
             }
             else
             {
-                btnLeftShift.Enabled = true;
                 btnLeftShiftAll.Enabled = true;
                 lbTarget.Enabled = true;
                 labTarget.Enabled = true;
@@ -76,7 +85,7 @@ namespace ComboBoxApp
         /// </summary>
         private void CopyAllToSource()
         {
-            foreach (string country in countryTab)
+            foreach (string country in lbTarget.Items)
                 cbSource.Items.Add(country);
             lbTarget.Items.Clear();
         }
@@ -86,9 +95,16 @@ namespace ComboBoxApp
         /// </summary>
         private void CopyAllToTarget()
         {
-            foreach (string country in countryTab)
+            foreach (string country in cbSource.Items)
                 lbTarget.Items.Add(country);
             cbSource.Items.Clear();
+        }
+
+        private string FormatCountryName(string _country)
+        {
+            CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
+            TextInfo textInfo = cultureInfo.TextInfo;
+            return textInfo.ToTitleCase(_country);
         }
 
         private void SwapCountryFromSourceToTarget(string _country)
@@ -97,6 +113,7 @@ namespace ComboBoxApp
             {
                 lbTarget.Items.Add(_country);
                 cbSource.Items.Remove(_country);
+                cbSource.Text = "";
             }
             else
             {
@@ -116,19 +133,29 @@ namespace ComboBoxApp
 
         private void BtnLeftShiftAll_Click(object sender, EventArgs e)
         {
+            lbTarget.SelectedIndex = -1;
             CopyAllToSource();
             CheckIsEmptyBox();
         }
 
         private void BtnRightShift_Click(object sender, EventArgs e)
         {
+            lbTarget.SelectedIndex = -1;
+            SwapCountryFromSourceToTarget(cbSource.Text);
             CheckIsEmptyBox();
         }
 
         private void BtnRightShiftAll_Click(object sender, EventArgs e)
         {
+            cbSource.Text = "";
+            lbTarget.SelectedIndex = -1;
             CopyAllToTarget();
             CheckIsEmptyBox();
+        }
+
+        private void CbSource_Click(object sender, EventArgs e)
+        {
+            lbTarget.SelectedIndex = -1;
         }
 
         private void CbSource_TextChanged(object sender, EventArgs e)
@@ -136,14 +163,32 @@ namespace ComboBoxApp
             errorProvider.Clear();
             if (cbSource.Text.Length == 0)
                 btnRightShift.Enabled = false;
+            else
+                btnRightShift.Enabled = true;
         }
 
-
-
-
-
-
-
-
+        private void LbTarget_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lbTarget.SelectedIndex == -1)
+            {
+                btnMoveDown.Enabled = false;
+                btnMoveUp.Enabled = false;
+            }
+            else if (lbTarget.SelectedIndex == 0)
+            {
+                btnMoveDown.Enabled = true;
+                btnMoveUp.Enabled = false;
+            }
+            else if (lbTarget.SelectedIndex == (lbTarget.Items.Count - 1))
+            {
+                btnMoveDown.Enabled = false;
+                btnMoveUp.Enabled = true;
+            }
+            else
+            {
+                btnMoveDown.Enabled = true;
+                btnMoveUp.Enabled = true;
+            }
+        }
     }
 }
