@@ -28,115 +28,147 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListsApplication));
+            this.comboBoxSource = new System.Windows.Forms.ComboBox();
+            this.btnShiftRight = new System.Windows.Forms.Button();
+            this.btnShiftRightAll = new System.Windows.Forms.Button();
+            this.btnShiftLeft = new System.Windows.Forms.Button();
+            this.btnShiftLeftAll = new System.Windows.Forms.Button();
+            this.listBoxTarget = new System.Windows.Forms.ListBox();
+            this.btnUp = new System.Windows.Forms.Button();
+            this.btnDown = new System.Windows.Forms.Button();
+            this.labelSource = new System.Windows.Forms.Label();
+            this.labelTarget = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // comboBoxSource
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(13, 45);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(215, 21);
-            this.comboBox1.TabIndex = 0;
+            this.comboBoxSource.FormattingEnabled = true;
+            this.comboBoxSource.Location = new System.Drawing.Point(13, 45);
+            this.comboBoxSource.Name = "comboBoxSource";
+            this.comboBoxSource.Size = new System.Drawing.Size(215, 21);
+            this.comboBoxSource.TabIndex = 0;
             // 
-            // button1
+            // btnShiftRight
             // 
-            this.button1.Location = new System.Drawing.Point(285, 45);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnShiftRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShiftRight.Location = new System.Drawing.Point(285, 45);
+            this.btnShiftRight.Name = "btnShiftRight";
+            this.btnShiftRight.Size = new System.Drawing.Size(75, 32);
+            this.btnShiftRight.TabIndex = 1;
+            this.btnShiftRight.Text = ">";
+            this.btnShiftRight.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnShiftRightAll
             // 
-            this.button2.Location = new System.Drawing.Point(285, 75);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnShiftRightAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShiftRightAll.Location = new System.Drawing.Point(285, 83);
+            this.btnShiftRightAll.Name = "btnShiftRightAll";
+            this.btnShiftRightAll.Size = new System.Drawing.Size(75, 32);
+            this.btnShiftRightAll.TabIndex = 2;
+            this.btnShiftRightAll.Text = ">>";
+            this.btnShiftRightAll.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnShiftLeft
             // 
-            this.button3.Location = new System.Drawing.Point(285, 152);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnShiftLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShiftLeft.Location = new System.Drawing.Point(285, 187);
+            this.btnShiftLeft.Name = "btnShiftLeft";
+            this.btnShiftLeft.Size = new System.Drawing.Size(75, 32);
+            this.btnShiftLeft.TabIndex = 3;
+            this.btnShiftLeft.Text = "<";
+            this.btnShiftLeft.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnShiftLeftAll
             // 
-            this.button4.Location = new System.Drawing.Point(285, 182);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnShiftLeftAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShiftLeftAll.Location = new System.Drawing.Point(285, 225);
+            this.btnShiftLeftAll.Name = "btnShiftLeftAll";
+            this.btnShiftLeftAll.Size = new System.Drawing.Size(75, 32);
+            this.btnShiftLeftAll.TabIndex = 4;
+            this.btnShiftLeftAll.Text = "<<";
+            this.btnShiftLeftAll.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // listBoxTarget
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(403, 45);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(206, 212);
-            this.listBox1.TabIndex = 5;
+            this.listBoxTarget.FormattingEnabled = true;
+            this.listBoxTarget.Location = new System.Drawing.Point(403, 45);
+            this.listBoxTarget.Name = "listBoxTarget";
+            this.listBoxTarget.Size = new System.Drawing.Size(206, 212);
+            this.listBoxTarget.TabIndex = 5;
             // 
-            // button5
+            // btnUp
             // 
-            this.button5.Location = new System.Drawing.Point(403, 304);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnUp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUp.BackgroundImage")));
+            this.btnUp.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUp.Location = new System.Drawing.Point(459, 263);
+            this.btnUp.Name = "btnUp";
+            this.btnUp.Size = new System.Drawing.Size(42, 53);
+            this.btnUp.TabIndex = 6;
+            this.btnUp.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnDown
             // 
-            this.button6.Location = new System.Drawing.Point(534, 304);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnDown.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDown.Location = new System.Drawing.Point(507, 263);
+            this.btnDown.Name = "btnDown";
+            this.btnDown.Size = new System.Drawing.Size(42, 53);
+            this.btnDown.TabIndex = 7;
+            this.btnDown.Text = "↓";
+            this.btnDown.UseVisualStyleBackColor = true;
+            // 
+            // labelSource
+            // 
+            this.labelSource.AutoSize = true;
+            this.labelSource.Location = new System.Drawing.Point(13, 13);
+            this.labelSource.Name = "labelSource";
+            this.labelSource.Size = new System.Drawing.Size(41, 13);
+            this.labelSource.TabIndex = 8;
+            this.labelSource.Text = "Source";
+            // 
+            // labelTarget
+            // 
+            this.labelTarget.AutoSize = true;
+            this.labelTarget.Location = new System.Drawing.Point(403, 12);
+            this.labelTarget.Name = "labelTarget";
+            this.labelTarget.Size = new System.Drawing.Size(38, 13);
+            this.labelTarget.TabIndex = 9;
+            this.labelTarget.Text = "Target";
             // 
             // ListsApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(638, 353);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(638, 362);
+            this.Controls.Add(this.labelTarget);
+            this.Controls.Add(this.labelSource);
+            this.Controls.Add(this.btnDown);
+            this.Controls.Add(this.btnUp);
+            this.Controls.Add(this.listBoxTarget);
+            this.Controls.Add(this.btnShiftLeftAll);
+            this.Controls.Add(this.btnShiftLeft);
+            this.Controls.Add(this.btnShiftRightAll);
+            this.Controls.Add(this.btnShiftRight);
+            this.Controls.Add(this.comboBoxSource);
             this.Name = "ListsApplication";
             this.Text = "Lists";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.ComboBox comboBoxSource;
+        private System.Windows.Forms.Button btnShiftRight;
+        private System.Windows.Forms.Button btnShiftRightAll;
+        private System.Windows.Forms.Button btnShiftLeft;
+        private System.Windows.Forms.Button btnShiftLeftAll;
+        private System.Windows.Forms.ListBox listBoxTarget;
+        private System.Windows.Forms.Button btnUp;
+        private System.Windows.Forms.Button btnDown;
+        private System.Windows.Forms.Label labelSource;
+        private System.Windows.Forms.Label labelTarget;
     }
 }
 

@@ -42,7 +42,6 @@ namespace BusinessClassLibrary
         public Dictionary<string, bool> Countries
         {
             get => countries;
-            set => countries = value;
         }
 
         /****************************** METHODS ******************************/
