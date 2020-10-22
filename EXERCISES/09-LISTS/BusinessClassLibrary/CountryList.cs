@@ -33,6 +33,7 @@ namespace BusinessClassLibrary
             {
                 foreach (string country in _countryList)
                     countries.Add(country, false);
+                countries.OrderBy(item => item.Key);
             }
         }
 
@@ -119,6 +120,30 @@ namespace BusinessClassLibrary
                 return false;
             countries.Add(_country, false);
             countries.OrderBy(item => item.Key);
+            return true;
+        }
+
+        /// <summary>
+        /// Redifine AddCountry: Add a country to the list and set the default value to value.
+        /// If the country can't be added, returns false an an error message.
+        /// </summary>
+        /// <param name="_country">string</param>
+        /// <returns>bool</returns>
+        public bool AddCountry(string _country, bool _value, out string _error)
+        {
+            if (!IsValidCountryName(_country))
+            {
+                _error = "Invalid format";
+                return false;
+            }
+            if (!IsUniqueCountry(_country))
+            {
+                _error = "This country already exists";
+                return false;
+            }
+            countries.Add(_country, _value);
+            countries.OrderBy(item => item.Key);
+            _error = null;
             return true;
         }
     }

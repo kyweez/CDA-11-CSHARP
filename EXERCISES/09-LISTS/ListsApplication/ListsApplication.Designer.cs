@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListsApplication));
             this.comboBoxSource = new System.Windows.Forms.ComboBox();
             this.btnShiftRight = new System.Windows.Forms.Button();
@@ -39,6 +40,8 @@
             this.btnDown = new System.Windows.Forms.Button();
             this.labelSource = new System.Windows.Forms.Label();
             this.labelTarget = new System.Windows.Forms.Label();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBoxSource
@@ -47,10 +50,15 @@
             this.comboBoxSource.Location = new System.Drawing.Point(13, 45);
             this.comboBoxSource.Name = "comboBoxSource";
             this.comboBoxSource.Size = new System.Drawing.Size(215, 21);
+            this.comboBoxSource.Sorted = true;
             this.comboBoxSource.TabIndex = 0;
+            this.comboBoxSource.SelectedIndexChanged += new System.EventHandler(this.ComboBoxSource_SelectedIndexChanged);
+            this.comboBoxSource.TextChanged += new System.EventHandler(this.ComboBoxSource_TextChanged);
+            this.comboBoxSource.Click += new System.EventHandler(this.ComboBoxSource_Click);
             // 
             // btnShiftRight
             // 
+            this.btnShiftRight.Enabled = false;
             this.btnShiftRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShiftRight.Location = new System.Drawing.Point(285, 45);
             this.btnShiftRight.Name = "btnShiftRight";
@@ -58,6 +66,7 @@
             this.btnShiftRight.TabIndex = 1;
             this.btnShiftRight.Text = ">";
             this.btnShiftRight.UseVisualStyleBackColor = true;
+            this.btnShiftRight.Click += new System.EventHandler(this.BtnShiftRight_Click);
             // 
             // btnShiftRightAll
             // 
@@ -68,9 +77,11 @@
             this.btnShiftRightAll.TabIndex = 2;
             this.btnShiftRightAll.Text = ">>";
             this.btnShiftRightAll.UseVisualStyleBackColor = true;
+            this.btnShiftRightAll.Click += new System.EventHandler(this.BtnShiftRightAll_Click);
             // 
             // btnShiftLeft
             // 
+            this.btnShiftLeft.Enabled = false;
             this.btnShiftLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShiftLeft.Location = new System.Drawing.Point(285, 187);
             this.btnShiftLeft.Name = "btnShiftLeft";
@@ -81,6 +92,7 @@
             // 
             // btnShiftLeftAll
             // 
+            this.btnShiftLeftAll.Enabled = false;
             this.btnShiftLeftAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShiftLeftAll.Location = new System.Drawing.Point(285, 225);
             this.btnShiftLeftAll.Name = "btnShiftLeftAll";
@@ -88,9 +100,11 @@
             this.btnShiftLeftAll.TabIndex = 4;
             this.btnShiftLeftAll.Text = "<<";
             this.btnShiftLeftAll.UseVisualStyleBackColor = true;
+            this.btnShiftLeftAll.Click += new System.EventHandler(this.BtnShiftLeftAll_Click);
             // 
             // listBoxTarget
             // 
+            this.listBoxTarget.Enabled = false;
             this.listBoxTarget.FormattingEnabled = true;
             this.listBoxTarget.Location = new System.Drawing.Point(403, 45);
             this.listBoxTarget.Name = "listBoxTarget";
@@ -99,6 +113,7 @@
             // 
             // btnUp
             // 
+            this.btnUp.Enabled = false;
             this.btnUp.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUp.Image = ((System.Drawing.Image)(resources.GetObject("btnUp.Image")));
             this.btnUp.Location = new System.Drawing.Point(449, 263);
@@ -109,6 +124,7 @@
             // 
             // btnDown
             // 
+            this.btnDown.Enabled = false;
             this.btnDown.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDown.Image = ((System.Drawing.Image)(resources.GetObject("btnDown.Image")));
             this.btnDown.Location = new System.Drawing.Point(514, 263);
@@ -130,12 +146,18 @@
             // labelTarget
             // 
             this.labelTarget.AutoSize = true;
+            this.labelTarget.Enabled = false;
             this.labelTarget.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTarget.Location = new System.Drawing.Point(403, 16);
             this.labelTarget.Name = "labelTarget";
             this.labelTarget.Size = new System.Drawing.Size(55, 20);
             this.labelTarget.TabIndex = 9;
             this.labelTarget.Text = "Target";
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider.ContainerControl = this;
             // 
             // ListsApplication
             // 
@@ -154,6 +176,7 @@
             this.Controls.Add(this.comboBoxSource);
             this.Name = "ListsApplication";
             this.Text = "Lists";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,6 +194,7 @@
         private System.Windows.Forms.Button btnDown;
         private System.Windows.Forms.Label labelSource;
         private System.Windows.Forms.Label labelTarget;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
 
