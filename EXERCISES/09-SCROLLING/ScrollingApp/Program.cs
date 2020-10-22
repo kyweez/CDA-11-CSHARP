@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ListsApplication
+namespace ScrollingApp
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace ListsApplication
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ListsApplication());
+            Application.Run(new Scrolling());
         }
     }
 }

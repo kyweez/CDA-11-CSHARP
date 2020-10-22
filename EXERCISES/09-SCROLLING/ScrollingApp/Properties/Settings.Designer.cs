@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ListsApplication.Properties
+namespace ScrollingApp.Properties
 {
 
 
