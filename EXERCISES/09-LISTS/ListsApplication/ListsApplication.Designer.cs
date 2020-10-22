@@ -99,9 +99,9 @@
             // 
             // btnUp
             // 
-            this.btnUp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUp.BackgroundImage")));
             this.btnUp.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUp.Location = new System.Drawing.Point(459, 263);
+            this.btnUp.Image = ((System.Drawing.Image)(resources.GetObject("btnUp.Image")));
+            this.btnUp.Location = new System.Drawing.Point(449, 263);
             this.btnUp.Name = "btnUp";
             this.btnUp.Size = new System.Drawing.Size(42, 53);
             this.btnUp.TabIndex = 6;
@@ -110,28 +110,30 @@
             // btnDown
             // 
             this.btnDown.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDown.Location = new System.Drawing.Point(507, 263);
+            this.btnDown.Image = ((System.Drawing.Image)(resources.GetObject("btnDown.Image")));
+            this.btnDown.Location = new System.Drawing.Point(514, 263);
             this.btnDown.Name = "btnDown";
             this.btnDown.Size = new System.Drawing.Size(42, 53);
             this.btnDown.TabIndex = 7;
-            this.btnDown.Text = "↓";
             this.btnDown.UseVisualStyleBackColor = true;
             // 
             // labelSource
             // 
             this.labelSource.AutoSize = true;
-            this.labelSource.Location = new System.Drawing.Point(13, 13);
+            this.labelSource.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSource.Location = new System.Drawing.Point(13, 17);
             this.labelSource.Name = "labelSource";
-            this.labelSource.Size = new System.Drawing.Size(41, 13);
+            this.labelSource.Size = new System.Drawing.Size(60, 20);
             this.labelSource.TabIndex = 8;
             this.labelSource.Text = "Source";
             // 
             // labelTarget
             // 
             this.labelTarget.AutoSize = true;
-            this.labelTarget.Location = new System.Drawing.Point(403, 12);
+            this.labelTarget.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTarget.Location = new System.Drawing.Point(403, 16);
             this.labelTarget.Name = "labelTarget";
-            this.labelTarget.Size = new System.Drawing.Size(38, 13);
+            this.labelTarget.Size = new System.Drawing.Size(55, 20);
             this.labelTarget.TabIndex = 9;
             this.labelTarget.Text = "Target";
             // 
