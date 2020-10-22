@@ -67,6 +67,7 @@ namespace ComboBoxApp
 
             if (lbTarget.Items.Count == 0)
             {
+                btnRightShiftAll.Enabled = true;
                 btnLeftShift.Enabled = false;
                 btnLeftShiftAll.Enabled = false;
                 lbTarget.Enabled = false;
@@ -136,6 +137,30 @@ namespace ComboBoxApp
             lbTarget.SelectedIndex = -1;
             CopyAllToSource();
             CheckIsEmptyBox();
+        }
+
+        private void BtnMoveDown_Click(object sender, EventArgs e)
+        {
+            int index = lbTarget.SelectedIndex;
+            string temp = lbTarget.Items[index].ToString();
+
+            if (lbTarget.Items.Count > 1 && lbTarget.SelectedIndex < (lbTarget.Items.Count - 1))
+            {
+                lbTarget.Items[index] = lbTarget.Items[index + 1];
+                lbTarget.Items[index + 1] = temp;
+            }
+        }
+
+        private void BtnMoveUp_Click(object sender, EventArgs e)
+        {
+            int index = lbTarget.SelectedIndex;
+            string temp = lbTarget.Items[index].ToString();
+
+            if (lbTarget.Items.Count > 1 && lbTarget.SelectedIndex > 0)
+            {
+                lbTarget.Items[index] = lbTarget.Items[index - 1];
+                lbTarget.Items[index - 1] = temp;
+            }
         }
 
         private void BtnRightShift_Click(object sender, EventArgs e)

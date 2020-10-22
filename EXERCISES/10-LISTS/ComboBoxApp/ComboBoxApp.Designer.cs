@@ -124,6 +124,7 @@
             this.btnMoveUp.Size = new System.Drawing.Size(40, 40);
             this.btnMoveUp.TabIndex = 6;
             this.btnMoveUp.UseVisualStyleBackColor = true;
+            this.btnMoveUp.Click += new System.EventHandler(this.BtnMoveUp_Click);
             // 
             // btnMoveDown
             // 
@@ -134,6 +135,7 @@
             this.btnMoveDown.Size = new System.Drawing.Size(40, 40);
             this.btnMoveDown.TabIndex = 7;
             this.btnMoveDown.UseVisualStyleBackColor = true;
+            this.btnMoveDown.Click += new System.EventHandler(this.BtnMoveDown_Click);
             // 
             // labSource
             // 
