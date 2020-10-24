@@ -28,8 +28,6 @@ namespace ComboBoxApp
                 cbSource.Items.Add(country);
         }
 
-        /***************************** PROPERTIES ****************************/
-
         /****************************** METHODS ******************************/
 
         /// <summary>
@@ -101,6 +99,11 @@ namespace ComboBoxApp
             cbSource.Items.Clear();
         }
 
+        /// <summary>
+        /// Format the input string into a valid one for a country
+        /// </summary>
+        /// <param name="_country">string</param>
+        /// <returns>string</returns>
         private string FormatCountryName(string _country)
         {
             CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
@@ -108,6 +111,11 @@ namespace ComboBoxApp
             return textInfo.ToTitleCase(_country);
         }
 
+        /// <summary>
+        /// Add country from comboBox to listBox if it's possbile
+        /// If not, set an errorProvider
+        /// </summary>
+        /// <param name="_country">string</param>
         private void SwapCountryFromSourceToTarget(string _country)
         {
             if (cbSource.Items.Contains(_country))
@@ -127,11 +135,24 @@ namespace ComboBoxApp
 
         /******************************* EVENTS ******************************/
 
+        /// <summary>
+        /// Shift the selected country to the comboBox
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="e">EventArgs</param>
         private void BtnLeftShift_Click(object sender, EventArgs e)
         {
+            int index = lbTarget.SelectedIndex;
+            cbSource.Items.Add(lbTarget.Items[index]);
+            lbTarget.Items.RemoveAt(index);
             CheckIsEmptyBox();
         }
 
+        /// <summary>
+        /// Shift all countries to the combox
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="e">EventArgs</param>
         private void BtnLeftShiftAll_Click(object sender, EventArgs e)
         {
             lbTarget.SelectedIndex = -1;
@@ -139,6 +160,11 @@ namespace ComboBoxApp
             CheckIsEmptyBox();
         }
 
+        /// <summary>
+        /// Move down the selected item in the list box
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="e">EventArgs</param>
         private void BtnMoveDown_Click(object sender, EventArgs e)
         {
             int index = lbTarget.SelectedIndex;
@@ -151,6 +177,11 @@ namespace ComboBoxApp
             }
         }
 
+        /// <summary>
+        /// Move up the selected item in the list box
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="e">EventArgs</param>
         private void BtnMoveUp_Click(object sender, EventArgs e)
         {
             int index = lbTarget.SelectedIndex;
@@ -163,6 +194,11 @@ namespace ComboBoxApp
             }
         }
 
+        /// <summary>
+        /// Shift the country input in the comboBox.Text into the listBox if it's possible
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="e">EventArgs</param>
         private void BtnRightShift_Click(object sender, EventArgs e)
         {
             lbTarget.SelectedIndex = -1;
@@ -170,6 +206,11 @@ namespace ComboBoxApp
             CheckIsEmptyBox();
         }
 
+        /// <summary>
+        /// Shift all the countries in the listBox
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="e">EventArgs</param>
         private void BtnRightShiftAll_Click(object sender, EventArgs e)
         {
             cbSource.Text = "";
@@ -178,11 +219,21 @@ namespace ComboBoxApp
             CheckIsEmptyBox();
         }
 
+        /// <summary>
+        /// Unselect the selected item in the listBox
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="e">EventArgs</param>
         private void CbSource_Click(object sender, EventArgs e)
         {
             lbTarget.SelectedIndex = -1;
         }
 
+        /// <summary>
+        /// Clear errorProvider and enable/disable rightShift button
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="e">EventArgs</param>
         private void CbSource_TextChanged(object sender, EventArgs e)
         {
             errorProvider.Clear();
@@ -192,22 +243,45 @@ namespace ComboBoxApp
                 btnRightShift.Enabled = true;
         }
 
+        /// <summary>
+        /// Enable/Disable buttons depending on the selected index in listbox
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="e">EventArgs</param>
         private void LbTarget_SelectedIndexChanged(object sender, EventArgs e)
         {
+            btnLeftShift.Enabled = true;
             if (lbTarget.SelectedIndex == -1)
             {
+                btnLeftShift.Enabled = false;
                 btnMoveDown.Enabled = false;
                 btnMoveUp.Enabled = false;
             }
             else if (lbTarget.SelectedIndex == 0)
             {
-                btnMoveDown.Enabled = true;
-                btnMoveUp.Enabled = false;
+                if (lbTarget.Items.Count > 1)
+                {
+                    btnMoveDown.Enabled = true;
+                    btnMoveUp.Enabled = false;
+                }
+                else
+                {
+                    btnMoveDown.Enabled = false;
+                    btnMoveUp.Enabled = false;
+                }
             }
             else if (lbTarget.SelectedIndex == (lbTarget.Items.Count - 1))
             {
-                btnMoveDown.Enabled = false;
-                btnMoveUp.Enabled = true;
+                if (lbTarget.Items.Count > 1)
+                {
+                    btnMoveDown.Enabled = false;
+                    btnMoveUp.Enabled = true;
+                }
+                else
+                {
+                    btnMoveDown.Enabled = false;
+                    btnMoveUp.Enabled = false;
+                }
             }
             else
             {
