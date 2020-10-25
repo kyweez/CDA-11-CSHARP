@@ -16,7 +16,7 @@ namespace SynthesisApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Synthesis());
+            Application.Run(new Loan());
         }
     }
 }

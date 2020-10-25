@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace SynthesisApp
 {
-    public partial class Synthesis : Form
+    public partial class Loan : Form
     {
-        public Synthesis()
+        public Loan()
         {
             InitializeComponent();
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
