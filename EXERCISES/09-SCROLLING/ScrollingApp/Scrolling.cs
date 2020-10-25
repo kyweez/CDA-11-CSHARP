@@ -12,18 +12,17 @@ namespace ScrollingApp
 {
     public partial class Scrolling : Form
     {
-        /***************************** ATTRIBUTES ****************************/
-
         /**************************** CONSTRUCTORS ***************************/
         public Scrolling()
         {
             InitializeComponent();
         }
 
-        /***************************** PROPERTIES ****************************/
-
         /****************************** METHODS ******************************/
 
+        /// <summary>
+        /// Update the textBoxColor dependeing on the RGB values
+        /// </summary>
         private void UpdateTextBoxColor()
         {
             int red = Convert.ToInt32(numericUpDownRed.Value);
@@ -100,6 +99,5 @@ namespace ScrollingApp
             numericUpDownRed.Value = hsRed.Value;
             UpdateTextBoxColor();
         }
-
     }
 }
