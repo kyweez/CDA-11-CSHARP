@@ -58,6 +58,7 @@
             this.numericUpDownRed.Name = "numericUpDownRed";
             this.numericUpDownRed.Size = new System.Drawing.Size(50, 26);
             this.numericUpDownRed.TabIndex = 0;
+            this.numericUpDownRed.ValueChanged += new System.EventHandler(this.NumericUpDownRed_ValueChanged);
             // 
             // numericUpDownGreen
             // 
@@ -71,6 +72,7 @@
             this.numericUpDownGreen.Name = "numericUpDownGreen";
             this.numericUpDownGreen.Size = new System.Drawing.Size(50, 26);
             this.numericUpDownGreen.TabIndex = 1;
+            this.numericUpDownGreen.ValueChanged += new System.EventHandler(this.NumericUpDownGreen_ValueChanged);
             // 
             // numericUpDownBlue
             // 
@@ -84,27 +86,34 @@
             this.numericUpDownBlue.Name = "numericUpDownBlue";
             this.numericUpDownBlue.Size = new System.Drawing.Size(50, 26);
             this.numericUpDownBlue.TabIndex = 2;
+            this.numericUpDownBlue.ValueChanged += new System.EventHandler(this.NumericUpDownBlue_ValueChanged);
             // 
             // hsRed
             // 
             this.hsRed.Location = new System.Drawing.Point(111, 27);
+            this.hsRed.Maximum = 255;
             this.hsRed.Name = "hsRed";
             this.hsRed.Size = new System.Drawing.Size(210, 26);
             this.hsRed.TabIndex = 3;
+            this.hsRed.ValueChanged += new System.EventHandler(this.HsRed_ValueChanged);
             // 
             // hsGreen
             // 
             this.hsGreen.Location = new System.Drawing.Point(111, 76);
+            this.hsGreen.Maximum = 255;
             this.hsGreen.Name = "hsGreen";
             this.hsGreen.Size = new System.Drawing.Size(210, 26);
             this.hsGreen.TabIndex = 4;
+            this.hsGreen.ValueChanged += new System.EventHandler(this.HsGreen_ValueChanged);
             // 
             // hsBlue
             // 
             this.hsBlue.Location = new System.Drawing.Point(111, 127);
+            this.hsBlue.Maximum = 255;
             this.hsBlue.Name = "hsBlue";
             this.hsBlue.Size = new System.Drawing.Size(210, 26);
             this.hsBlue.TabIndex = 5;
+            this.hsBlue.ValueChanged += new System.EventHandler(this.HsBlue_ValueChanged);
             // 
             // labRed
             // 
@@ -139,39 +148,44 @@
             // textBoxRed
             // 
             this.textBoxRed.BackColor = System.Drawing.Color.Red;
+            this.textBoxRed.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxRed.Enabled = false;
             this.textBoxRed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxRed.Location = new System.Drawing.Point(422, 27);
             this.textBoxRed.Name = "textBoxRed";
-            this.textBoxRed.Size = new System.Drawing.Size(57, 26);
+            this.textBoxRed.Size = new System.Drawing.Size(57, 19);
             this.textBoxRed.TabIndex = 9;
             // 
             // textBoxGreen
             // 
             this.textBoxGreen.BackColor = System.Drawing.Color.Green;
+            this.textBoxGreen.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxGreen.Enabled = false;
             this.textBoxGreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxGreen.Location = new System.Drawing.Point(422, 76);
             this.textBoxGreen.Name = "textBoxGreen";
-            this.textBoxGreen.Size = new System.Drawing.Size(57, 26);
+            this.textBoxGreen.Size = new System.Drawing.Size(57, 19);
             this.textBoxGreen.TabIndex = 10;
             // 
             // textBoxBlue
             // 
             this.textBoxBlue.BackColor = System.Drawing.Color.Blue;
+            this.textBoxBlue.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxBlue.Enabled = false;
             this.textBoxBlue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxBlue.Location = new System.Drawing.Point(422, 127);
             this.textBoxBlue.Name = "textBoxBlue";
-            this.textBoxBlue.Size = new System.Drawing.Size(57, 26);
+            this.textBoxBlue.Size = new System.Drawing.Size(57, 19);
             this.textBoxBlue.TabIndex = 11;
             // 
             // textBoxColor
             // 
+            this.textBoxColor.BackColor = System.Drawing.Color.Black;
+            this.textBoxColor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxColor.Enabled = false;
             this.textBoxColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxColor.Location = new System.Drawing.Point(111, 184);
-            this.textBoxColor.MinimumSize = new System.Drawing.Size(0, 80);
+            this.textBoxColor.MinimumSize = new System.Drawing.Size(4, 80);
             this.textBoxColor.Name = "textBoxColor";
             this.textBoxColor.Size = new System.Drawing.Size(368, 80);
             this.textBoxColor.TabIndex = 12;
@@ -198,8 +212,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Scrolling";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Scrolling";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "Color Picker";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGreen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBlue)).EndInit();
