@@ -146,6 +146,10 @@ namespace ComboBoxApp
             cbSource.Items.Add(lbTarget.Items[index]);
             lbTarget.Items.RemoveAt(index);
             CheckIsEmptyBox();
+            if (lbTarget.Items.Count != 0)
+                lbTarget.SelectedIndex = 0;
+            else
+                lbTarget.SelectedIndex = -1;
         }
 
         /// <summary>
@@ -175,6 +179,7 @@ namespace ComboBoxApp
                 lbTarget.Items[index] = lbTarget.Items[index + 1];
                 lbTarget.Items[index + 1] = temp;
             }
+            lbTarget.SelectedIndex = index + 1;
         }
 
         /// <summary>
@@ -192,6 +197,7 @@ namespace ComboBoxApp
                 lbTarget.Items[index] = lbTarget.Items[index - 1];
                 lbTarget.Items[index - 1] = temp;
             }
+            lbTarget.SelectedIndex = index - 1;
         }
 
         /// <summary>
@@ -201,7 +207,7 @@ namespace ComboBoxApp
         /// <param name="e">EventArgs</param>
         private void BtnRightShift_Click(object sender, EventArgs e)
         {
-            lbTarget.SelectedIndex = -1;
+            //lbTarget.SelectedIndex = -1;
             SwapCountryFromSourceToTarget(cbSource.Text);
             CheckIsEmptyBox();
         }
