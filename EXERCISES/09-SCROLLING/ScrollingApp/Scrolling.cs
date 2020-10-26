@@ -30,11 +30,6 @@ namespace ScrollingApp
         /// </summary>
         private void UpdateTextBoxColor()
         {
-            //int red = Convert.ToInt32(numericUpDownRed.Value);
-            //int green = Convert.ToInt32(numericUpDownGreen.Value);
-            //int blue = Convert.ToInt32(numericUpDownBlue.Value);
-
-            //finalColor = Color.FromArgb(red, green, blue);
             textBoxColor.BackColor = finalColor;
         }
 
