@@ -73,6 +73,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynthesisApp", "12-SYNTHESI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboBoxApp", "11-LISTS\ComboBoxApp\ComboBoxApp.csproj", "{31CA1623-6EF4-4B49-A00F-52653A0FD895}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonClassLibrary", "12-SYNTHESIS\PersonClassLibrary\PersonClassLibrary.csproj", "{FCBECAD4-69BC-4FA4-8C68-11B1359A561A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -159,6 +161,10 @@ Global
 		{31CA1623-6EF4-4B49-A00F-52653A0FD895}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31CA1623-6EF4-4B49-A00F-52653A0FD895}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31CA1623-6EF4-4B49-A00F-52653A0FD895}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCBECAD4-69BC-4FA4-8C68-11B1359A561A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCBECAD4-69BC-4FA4-8C68-11B1359A561A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCBECAD4-69BC-4FA4-8C68-11B1359A561A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCBECAD4-69BC-4FA4-8C68-11B1359A561A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -186,6 +192,7 @@ Global
 		{403A2FFF-964D-4ADC-8F90-11F950E4E7B8} = {5F8B4C6B-D970-4F41-A0BA-F00CD8B30858}
 		{FC69B466-5079-42D1-8E4A-D470D32E36B3} = {70AB717F-DDF3-4E85-B190-30635CE51DE8}
 		{31CA1623-6EF4-4B49-A00F-52653A0FD895} = {CE2037FE-AE95-4280-8AA8-63F8F5FD6122}
+		{FCBECAD4-69BC-4FA4-8C68-11B1359A561A} = {70AB717F-DDF3-4E85-B190-30635CE51DE8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3D3CB9DA-63EE-4159-BFD3-A5CDF0F4E6B1}
