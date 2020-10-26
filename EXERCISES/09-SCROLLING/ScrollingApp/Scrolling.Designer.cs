@@ -90,34 +90,28 @@
             // 
             // hsRed
             // 
-            this.hsRed.LargeChange = 1;
             this.hsRed.Location = new System.Drawing.Point(111, 27);
-            this.hsRed.Maximum = 255;
+            this.hsRed.Maximum = 264;
             this.hsRed.Name = "hsRed";
             this.hsRed.Size = new System.Drawing.Size(210, 26);
-            this.hsRed.SmallChange = 0;
             this.hsRed.TabIndex = 3;
             this.hsRed.ValueChanged += new System.EventHandler(this.HsRed_ValueChanged);
             // 
             // hsGreen
             // 
-            this.hsGreen.LargeChange = 0;
             this.hsGreen.Location = new System.Drawing.Point(111, 76);
-            this.hsGreen.Maximum = 255;
+            this.hsGreen.Maximum = 264;
             this.hsGreen.Name = "hsGreen";
             this.hsGreen.Size = new System.Drawing.Size(210, 26);
-            this.hsGreen.SmallChange = 0;
             this.hsGreen.TabIndex = 4;
             this.hsGreen.ValueChanged += new System.EventHandler(this.HsGreen_ValueChanged);
             // 
             // hsBlue
             // 
-            this.hsBlue.LargeChange = 0;
             this.hsBlue.Location = new System.Drawing.Point(111, 127);
-            this.hsBlue.Maximum = 255;
+            this.hsBlue.Maximum = 264;
             this.hsBlue.Name = "hsBlue";
             this.hsBlue.Size = new System.Drawing.Size(210, 26);
-            this.hsBlue.SmallChange = 0;
             this.hsBlue.TabIndex = 5;
             this.hsBlue.ValueChanged += new System.EventHandler(this.HsBlue_ValueChanged);
             // 
@@ -232,7 +226,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDownRed;
         private System.Windows.Forms.NumericUpDown numericUpDownGreen;
         private System.Windows.Forms.NumericUpDown numericUpDownBlue;
-        private System.Windows.Forms.HScrollBar hsRed;
         private System.Windows.Forms.HScrollBar hsGreen;
         private System.Windows.Forms.HScrollBar hsBlue;
         private System.Windows.Forms.Label labRed;
@@ -242,6 +235,7 @@
         private System.Windows.Forms.TextBox textBoxGreen;
         private System.Windows.Forms.TextBox textBoxBlue;
         private System.Windows.Forms.TextBox textBoxColor;
+        private System.Windows.Forms.HScrollBar hsRed;
     }
 }
 

@@ -12,10 +12,15 @@ namespace ScrollingApp
 {
     public partial class Scrolling : Form
     {
+        /***************************** ATTRIBUTES ****************************/
+        private Color finalColor;
+
         /**************************** CONSTRUCTORS ***************************/
         public Scrolling()
         {
             InitializeComponent();
+            finalColor = new Color();
+            finalColor = Color.FromArgb(0, 0, 0);
         }
 
         /****************************** METHODS ******************************/
@@ -29,7 +34,8 @@ namespace ScrollingApp
             int green = Convert.ToInt32(numericUpDownGreen.Value);
             int blue = Convert.ToInt32(numericUpDownBlue.Value);
 
-            textBoxColor.BackColor = Color.FromArgb(red, green, blue);
+            finalColor = Color.FromArgb(red, green, blue);
+            textBoxColor.BackColor = finalColor;
         }
 
         /******************************* EVENTS ******************************/
