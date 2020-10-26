@@ -28,52 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.components = new System.ComponentModel.Container();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textBoxBorrowedCapital = new System.Windows.Forms.TextBox();
             this.radioButtonSeven = new System.Windows.Forms.RadioButton();
             this.radioButtonEight = new System.Windows.Forms.RadioButton();
             this.radioButtonNine = new System.Windows.Forms.RadioButton();
             this.groupBoxInterestRate = new System.Windows.Forms.GroupBox();
             this.buttonOK = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
-            this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
+            this.hScrollBarNumberOfMonths = new System.Windows.Forms.HScrollBar();
             this.labelName = new System.Windows.Forms.Label();
             this.labelBorrowedCapital = new System.Windows.Forms.Label();
             this.labelRepaymentPeriod = new System.Windows.Forms.Label();
             this.labelNumberOfMonths = new System.Windows.Forms.Label();
             this.labelRepaymentFrequency = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.labelNumberOfRepayments = new System.Windows.Forms.Label();
-            this.labelRepayments = new System.Windows.Forms.Label();
-            this.labelAmount = new System.Windows.Forms.Label();
+            this.listBoxRepaymentFrequency = new System.Windows.Forms.ListBox();
+            this.labelResult = new System.Windows.Forms.Label();
+            this.errorProviderName = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderAmount = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBoxInterestRate.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderAmount)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textBoxName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.textBox1.Location = new System.Drawing.Point(167, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(225, 23);
-            this.textBox1.TabIndex = 0;
+            this.textBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.textBoxName.Location = new System.Drawing.Point(167, 31);
+            this.textBoxName.MaxLength = 30;
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(284, 23);
+            this.textBoxName.TabIndex = 0;
+            this.textBoxName.TextChanged += new System.EventHandler(this.TextBoxName_TextChanged);
             // 
-            // textBox2
+            // textBoxBorrowedCapital
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.textBox2.Location = new System.Drawing.Point(167, 88);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(225, 23);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBoxBorrowedCapital.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.textBoxBorrowedCapital.Location = new System.Drawing.Point(167, 88);
+            this.textBoxBorrowedCapital.MaxLength = 7;
+            this.textBoxBorrowedCapital.Name = "textBoxBorrowedCapital";
+            this.textBoxBorrowedCapital.Size = new System.Drawing.Size(135, 23);
+            this.textBoxBorrowedCapital.TabIndex = 1;
+            this.textBoxBorrowedCapital.TextChanged += new System.EventHandler(this.TextBorrowedCapital_TextChanged);
             // 
             // radioButtonSeven
             // 
             this.radioButtonSeven.AutoSize = true;
+            this.radioButtonSeven.Checked = true;
             this.radioButtonSeven.Location = new System.Drawing.Point(16, 26);
             this.radioButtonSeven.Name = "radioButtonSeven";
             this.radioButtonSeven.Size = new System.Drawing.Size(46, 21);
             this.radioButtonSeven.TabIndex = 2;
             this.radioButtonSeven.TabStop = true;
+            this.radioButtonSeven.Tag = "7";
             this.radioButtonSeven.Text = "7%";
             this.radioButtonSeven.UseVisualStyleBackColor = true;
             // 
@@ -85,6 +93,7 @@
             this.radioButtonEight.Size = new System.Drawing.Size(46, 21);
             this.radioButtonEight.TabIndex = 3;
             this.radioButtonEight.TabStop = true;
+            this.radioButtonEight.Tag = "8";
             this.radioButtonEight.Text = "8%";
             this.radioButtonEight.UseVisualStyleBackColor = true;
             // 
@@ -96,6 +105,7 @@
             this.radioButtonNine.Size = new System.Drawing.Size(46, 21);
             this.radioButtonNine.TabIndex = 4;
             this.radioButtonNine.TabStop = true;
+            this.radioButtonNine.Tag = "9";
             this.radioButtonNine.Text = "9%";
             this.radioButtonNine.UseVisualStyleBackColor = true;
             // 
@@ -105,7 +115,7 @@
             this.groupBoxInterestRate.Controls.Add(this.radioButtonEight);
             this.groupBoxInterestRate.Controls.Add(this.radioButtonSeven);
             this.groupBoxInterestRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.groupBoxInterestRate.Location = new System.Drawing.Point(434, 23);
+            this.groupBoxInterestRate.Location = new System.Drawing.Point(507, 23);
             this.groupBoxInterestRate.Name = "groupBoxInterestRate";
             this.groupBoxInterestRate.Size = new System.Drawing.Size(80, 110);
             this.groupBoxInterestRate.TabIndex = 5;
@@ -114,8 +124,9 @@
             // 
             // buttonOK
             // 
+            this.buttonOK.Enabled = false;
             this.buttonOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.buttonOK.Location = new System.Drawing.Point(532, 34);
+            this.buttonOK.Location = new System.Drawing.Point(605, 34);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(108, 29);
             this.buttonOK.TabIndex = 6;
@@ -125,19 +136,23 @@
             // buttonCancel
             // 
             this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.buttonCancel.Location = new System.Drawing.Point(532, 84);
+            this.buttonCancel.Location = new System.Drawing.Point(605, 84);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(108, 31);
             this.buttonCancel.TabIndex = 7;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
-            // hScrollBar1
+            // hScrollBarNumberOfMonths
             // 
-            this.hScrollBar1.Location = new System.Drawing.Point(167, 147);
-            this.hScrollBar1.Name = "hScrollBar1";
-            this.hScrollBar1.Size = new System.Drawing.Size(225, 23);
-            this.hScrollBar1.TabIndex = 8;
+            this.hScrollBarNumberOfMonths.Location = new System.Drawing.Point(167, 147);
+            this.hScrollBarNumberOfMonths.Maximum = 309;
+            this.hScrollBarNumberOfMonths.Minimum = 1;
+            this.hScrollBarNumberOfMonths.Name = "hScrollBarNumberOfMonths";
+            this.hScrollBarNumberOfMonths.Size = new System.Drawing.Size(284, 23);
+            this.hScrollBarNumberOfMonths.TabIndex = 8;
+            this.hScrollBarNumberOfMonths.Value = 1;
+            this.hScrollBarNumberOfMonths.ValueChanged += new System.EventHandler(this.HScrollBarNumberOfMonths_ValueChanged);
             // 
             // labelName
             // 
@@ -192,71 +207,65 @@
             this.labelRepaymentFrequency.TabIndex = 14;
             this.labelRepaymentFrequency.Text = "Repayment frequency";
             // 
-            // listBox1
+            // listBoxRepaymentFrequency
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(15, 272);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(172, 82);
-            this.listBox1.TabIndex = 15;
+            this.listBoxRepaymentFrequency.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.listBoxRepaymentFrequency.FormattingEnabled = true;
+            this.listBoxRepaymentFrequency.ItemHeight = 17;
+            this.listBoxRepaymentFrequency.Location = new System.Drawing.Point(15, 272);
+            this.listBoxRepaymentFrequency.Name = "listBoxRepaymentFrequency";
+            this.listBoxRepaymentFrequency.Size = new System.Drawing.Size(144, 89);
+            this.listBoxRepaymentFrequency.TabIndex = 15;
             // 
-            // labelNumberOfRepayments
+            // labelResult
             // 
-            this.labelNumberOfRepayments.AutoSize = true;
-            this.labelNumberOfRepayments.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.labelNumberOfRepayments.Location = new System.Drawing.Point(365, 272);
-            this.labelNumberOfRepayments.Name = "labelNumberOfRepayments";
-            this.labelNumberOfRepayments.Size = new System.Drawing.Size(36, 20);
-            this.labelNumberOfRepayments.TabIndex = 16;
-            this.labelNumberOfRepayments.Text = "100";
+            this.labelResult.AutoSize = true;
+            this.labelResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
+            this.labelResult.ForeColor = System.Drawing.Color.Red;
+            this.labelResult.Location = new System.Drawing.Point(287, 287);
+            this.labelResult.Name = "labelResult";
+            this.labelResult.Size = new System.Drawing.Size(295, 26);
+            this.labelResult.TabIndex = 16;
+            this.labelResult.Text = "100 repayment of 12345,12 $";
+            this.labelResult.Visible = false;
             // 
-            // labelRepayments
+            // errorProviderName
             // 
-            this.labelRepayments.AutoSize = true;
-            this.labelRepayments.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.labelRepayments.Location = new System.Drawing.Point(407, 272);
-            this.labelRepayments.Name = "labelRepayments";
-            this.labelRepayments.Size = new System.Drawing.Size(115, 20);
-            this.labelRepayments.TabIndex = 17;
-            this.labelRepayments.Text = "repayments of";
+            this.errorProviderName.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderName.ContainerControl = this;
             // 
-            // labelAmount
+            // errorProviderAmount
             // 
-            this.labelAmount.AutoSize = true;
-            this.labelAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.labelAmount.Location = new System.Drawing.Point(528, 272);
-            this.labelAmount.Name = "labelAmount";
-            this.labelAmount.Size = new System.Drawing.Size(90, 20);
-            this.labelAmount.TabIndex = 18;
-            this.labelAmount.Text = "10000,00 $";
+            this.errorProviderAmount.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderAmount.ContainerControl = this;
             // 
             // Loan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(652, 374);
-            this.Controls.Add(this.labelAmount);
-            this.Controls.Add(this.labelRepayments);
-            this.Controls.Add(this.labelNumberOfRepayments);
-            this.Controls.Add(this.listBox1);
+            this.ClientSize = new System.Drawing.Size(737, 383);
+            this.Controls.Add(this.labelResult);
+            this.Controls.Add(this.listBoxRepaymentFrequency);
             this.Controls.Add(this.labelRepaymentFrequency);
             this.Controls.Add(this.labelNumberOfMonths);
             this.Controls.Add(this.labelRepaymentPeriod);
             this.Controls.Add(this.labelBorrowedCapital);
             this.Controls.Add(this.labelName);
-            this.Controls.Add(this.hScrollBar1);
+            this.Controls.Add(this.hScrollBarNumberOfMonths);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOK);
             this.Controls.Add(this.groupBoxInterestRate);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxBorrowedCapital);
+            this.Controls.Add(this.textBoxName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Loan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loan";
             this.groupBoxInterestRate.ResumeLayout(false);
             this.groupBoxInterestRate.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderAmount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,24 +273,24 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.TextBox textBoxBorrowedCapital;
         private System.Windows.Forms.RadioButton radioButtonSeven;
         private System.Windows.Forms.RadioButton radioButtonEight;
         private System.Windows.Forms.RadioButton radioButtonNine;
         private System.Windows.Forms.GroupBox groupBoxInterestRate;
         private System.Windows.Forms.Button buttonOK;
         private System.Windows.Forms.Button buttonCancel;
-        private System.Windows.Forms.HScrollBar hScrollBar1;
+        private System.Windows.Forms.HScrollBar hScrollBarNumberOfMonths;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label labelBorrowedCapital;
         private System.Windows.Forms.Label labelRepaymentPeriod;
         private System.Windows.Forms.Label labelNumberOfMonths;
         private System.Windows.Forms.Label labelRepaymentFrequency;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Label labelNumberOfRepayments;
-        private System.Windows.Forms.Label labelRepayments;
-        private System.Windows.Forms.Label labelAmount;
+        private System.Windows.Forms.ListBox listBoxRepaymentFrequency;
+        private System.Windows.Forms.Label labelResult;
+        private System.Windows.Forms.ErrorProvider errorProviderName;
+        private System.Windows.Forms.ErrorProvider errorProviderAmount;
     }
 }
 
