@@ -38,7 +38,8 @@ namespace SynthesisApp
         /// </summary>
         private void CalculateTotalRepayment()
         {
-            int rate = Convert.ToInt32(Controls.OfType<RadioButton>().FirstOrDefault(n => n.Checked).Tag);
+            var checkedButton = this.Controls.OfType<RadioButton>().First(button => (button.Checked == true));
+            int rate = Convert.ToInt32(checkedButton.Tag);
             int capital = Convert.ToInt32(textBoxBorrowedCapital);
             double repaymentNumber = hScrollBarNumberOfMonths.Value / NumberOfMonthsDivider();
 
@@ -80,6 +81,17 @@ namespace SynthesisApp
         }
 
         /******************************* EVENTS ******************************/
+
+        /// <summary>
+        /// Launches the calcul and display the result
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="e">EventArgs</param>
+        private void ButtonOK_Click(object sender, EventArgs e)
+        {
+            CalculateTotalRepayment();
+            MessageBox.Show(Math.Round(totalRepayment, 2).ToString());
+        }
 
         /// <summary>
         /// Triggers the update of the Label NumberOfMonths
