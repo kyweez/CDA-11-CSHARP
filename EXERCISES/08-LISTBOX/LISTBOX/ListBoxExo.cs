@@ -39,7 +39,24 @@ namespace LISTBOX
         /// </summary>
         private void AddFirstname()
         {
-            if (listBox.FindStringExact(tbNewElement.Text) == ListBox.NoMatches)
+            string title = "Operation aborted";
+            string errorMessage;
+
+            if (!Regex.IsMatch(tbNewElement.Text, @"^[a-zA-Z]+([\-\' ][a-zA-Z]+)*$"))
+            {
+                errorMessage = "This is not a valid name";
+                MessageBox.Show(errorMessage, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnAddFirstName.Enabled = false;
+                tbNewElement.Focus();
+            }
+            else if (!(listBox.FindStringExact(tbNewElement.Text) == ListBox.NoMatches))
+            {
+                errorMessage = "This firstname is already in the list !";
+                MessageBox.Show(errorMessage, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnAddFirstName.Enabled = false;
+                tbNewElement.Focus();
+            }
+            else
             {
                 btnEmptyList.Enabled = true;
                 listBox.Enabled = true;
@@ -50,18 +67,6 @@ namespace LISTBOX
                 tbNewElement.Focus();
                 tbItemsCount.Text = StudentTab.Count.ToString();
             }
-            else
-            {
-                string title;
-                string errorMessage;
-
-                title = "Operation aborted";
-                errorMessage = "This firstname is already in the list !";
-                MessageBox.Show(errorMessage, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                btnAddFirstName.Enabled = false;
-                tbNewElement.Focus();
-            }
-
         }
 
         /// <summary>
