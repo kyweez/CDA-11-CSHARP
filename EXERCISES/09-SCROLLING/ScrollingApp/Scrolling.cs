@@ -47,8 +47,8 @@ namespace ScrollingApp
         /// <param name="e">EventArgs</param>
         private void NumericUpDownBlue_ValueChanged(object sender, EventArgs e)
         {
+            hsBlue.Value = Convert.ToInt32(numericUpDownBlue.Value);
             finalColor = Color.FromArgb(finalColor.R, finalColor.G, Convert.ToInt32(numericUpDownBlue.Value));
-            //hsBlue.Value = Convert.ToInt32(numericUpDownBlue.Value);
             UpdateTextBoxColor();
         }
 
@@ -60,6 +60,7 @@ namespace ScrollingApp
         private void NumericUpDownGreen_ValueChanged(object sender, EventArgs e)
         {
             hsGreen.Value = Convert.ToInt32(numericUpDownGreen.Value);
+            finalColor = Color.FromArgb(finalColor.R, Convert.ToInt32(numericUpDownGreen.Value), finalColor.B);
             UpdateTextBoxColor();
         }
 
@@ -71,6 +72,7 @@ namespace ScrollingApp
         private void NumericUpDownRed_ValueChanged(object sender, EventArgs e)
         {
             hsRed.Value = Convert.ToInt32(numericUpDownRed.Value);
+            finalColor = Color.FromArgb(Convert.ToInt32(numericUpDownRed.Value), finalColor.G, finalColor.B);
             UpdateTextBoxColor();
         }
 
