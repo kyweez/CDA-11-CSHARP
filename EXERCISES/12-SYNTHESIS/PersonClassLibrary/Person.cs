@@ -28,21 +28,18 @@ namespace PersonClassLibrary
         /// <exception cref="ArgumentNullException">Input or pattern is null</exception>
         /// <exception cref="RegexMatchTimeoutException">A time-out occurred</exception>
         /// <exception cref="BadNameInputFormatException">Input names don't fit to the given regex</exception>
-        /// <exception cref="BadDateStringFormatException">The input string doesn't have a good format</exception>
         /// <exception cref="InvalidDateOfBirthException">The input date of birth is not valid</exception>
-        public Person(string _lastName, string _firstName, string _dateOfBirth, SexType _sex)
+        public Person(string _lastName, string _firstName, DateTime _dateOfBirth, SexType _sex)
         {
             try
             {
                 if (!Regex.IsMatch(_lastName, REGEX_NAME) || Regex.IsMatch(_firstName, REGEX_NAME))
                     throw new BadNameInputFormatException();
-                if (!DateTime.TryParse(_dateOfBirth, out DateTime result))
-                    throw new BadDateStringFormatException();
-                else if (result > DateTime.Now || result.Year < 1900)
+                if (_dateOfBirth > DateTime.Now || _dateOfBirth.Year < 1900)
                     throw new InvalidDateOfBirthException();
                 lastName = _lastName;
                 firstName = _firstName;
-                dateOfBirth = result;
+                dateOfBirth = _dateOfBirth;
                 sex = _sex;
             }
             catch (Exception e)
