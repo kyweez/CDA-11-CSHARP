@@ -1,5 +1,6 @@
 ﻿using PersonClassLibrary.PersonExceptions;
 using System;
+using System.Globalization;
 using System.Text.RegularExpressions;
 
 namespace PersonClassLibrary
@@ -37,7 +38,7 @@ namespace PersonClassLibrary
                     throw new BadNameInputFormatException();
                 if (_dateOfBirth > DateTime.Now || _dateOfBirth.Year < 1900)
                     throw new InvalidDateOfBirthException();
-                lastName = _lastName;
+                lastName = new CultureInfo(CultureInfo.CurrentCulture.Name).TextInfo.ToTitleCase( _lastName;
                 firstName = _firstName;
                 dateOfBirth = _dateOfBirth;
                 sex = _sex;

@@ -1,12 +1,6 @@
 ﻿using LoanClassLibrary.LoanExceptions;
 using PersonClassLibrary;
 using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LoanClassLibrary
 {
@@ -39,50 +33,27 @@ namespace LoanClassLibrary
                 throw new InvalidRepaymentDurationException();
             if (_interestRate < 7 || _interestRate > 9)
                 throw new InvalidInterestRateException();
+            if (!IsValidRepaymentPeriodicity(_durationInMonths, _periodicity))
+                throw new InvalidRepaymentPeriodicityException();
 
         }
         #endregion
 
-        //
-        // Exceptions:
-        //   T:System.FormatException:
-        //     value is not in an appropriate format.
-        //
-        //   T:System.InvalidCastException:
-        //     value does not implement the System.IConvertible interface. -or-The conversion
-        //     is not supported.
-        //
-        //   T:System.OverflowException:
-        //     value represents a number that is less than System.Int32.MinValue or greater
-        //     than System.Int32.MaxValue.
-
-
         #region Methods
         /// <summary>
-        /// 
+        /// This mehtod checks if the given periodicity fits with the given duration months
         /// </summary>
-        /// <param name="_durationInMonths"></param>
-        /// <param name="_periodicity"></param>
-        /// <returns></returns>
-        /// <exception cref="ArgumentNullException">Input or pattern is null</exception>
-        /// <exception cref="RegexMatchTimeoutException">A time-out occurred</exception>
-        /// <exception cref="BadNameInputFormatException">Input names don't fit to the given regex</exception>
-        /// <exception cref="BadDateStringFormatException">The input string doesn't have a good format</exception>
-        /// <exception cref="InvalidDateOfBirthException">The input date of birth is not valid</exception>
+        /// <param name="_durationInMonths">int</param>
+        /// <param name="_periodicity">RepaymentPeriodicity</param>
+        /// <returns>bool</returns>
+        /// <exception cref="InvalidRepaymentDurationException">The input date of birth is not valid</exception>
         private bool IsValidRepaymentPeriodicity(int _durationInMonths, RepaymentPeriodicity _periodicity)
         {
-            try
-            {
-                if (_durationInMonths < MIN_DURATION_IN_MONTHS || _durationInMonths > MAX_DURATION_IN_MONTHS)
-                    throw new InvalidRepaymentDurationException();
-                if (_durationInMonths % Convert.ToInt32(_periodicity) != 0)
-                    return false;
-                return true;
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
+            if (_durationInMonths < MIN_DURATION_IN_MONTHS || _durationInMonths > MAX_DURATION_IN_MONTHS)
+                throw new InvalidRepaymentDurationException();
+            if (_durationInMonths % Convert.ToInt32(_periodicity) != 0)
+                return false;
+            return true;
         }
         #endregion
     }

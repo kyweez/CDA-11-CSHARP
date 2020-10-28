@@ -42,7 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Person.cs" />
-    <Compile Include="PersonExceptions\BadDateStringFormatException.cs" />
     <Compile Include="PersonExceptions\BadNameInputFormatException.cs" />
     <Compile Include="PersonExceptions\InvalidDateOfBirthException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
