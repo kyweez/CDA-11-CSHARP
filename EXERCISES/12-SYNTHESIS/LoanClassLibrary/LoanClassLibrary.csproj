@@ -44,6 +44,7 @@
     <Compile Include="LoanExceptions\InvalidBorrowedCapitalException.cs" />
     <Compile Include="LoanExceptions\InvalidInterestRateException.cs" />
     <Compile Include="LoanExceptions\InvalidRepaymentDurationException.cs" />
+    <Compile Include="LoanExceptions\InvalidRepaymentPeriodicityException.cs" />
     <Compile Include="RepaymentPeriodicity.cs" />
     <Compile Include="Loan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

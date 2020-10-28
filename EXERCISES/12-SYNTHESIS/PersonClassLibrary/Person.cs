@@ -38,8 +38,8 @@ namespace PersonClassLibrary
                     throw new BadNameInputFormatException();
                 if (_dateOfBirth > DateTime.Now || _dateOfBirth.Year < 1900)
                     throw new InvalidDateOfBirthException();
-                lastName = new CultureInfo(CultureInfo.CurrentCulture.Name).TextInfo.ToTitleCase( _lastName;
-                firstName = _firstName;
+                lastName = new CultureInfo(CultureInfo.CurrentCulture.Name).TextInfo.ToTitleCase(_lastName);
+                firstName = new CultureInfo(CultureInfo.CurrentCulture.Name).TextInfo.ToTitleCase(_firstName);
                 dateOfBirth = _dateOfBirth;
                 sex = _sex;
             }

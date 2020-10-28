@@ -35,11 +35,17 @@ namespace LoanClassLibrary
                 throw new InvalidInterestRateException();
             if (!IsValidRepaymentPeriodicity(_durationInMonths, _periodicity))
                 throw new InvalidRepaymentPeriodicityException();
+            client = _client;
+            borrowedCapital = _borrowedCapital;
+            durationInMonths = _durationInMonths;
+            interestRate = _interestRate;
+            periodicity = _periodicity;
 
         }
         #endregion
 
         #region Methods
+
         /// <summary>
         /// This mehtod checks if the given periodicity fits with the given duration months
         /// </summary>
