@@ -20,7 +20,7 @@ namespace PersonClassLibrary
 
         #region Constructor
         /// <summary>
-        /// Create a new person object
+        /// Person constructor
         /// </summary>
         /// <param name="_lastName">string</param>
         /// <param name="_firstName">string</param>

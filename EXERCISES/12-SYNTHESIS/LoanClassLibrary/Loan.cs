@@ -23,6 +23,20 @@ namespace LoanClassLibrary
         #endregion
 
         #region Constructors
+
+        /// <summary>
+        /// Loan constructor
+        /// </summary>
+        /// <param name="_client">Person</param>
+        /// <param name="_borrowedCapital">int</param>
+        /// <param name="_durationInMonths">int</param>
+        /// <param name="_interestRate">int</param>
+        /// <param name="_periodicity">RepaymentPeriodicity</param>
+        /// <exception cref="ArgumentNullException">Input or pattern is null</exception>
+        /// <exception cref="InvalidBorrowedCapitalException">Invalid borrowed capital input</exception>
+        /// <exception cref="InvalidRepaymentDurationException">Invalid repayment duration input</exception>
+        /// <exception cref="InvalidInterestRateException">Invalid rate interest input</exception>
+        /// <exception cref="InvalidRepaymentPeriodicityException">Invalid repayment periodicity input</exception>
         public Loan(Person _client, int _borrowedCapital, int _durationInMonths, int _interestRate, RepaymentPeriodicity _periodicity)
         {
             if (_client == null)
@@ -40,7 +54,6 @@ namespace LoanClassLibrary
             durationInMonths = _durationInMonths;
             interestRate = _interestRate;
             periodicity = _periodicity;
-
         }
         #endregion
 
