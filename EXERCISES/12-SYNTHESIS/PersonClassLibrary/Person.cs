@@ -5,20 +5,26 @@ using System.Text.RegularExpressions;
 
 namespace PersonClassLibrary
 {
+    [Serializable]
     public class Person
     {
         #region Constants
         private const string REGEX_NAME = @"^[a-zA-Z]+([\-\' ][a-zA-Z]+)*$";
         #endregion
 
-        #region Attributes
-        private string lastName;
-        private string firstName;
-        private readonly DateTime dateOfBirth;
-        private SexType sex;
+        #region Properties
+        public string LastName { get; set; }
+        public string FirstName { get; set; }
+        public DateTime DateOfBirth { get; set; }
+        public SexType Sex { get; set; }
         #endregion
 
         #region Constructor
+
+        public Person()
+        {
+        }
+
         /// <summary>
         /// Person constructor
         /// </summary>
@@ -34,14 +40,14 @@ namespace PersonClassLibrary
         {
             try
             {
-                if (!Regex.IsMatch(_lastName, REGEX_NAME) || Regex.IsMatch(_firstName, REGEX_NAME))
-                    throw new BadNameInputFormatException();
+                //if (!Regex.IsMatch(_lastName, REGEX_NAME) || Regex.IsMatch(_firstName, REGEX_NAME))
+                //    throw new BadNameInputFormatException();
                 if (_dateOfBirth > DateTime.Now || _dateOfBirth.Year < 1900)
                     throw new InvalidDateOfBirthException();
-                lastName = new CultureInfo(CultureInfo.CurrentCulture.Name).TextInfo.ToTitleCase(_lastName);
-                firstName = new CultureInfo(CultureInfo.CurrentCulture.Name).TextInfo.ToTitleCase(_firstName);
-                dateOfBirth = _dateOfBirth;
-                sex = _sex;
+                LastName = new CultureInfo(CultureInfo.CurrentCulture.Name).TextInfo.ToTitleCase(_lastName);
+                FirstName = new CultureInfo(CultureInfo.CurrentCulture.Name).TextInfo.ToTitleCase(_firstName);
+                DateOfBirth = _dateOfBirth;
+                Sex = _sex;
             }
             catch (Exception e)
             {
