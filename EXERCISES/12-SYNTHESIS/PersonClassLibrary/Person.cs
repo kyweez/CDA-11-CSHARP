@@ -5,7 +5,6 @@ using System.Text.RegularExpressions;
 
 namespace PersonClassLibrary
 {
-    [Serializable]
     public class Person
     {
         #region Constants
@@ -20,11 +19,6 @@ namespace PersonClassLibrary
         #endregion
 
         #region Constructor
-
-        public Person()
-        {
-        }
-
         /// <summary>
         /// Person constructor
         /// </summary>
