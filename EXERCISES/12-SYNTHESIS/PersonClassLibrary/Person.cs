@@ -7,18 +7,18 @@ namespace PersonClassLibrary
 {
     public class Person
     {
-        #region Constants
+        #region ********** CONSTANTS **********
         private const string REGEX_NAME = @"^[a-zA-Z]+([\-\' ][a-zA-Z]+)*$";
         #endregion
 
-        #region Properties
+        #region ********** PROPERTIES **********
         public string LastName { get; set; }
         public string FirstName { get; set; }
         public DateTime DateOfBirth { get; set; }
         public SexType Sex { get; set; }
         #endregion
 
-        #region Constructor
+        #region ********** CONSTRUCTORS **********
         /// <summary>
         /// Person constructor
         /// </summary>
@@ -47,6 +47,18 @@ namespace PersonClassLibrary
             {
                 throw e;
             }
+        }
+        #endregion
+
+        #region ********** METHODS **********
+        public void Copy(Person _person)
+        {
+            if (_person == null)
+                throw new ArgumentNullException();
+            LastName = _person.LastName;
+            FirstName = _person.FirstName;
+            DateOfBirth = _person.DateOfBirth;
+            Sex = _person.Sex;
         }
         #endregion
     }
