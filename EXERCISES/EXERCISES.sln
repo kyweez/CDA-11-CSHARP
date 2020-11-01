@@ -83,6 +83,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serialisation", "Serialisat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientListClassLibrary", "12-SYNTHESIS\ClientListClassLibrary\ClientListClassLibrary.csproj", "{E637A047-7A53-4949-8472-725CB22A413A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanListClassLibrary", "12-SYNTHESIS\LoanListClassLibrary\LoanListClassLibrary.csproj", "{FCAF4CAA-DFA8-4BEA-AC22-CBB1E9D52DF3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -185,6 +187,10 @@ Global
 		{E637A047-7A53-4949-8472-725CB22A413A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E637A047-7A53-4949-8472-725CB22A413A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E637A047-7A53-4949-8472-725CB22A413A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCAF4CAA-DFA8-4BEA-AC22-CBB1E9D52DF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCAF4CAA-DFA8-4BEA-AC22-CBB1E9D52DF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCAF4CAA-DFA8-4BEA-AC22-CBB1E9D52DF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCAF4CAA-DFA8-4BEA-AC22-CBB1E9D52DF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -216,6 +222,7 @@ Global
 		{ABF826A8-69A2-43E2-8EC8-8577DEED36CA} = {70AB717F-DDF3-4E85-B190-30635CE51DE8}
 		{53B191E8-3D90-4B73-8B8B-543C6D5622F4} = {D83352FA-40AA-428B-B31E-8A3890D03946}
 		{E637A047-7A53-4949-8472-725CB22A413A} = {70AB717F-DDF3-4E85-B190-30635CE51DE8}
+		{FCAF4CAA-DFA8-4BEA-AC22-CBB1E9D52DF3} = {70AB717F-DDF3-4E85-B190-30635CE51DE8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3D3CB9DA-63EE-4159-BFD3-A5CDF0F4E6B1}

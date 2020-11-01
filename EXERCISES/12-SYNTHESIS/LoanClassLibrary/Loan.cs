@@ -14,20 +14,29 @@ namespace LoanClassLibrary
 
         #endregion
 
-        #region Attributes
-        private Person client;
-        private int borrowedCapital;
-        private int durationInMonths;
-        private int interestRate;
-        private RepaymentPeriodicity periodicity;
+        #region ********** PROPERTIES **********
+        private int BorrowedCapital
+        {
+            get; set;
+        }
+        private int DurationInMonths
+        {
+            get; set;
+        }
+        private int InterestRate
+        {
+            get; set;
+        }
+        private RepaymentPeriodicity Periodicity
+        {
+            get; set;
+        }
         #endregion
 
-        #region Constructors
-
+        #region ********** CONSTRUCTORS **********
         /// <summary>
         /// Loan constructor
         /// </summary>
-        /// <param name="_client">Person</param>
         /// <param name="_borrowedCapital">int</param>
         /// <param name="_durationInMonths">int</param>
         /// <param name="_interestRate">int</param>
@@ -37,10 +46,8 @@ namespace LoanClassLibrary
         /// <exception cref="InvalidRepaymentDurationException">Invalid repayment duration input</exception>
         /// <exception cref="InvalidInterestRateException">Invalid rate interest input</exception>
         /// <exception cref="InvalidRepaymentPeriodicityException">Invalid repayment periodicity input</exception>
-        public Loan(Person _client, int _borrowedCapital, int _durationInMonths, int _interestRate, RepaymentPeriodicity _periodicity)
+        public Loan(int _borrowedCapital, int _durationInMonths, int _interestRate, RepaymentPeriodicity _periodicity)
         {
-            if (_client == null)
-                throw new ArgumentNullException();
             if (_borrowedCapital < MIN_BORROWED_CAPITAL || _borrowedCapital > MAX_BORROWED_CAPITAL)
                 throw new InvalidBorrowedCapitalException();
             if (_durationInMonths < MIN_DURATION_IN_MONTHS || _durationInMonths > MAX_DURATION_IN_MONTHS)
@@ -49,16 +56,14 @@ namespace LoanClassLibrary
                 throw new InvalidInterestRateException();
             if (!IsValidRepaymentPeriodicity(_durationInMonths, _periodicity))
                 throw new InvalidRepaymentPeriodicityException();
-            client = _client;
-            borrowedCapital = _borrowedCapital;
-            durationInMonths = _durationInMonths;
-            interestRate = _interestRate;
-            periodicity = _periodicity;
+            BorrowedCapital = _borrowedCapital;
+            DurationInMonths = _durationInMonths;
+            InterestRate = _interestRate;
+            Periodicity = _periodicity;
         }
         #endregion
 
-        #region Methods
-
+        #region ********** METHODS **********
         /// <summary>
         /// This mehtod checks if the given periodicity fits with the given duration months
         /// </summary>
@@ -74,6 +79,22 @@ namespace LoanClassLibrary
                 return false;
             return true;
         }
+
+        /// <summary>
+        /// Copy the given Person state into the the current object state
+        /// </summary>
+        /// <param name="_loan">Person</param>
+        /// <exception cref="ArgumentNullException">Input is null</exception>
+        public void Copy(Loan _loan)
+        {
+            if (_loan == null)
+                throw new ArgumentNullException();
+            BorrowedCapital = _loan.BorrowedCapital;
+            DurationInMonths = _loan.DurationInMonths;
+            InterestRate = _loan.InterestRate;
+            Periodicity = _loan.Periodicity;
+        }
+
         #endregion
     }
 }

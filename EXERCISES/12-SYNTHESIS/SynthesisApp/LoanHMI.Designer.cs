@@ -32,11 +32,11 @@
             this.tbLastName = new System.Windows.Forms.TextBox();
             this.tbDateOfBirth = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnReset = new System.Windows.Forms.Button();
+            this.btnSaveClient = new System.Windows.Forms.Button();
+            this.btnResetClient = new System.Windows.Forms.Button();
             this.gbClient = new System.Windows.Forms.GroupBox();
             this.cbSex = new System.Windows.Forms.ComboBox();
-            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnDeleteClient = new System.Windows.Forms.Button();
             this.labSex = new System.Windows.Forms.Label();
             this.labDateOfBirth = new System.Windows.Forms.Label();
             this.labLastName = new System.Windows.Forms.Label();
@@ -53,7 +53,9 @@
             this.labMonths = new System.Windows.Forms.Label();
             this.labRepaymentPeriodicity = new System.Windows.Forms.Label();
             this.gbLoan = new System.Windows.Forms.GroupBox();
+            this.btnDeleteLoan = new System.Windows.Forms.Button();
             this.labResult = new System.Windows.Forms.Label();
+            this.btnSaveLoan = new System.Windows.Forms.Button();
             this.gbClient.SuspendLayout();
             this.gbInterestRate.SuspendLayout();
             this.gbLoan.SuspendLayout();
@@ -63,6 +65,7 @@
             // 
             this.tbFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbFirstName.Location = new System.Drawing.Point(151, 36);
+            this.tbFirstName.MaxLength = 30;
             this.tbFirstName.Name = "tbFirstName";
             this.tbFirstName.Size = new System.Drawing.Size(204, 24);
             this.tbFirstName.TabIndex = 0;
@@ -71,6 +74,7 @@
             // 
             this.tbLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLastName.Location = new System.Drawing.Point(151, 79);
+            this.tbLastName.MaxLength = 30;
             this.tbLastName.Name = "tbLastName";
             this.tbLastName.Size = new System.Drawing.Size(204, 24);
             this.tbLastName.TabIndex = 1;
@@ -85,6 +89,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(151, 263);
@@ -92,36 +97,36 @@
             this.comboBox1.Size = new System.Drawing.Size(204, 26);
             this.comboBox1.TabIndex = 7;
             // 
-            // btnSave
+            // btnSaveClient
             // 
-            this.btnSave.Enabled = false;
-            this.btnSave.Location = new System.Drawing.Point(151, 213);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 30);
-            this.btnSave.TabIndex = 4;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSaveClient.Enabled = false;
+            this.btnSaveClient.Location = new System.Drawing.Point(151, 213);
+            this.btnSaveClient.Name = "btnSaveClient";
+            this.btnSaveClient.Size = new System.Drawing.Size(75, 30);
+            this.btnSaveClient.TabIndex = 4;
+            this.btnSaveClient.Text = "Save";
+            this.btnSaveClient.UseVisualStyleBackColor = true;
             // 
-            // btnReset
+            // btnResetClient
             // 
-            this.btnReset.Enabled = false;
-            this.btnReset.Location = new System.Drawing.Point(280, 213);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(75, 30);
-            this.btnReset.TabIndex = 5;
-            this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnResetClient.Enabled = false;
+            this.btnResetClient.Location = new System.Drawing.Point(280, 213);
+            this.btnResetClient.Name = "btnResetClient";
+            this.btnResetClient.Size = new System.Drawing.Size(75, 30);
+            this.btnResetClient.TabIndex = 5;
+            this.btnResetClient.Text = "Reset";
+            this.btnResetClient.UseVisualStyleBackColor = true;
             // 
             // gbClient
             // 
             this.gbClient.Controls.Add(this.cbSex);
-            this.gbClient.Controls.Add(this.btnDelete);
+            this.gbClient.Controls.Add(this.btnDeleteClient);
             this.gbClient.Controls.Add(this.labSex);
             this.gbClient.Controls.Add(this.labDateOfBirth);
             this.gbClient.Controls.Add(this.labLastName);
             this.gbClient.Controls.Add(this.labFirstName);
-            this.gbClient.Controls.Add(this.btnReset);
-            this.gbClient.Controls.Add(this.btnSave);
+            this.gbClient.Controls.Add(this.btnResetClient);
+            this.gbClient.Controls.Add(this.btnSaveClient);
             this.gbClient.Controls.Add(this.comboBox1);
             this.gbClient.Controls.Add(this.tbDateOfBirth);
             this.gbClient.Controls.Add(this.tbLastName);
@@ -136,21 +141,22 @@
             // 
             // cbSex
             // 
+            this.cbSex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSex.FormattingEnabled = true;
             this.cbSex.Location = new System.Drawing.Point(151, 165);
             this.cbSex.Name = "cbSex";
             this.cbSex.Size = new System.Drawing.Size(204, 26);
             this.cbSex.TabIndex = 3;
             // 
-            // btnDelete
+            // btnDeleteClient
             // 
-            this.btnDelete.Enabled = false;
-            this.btnDelete.Location = new System.Drawing.Point(27, 259);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 30);
-            this.btnDelete.TabIndex = 6;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDeleteClient.Enabled = false;
+            this.btnDeleteClient.Location = new System.Drawing.Point(27, 259);
+            this.btnDeleteClient.Name = "btnDeleteClient";
+            this.btnDeleteClient.Size = new System.Drawing.Size(75, 30);
+            this.btnDeleteClient.TabIndex = 6;
+            this.btnDeleteClient.Text = "Delete";
+            this.btnDeleteClient.UseVisualStyleBackColor = true;
             // 
             // labSex
             // 
@@ -203,9 +209,12 @@
             // hsbRepaymentDuration
             // 
             this.hsbRepaymentDuration.Location = new System.Drawing.Point(23, 115);
+            this.hsbRepaymentDuration.Maximum = 309;
+            this.hsbRepaymentDuration.Minimum = 1;
             this.hsbRepaymentDuration.Name = "hsbRepaymentDuration";
             this.hsbRepaymentDuration.Size = new System.Drawing.Size(327, 24);
             this.hsbRepaymentDuration.TabIndex = 13;
+            this.hsbRepaymentDuration.Value = 1;
             // 
             // lbRepaymentPeriodicity
             // 
@@ -220,6 +229,7 @@
             // rbSeven
             // 
             this.rbSeven.AutoSize = true;
+            this.rbSeven.Checked = true;
             this.rbSeven.Location = new System.Drawing.Point(22, 31);
             this.rbSeven.Name = "rbSeven";
             this.rbSeven.Size = new System.Drawing.Size(47, 22);
@@ -235,7 +245,6 @@
             this.rbEight.Name = "rbEight";
             this.rbEight.Size = new System.Drawing.Size(47, 22);
             this.rbEight.TabIndex = 17;
-            this.rbEight.TabStop = true;
             this.rbEight.Text = "8%";
             this.rbEight.UseVisualStyleBackColor = true;
             // 
@@ -246,7 +255,6 @@
             this.rbNine.Name = "rbNine";
             this.rbNine.Size = new System.Drawing.Size(47, 22);
             this.rbNine.TabIndex = 18;
-            this.rbNine.TabStop = true;
             this.rbNine.Text = "9%";
             this.rbNine.UseVisualStyleBackColor = true;
             // 
@@ -307,8 +315,10 @@
             // 
             // gbLoan
             // 
+            this.gbLoan.Controls.Add(this.btnDeleteLoan);
             this.gbLoan.Controls.Add(this.labResult);
             this.gbLoan.Controls.Add(this.hsbRepaymentDuration);
+            this.gbLoan.Controls.Add(this.btnSaveLoan);
             this.gbLoan.Controls.Add(this.labRepaymentPeriodicity);
             this.gbLoan.Controls.Add(this.tbBorrowedCapital);
             this.gbLoan.Controls.Add(this.labMonths);
@@ -325,17 +335,37 @@
             this.gbLoan.TabStop = false;
             this.gbLoan.Text = "Loan";
             // 
+            // btnDeleteLoan
+            // 
+            this.btnDeleteLoan.Enabled = false;
+            this.btnDeleteLoan.Location = new System.Drawing.Point(216, 407);
+            this.btnDeleteLoan.Name = "btnDeleteLoan";
+            this.btnDeleteLoan.Size = new System.Drawing.Size(75, 30);
+            this.btnDeleteLoan.TabIndex = 14;
+            this.btnDeleteLoan.Text = "Delete";
+            this.btnDeleteLoan.UseVisualStyleBackColor = true;
+            // 
             // labResult
             // 
             this.labResult.AutoSize = true;
             this.labResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labResult.Location = new System.Drawing.Point(20, 382);
+            this.labResult.Location = new System.Drawing.Point(23, 357);
             this.labResult.MinimumSize = new System.Drawing.Size(327, 0);
             this.labResult.Name = "labResult";
             this.labResult.Size = new System.Drawing.Size(327, 20);
             this.labResult.TabIndex = 23;
             this.labResult.Text = "120 repayments of 12345,67 $";
             this.labResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnSaveLoan
+            // 
+            this.btnSaveLoan.Enabled = false;
+            this.btnSaveLoan.Location = new System.Drawing.Point(100, 407);
+            this.btnSaveLoan.Name = "btnSaveLoan";
+            this.btnSaveLoan.Size = new System.Drawing.Size(75, 30);
+            this.btnSaveLoan.TabIndex = 12;
+            this.btnSaveLoan.Text = "Save";
+            this.btnSaveLoan.UseVisualStyleBackColor = true;
             // 
             // Loan
             // 
@@ -367,10 +397,10 @@
         private System.Windows.Forms.TextBox tbLastName;
         private System.Windows.Forms.TextBox tbDateOfBirth;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button btnSaveClient;
+        private System.Windows.Forms.Button btnResetClient;
         private System.Windows.Forms.GroupBox gbClient;
-        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnDeleteClient;
         private System.Windows.Forms.Label labSex;
         private System.Windows.Forms.Label labDateOfBirth;
         private System.Windows.Forms.Label labLastName;
@@ -389,6 +419,8 @@
         private System.Windows.Forms.GroupBox gbLoan;
         private System.Windows.Forms.ComboBox cbSex;
         private System.Windows.Forms.Label labResult;
+        private System.Windows.Forms.Button btnDeleteLoan;
+        private System.Windows.Forms.Button btnSaveLoan;
     }
 }
 

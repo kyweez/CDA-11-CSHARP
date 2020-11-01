@@ -51,6 +51,11 @@ namespace PersonClassLibrary
         #endregion
 
         #region ********** METHODS **********
+        /// <summary>
+        /// Copy the given Person state into the the current object state
+        /// </summary>
+        /// <param name="_person">Person</param>
+        /// <exception cref="ArgumentNullException">Input is null</exception>
         public void Copy(Person _person)
         {
             if (_person == null)
