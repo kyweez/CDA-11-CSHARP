@@ -3,19 +3,16 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Globalization;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SynthesisApp
+namespace LoanApp_v1
 {
-    public partial class Loan : Form
+    public partial class LoanForm : Form
     {
-        public Loan()
+        public LoanForm()
         {
             InitializeComponent();
         }

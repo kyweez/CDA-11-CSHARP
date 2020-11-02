@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("LoanListClassLibrary")]
+[assembly: AssemblyTitle("LoanApp-v1")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("LoanListClassLibrary")]
+[assembly: AssemblyProduct("LoanApp-v1")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("fcaf4caa-dfa8-4bea-ac22-cbb1e9d52df3")]
+[assembly: Guid("6e84baaf-14f7-457d-8c01-b42e40e5affa")]
 
 // Version information for an assembly consists of the following four values:
 //

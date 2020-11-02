@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SynthesisApp.Properties
+namespace LoanApp_v1.Properties
 {
 
 

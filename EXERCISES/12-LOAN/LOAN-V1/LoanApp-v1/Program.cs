@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SynthesisApp
+namespace LoanApp_v1
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace SynthesisApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Loan());
+            Application.Run(new LoanForm());
         }
     }
 }
