@@ -17,6 +17,8 @@ namespace UtilsClassLibrary
         /// <exception cref="ArgumentNullException">If the string given as an argument is null</exception>
         public static bool IsValidName(string _name)
         {
+            if (_name == "")
+                return true;
             try
             {
                 return Regex.IsMatch(_name, @"^[a-zA-Z]+([\-\' ][a-zA-Z]+)*$");
@@ -29,6 +31,8 @@ namespace UtilsClassLibrary
 
         public static bool IsValidAmount(string _amount)
         {
+            if (_amount == "")
+                return true;
             if (!float.TryParse(_amount, out float result))
                 return false;
             else if (result < 0)

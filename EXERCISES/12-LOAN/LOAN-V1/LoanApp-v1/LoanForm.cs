@@ -4,11 +4,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Deployment.Application;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UtilsClassLibrary;
 
 namespace LoanApp_v1
 {
@@ -34,6 +36,24 @@ namespace LoanApp_v1
             lbRepaymentPeriodicity.DataSource = CurrentRepaymentPeriodicity;
             UpdateHMI_All();
         }
+
+        #region ********** METHODS **********
+
+        private void ClearErrorProvider(object sender)
+        {
+            if ((TextBox)sender == tbName)
+                errorProviderName.Clear();
+            else
+                errorProviderCapital.Clear();
+        }
+
+        private void DisableElements()
+        {
+            btnSave.Enabled = false;
+            labResult.Visible = false;
+        }
+
+        #endregion
 
         #region ********** UPDATE HMI METHODS **********
         private void UpdateHMI_All()
@@ -78,23 +98,59 @@ namespace LoanApp_v1
         #region ********** EVENTS **********
         private void HsbRepaymentDurations_ValueChanged(object sender, EventArgs e)
         {
-            
+            CurrentLoan.DurationInMonths = hsbRepaymentDuration.Value;
+            UpdateHMI_All();
         }
+
+        private void LbRepaymentPeriodicity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int test = lbRepaymentPeriodicity.SelectedIndex;
+
+            if (CurrentRepaymentPeriodicity.Count != 0)
+            {
+                CurrentLoan.Periodicity = CurrentRepaymentPeriodicity.ElementAt<RepaymentPeriodicity>(test);
+                UpdateHMI_All();
+            }
+        }
+
+        private void TextBox_TextChanged(object sender, EventArgs e)
+        {
+            ClearErrorProvider(sender);
+            if (!StringChecker.IsValidName(tbName.Text) || !StringChecker.IsValidAmount(tbBorrowedCapital.Text))
+            {
+                DisableElements();
+                if (!StringChecker.IsValidName(tbName.Text))
+                    errorProviderName.SetError(tbName, "Invalid name");
+                if (!StringChecker.IsValidAmount(tbBorrowedCapital.Text))
+                    errorProviderCapital.SetError(tbBorrowedCapital, "Invalid number format");
+            }
+            else if (tbName.Text.Length == 0 || tbBorrowedCapital.Text.Length == 0)
+                DisableElements();
+            else
+            {
+                btnSave.Enabled = true;
+                labResult.Visible = true;
+                CurrentLoan.Name = tbName.Text;
+                CurrentLoan.BorrowedCapital = float.Parse(tbBorrowedCapital.Text);
+                UpdateHMI_All();
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         #endregion
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }

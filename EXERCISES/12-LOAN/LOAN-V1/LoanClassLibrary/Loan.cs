@@ -12,62 +12,85 @@ namespace LoanClassLibrary
     {
         #region ********** CONSTANTS **********
         private const string REGEX_NAME = @"^[a-zA-Z]+([\-\' ][a-zA-Z]+)*$";
-        private int durationInMonths;
         #endregion
 
         #region ********** ATTRIBUTES **********
         private string name;
         private float borrowedCapital;
         private int durationInMonths;
+        private float interestRateInPerCent;
+        private RepaymentPeriodicity periodicity;
+        #endregion
 
         #region ********** PROPERTIES **********
         public string Name
         {
-            get; private set;
+            get => name;
+            set
+            {
+                if (!Regex.IsMatch(value, REGEX_NAME))
+                    throw new BadNameInputFormatException();
+                name = value;
+            }
         }
+
         public float BorrowedCapital
         {
-            get; private set;
+            get => borrowedCapital;
+            set
+            {
+                if (value < 0f)
+                    throw new InvalidBorrowedCapitalException();
+                borrowedCapital = value;
+            }
         }
 
         public int DurationInMonths
         {
-            get; private set;
+            get => durationInMonths;
+            set
+            {
+                if (value < 0)
+                    throw new InvalidRepaymentDurationException();
+                durationInMonths = value;
+            }
         }
 
         public float InterestRateInPerCent
         {
-            get; private set;
+            get => interestRateInPerCent;
+            set
+            {
+                if (value < 0 || value > 100)
+                    throw new InvalidInterestRateException();
+                interestRateInPerCent = value;
+            }
         }
 
         public RepaymentPeriodicity Periodicity
         {
-            get; private set;
+            get => periodicity;
+            set
+            {
+                if (!IsValidRepaymentPeriodicity(durationInMonths, value))
+                    throw new InvalidRepaymentPeriodicityException();
+                periodicity = value;
+            }
         }
         #endregion
 
         #region ********** CONSTRUCTORS **********
         public Loan()
         {
-            Name = "";
-            BorrowedCapital = 0f;
-            DurationInMonths = 1;
-            InterestRateInPerCent = 7;
-            Periodicity = RepaymentPeriodicity.Monthly;
+            name = "";
+            borrowedCapital = 0f;
+            durationInMonths = 1;
+            interestRateInPerCent = 7;
+            periodicity = RepaymentPeriodicity.Monthly;
         }
 
         public Loan(string _name, float _borrowedCapital, int _durationInMonths, float _interestRateInPerCent, RepaymentPeriodicity _periodicity)
         {
-            if (!Regex.IsMatch(_name, REGEX_NAME))
-                throw new BadNameInputFormatException();
-            if (_borrowedCapital < 0f)
-                throw new InvalidBorrowedCapitalException();
-            if (_durationInMonths < 0)
-                throw new InvalidRepaymentDurationException();
-            if (_interestRateInPerCent < 0 || _interestRateInPerCent > 100)
-                throw new InvalidInterestRateException();
-            if (!IsValidRepaymentPeriodicity(_durationInMonths, _periodicity))
-                throw new InvalidRepaymentPeriodicityException();
             Name = _name;
             BorrowedCapital = _borrowedCapital;
             DurationInMonths = _durationInMonths;

@@ -33,9 +33,9 @@
             this.tbBorrowedCapital = new System.Windows.Forms.TextBox();
             this.hsbRepaymentDuration = new System.Windows.Forms.HScrollBar();
             this.gbInterestRate = new System.Windows.Forms.GroupBox();
-            this.rbSeven = new System.Windows.Forms.RadioButton();
-            this.rbEight = new System.Windows.Forms.RadioButton();
             this.rbNine = new System.Windows.Forms.RadioButton();
+            this.rbEight = new System.Windows.Forms.RadioButton();
+            this.rbSeven = new System.Windows.Forms.RadioButton();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.lbRepaymentPeriodicity = new System.Windows.Forms.ListBox();
@@ -58,6 +58,7 @@
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(229, 24);
             this.tbName.TabIndex = 0;
+            this.tbName.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // tbBorrowedCapital
             // 
@@ -65,13 +66,18 @@
             this.tbBorrowedCapital.Name = "tbBorrowedCapital";
             this.tbBorrowedCapital.Size = new System.Drawing.Size(100, 24);
             this.tbBorrowedCapital.TabIndex = 1;
+            this.tbBorrowedCapital.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // hsbRepaymentDuration
             // 
             this.hsbRepaymentDuration.Location = new System.Drawing.Point(205, 184);
+            this.hsbRepaymentDuration.Maximum = 309;
+            this.hsbRepaymentDuration.Minimum = 1;
             this.hsbRepaymentDuration.Name = "hsbRepaymentDuration";
             this.hsbRepaymentDuration.Size = new System.Drawing.Size(229, 24);
             this.hsbRepaymentDuration.TabIndex = 2;
+            this.hsbRepaymentDuration.Value = 1;
+            this.hsbRepaymentDuration.ValueChanged += new System.EventHandler(this.HsbRepaymentDurations_ValueChanged);
             // 
             // gbInterestRate
             // 
@@ -85,17 +91,15 @@
             this.gbInterestRate.TabStop = false;
             this.gbInterestRate.Text = "Interetst rate";
             // 
-            // rbSeven
+            // rbNine
             // 
-            this.rbSeven.AutoSize = true;
-            this.rbSeven.Checked = true;
-            this.rbSeven.Location = new System.Drawing.Point(28, 34);
-            this.rbSeven.Name = "rbSeven";
-            this.rbSeven.Size = new System.Drawing.Size(47, 22);
-            this.rbSeven.TabIndex = 0;
-            this.rbSeven.TabStop = true;
-            this.rbSeven.Text = "7%";
-            this.rbSeven.UseVisualStyleBackColor = true;
+            this.rbNine.AutoSize = true;
+            this.rbNine.Location = new System.Drawing.Point(28, 132);
+            this.rbNine.Name = "rbNine";
+            this.rbNine.Size = new System.Drawing.Size(47, 22);
+            this.rbNine.TabIndex = 2;
+            this.rbNine.Text = "9%";
+            this.rbNine.UseVisualStyleBackColor = true;
             // 
             // rbEight
             // 
@@ -107,15 +111,17 @@
             this.rbEight.Text = "8%";
             this.rbEight.UseVisualStyleBackColor = true;
             // 
-            // rbNine
+            // rbSeven
             // 
-            this.rbNine.AutoSize = true;
-            this.rbNine.Location = new System.Drawing.Point(28, 132);
-            this.rbNine.Name = "rbNine";
-            this.rbNine.Size = new System.Drawing.Size(47, 22);
-            this.rbNine.TabIndex = 2;
-            this.rbNine.Text = "9%";
-            this.rbNine.UseVisualStyleBackColor = true;
+            this.rbSeven.AutoSize = true;
+            this.rbSeven.Checked = true;
+            this.rbSeven.Location = new System.Drawing.Point(28, 34);
+            this.rbSeven.Name = "rbSeven";
+            this.rbSeven.Size = new System.Drawing.Size(47, 22);
+            this.rbSeven.TabIndex = 0;
+            this.rbSeven.TabStop = true;
+            this.rbSeven.Text = "7%";
+            this.rbSeven.UseVisualStyleBackColor = true;
             // 
             // btnSave
             // 
@@ -144,6 +150,7 @@
             this.lbRepaymentPeriodicity.Name = "lbRepaymentPeriodicity";
             this.lbRepaymentPeriodicity.Size = new System.Drawing.Size(199, 94);
             this.lbRepaymentPeriodicity.TabIndex = 6;
+            this.lbRepaymentPeriodicity.SelectedIndexChanged += new System.EventHandler(this.LbRepaymentPeriodicity_SelectedIndexChanged);
             // 
             // labName
             // 
@@ -204,10 +211,12 @@
             // 
             // errorProviderName
             // 
+            this.errorProviderName.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderName.ContainerControl = this;
             // 
             // errorProviderCapital
             // 
+            this.errorProviderCapital.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderCapital.ContainerControl = this;
             // 
             // LoanForm
@@ -232,7 +241,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "LoanForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
