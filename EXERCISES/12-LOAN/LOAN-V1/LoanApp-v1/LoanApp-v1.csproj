@@ -79,5 +79,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LoanClassLibrary\LoanClassLibrary.csproj">
+      <Project>{2c3b078b-6510-42e7-95bc-39786b031923}</Project>
+      <Name>LoanClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UtilsClassLibrary\UtilsClassLibrary.csproj">
+      <Project>{d6399b37-a84a-4d92-ab48-6c00d502393f}</Project>
+      <Name>UtilsClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
