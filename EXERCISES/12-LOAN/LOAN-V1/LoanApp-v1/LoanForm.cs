@@ -32,9 +32,11 @@ namespace LoanApp_v1
             InitializeComponent();
             CurrentLoan = new Loan();
             // Gets values of the enum, store in a Array, translate in a typed array, translate in a list and store this in a binding list.
+
             CurrentRepaymentPeriodicity = new BindingList<RepaymentPeriodicity>(Enum.GetValues(typeof(RepaymentPeriodicity)).OfType<RepaymentPeriodicity>().ToList());
             lbRepaymentPeriodicity.DataSource = CurrentRepaymentPeriodicity;
             UpdateHMI_All();
+            btnSave.Enabled = false;
         }
 
         #region ********** METHODS **********
@@ -53,15 +55,89 @@ namespace LoanApp_v1
             labResult.Visible = false;
         }
 
+
+        private bool FormIsCorrect()
+        {
+            if (tbName.Text.Length == 0)
+                return false;
+            if (tbBorrowedCapital.Text.Length == 0)
+                return false;
+            if (labResult.Text == "Invalid repayment periodicity")
+                return false;
+            if (!StringChecker.IsValidName(tbName.Text))
+                return false;
+            if (!StringChecker.IsValidAmount(tbBorrowedCapital.Text))
+                return false;
+            return true;
+        }
+
+        private bool FormIsEmpty()
+        {
+            if (tbName.Text.Length != 0)
+                return false;
+            if (tbBorrowedCapital.Text.Length != 0)
+                return false;
+            if (hsbRepaymentDuration.Value != 1)
+                return false;
+            if (lbRepaymentPeriodicity.SelectedIndex != 0)
+                return false;
+            if (rbSeven.Checked != true)
+                return false;
+            return true;
+        }
+
+        private void SetSmallChangeOnHSB()
+        {
+            hsbRepaymentDuration.Minimum = Convert.ToInt32(CurrentLoan.Periodicity);
+            hsbRepaymentDuration.SmallChange = Convert.ToInt32(CurrentLoan.Periodicity);
+        }
+
+        private void UpdateNumberOfMonths(RepaymentPeriodicity _periodicity)
+        {
+            int duration = CurrentLoan.DurationInMonths;
+            int periodicity = Convert.ToInt32(_periodicity);
+            int moduloResult = duration % periodicity;
+
+            if (duration < periodicity)
+                CurrentLoan.DurationInMonths = periodicity;
+            else if (300 - duration < periodicity)
+                CurrentLoan.DurationInMonths = 300;
+            else if (moduloResult >= periodicity / 2f)
+                CurrentLoan.DurationInMonths += periodicity - moduloResult;
+            else
+                CurrentLoan.DurationInMonths -= moduloResult;
+            hsbRepaymentDuration.Value = CurrentLoan.DurationInMonths;
+        }
+
         #endregion
 
         #region ********** UPDATE HMI METHODS **********
         private void UpdateHMI_All()
         {
             UpdateHMI_labNumberOfMonths();
-            UpdateHMI_lbRepaymentPeriodicity();
             UpdateHMI_labResult();
+            UpdateHMI_buttons();
         }
+
+        private void UpdateHMI_buttons()
+        {
+            if (FormIsEmpty())
+            {
+                btnSave.Enabled = false;
+                btnReset.Enabled = false;
+            }
+            else if (FormIsCorrect())
+            {
+                btnSave.Enabled = true;
+                btnReset.Enabled = true;
+            }
+            else
+            {
+                btnSave.Enabled = false;
+                btnReset.Enabled = true;
+            }
+        }
+
 
         private void UpdateHMI_labNumberOfMonths()
         {
@@ -73,29 +149,38 @@ namespace LoanApp_v1
 
         private void UpdateHMI_labResult()
         {
-            if (CurrentLoan.GetRepaymentNumber() == 1)
-                labResult.Text = $"{CurrentLoan.GetRepaymentNumber()} month";
+            if (CurrentLoan.IsValidRepaymentPeriodicity(CurrentLoan.DurationInMonths, CurrentLoan.Periodicity))
+            {
+                if (CurrentLoan.GetRepaymentNumber() == 1)
+                    labResult.Text = $"{CurrentLoan.GetRepaymentNumber()} repayment of {Math.Round(CurrentLoan.GetRepaymentValue(), 2)} $";
+                else
+                    labResult.Text = $"{CurrentLoan.GetRepaymentNumber()} repayments of {Math.Round(CurrentLoan.GetRepaymentValue(), 2)} $";
+            }
             else
-                labResult.Text = $"{CurrentLoan.GetRepaymentNumber()} months";
-
+                labResult.Text = "Invalid repayment periodicity";
             if (CurrentLoan.Name == "" || CurrentLoan.BorrowedCapital == 0)
                 labResult.Visible = false;
             else
                 labResult.Visible = true;
         }
 
-        private void UpdateHMI_lbRepaymentPeriodicity()
-        {
-            CurrentRepaymentPeriodicity.Clear();
-            foreach (RepaymentPeriodicity value in Enum.GetValues(typeof(RepaymentPeriodicity)))
-            {
-                if (CurrentLoan.IsValidRepaymentPeriodicity(CurrentLoan.DurationInMonths, value))
-                    CurrentRepaymentPeriodicity.Add(value);
-            }
-        }
         #endregion
 
         #region ********** EVENTS **********
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            CurrentLoan.Name = "";
+            tbName.Text = "";
+            CurrentLoan.BorrowedCapital = 0f;
+            tbBorrowedCapital.Text = "";
+            lbRepaymentPeriodicity.SelectedIndex = 0;
+            hsbRepaymentDuration.Value = 1;
+            rbSeven.Checked = true;
+            btnSave.Enabled = false;
+            UpdateHMI_All();
+        }
+
         private void HsbRepaymentDurations_ValueChanged(object sender, EventArgs e)
         {
             CurrentLoan.DurationInMonths = hsbRepaymentDuration.Value;
@@ -104,17 +189,24 @@ namespace LoanApp_v1
 
         private void LbRepaymentPeriodicity_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int test = lbRepaymentPeriodicity.SelectedIndex;
-
-            if (CurrentRepaymentPeriodicity.Count != 0)
-            {
-                CurrentLoan.Periodicity = CurrentRepaymentPeriodicity.ElementAt<RepaymentPeriodicity>(test);
-                UpdateHMI_All();
-            }
+            int index = lbRepaymentPeriodicity.SelectedIndex;
+            UpdateNumberOfMonths(CurrentRepaymentPeriodicity.ElementAt<RepaymentPeriodicity>(index));
+            CurrentLoan.Periodicity = CurrentRepaymentPeriodicity.ElementAt<RepaymentPeriodicity>(index);
+            SetSmallChangeOnHSB();
+            UpdateHMI_All();
         }
+
+        private void Rb_CheckedChanged(object sender, EventArgs e)
+        {
+            CurrentLoan.InterestRateInPerCent = Convert.ToInt32(gbInterestRate.Controls.OfType<RadioButton>().ToList().Find(rb => rb.Checked == true).Tag);
+            UpdateHMI_All();
+        }
+
+
 
         private void TextBox_TextChanged(object sender, EventArgs e)
         {
+            btnReset.Enabled = true;
             ClearErrorProvider(sender);
             if (!StringChecker.IsValidName(tbName.Text) || !StringChecker.IsValidAmount(tbBorrowedCapital.Text))
             {
@@ -135,23 +227,6 @@ namespace LoanApp_v1
                 UpdateHMI_All();
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         #endregion
-
-
     }
 }

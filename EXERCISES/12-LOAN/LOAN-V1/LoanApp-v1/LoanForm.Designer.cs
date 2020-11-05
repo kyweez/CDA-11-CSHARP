@@ -98,8 +98,10 @@
             this.rbNine.Name = "rbNine";
             this.rbNine.Size = new System.Drawing.Size(47, 22);
             this.rbNine.TabIndex = 2;
+            this.rbNine.Tag = "9";
             this.rbNine.Text = "9%";
             this.rbNine.UseVisualStyleBackColor = true;
+            this.rbNine.CheckedChanged += new System.EventHandler(this.Rb_CheckedChanged);
             // 
             // rbEight
             // 
@@ -108,8 +110,10 @@
             this.rbEight.Name = "rbEight";
             this.rbEight.Size = new System.Drawing.Size(47, 22);
             this.rbEight.TabIndex = 1;
+            this.rbEight.Tag = "8";
             this.rbEight.Text = "8%";
             this.rbEight.UseVisualStyleBackColor = true;
+            this.rbEight.CheckedChanged += new System.EventHandler(this.Rb_CheckedChanged);
             // 
             // rbSeven
             // 
@@ -120,8 +124,10 @@
             this.rbSeven.Size = new System.Drawing.Size(47, 22);
             this.rbSeven.TabIndex = 0;
             this.rbSeven.TabStop = true;
+            this.rbSeven.Tag = "7";
             this.rbSeven.Text = "7%";
             this.rbSeven.UseVisualStyleBackColor = true;
+            this.rbSeven.CheckedChanged += new System.EventHandler(this.Rb_CheckedChanged);
             // 
             // btnSave
             // 
@@ -135,12 +141,14 @@
             // 
             // btnReset
             // 
+            this.btnReset.Enabled = false;
             this.btnReset.Location = new System.Drawing.Point(650, 100);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(121, 38);
             this.btnReset.TabIndex = 5;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // lbRepaymentPeriodicity
             // 

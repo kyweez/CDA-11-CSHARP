@@ -28,7 +28,7 @@ namespace LoanClassLibrary
             get => name;
             set
             {
-                if (!Regex.IsMatch(value, REGEX_NAME))
+                if (!Regex.IsMatch(value, REGEX_NAME) && value != "")
                     throw new BadNameInputFormatException();
                 name = value;
             }
@@ -113,6 +113,13 @@ namespace LoanClassLibrary
         public int GetRepaymentNumber()
         {
             return (DurationInMonths / Convert.ToInt32(Periodicity));
+        }
+
+        public float GetRepaymentValue()
+        {
+            float rate = interestRateInPerCent / 100 / 12 * (int)Periodicity;
+            float repaymentNumber = GetRepaymentNumber();
+            return (float)(BorrowedCapital * (rate / (1 - Math.Pow(1 + rate, -repaymentNumber))));
         }
 
         /// <summary>
