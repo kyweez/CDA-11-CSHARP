@@ -1,10 +1,6 @@
 ﻿using LoanClassLibrary.LoanExceptions;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace LoanClassLibrary
 {
@@ -110,11 +106,19 @@ namespace LoanClassLibrary
 
         #region ********** METHODS **********
 
+        /// <summary>
+        /// This method returns the number of repayment
+        /// </summary>
+        /// <returns>int</returns>
         public int GetRepaymentNumber()
         {
             return (DurationInMonths / Convert.ToInt32(Periodicity));
         }
 
+        /// <summary>
+        /// This method returns the value of the rapyment depending on the rate, the periodicity an the amount
+        /// </summary>
+        /// <returns>float</returns>
         public float GetRepaymentValue()
         {
             float rate = interestRateInPerCent / 100 / 12 * (int)Periodicity;
@@ -123,7 +127,7 @@ namespace LoanClassLibrary
         }
 
         /// <summary>
-        /// This mehtod checks if the given periodicity fits with the given duration months
+        /// This method checks if the given periodicity fits with the given duration months
         /// </summary>
         /// <param name="_durationInMonths">int</param>
         /// <param name="_periodicity">RepaymentPeriodicity</param>

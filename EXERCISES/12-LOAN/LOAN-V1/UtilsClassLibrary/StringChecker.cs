@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace UtilsClassLibrary
 {
+    #region ********** METHODS **********
     public static class StringChecker
     {
         /// <summary>
@@ -29,16 +26,32 @@ namespace UtilsClassLibrary
             }
         }
 
+        /// <summary>
+        /// This method checks whether the given string is a valid amount or not.
+        /// </summary>
+        /// <param name="_amount">string</param>
+        /// <returns>bool</returns>
+        /// <exception cref="ArgumentNullException">If the string given as an argument is null</exception>
         public static bool IsValidAmount(string _amount)
         {
-            if (_amount == "")
-                return true;
-            if (!float.TryParse(_amount, out float result))
-                return false;
-            else if (result < 0)
-                return false;
-            else
-                return true;
+            try
+            {
+                if (_amount == "")
+                    return true;
+                if (!float.TryParse(_amount, out float result))
+                    return false;
+                if (!Regex.IsMatch(_amount, @"^([1-9]{1})[0-9]{0,8}([\.\,]{1}?[0-9]{1,2})?$"))
+                    return false;
+                else if (result < 1)
+                    return false;
+                else
+                    return true;
+            }
+            catch (ArgumentNullException e)
+            {
+                throw new ArgumentNullException("IsValidAmount : The argument can't be null", e);
+            }
         }
     }
+    #endregion
 }

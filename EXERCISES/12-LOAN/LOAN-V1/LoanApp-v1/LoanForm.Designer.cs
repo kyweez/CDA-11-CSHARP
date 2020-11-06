@@ -70,6 +70,7 @@
             // 
             // hsbRepaymentDuration
             // 
+            this.hsbRepaymentDuration.LargeChange = 12;
             this.hsbRepaymentDuration.Location = new System.Drawing.Point(205, 184);
             this.hsbRepaymentDuration.Maximum = 309;
             this.hsbRepaymentDuration.Minimum = 1;
@@ -77,6 +78,7 @@
             this.hsbRepaymentDuration.Size = new System.Drawing.Size(229, 24);
             this.hsbRepaymentDuration.TabIndex = 2;
             this.hsbRepaymentDuration.Value = 1;
+            this.hsbRepaymentDuration.Scroll += new System.Windows.Forms.ScrollEventHandler(this.HsbRepaymentDuration_Scroll);
             this.hsbRepaymentDuration.ValueChanged += new System.EventHandler(this.HsbRepaymentDurations_ValueChanged);
             // 
             // gbInterestRate
@@ -148,7 +150,7 @@
             this.btnReset.TabIndex = 5;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            this.btnReset.Click += new System.EventHandler(this.BtnReset_Click);
             // 
             // lbRepaymentPeriodicity
             // 
