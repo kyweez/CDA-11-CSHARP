@@ -78,6 +78,7 @@
             this.btnModifyClient.TabIndex = 2;
             this.btnModifyClient.Text = "Modify client";
             this.btnModifyClient.UseVisualStyleBackColor = true;
+            this.btnModifyClient.Click += new System.EventHandler(this.btnModifyClient_Click);
             // 
             // LoanForm
             // 

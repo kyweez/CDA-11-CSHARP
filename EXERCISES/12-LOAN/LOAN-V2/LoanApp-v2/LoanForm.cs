@@ -22,5 +22,11 @@ namespace LoanApp_v2
             CreateClientForm form = new CreateClientForm();
             form.ShowDialog();
         }
+
+        private void btnModifyClient_Click(object sender, EventArgs e)
+        {
+            ModifyClientForm form = new ModifyClientForm();
+            form.ShowDialog();
+        }
     }
 }

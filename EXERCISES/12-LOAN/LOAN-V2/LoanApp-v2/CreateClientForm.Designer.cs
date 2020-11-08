@@ -37,8 +37,8 @@
             this.labClientFirstName = new System.Windows.Forms.Label();
             this.labClientDateOfBirth = new System.Windows.Forms.Label();
             this.labClientSex = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dtpClientDateOfBirth = new System.Windows.Forms.DateTimePicker();
+            this.cbClientSex = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // tbClientLastName
@@ -129,34 +129,34 @@
             this.labClientSex.TabIndex = 10;
             this.labClientSex.Text = "Sex";
             // 
-            // dateTimePicker1
+            // dtpClientDateOfBirth
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(565, 29);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(20);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(118, 24);
-            this.dateTimePicker1.TabIndex = 2;
+            this.dtpClientDateOfBirth.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.dtpClientDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpClientDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpClientDateOfBirth.Location = new System.Drawing.Point(565, 29);
+            this.dtpClientDateOfBirth.Margin = new System.Windows.Forms.Padding(20);
+            this.dtpClientDateOfBirth.Name = "dtpClientDateOfBirth";
+            this.dtpClientDateOfBirth.Size = new System.Drawing.Size(118, 24);
+            this.dtpClientDateOfBirth.TabIndex = 2;
             // 
-            // comboBox1
+            // cbClientSex
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(142, 157);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(20);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(203, 26);
-            this.comboBox1.TabIndex = 11;
+            this.cbClientSex.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.cbClientSex.FormattingEnabled = true;
+            this.cbClientSex.Location = new System.Drawing.Point(142, 157);
+            this.cbClientSex.Margin = new System.Windows.Forms.Padding(20);
+            this.cbClientSex.Name = "cbClientSex";
+            this.cbClientSex.Size = new System.Drawing.Size(203, 26);
+            this.cbClientSex.TabIndex = 11;
             // 
             // CreateClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(824, 322);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.cbClientSex);
+            this.Controls.Add(this.dtpClientDateOfBirth);
             this.Controls.Add(this.labClientSex);
             this.Controls.Add(this.labClientDateOfBirth);
             this.Controls.Add(this.labClientFirstName);
@@ -166,7 +166,10 @@
             this.Controls.Add(this.btnClientSave);
             this.Controls.Add(this.tbClientFirstName);
             this.Controls.Add(this.tbClientLastName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "CreateClientForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create client";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -184,7 +187,7 @@
         private System.Windows.Forms.Label labClientFirstName;
         private System.Windows.Forms.Label labClientDateOfBirth;
         private System.Windows.Forms.Label labClientSex;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DateTimePicker dtpClientDateOfBirth;
+        private System.Windows.Forms.ComboBox cbClientSex;
     }
 }
