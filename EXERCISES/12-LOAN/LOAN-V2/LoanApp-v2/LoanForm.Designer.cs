@@ -28,69 +28,81 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnCreateClient = new System.Windows.Forms.Button();
+            this.btnCreateLoan = new System.Windows.Forms.Button();
+            this.btnModifyLoan = new System.Windows.Forms.Button();
+            this.btnModifyClient = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnCreateClient
             // 
-            this.button1.Location = new System.Drawing.Point(46, 41);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 33);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Creer un client";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCreateClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.btnCreateClient.Location = new System.Drawing.Point(19, 19);
+            this.btnCreateClient.Margin = new System.Windows.Forms.Padding(10);
+            this.btnCreateClient.Name = "btnCreateClient";
+            this.btnCreateClient.Size = new System.Drawing.Size(119, 39);
+            this.btnCreateClient.TabIndex = 0;
+            this.btnCreateClient.Text = "Create client";
+            this.btnCreateClient.UseVisualStyleBackColor = true;
+            this.btnCreateClient.Click += new System.EventHandler(this.btnCreateClient_Click);
             // 
-            // button2
+            // btnCreateLoan
             // 
-            this.button2.Location = new System.Drawing.Point(46, 96);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 33);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Creer un pret";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCreateLoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.btnCreateLoan.Location = new System.Drawing.Point(19, 78);
+            this.btnCreateLoan.Margin = new System.Windows.Forms.Padding(10);
+            this.btnCreateLoan.Name = "btnCreateLoan";
+            this.btnCreateLoan.Size = new System.Drawing.Size(119, 39);
+            this.btnCreateLoan.TabIndex = 1;
+            this.btnCreateLoan.Text = "Create loan";
+            this.btnCreateLoan.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnModifyLoan
             // 
-            this.button3.Location = new System.Drawing.Point(190, 96);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(119, 33);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Modifier un pret";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnModifyLoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.btnModifyLoan.Location = new System.Drawing.Point(158, 78);
+            this.btnModifyLoan.Margin = new System.Windows.Forms.Padding(10);
+            this.btnModifyLoan.Name = "btnModifyLoan";
+            this.btnModifyLoan.Size = new System.Drawing.Size(119, 39);
+            this.btnModifyLoan.TabIndex = 3;
+            this.btnModifyLoan.Text = "Modify loan";
+            this.btnModifyLoan.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnModifyClient
             // 
-            this.button4.Location = new System.Drawing.Point(190, 41);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(119, 33);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Modifier un client";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnModifyClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.btnModifyClient.Location = new System.Drawing.Point(158, 19);
+            this.btnModifyClient.Margin = new System.Windows.Forms.Padding(10);
+            this.btnModifyClient.Name = "btnModifyClient";
+            this.btnModifyClient.Size = new System.Drawing.Size(119, 39);
+            this.btnModifyClient.TabIndex = 2;
+            this.btnModifyClient.Text = "Modify client";
+            this.btnModifyClient.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // LoanForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(359, 170);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(301, 134);
+            this.Controls.Add(this.btnModifyLoan);
+            this.Controls.Add(this.btnModifyClient);
+            this.Controls.Add(this.btnCreateLoan);
+            this.Controls.Add(this.btnCreateClient);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.Name = "LoanForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Loan Application";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnCreateClient;
+        private System.Windows.Forms.Button btnCreateLoan;
+        private System.Windows.Forms.Button btnModifyLoan;
+        private System.Windows.Forms.Button btnModifyClient;
     }
 }
 

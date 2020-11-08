@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace LoanApp_v2
 {
-    public partial class LoanForm : Form
+    public partial class CreateClientForm : Form
     {
-        public LoanForm()
+        public CreateClientForm()
         {
             InitializeComponent();
-        }
-
-        private void btnCreateClient_Click(object sender, EventArgs e)
-        {
-            CreateClientForm form = new CreateClientForm();
-            form.ShowDialog();
         }
     }
 }
