@@ -56,6 +56,7 @@
             this.btnCreateLoan.TabIndex = 1;
             this.btnCreateLoan.Text = "Create loan";
             this.btnCreateLoan.UseVisualStyleBackColor = true;
+            this.btnCreateLoan.Click += new System.EventHandler(this.btnCreateLoan_Click);
             // 
             // btnModifyLoan
             // 
@@ -67,6 +68,7 @@
             this.btnModifyLoan.TabIndex = 3;
             this.btnModifyLoan.Text = "Modify loan";
             this.btnModifyLoan.UseVisualStyleBackColor = true;
+            this.btnModifyLoan.Click += new System.EventHandler(this.btnModifyLoan_Click);
             // 
             // btnModifyClient
             // 

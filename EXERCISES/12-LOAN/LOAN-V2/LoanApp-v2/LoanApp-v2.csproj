@@ -52,6 +52,12 @@
     <Compile Include="CreateClientForm.Designer.cs">
       <DependentUpon>CreateClientForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateLoanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateLoanForm.Designer.cs">
+      <DependentUpon>CreateLoanForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoanForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,16 +70,28 @@
     <Compile Include="ModifyClientForm.Designer.cs">
       <DependentUpon>ModifyClientForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModifyLoanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyLoanForm.Designer.cs">
+      <DependentUpon>ModifyLoanForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CreateClientForm.resx">
       <DependentUpon>CreateClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateLoanForm.resx">
+      <DependentUpon>CreateLoanForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoanForm.resx">
       <DependentUpon>LoanForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModifyClientForm.resx">
       <DependentUpon>ModifyClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyLoanForm.resx">
+      <DependentUpon>ModifyLoanForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
