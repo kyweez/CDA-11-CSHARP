@@ -19,10 +19,10 @@ namespace BUTTERFLY
             Console.WriteLine("Egg instanciation");
             Console.ResetColor();
             Console.WriteLine("=================\n");
-            Lepidoptera lepidoptereCutty = new Lepidoptera();
-            Console.WriteLine("Egg class         : " + lepidoptereCutty.ToString());
-            Console.WriteLine("Egg stage class   : " + lepidoptereCutty.CurrentStage.ToString());
-            Console.WriteLine("Egg date of birth : " + lepidoptereCutty.DateOfBirth);
+            Lepidoptera lepidopteraCutty = new Lepidoptera();
+            Console.WriteLine("Egg class         : " + lepidopteraCutty.ToString());
+            Console.WriteLine("Egg stage class   : " + lepidopteraCutty.CurrentStage.ToString());
+            Console.WriteLine("Egg date of birth : " + lepidopteraCutty.DateOfBirth);
             Console.WriteLine("\nPress any key to continue\n");
             Console.ReadKey();
             Console.Clear();
@@ -33,7 +33,7 @@ namespace BUTTERFLY
             Console.WriteLine("Let's try to move the egg");
             Console.ResetColor();
             Console.WriteLine("=========================\n");
-            lepidoptereCutty.Move();
+            lepidopteraCutty.Move();
             Console.WriteLine("\nPress any key to continue\n");
             Console.ReadKey();
             Console.Clear();
@@ -44,10 +44,10 @@ namespace BUTTERFLY
             Console.WriteLine("Let's try to evolve the egg");
             Console.ResetColor();
             Console.WriteLine("===========================\n");
-            lepidoptereCutty.Evolve();
-            Console.WriteLine("\nEgg class         : " + lepidoptereCutty.ToString());
-            Console.WriteLine("Egg stage class   : " + lepidoptereCutty.CurrentStage.ToString());
-            Console.WriteLine("Egg date of birth : " + lepidoptereCutty.DateOfBirth);
+            lepidopteraCutty.Evolve();
+            Console.WriteLine("\nEgg class         : " + lepidopteraCutty.ToString());
+            Console.WriteLine("Egg stage class   : " + lepidopteraCutty.CurrentStage.ToString());
+            Console.WriteLine("Egg date of birth : " + lepidopteraCutty.DateOfBirth);
             Console.WriteLine("\nPress any key to continue\n");
             Console.ReadKey();
             Console.Clear();
@@ -58,7 +58,7 @@ namespace BUTTERFLY
             Console.WriteLine("Let's try to move the caterpillar");
             Console.ResetColor();
             Console.WriteLine("=================================\n");
-            lepidoptereCutty.Move();
+            lepidopteraCutty.Move();
             Console.WriteLine("\nPress any key to continue\n");
             Console.ReadKey();
             Console.Clear();
@@ -69,10 +69,10 @@ namespace BUTTERFLY
             Console.WriteLine("Let's try to evolve the caterpillar");
             Console.ResetColor();
             Console.WriteLine("===================================\n");
-            lepidoptereCutty.Evolve();
-            Console.WriteLine("\nEgg class         : " + lepidoptereCutty.ToString());
-            Console.WriteLine("Egg stage class   : " + lepidoptereCutty.CurrentStage.ToString());
-            Console.WriteLine("Egg date of birth : " + lepidoptereCutty.DateOfBirth);
+            lepidopteraCutty.Evolve();
+            Console.WriteLine("\nEgg class         : " + lepidopteraCutty.ToString());
+            Console.WriteLine("Egg stage class   : " + lepidopteraCutty.CurrentStage.ToString());
+            Console.WriteLine("Egg date of birth : " + lepidopteraCutty.DateOfBirth);
             Console.WriteLine("\nPress any key to continue\n");
             Console.ReadKey();
             Console.Clear();
@@ -83,7 +83,7 @@ namespace BUTTERFLY
             Console.WriteLine("Let's try to move the chrysalis");
             Console.ResetColor();
             Console.WriteLine("===============================\n");
-            lepidoptereCutty.Move();
+            lepidopteraCutty.Move();
             Console.WriteLine("\nPress any key to continue\n");
             Console.ReadKey();
             Console.Clear();
@@ -94,10 +94,10 @@ namespace BUTTERFLY
             Console.WriteLine("Let's try to evolve the chrysalis");
             Console.ResetColor();
             Console.WriteLine("=================================\n");
-            lepidoptereCutty.Evolve();
-            Console.WriteLine("\nEgg class         : " + lepidoptereCutty.ToString());
-            Console.WriteLine("Egg stage class   : " + lepidoptereCutty.CurrentStage.ToString());
-            Console.WriteLine("Egg date of birth : " + lepidoptereCutty.DateOfBirth);
+            lepidopteraCutty.Evolve();
+            Console.WriteLine("\nEgg class         : " + lepidopteraCutty.ToString());
+            Console.WriteLine("Egg stage class   : " + lepidopteraCutty.CurrentStage.ToString());
+            Console.WriteLine("Egg date of birth : " + lepidopteraCutty.DateOfBirth);
             Console.WriteLine("\nPress any key to continue\n");
             Console.ReadKey();
             Console.Clear();
@@ -108,7 +108,7 @@ namespace BUTTERFLY
             Console.WriteLine("Let's try to move the butterfly");
             Console.ResetColor();
             Console.WriteLine("===============================\n");
-            lepidoptereCutty.Move();
+            lepidopteraCutty.Move();
             Console.WriteLine("\nPress any key to continue\n");
             Console.ReadKey();
             Console.Clear();
@@ -121,8 +121,8 @@ namespace BUTTERFLY
             Console.WriteLine("===================================\n");
             Butterfly butterflyCanfly = new Butterfly();
             butterflyCanfly.IsFlying = true;
-            lepidoptereCutty.CurrentStage = butterflyCanfly;
-            lepidoptereCutty.Move();
+            lepidopteraCutty.CurrentStage = butterflyCanfly;
+            lepidopteraCutty.Move();
             Console.WriteLine("\nPress any key to continue\n");
             Console.ReadKey();
             Console.Clear();
@@ -133,10 +133,10 @@ namespace BUTTERFLY
             Console.WriteLine("Let's try to evolve the butterfly");
             Console.ResetColor();
             Console.WriteLine("=================================\n");
-            lepidoptereCutty.Evolve();
-            Console.WriteLine("\nEgg class         : " + lepidoptereCutty.ToString());
-            Console.WriteLine("Egg stage class   : " + lepidoptereCutty.CurrentStage.ToString());
-            Console.WriteLine("Egg date of birth : " + lepidoptereCutty.DateOfBirth);
+            lepidopteraCutty.Evolve();
+            Console.WriteLine("\nEgg class         : " + lepidopteraCutty.ToString());
+            Console.WriteLine("Egg stage class   : " + lepidopteraCutty.CurrentStage.ToString());
+            Console.WriteLine("Egg date of birth : " + lepidopteraCutty.DateOfBirth);
 
 
             Console.BackgroundColor = ConsoleColor.DarkRed;

@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\ClassLibraryForest\ClassLibraryForest.csproj" />
+    <ProjectReference Include="..\ClassLibraryForest\ClassLibraryForest.csproj" />
   </ItemGroup>
 
 </Project>

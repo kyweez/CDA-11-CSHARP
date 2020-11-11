@@ -39,7 +39,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryTest", "00 - Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppForest", "00 - Console applications\02 - Forest\ConsoleAppForest\ConsoleAppForest.csproj", "{7A238B83-A3C6-47BD-B5D7-2EEFCE94539A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryForest", "ClassLibraryForest\ClassLibraryForest.csproj", "{3D57A817-3A67-4373-B1F8-C1FF2D88228A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryForest", "00 - Console applications\02 - Forest\ClassLibraryForest\ClassLibraryForest.csproj", "{BA01F6BD-B144-4296-8836-D5393153ED70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,10 +83,10 @@ Global
 		{7A238B83-A3C6-47BD-B5D7-2EEFCE94539A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A238B83-A3C6-47BD-B5D7-2EEFCE94539A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A238B83-A3C6-47BD-B5D7-2EEFCE94539A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3D57A817-3A67-4373-B1F8-C1FF2D88228A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3D57A817-3A67-4373-B1F8-C1FF2D88228A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3D57A817-3A67-4373-B1F8-C1FF2D88228A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3D57A817-3A67-4373-B1F8-C1FF2D88228A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA01F6BD-B144-4296-8836-D5393153ED70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA01F6BD-B144-4296-8836-D5393153ED70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA01F6BD-B144-4296-8836-D5393153ED70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA01F6BD-B144-4296-8836-D5393153ED70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -105,7 +105,7 @@ Global
 		{6767D2A4-0447-4516-85D7-361CEE4A7E6C} = {34078E58-EEF4-414B-B9F4-C345165342C0}
 		{226EF9EB-8818-4F14-9F04-16B972BB3AF0} = {34078E58-EEF4-414B-B9F4-C345165342C0}
 		{7A238B83-A3C6-47BD-B5D7-2EEFCE94539A} = {FBA604CC-3F04-4E7B-9A93-19CBA59112CC}
-		{3D57A817-3A67-4373-B1F8-C1FF2D88228A} = {FBA604CC-3F04-4E7B-9A93-19CBA59112CC}
+		{BA01F6BD-B144-4296-8836-D5393153ED70} = {FBA604CC-3F04-4E7B-9A93-19CBA59112CC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {74CB25AE-1A47-47C8-BE16-CABB6D564B95}
