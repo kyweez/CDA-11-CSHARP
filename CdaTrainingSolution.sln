@@ -41,6 +41,22 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppForest", "00 - Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryForest", "00 - Console applications\02 - Forest\ClassLibraryForest\ClassLibraryForest.csproj", "{BA01F6BD-B144-4296-8836-D5393153ED70}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Version-2", "Version-2", "{85FD52F7-963C-419D-8B19-92BF9ADD6F05}"
+	ProjectSection(SolutionItems) = preProject
+		00 - Console applications\03 - Wedding\Version-2\wedding-v2.png = 00 - Console applications\03 - Wedding\Version-2\wedding-v2.png
+		00 - Console applications\03 - Wedding\Version-2\wedding-v2.vpp = 00 - Console applications\03 - Wedding\Version-2\wedding-v2.vpp
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Version-1", "Version-1", "{24CF5ED0-D7E6-40DC-9ED6-326445884F53}"
+	ProjectSection(SolutionItems) = preProject
+		00 - Console applications\03 - Wedding\Version-1\wedding-v1.png = 00 - Console applications\03 - Wedding\Version-1\wedding-v1.png
+		00 - Console applications\03 - Wedding\Version-1\wedding-v1.vpp = 00 - Console applications\03 - Wedding\Version-1\wedding-v1.vpp
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 - Calculator", "00 - Calculator", "{788AAB33-28D3-4647-BD5F-65FF01DD7826}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormAppCalculator", "01 - First steps\00 - Calculator\WinFormAppCalculator\WinFormAppCalculator.csproj", "{1C1E7E4B-C258-42B3-92CA-378CBFA822AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +103,10 @@ Global
 		{BA01F6BD-B144-4296-8836-D5393153ED70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA01F6BD-B144-4296-8836-D5393153ED70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA01F6BD-B144-4296-8836-D5393153ED70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C1E7E4B-C258-42B3-92CA-378CBFA822AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C1E7E4B-C258-42B3-92CA-378CBFA822AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C1E7E4B-C258-42B3-92CA-378CBFA822AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C1E7E4B-C258-42B3-92CA-378CBFA822AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -106,6 +126,10 @@ Global
 		{226EF9EB-8818-4F14-9F04-16B972BB3AF0} = {34078E58-EEF4-414B-B9F4-C345165342C0}
 		{7A238B83-A3C6-47BD-B5D7-2EEFCE94539A} = {FBA604CC-3F04-4E7B-9A93-19CBA59112CC}
 		{BA01F6BD-B144-4296-8836-D5393153ED70} = {FBA604CC-3F04-4E7B-9A93-19CBA59112CC}
+		{85FD52F7-963C-419D-8B19-92BF9ADD6F05} = {547C9887-F3EE-45C5-9CF9-30DB68A9FF58}
+		{24CF5ED0-D7E6-40DC-9ED6-326445884F53} = {547C9887-F3EE-45C5-9CF9-30DB68A9FF58}
+		{788AAB33-28D3-4647-BD5F-65FF01DD7826} = {D0335841-B523-4C2F-A123-DC4EE45DB668}
+		{1C1E7E4B-C258-42B3-92CA-378CBFA822AE} = {788AAB33-28D3-4647-BD5F-65FF01DD7826}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {74CB25AE-1A47-47C8-BE16-CABB6D564B95}
