@@ -103,6 +103,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormAppComboBox", "03 - 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormAppScrolling-v1", "03 - Graphical objects\03 - Scrolling\Version-1\WinFormAppScrolling-v1\WinFormAppScrolling-v1.csproj", "{EFDC67DF-B274-41B6-B99E-4188AA12FB71}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormAppScrolling-v2", "03 - Graphical objects\03 - Scrolling\Version-2\WinFormAppScrolling-v2\WinFormAppScrolling-v2.csproj", "{D5E754A4-323F-438B-B978-F7830C5FDBB6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -197,6 +199,10 @@ Global
 		{EFDC67DF-B274-41B6-B99E-4188AA12FB71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFDC67DF-B274-41B6-B99E-4188AA12FB71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFDC67DF-B274-41B6-B99E-4188AA12FB71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5E754A4-323F-438B-B978-F7830C5FDBB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5E754A4-323F-438B-B978-F7830C5FDBB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5E754A4-323F-438B-B978-F7830C5FDBB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5E754A4-323F-438B-B978-F7830C5FDBB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -243,6 +249,7 @@ Global
 		{18CD72D5-13D9-41E9-AA9C-FD92B8E0501F} = {D1BAAE00-B676-47CC-BFC4-03D147005D88}
 		{1653E821-6E1F-43C0-84CE-776162498A50} = {182FE6C9-1926-413C-8CCE-32A7ACEF1DC8}
 		{EFDC67DF-B274-41B6-B99E-4188AA12FB71} = {698DEB05-CACF-4338-9BB2-E097E2222C7C}
+		{D5E754A4-323F-438B-B978-F7830C5FDBB6} = {4E562E60-7712-4C00-888F-8B64BCF18F24}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {74CB25AE-1A47-47C8-BE16-CABB6D564B95}
