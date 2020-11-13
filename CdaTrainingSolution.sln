@@ -25,21 +25,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppButterfly", "D:\R
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryButterfly", "D:\REPO-GIT\CDA-11-CSHARP\00 - Console applications\00 - Butterfly\ClassLibraryButterfly\ClassLibraryButterfly.csproj", "{FF5A033F-FD21-445A-B1B6-D52FDD85AD0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppZoo", "00 - Console applications\01 - Zoo\ConsoleAppZoo\ConsoleAppZoo.csproj", "{E8FCFFAF-8D59-49F7-8F7E-40C85311E68D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppZoo", "00 - Console applications\01 - Zoo\ConsoleAppZoo\ConsoleAppZoo.csproj", "{E8FCFFAF-8D59-49F7-8F7E-40C85311E68D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryAnimal", "00 - Console applications\01 - Zoo\ClassLibraryAnimal\ClassLibraryAnimal.csproj", "{A69AEAB8-1CF6-4955-A9D2-D7D39172C6EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryAnimal", "00 - Console applications\01 - Zoo\ClassLibraryAnimal\ClassLibraryAnimal.csproj", "{A69AEAB8-1CF6-4955-A9D2-D7D39172C6EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryEmployee", "00 - Console applications\01 - Zoo\ClassLibraryEmployee\ClassLibraryEmployee.csproj", "{03A203EE-C4F1-495D-9F70-31DD39F7F240}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryEmployee", "00 - Console applications\01 - Zoo\ClassLibraryEmployee\ClassLibraryEmployee.csproj", "{03A203EE-C4F1-495D-9F70-31DD39F7F240}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceLibrary", "00 - Console applications\01 - Zoo\InterfaceLibrary\InterfaceLibrary.csproj", "{93E9D675-F09D-42F4-B1F5-22A8CA854E5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceLibrary", "00 - Console applications\01 - Zoo\InterfaceLibrary\InterfaceLibrary.csproj", "{93E9D675-F09D-42F4-B1F5-22A8CA854E5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryScript", "00 - Console applications\01 - Zoo\ClassLibraryScript\ClassLibraryScript.csproj", "{6767D2A4-0447-4516-85D7-361CEE4A7E6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryScript", "00 - Console applications\01 - Zoo\ClassLibraryScript\ClassLibraryScript.csproj", "{6767D2A4-0447-4516-85D7-361CEE4A7E6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryTest", "00 - Console applications\01 - Zoo\ClassLibraryTest\ClassLibraryTest.csproj", "{226EF9EB-8818-4F14-9F04-16B972BB3AF0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryTest", "00 - Console applications\01 - Zoo\ClassLibraryTest\ClassLibraryTest.csproj", "{226EF9EB-8818-4F14-9F04-16B972BB3AF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppForest", "00 - Console applications\02 - Forest\ConsoleAppForest\ConsoleAppForest.csproj", "{7A238B83-A3C6-47BD-B5D7-2EEFCE94539A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppForest", "00 - Console applications\02 - Forest\ConsoleAppForest\ConsoleAppForest.csproj", "{7A238B83-A3C6-47BD-B5D7-2EEFCE94539A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryForest", "00 - Console applications\02 - Forest\ClassLibraryForest\ClassLibraryForest.csproj", "{BA01F6BD-B144-4296-8836-D5393153ED70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryForest", "00 - Console applications\02 - Forest\ClassLibraryForest\ClassLibraryForest.csproj", "{BA01F6BD-B144-4296-8836-D5393153ED70}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Version-2", "Version-2", "{85FD52F7-963C-419D-8B19-92BF9ADD6F05}"
 	ProjectSection(SolutionItems) = preProject
@@ -104,6 +104,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormAppScrolling-v1", "03 - Graphical objects\03 - Scrolling\Version-1\WinFormAppScrolling-v1\WinFormAppScrolling-v1.csproj", "{EFDC67DF-B274-41B6-B99E-4188AA12FB71}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormAppScrolling-v2", "03 - Graphical objects\03 - Scrolling\Version-2\WinFormAppScrolling-v2\WinFormAppScrolling-v2.csproj", "{D5E754A4-323F-438B-B978-F7830C5FDBB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormAppLoan-v1", "03 - Graphical objects\04 - Loan\Version-1\WinFormAppLoan-v1\WinFormAppLoan-v1.csproj", "{0462D316-3DBA-444C-BA05-6B8E2F582476}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -203,6 +205,10 @@ Global
 		{D5E754A4-323F-438B-B978-F7830C5FDBB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5E754A4-323F-438B-B978-F7830C5FDBB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5E754A4-323F-438B-B978-F7830C5FDBB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0462D316-3DBA-444C-BA05-6B8E2F582476}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0462D316-3DBA-444C-BA05-6B8E2F582476}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0462D316-3DBA-444C-BA05-6B8E2F582476}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0462D316-3DBA-444C-BA05-6B8E2F582476}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -250,6 +256,7 @@ Global
 		{1653E821-6E1F-43C0-84CE-776162498A50} = {182FE6C9-1926-413C-8CCE-32A7ACEF1DC8}
 		{EFDC67DF-B274-41B6-B99E-4188AA12FB71} = {698DEB05-CACF-4338-9BB2-E097E2222C7C}
 		{D5E754A4-323F-438B-B978-F7830C5FDBB6} = {4E562E60-7712-4C00-888F-8B64BCF18F24}
+		{0462D316-3DBA-444C-BA05-6B8E2F582476} = {6D2163EF-DA49-463F-B8CE-0BA3C087A9DD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {74CB25AE-1A47-47C8-BE16-CABB6D564B95}
