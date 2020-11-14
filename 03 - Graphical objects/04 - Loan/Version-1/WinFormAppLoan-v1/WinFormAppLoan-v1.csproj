@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="LoanForm1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="LoanForm1.Designer.cs">
+      <DependentUpon>LoanForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,6 +75,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibraryLoan-v1\ClassLibraryLoan-v1.csproj">
+      <Project>{c08abe1d-52d2-4a49-95c5-884c5b602542}</Project>
+      <Name>ClassLibraryLoan-v1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassLibraryLoanTool-v1\ClassLibraryLoanTool-v1.csproj">
+      <Project>{0cf8e0e5-fe8e-4689-b220-7e3cc93ac48e}</Project>
+      <Name>ClassLibraryLoanTool-v1</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
