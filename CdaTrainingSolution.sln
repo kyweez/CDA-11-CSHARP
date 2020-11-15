@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Input validation", "02
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Graphical objects", "03 - Graphical objects", "{819EEFE9-99B4-412F-BD1B-D2595B6E6DFA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Menu toolbar", "04 - Menu toolbar", "{FFA73FED-9B28-4EB6-A180-1BB48CB359FD}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Tout embal", "04 - Tout embal", "{FFA73FED-9B28-4EB6-A180-1BB48CB359FD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 - Butterfly", "00 - Butterfly", "{E37B387B-88B1-415E-8E9A-7D4212E43203}"
 EndProject
@@ -110,6 +110,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryLoan-v1", "03 - Graphical objects\04 - Loan\Version-1\ClassLibraryLoan-v1\ClassLibraryLoan-v1.csproj", "{C08ABE1D-52D2-4A49-95C5-884C5B602542}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryLoanTool-v1", "03 - Graphical objects\04 - Loan\Version-1\ClassLibraryLoanTool-v1\ClassLibraryLoanTool-v1.csproj", "{0CF8E0E5-FE8E-4689-B220-7E3CC93AC48E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Version-1", "Version-1", "{57697CB9-6B17-41B6-BD51-EA2A782BA3FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormAppToutEmbal-v1", "04 - Tout embal\Version-1\WinFormAppToutEmbal-v1\WinFormAppToutEmbal-v1.csproj", "{EFF7F96A-5E90-4A28-A7BD-D3AFFACC00E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -221,6 +225,10 @@ Global
 		{0CF8E0E5-FE8E-4689-B220-7E3CC93AC48E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CF8E0E5-FE8E-4689-B220-7E3CC93AC48E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CF8E0E5-FE8E-4689-B220-7E3CC93AC48E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFF7F96A-5E90-4A28-A7BD-D3AFFACC00E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFF7F96A-5E90-4A28-A7BD-D3AFFACC00E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFF7F96A-5E90-4A28-A7BD-D3AFFACC00E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFF7F96A-5E90-4A28-A7BD-D3AFFACC00E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -271,6 +279,8 @@ Global
 		{0462D316-3DBA-444C-BA05-6B8E2F582476} = {6D2163EF-DA49-463F-B8CE-0BA3C087A9DD}
 		{C08ABE1D-52D2-4A49-95C5-884C5B602542} = {6D2163EF-DA49-463F-B8CE-0BA3C087A9DD}
 		{0CF8E0E5-FE8E-4689-B220-7E3CC93AC48E} = {6D2163EF-DA49-463F-B8CE-0BA3C087A9DD}
+		{57697CB9-6B17-41B6-BD51-EA2A782BA3FF} = {FFA73FED-9B28-4EB6-A180-1BB48CB359FD}
+		{EFF7F96A-5E90-4A28-A7BD-D3AFFACC00E2} = {57697CB9-6B17-41B6-BD51-EA2A782BA3FF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {74CB25AE-1A47-47C8-BE16-CABB6D564B95}
