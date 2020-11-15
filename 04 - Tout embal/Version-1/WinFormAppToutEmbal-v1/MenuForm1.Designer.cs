@@ -42,6 +42,18 @@
             this.butterflyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zooToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.forestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.version1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.version2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comboBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scrollingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.version1ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.vesrion2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.version1ToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.version2ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripInMenuForm.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,6 +95,8 @@
             // 
             // firstStepsToolStripMenuItem
             // 
+            this.firstStepsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.calculatorToolStripMenuItem});
             this.firstStepsToolStripMenuItem.Enabled = false;
             this.firstStepsToolStripMenuItem.Name = "firstStepsToolStripMenuItem";
             this.firstStepsToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
@@ -90,6 +104,9 @@
             // 
             // inputValidationToolStripMenuItem
             // 
+            this.inputValidationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.version1ToolStripMenuItem,
+            this.version2ToolStripMenuItem});
             this.inputValidationToolStripMenuItem.Enabled = false;
             this.inputValidationToolStripMenuItem.Name = "inputValidationToolStripMenuItem";
             this.inputValidationToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
@@ -97,6 +114,12 @@
             // 
             // graphicalObjectsToolStripMenuItem
             // 
+            this.graphicalObjectsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.checkBoxToolStripMenuItem,
+            this.listBoxToolStripMenuItem,
+            this.comboBoxToolStripMenuItem,
+            this.scrollingToolStripMenuItem,
+            this.loanToolStripMenuItem});
             this.graphicalObjectsToolStripMenuItem.Enabled = false;
             this.graphicalObjectsToolStripMenuItem.Name = "graphicalObjectsToolStripMenuItem";
             this.graphicalObjectsToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
@@ -106,8 +129,9 @@
             // 
             this.windowsToolStripMenuItem.Enabled = false;
             this.windowsToolStripMenuItem.Name = "windowsToolStripMenuItem";
-            this.windowsToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
-            this.windowsToolStripMenuItem.Text = "Windows";
+            this.windowsToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.windowsToolStripMenuItem.Text = "Cascade";
+            this.windowsToolStripMenuItem.Click += new System.EventHandler(this.windowsToolStripMenuItem_Click);
             // 
             // logInToolStripMenuItem
             // 
@@ -146,6 +170,84 @@
             this.forestToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.forestToolStripMenuItem.Text = "Forest";
             // 
+            // calculatorToolStripMenuItem
+            // 
+            this.calculatorToolStripMenuItem.Name = "calculatorToolStripMenuItem";
+            this.calculatorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.calculatorToolStripMenuItem.Text = "Calculator";
+            // 
+            // version1ToolStripMenuItem
+            // 
+            this.version1ToolStripMenuItem.Name = "version1ToolStripMenuItem";
+            this.version1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.version1ToolStripMenuItem.Text = "Version 1";
+            // 
+            // version2ToolStripMenuItem
+            // 
+            this.version2ToolStripMenuItem.Name = "version2ToolStripMenuItem";
+            this.version2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.version2ToolStripMenuItem.Text = "Version 2";
+            // 
+            // checkBoxToolStripMenuItem
+            // 
+            this.checkBoxToolStripMenuItem.Name = "checkBoxToolStripMenuItem";
+            this.checkBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.checkBoxToolStripMenuItem.Text = "Check box";
+            // 
+            // listBoxToolStripMenuItem
+            // 
+            this.listBoxToolStripMenuItem.Name = "listBoxToolStripMenuItem";
+            this.listBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listBoxToolStripMenuItem.Text = "List box";
+            // 
+            // comboBoxToolStripMenuItem
+            // 
+            this.comboBoxToolStripMenuItem.Name = "comboBoxToolStripMenuItem";
+            this.comboBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.comboBoxToolStripMenuItem.Text = "Combo box";
+            // 
+            // scrollingToolStripMenuItem
+            // 
+            this.scrollingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.version1ToolStripMenuItem1,
+            this.vesrion2ToolStripMenuItem});
+            this.scrollingToolStripMenuItem.Name = "scrollingToolStripMenuItem";
+            this.scrollingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.scrollingToolStripMenuItem.Text = "Scrolling";
+            // 
+            // version1ToolStripMenuItem1
+            // 
+            this.version1ToolStripMenuItem1.Name = "version1ToolStripMenuItem1";
+            this.version1ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.version1ToolStripMenuItem1.Text = "Version 1";
+            // 
+            // vesrion2ToolStripMenuItem
+            // 
+            this.vesrion2ToolStripMenuItem.Name = "vesrion2ToolStripMenuItem";
+            this.vesrion2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.vesrion2ToolStripMenuItem.Text = "Vesrion 2";
+            // 
+            // loanToolStripMenuItem
+            // 
+            this.loanToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.version1ToolStripMenuItem2,
+            this.version2ToolStripMenuItem1});
+            this.loanToolStripMenuItem.Name = "loanToolStripMenuItem";
+            this.loanToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loanToolStripMenuItem.Text = "Loan";
+            // 
+            // version1ToolStripMenuItem2
+            // 
+            this.version1ToolStripMenuItem2.Name = "version1ToolStripMenuItem2";
+            this.version1ToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.version1ToolStripMenuItem2.Text = "Version 1";
+            // 
+            // version2ToolStripMenuItem1
+            // 
+            this.version2ToolStripMenuItem1.Name = "version2ToolStripMenuItem1";
+            this.version2ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.version2ToolStripMenuItem1.Text = "Version 2";
+            // 
             // MenuForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,6 +283,18 @@
         private System.Windows.Forms.ToolStripMenuItem butterflyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zooToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem forestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem calculatorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem version1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem version2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem checkBoxToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listBoxToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem comboBoxToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem scrollingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem version1ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem vesrion2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem loanToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem version1ToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem version2ToolStripMenuItem1;
     }
 }
 
