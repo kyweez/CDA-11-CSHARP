@@ -6,8 +6,17 @@ namespace ClassLibraryFraction
     public class Fraction
     {
         #region ################ PROPERTIES ################
-        private int numerator;
-        private int denominator;
+        private int Numerator
+        {
+            get;
+            set;
+        }
+        
+        private int Denominator
+        {
+            get;
+            set;
+        }
         #endregion
 
         #region ################ CONSTRUCTORS ################
@@ -21,8 +30,8 @@ namespace ClassLibraryFraction
         {
             if (_denominator == 0)
                 throw new ZeroDenominatorException("Denominator can't be equal to 0");
-            numerator = _numerator;
-            denominator = _denominator;
+            Numerator = _numerator;
+            Denominator = _denominator;
         }
 
         /// <summary>
@@ -41,11 +50,11 @@ namespace ClassLibraryFraction
         /// <exception cref="FractionReverseImpossibleException">Triggers if the numerator is equal to 0</exception>
         public void Reverse()
         {
-            if (numerator == 0)
+            if (Numerator == 0)
                 throw new FractionReverseImpossibleException("Can't reverse a fraction with numerator equal to 0");
-            int tmp = numerator;
-            numerator = denominator;
-            denominator = tmp;
+            int tmp = Numerator;
+            Numerator = Denominator;
+            Denominator = tmp;
         }
 
         /// <summary>
@@ -59,7 +68,7 @@ namespace ClassLibraryFraction
             int result;
             try
             {
-                result = numerator / denominator;
+                result = Numerator / Denominator;
                 return result;
             }
             catch (DivideByZeroException e)

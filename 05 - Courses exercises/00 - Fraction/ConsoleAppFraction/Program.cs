@@ -158,7 +158,7 @@ namespace ConsoleAppFraction
             #endregion
 
             #region Evaluate test
-            // Case numerator = 20 & denominator = 2 & no modification of the private field denominator
+            // Case numerator = 20 & denominator = 2 & no modification of the private property denominator
             try
             {
                 Fraction f14 = new Fraction(20, 2);
@@ -169,7 +169,7 @@ namespace ConsoleAppFraction
                 Console.WriteLine("f14 can't be evaluated : " + e.Message);
             }
 
-            // Case numerator = 20 & denominator = 18 & no modification of the private field denominator
+            // Case numerator = 20 & denominator = 18 & no modification of the private property denominator
             try
             {
                 Fraction f15 = new Fraction(20, 18);
@@ -180,11 +180,11 @@ namespace ConsoleAppFraction
                 Console.WriteLine("f15 can't be evaluated : " + e.Message);
             }
 
-            // Case numerator = 20 & denominator = 18 & private field denominator set to 0
+            // Case numerator = 20 & denominator = 18 & private property denominator set to 0
             try
             {
                 Fraction f16 = new Fraction(20, 18);
-                typeof(Fraction).GetField("denominator", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(f16, 0);
+                typeof(Fraction).GetProperty("Denominator", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(f16, 0);
                 Console.WriteLine($"f15 evaluation worked. Result : {f16.Evaluate()}");
             }
             catch (Exception e)
