@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("WinFormAppToutEmbal-v1")]
+[assembly: AssemblyTitle("WinFormAppMDI")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("WinFormAppToutEmbal-v1")]
+[assembly: AssemblyProduct("WinFormAppMDI")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("eff7f96a-5e90-4a28-a7bd-d3affacc00e2")]
+[assembly: Guid("18938811-1952-4346-886f-44aad8ebd6ba")]
 
 // Version information for an assembly consists of the following four values:
 //

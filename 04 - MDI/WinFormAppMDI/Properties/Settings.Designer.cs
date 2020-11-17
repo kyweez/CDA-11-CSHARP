@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WinFormAppToutEmbal_v1.Properties
+namespace WinFormAppMDI.Properties
 {
 
 

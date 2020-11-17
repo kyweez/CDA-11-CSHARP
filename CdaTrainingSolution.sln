@@ -131,6 +131,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppMajorityEvent", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryPerson", "05 - Courses exercises\01 - Events\ClassLibraryPerson\ClassLibraryPerson.csproj", "{E7C7EAD1-8297-401A-93A3-CE3BC0E6CC2E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormAppMDI", "04 - MDI\WinFormAppMDI\WinFormAppMDI.csproj", "{18938811-1952-4346-886F-44AAD8EBD6BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -261,6 +263,10 @@ Global
 		{E7C7EAD1-8297-401A-93A3-CE3BC0E6CC2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7C7EAD1-8297-401A-93A3-CE3BC0E6CC2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7C7EAD1-8297-401A-93A3-CE3BC0E6CC2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18938811-1952-4346-886F-44AAD8EBD6BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18938811-1952-4346-886F-44AAD8EBD6BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18938811-1952-4346-886F-44AAD8EBD6BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18938811-1952-4346-886F-44AAD8EBD6BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -319,6 +325,7 @@ Global
 		{D9B8166B-28BD-4EE7-8F23-6758228A7D2B} = {E3FD6186-3F2E-4D11-ABD8-281D3D1C91E5}
 		{32FB5CE9-F091-4C59-BC78-487B5C03416B} = {8CC60435-CC4A-447D-80BC-422D160E6815}
 		{E7C7EAD1-8297-401A-93A3-CE3BC0E6CC2E} = {8CC60435-CC4A-447D-80BC-422D160E6815}
+		{18938811-1952-4346-886F-44AAD8EBD6BA} = {BC924AC4-4346-4475-BD59-58F06349D2A7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {74CB25AE-1A47-47C8-BE16-CABB6D564B95}

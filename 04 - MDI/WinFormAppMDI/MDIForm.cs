@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WinFormAppToutEmbal_v1
+namespace WinFormAppMDI
 {
-    public partial class MenuForm1 : Form
+    public partial class MDIForm : Form
     {
-        public MenuForm1()
+        public MDIForm()
         {
             InitializeComponent();
         }
-
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WinFormAppToutEmbal_v1
+namespace WinFormAppMDI
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace WinFormAppToutEmbal_v1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenuForm1());
+            Application.Run(new MDIForm());
         }
     }
 }

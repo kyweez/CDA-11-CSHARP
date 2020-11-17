@@ -1,6 +1,6 @@
-﻿namespace WinFormAppToutEmbal_v1
+﻿namespace WinFormAppMDI
 {
-    partial class MenuForm1
+    partial class MDIForm
     {
         /// <summary>
         /// Required designer variable.
