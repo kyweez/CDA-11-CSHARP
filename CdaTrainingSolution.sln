@@ -123,15 +123,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 - Fraction", "00 - Fract
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Events", "01 - Events", "{8CC60435-CC4A-447D-80BC-422D160E6815}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppFraction", "05 - Courses exercises\00 - Fraction\ConsoleAppFraction\ConsoleAppFraction.csproj", "{37B2CB73-8E90-496C-8C54-32B296E39407}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppFraction", "05 - Courses exercises\00 - Fraction\ConsoleAppFraction\ConsoleAppFraction.csproj", "{37B2CB73-8E90-496C-8C54-32B296E39407}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryFraction", "05 - Courses exercises\00 - Fraction\ClassLibraryFraction\ClassLibraryFraction.csproj", "{D9B8166B-28BD-4EE7-8F23-6758228A7D2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryFraction", "05 - Courses exercises\00 - Fraction\ClassLibraryFraction\ClassLibraryFraction.csproj", "{D9B8166B-28BD-4EE7-8F23-6758228A7D2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppMajorityEvent", "05 - Courses exercises\01 - Events\ConsoleAppMajorityEvent\ConsoleAppMajorityEvent.csproj", "{32FB5CE9-F091-4C59-BC78-487B5C03416B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppMajorityEvent", "05 - Courses exercises\01 - Events\ConsoleAppMajorityEvent\ConsoleAppMajorityEvent.csproj", "{32FB5CE9-F091-4C59-BC78-487B5C03416B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryPerson", "05 - Courses exercises\01 - Events\ClassLibraryPerson\ClassLibraryPerson.csproj", "{E7C7EAD1-8297-401A-93A3-CE3BC0E6CC2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryPerson", "05 - Courses exercises\01 - Events\ClassLibraryPerson\ClassLibraryPerson.csproj", "{E7C7EAD1-8297-401A-93A3-CE3BC0E6CC2E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormAppMDI", "04 - MDI\WinFormAppMDI\WinFormAppMDI.csproj", "{18938811-1952-4346-886F-44AAD8EBD6BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Temperature", "02 - Temperature", "{66350EE8-082B-407A-9A44-1FC9F9EEE896}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppDoctor", "05 - Courses exercises\02 - Temperature\ConsoleAppDoctor\ConsoleAppDoctor.csproj", "{B641CEFE-1186-49E8-A1B5-D47979FF29F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppGardener", "05 - Courses exercises\02 - Temperature\ConsoleAppGardener\ConsoleAppGardener.csproj", "{03456FEC-BC74-46F6-BB03-D7D318081B6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryTemperature", "05 - Courses exercises\02 - Temperature\ClassLibraryTemperature\ClassLibraryTemperature.csproj", "{188C256F-E635-430C-8485-02123B5D1BE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -267,6 +275,18 @@ Global
 		{18938811-1952-4346-886F-44AAD8EBD6BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18938811-1952-4346-886F-44AAD8EBD6BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18938811-1952-4346-886F-44AAD8EBD6BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B641CEFE-1186-49E8-A1B5-D47979FF29F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B641CEFE-1186-49E8-A1B5-D47979FF29F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B641CEFE-1186-49E8-A1B5-D47979FF29F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B641CEFE-1186-49E8-A1B5-D47979FF29F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03456FEC-BC74-46F6-BB03-D7D318081B6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03456FEC-BC74-46F6-BB03-D7D318081B6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03456FEC-BC74-46F6-BB03-D7D318081B6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03456FEC-BC74-46F6-BB03-D7D318081B6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{188C256F-E635-430C-8485-02123B5D1BE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{188C256F-E635-430C-8485-02123B5D1BE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{188C256F-E635-430C-8485-02123B5D1BE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{188C256F-E635-430C-8485-02123B5D1BE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -326,6 +346,10 @@ Global
 		{32FB5CE9-F091-4C59-BC78-487B5C03416B} = {8CC60435-CC4A-447D-80BC-422D160E6815}
 		{E7C7EAD1-8297-401A-93A3-CE3BC0E6CC2E} = {8CC60435-CC4A-447D-80BC-422D160E6815}
 		{18938811-1952-4346-886F-44AAD8EBD6BA} = {BC924AC4-4346-4475-BD59-58F06349D2A7}
+		{66350EE8-082B-407A-9A44-1FC9F9EEE896} = {0B88BD9E-58E1-4E2D-AD08-6D07C1138817}
+		{B641CEFE-1186-49E8-A1B5-D47979FF29F9} = {66350EE8-082B-407A-9A44-1FC9F9EEE896}
+		{03456FEC-BC74-46F6-BB03-D7D318081B6E} = {66350EE8-082B-407A-9A44-1FC9F9EEE896}
+		{188C256F-E635-430C-8485-02123B5D1BE9} = {66350EE8-082B-407A-9A44-1FC9F9EEE896}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {74CB25AE-1A47-47C8-BE16-CABB6D564B95}
