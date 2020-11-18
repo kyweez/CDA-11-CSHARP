@@ -4,7 +4,7 @@ namespace ClassLibraryPerson
 {
     public class Person
     {
-        private const byte MAX_AGE = 125;
+        private const byte MAX_AGE = 150;
 
         #region ############### PROPERTIES ###############
         public string Name
@@ -16,7 +16,7 @@ namespace ClassLibraryPerson
         public byte Age
         {
             get;
-            set;
+            private set;
         }
         #endregion
 
@@ -58,6 +58,5 @@ namespace ClassLibraryPerson
             }
         }
         #endregion
-
     }
 }
