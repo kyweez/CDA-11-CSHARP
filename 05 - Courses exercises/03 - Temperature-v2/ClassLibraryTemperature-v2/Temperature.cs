@@ -38,9 +38,11 @@ namespace ClassLibraryTemperature_v2
             if (_temperatureDictionnary == null)
                 throw new ArgumentNullException("The temperature dictionnary is null");
             TemperatureInCelsius = _temperature;
+            TemperatureDictionary = _temperatureDictionnary;
         }
         #endregion
 
+        #region ############### METHODS ###############
         public void IncreaseTemperature(float _temperature)
         {
             float delta;
@@ -56,7 +58,7 @@ namespace ClassLibraryTemperature_v2
             if (delta < _temperature)
                 throw new ImpossibleTemperatureIncreasingException($"Can't increase this value : {_temperature}. Too high value");
             TemperatureInCelsius += _temperature;
-            if (TemperatureDictionary.ContainsKey(TemperatureInCelsius))
+            if (TemperatureDictionary.ContainsKey(TemperatureInCelsius) && SpecificTemperatureEvent != null)
                 SpecificTemperatureEvent(new KeyValuePair<float, string>(TemperatureInCelsius, TemperatureDictionary[TemperatureInCelsius]));
         }
 
@@ -78,6 +80,6 @@ namespace ClassLibraryTemperature_v2
             if (TemperatureDictionary.ContainsKey(TemperatureInCelsius))
                 SpecificTemperatureEvent(new KeyValuePair<float, string>(TemperatureInCelsius, TemperatureDictionary[TemperatureInCelsius]));
         }
-
+        #endregion
     }
 }

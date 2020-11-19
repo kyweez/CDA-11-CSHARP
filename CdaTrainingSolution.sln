@@ -143,7 +143,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryTemperature", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Temperature-v2", "03 - Temperature-v2", "{A94611C8-3DD3-445E-8FCB-79E6755D4338}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppEvaportation", "05 - Courses exercises\03 - Temperature-v2\ConsoleAppEvaportation\ConsoleAppEvaportation.csproj", "{B1E095E2-B436-45EE-B7AF-E904E83E9C00}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppPhysic", "05 - Courses exercises\03 - Temperature-v2\ConsoleAppEvaportation\ConsoleAppPhysic.csproj", "{B1E095E2-B436-45EE-B7AF-E904E83E9C00}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryTemperature-v2", "05 - Courses exercises\03 - Temperature-v2\ClassLibraryTemperature-v2\ClassLibraryTemperature-v2.csproj", "{4D312389-41EB-4AAA-A825-82ED9F7AAD4F}"
 EndProject
