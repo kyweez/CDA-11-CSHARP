@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,6 +15,8 @@ namespace WinFormAppMDI
         [STAThread]
         static void Main()
         {
+            //SplashScreenForm sc = new SplashScreenForm();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new SplashScreenForm());
@@ -21,3 +24,4 @@ namespace WinFormAppMDI
         }
     }
 }
+

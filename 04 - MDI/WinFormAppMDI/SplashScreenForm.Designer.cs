@@ -41,16 +41,21 @@
             this.progressBarSplashScreen.Size = new System.Drawing.Size(266, 23);
             this.progressBarSplashScreen.TabIndex = 0;
             // 
+            // timerSplashScreen
+            // 
+            this.timerSplashScreen.Tick += new System.EventHandler(this.timerSplashScreen_Tick);
+            // 
             // SplashScreenForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(960, 540);
+            this.ControlBox = false;
             this.Controls.Add(this.progressBarSplashScreen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SplashScreenForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.SplashScreenForm_Load);
             this.ResumeLayout(false);
 
         }
