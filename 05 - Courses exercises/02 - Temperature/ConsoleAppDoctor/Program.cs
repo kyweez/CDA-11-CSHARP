@@ -24,7 +24,7 @@ namespace ConsoleAppDoctor
             Console.ResetColor();
             try
             {
-                patientTemperature = new Temperature(1416831963729000000000000000000000f);
+                patientTemperature = new Temperature(10000000000f);
                 patientTemperature.FeverTemperature += PatientTemperature_FeverTemperature;
                 Console.WriteLine($"Temperature value afer construction : {patientTemperature.TemperatureInCelsius}\n");
 
@@ -46,15 +46,15 @@ namespace ConsoleAppDoctor
             }
             catch (WrongTemperatureArgumentException e)
             {
-                Console.WriteLine($"Bad argument : {e.Message}  from {e.Source}");
+                Console.WriteLine($"Bad argument : {e.Message} . Error comes from {e.Source}");
             }
             catch (ImpossibleTemperatureIncreasingException e)
             {
-                Console.WriteLine($"Increasing issue : {e.Message} from {e.Source}");
+                Console.WriteLine($"Increasing issue : {e.Message}. Error comes from {e.Source}");
             }
             catch (ImpossibleTemperatureDecreasingException e)
             {
-                Console.WriteLine($"Increasing issue : {e.Message} from {e.Source}");
+                Console.WriteLine($"Decreasing issue : {e.Message}. Error comes from {e.Source}");
             }
             catch (Exception e)
             {
@@ -92,15 +92,15 @@ namespace ConsoleAppDoctor
             }
             catch (WrongTemperatureArgumentException e)
             {
-                Console.WriteLine($"Bad argument : {e.Message}  from {e.Source}");
+                Console.WriteLine($"Bad argument : {e.Message} . Error comes from {e.Source}");
             }
             catch (ImpossibleTemperatureIncreasingException e)
             {
-                Console.WriteLine($"Increasing issue : {e.Message} from {e.Source}");
+                Console.WriteLine($"Increasing issue : {e.Message}. Error comes from {e.Source}");
             }
             catch (ImpossibleTemperatureDecreasingException e)
             {
-                Console.WriteLine($"Increasing issue : {e.Message} from {e.Source}");
+                Console.WriteLine($"Decreasing issue : {e.Message}. Error comes from {e.Source}");
             }
             catch (Exception e)
             {
@@ -140,15 +140,15 @@ namespace ConsoleAppDoctor
             }
             catch (WrongTemperatureArgumentException e)
             {
-                Console.WriteLine($"Bad argument : {e.Message}  from {e.Source}");
+                Console.WriteLine($"Bad argument : {e.Message} . Error comes from {e.Source}");
             }
             catch (ImpossibleTemperatureIncreasingException e)
             {
-                Console.WriteLine($"Increasing issue : {e.Message} from {e.Source}");
+                Console.WriteLine($"Increasing issue : {e.Message}. Error comes from {e.Source}");
             }
             catch (ImpossibleTemperatureDecreasingException e)
             {
-                Console.WriteLine($"Increasing issue : {e.Message} from {e.Source}");
+                Console.WriteLine($"Decreasing issue : {e.Message}. Error comes from {e.Source}");
             }
             catch (Exception e)
             {
@@ -169,8 +169,8 @@ namespace ConsoleAppDoctor
                 Console.WriteLine($"Temperature value afer construction : {patientTemperature.TemperatureInCelsius}\n");
 
                 //Trying to trigger the fever event
-                patientTemperature.IncreaseTemperature(2f);
-                Console.WriteLine($"Patient fever == {patientTemperature.TemperatureInCelsius}\n");
+                //patientTemperature.IncreaseTemperature(2f);
+                //Console.WriteLine($"Patient fever == {patientTemperature.TemperatureInCelsius}\n");
 
                 //Checking if the freezing event is triggered
                 patientTemperature.DecreaseTemperature(-50f);
@@ -186,15 +186,15 @@ namespace ConsoleAppDoctor
             }
             catch (WrongTemperatureArgumentException e)
             {
-                Console.WriteLine($"Bad argument : {e.Message}  from {e.Source}");
+                Console.WriteLine($"Bad argument : {e.Message} . Error comes from {e.Source}");
             }
             catch (ImpossibleTemperatureIncreasingException e)
             {
-                Console.WriteLine($"Increasing issue : {e.Message} from {e.Source}");
+                Console.WriteLine($"Increasing issue : {e.Message}. Error comes from {e.Source}");
             }
             catch (ImpossibleTemperatureDecreasingException e)
             {
-                Console.WriteLine($"Increasing issue : {e.Message} from {e.Source}");
+                Console.WriteLine($"Decreasing issue : {e.Message}. Error comes from {e.Source}");
             }
             catch (Exception e)
             {
@@ -205,19 +205,19 @@ namespace ConsoleAppDoctor
             Console.Clear();
             #endregion
 
-            #region ############### IMPOSSIBLE INCREASING & DECREASING CASEs ###############
+            #region ############### IMPOSSIBLE INCREASING CASES ###############
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("################### IMPOSSIBLE INCREASING CASE 1 ##################\n");
             Console.ResetColor();
             try
             {
-                patientTemperature = new Temperature(141683196372900000000000000000000f);
+                patientTemperature = new Temperature(1000000000f);
                 patientTemperature.FeverTemperature += PatientTemperature_FeverTemperature;
                 Console.WriteLine($"Temperature value afer construction : {patientTemperature.TemperatureInCelsius}\n");
 
                 //Trying to trigger the fever event
-                patientTemperature.IncreaseTemperature(1000f);
+                patientTemperature.IncreaseTemperature(10f);
                 Console.WriteLine($"Patient fever == {patientTemperature.TemperatureInCelsius}\n");
 
                 //Checking if the freezing event is triggered
@@ -234,15 +234,15 @@ namespace ConsoleAppDoctor
             }
             catch (WrongTemperatureArgumentException e)
             {
-                Console.WriteLine($"Bad argument : {e.Message}  from {e.Source}");
+                Console.WriteLine($"Bad argument : {e.Message} . Error comes from {e.Source}");
             }
             catch (ImpossibleTemperatureIncreasingException e)
             {
-                Console.WriteLine($"Increasing issue : {e.Message} from {e.Source}");
+                Console.WriteLine($"Increasing issue : {e.Message}. Error comes from {e.Source}");
             }
             catch (ImpossibleTemperatureDecreasingException e)
             {
-                Console.WriteLine($"Increasing issue : {e.Message} from {e.Source}");
+                Console.WriteLine($"Decreasing issue : {e.Message}. Error comes from {e.Source}");
             }
             catch (Exception e)
             {
@@ -254,17 +254,18 @@ namespace ConsoleAppDoctor
 
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.ForegroundColor = ConsoleColor.White;
-
             Console.WriteLine("################### IMPOSSIBLE INCREASING CASE 2 ##################\n");
             Console.ResetColor();
             try
             {
-                patientTemperature = new Temperature(10000000000000000000f);
+                patientTemperature = new Temperature(100f);
+                //patientTemperature = new Temperature(10f);
+                //patientTemperature = new Temperature(1f);
                 patientTemperature.FeverTemperature += PatientTemperature_FeverTemperature;
                 Console.WriteLine($"Temperature value afer construction : {patientTemperature.TemperatureInCelsius}\n");
 
                 //Trying to trigger the fever event
-                patientTemperature.IncreaseTemperature(1416831963729000000000000000000000f);
+                patientTemperature.IncreaseTemperature(1000000000f);
                 Console.WriteLine($"Patient fever == {patientTemperature.TemperatureInCelsius}\n");
 
                 //Checking if the freezing event is triggered
@@ -281,15 +282,15 @@ namespace ConsoleAppDoctor
             }
             catch (WrongTemperatureArgumentException e)
             {
-                Console.WriteLine($"Bad argument : {e.Message}  from {e.Source}");
+                Console.WriteLine($"Bad argument : {e.Message} . Error comes from {e.Source}");
             }
             catch (ImpossibleTemperatureIncreasingException e)
             {
-                Console.WriteLine($"Increasing issue : {e.Message} from {e.Source}");
+                Console.WriteLine($"Increasing issue : {e.Message}. Error comes from {e.Source}");
             }
             catch (ImpossibleTemperatureDecreasingException e)
             {
-                Console.WriteLine($"Increasing issue : {e.Message} from {e.Source}");
+                Console.WriteLine($"Decreasing issue : {e.Message}. Error comes from {e.Source}");
             }
             catch (Exception e)
             {
@@ -299,16 +300,18 @@ namespace ConsoleAppDoctor
             Console.ReadKey();
             Console.Clear();
 
+            Console.BackgroundColor = ConsoleColor.DarkGreen;
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("################### IMPOSSIBLE INCREASING CASE 3 ##################\n");
             Console.ResetColor();
             try
             {
-                patientTemperature = new Temperature(1000000000000000000000000f);
+                patientTemperature = new Temperature(-10f);
                 patientTemperature.FeverTemperature += PatientTemperature_FeverTemperature;
                 Console.WriteLine($"Temperature value afer construction : {patientTemperature.TemperatureInCelsius}\n");
 
                 //Trying to trigger the fever event
-                patientTemperature.IncreaseTemperature(141683196372900000000000000000000f);
+                patientTemperature.IncreaseTemperature(1000000273f);
                 Console.WriteLine($"Patient fever == {patientTemperature.TemperatureInCelsius}\n");
 
                 //Checking if the freezing event is triggered
@@ -325,15 +328,63 @@ namespace ConsoleAppDoctor
             }
             catch (WrongTemperatureArgumentException e)
             {
-                Console.WriteLine($"Bad argument : {e.Message}  from {e.Source}");
+                Console.WriteLine($"Bad argument : {e.Message} . Error comes from {e.Source}");
             }
             catch (ImpossibleTemperatureIncreasingException e)
             {
-                Console.WriteLine($"Increasing issue : {e.Message} from {e.Source}");
+                Console.WriteLine($"Increasing issue : {e.Message}. Error comes from {e.Source}");
             }
             catch (ImpossibleTemperatureDecreasingException e)
             {
-                Console.WriteLine($"Increasing issue : {e.Message} from {e.Source}");
+                Console.WriteLine($"Decreasing issue : {e.Message}. Error comes from {e.Source}");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            Console.WriteLine("\nPress any key to continue\n");
+            Console.ReadKey();
+            Console.Clear();
+            #endregion
+
+            #region ############### IMPOSSIBLE DECREASING CASES ###############
+            Console.BackgroundColor = ConsoleColor.DarkGreen;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("################### IMPOSSIBLE DECREASING CASE 1 ##################\n");
+            Console.ResetColor();
+            try
+            {
+                patientTemperature = new Temperature(-273.15f);
+                patientTemperature.FeverTemperature += PatientTemperature_FeverTemperature;
+                Console.WriteLine($"Temperature value afer construction : {patientTemperature.TemperatureInCelsius}\n");
+
+                //Trying to trigger the fever event
+                //patientTemperature.IncreaseTemperature(10f);
+                //Console.WriteLine($"Patient fever == {patientTemperature.TemperatureInCelsius}\n");
+
+                //Checking if the freezing event is triggered
+                patientTemperature.DecreaseTemperature(1f);
+                Console.WriteLine($"Patient fever == {patientTemperature.TemperatureInCelsius}\n");
+
+                //Trying to trigger again the fever event
+                patientTemperature.IncreaseTemperature(70f);
+                Console.WriteLine($"Patient fever == {patientTemperature.TemperatureInCelsius}\n");
+            }
+            catch (ImpossibleTemperatureException e)
+            {
+                Console.WriteLine($"Object can't be instanciated : {e.Message} in {e.Source}");
+            }
+            catch (WrongTemperatureArgumentException e)
+            {
+                Console.WriteLine($"Bad argument : {e.Message} . Error comes from {e.Source}");
+            }
+            catch (ImpossibleTemperatureIncreasingException e)
+            {
+                Console.WriteLine($"Increasing issue : {e.Message}. Error comes from {e.Source}");
+            }
+            catch (ImpossibleTemperatureDecreasingException e)
+            {
+                Console.WriteLine($"Decreasing issue : {e.Message}. Error comes from {e.Source}");
             }
             catch (Exception e)
             {
@@ -343,6 +394,99 @@ namespace ConsoleAppDoctor
             Console.ReadKey();
             Console.Clear();
 
+            Console.BackgroundColor = ConsoleColor.DarkGreen;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("################### IMPOSSIBLE DECREASING CASE 2 ##################\n");
+            Console.ResetColor();
+            try
+            {
+                patientTemperature = new Temperature(100f);
+                //patientTemperature = new Temperature(10f);
+                //patientTemperature = new Temperature(1f);
+                patientTemperature.FeverTemperature += PatientTemperature_FeverTemperature;
+                Console.WriteLine($"Temperature value afer construction : {patientTemperature.TemperatureInCelsius}\n");
+
+                //Trying to trigger the fever event
+                //patientTemperature.IncreaseTemperature(1000000000f);
+                //Console.WriteLine($"Patient fever == {patientTemperature.TemperatureInCelsius}\n");
+
+                //Checking if the freezing event is triggered
+                patientTemperature.DecreaseTemperature(384f);
+                Console.WriteLine($"Patient fever == {patientTemperature.TemperatureInCelsius}\n");
+
+                //Trying to trigger again the fever event
+                patientTemperature.IncreaseTemperature(70f);
+                Console.WriteLine($"Patient fever == {patientTemperature.TemperatureInCelsius}\n");
+            }
+            catch (ImpossibleTemperatureException e)
+            {
+                Console.WriteLine($"Object can't be instanciated : {e.Message} in {e.Source}");
+            }
+            catch (WrongTemperatureArgumentException e)
+            {
+                Console.WriteLine($"Bad argument : {e.Message} . Error comes from {e.Source}");
+            }
+            catch (ImpossibleTemperatureIncreasingException e)
+            {
+                Console.WriteLine($"Increasing issue : {e.Message}. Error comes from {e.Source}");
+            }
+            catch (ImpossibleTemperatureDecreasingException e)
+            {
+                Console.WriteLine($"Decreasing issue : {e.Message}. Error comes from {e.Source}");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            Console.WriteLine("\nPress any key to continue\n");
+            Console.ReadKey();
+            Console.Clear();
+
+            Console.BackgroundColor = ConsoleColor.DarkGreen;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("################### IMPOSSIBLE DECREASING CASE 3 ##################\n");
+            Console.ResetColor();
+            try
+            {
+                patientTemperature = new Temperature(-10f);
+                patientTemperature.FeverTemperature += PatientTemperature_FeverTemperature;
+                Console.WriteLine($"Temperature value afer construction : {patientTemperature.TemperatureInCelsius}\n");
+
+                //Trying to trigger the fever event
+                //patientTemperature.IncreaseTemperature(1000000273f);
+                //Console.WriteLine($"Patient fever == {patientTemperature.TemperatureInCelsius}\n");
+
+                //Checking if the freezing event is triggered
+                patientTemperature.DecreaseTemperature(273.15f);
+                Console.WriteLine($"Patient fever == {patientTemperature.TemperatureInCelsius}\n");
+
+                //Trying to trigger again the fever event
+                patientTemperature.IncreaseTemperature(70f);
+                Console.WriteLine($"Patient fever == {patientTemperature.TemperatureInCelsius}\n");
+            }
+            catch (ImpossibleTemperatureException e)
+            {
+                Console.WriteLine($"Object can't be instanciated : {e.Message} in {e.Source}");
+            }
+            catch (WrongTemperatureArgumentException e)
+            {
+                Console.WriteLine($"Bad argument : {e.Message} . Error comes from {e.Source}");
+            }
+            catch (ImpossibleTemperatureIncreasingException e)
+            {
+                Console.WriteLine($"Increasing issue : {e.Message}. Error comes from {e.Source}");
+            }
+            catch (ImpossibleTemperatureDecreasingException e)
+            {
+                Console.WriteLine($"Decreasing issue : {e.Message}. Error comes from {e.Source}");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            Console.WriteLine("\nPress any key to continue\n");
+            Console.ReadKey();
+            Console.Clear();
             #endregion
 
             #region ############### NOMINAL CASE ###############
@@ -374,36 +518,28 @@ namespace ConsoleAppDoctor
             }
             catch (WrongTemperatureArgumentException e)
             {
-                Console.WriteLine($"Bad argument : {e.Message}  from {e.Source}");
+                Console.WriteLine($"Bad argument : {e.Message} . Error comes from {e.Source}");
             }
             catch (ImpossibleTemperatureIncreasingException e)
             {
-                Console.WriteLine($"Increasing issue : {e.Message} from {e.Source}");
+                Console.WriteLine($"Increasing issue : {e.Message}. Error comes from {e.Source}");
             }
             catch (ImpossibleTemperatureDecreasingException e)
             {
-                Console.WriteLine($"Increasing issue : {e.Message} from {e.Source}");
+                Console.WriteLine($"Decreasing issue : {e.Message}. Error comes from {e.Source}");
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
-            Console.WriteLine("\nPress any key to continue\n");
-            Console.ReadKey();
-            Console.Clear();
-            #endregion
-
-
             Console.BackgroundColor = ConsoleColor.DarkRed;
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("===================================================");
             Console.WriteLine("================== END OF PROGRAM =================");
             Console.WriteLine("===================================================\n");
             Console.ResetColor();
+            #endregion
         }
-
-
-
 
         private static void PatientTemperature_FeverTemperature(Temperature sender)
         {

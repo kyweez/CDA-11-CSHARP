@@ -6,7 +6,7 @@ namespace ClassLibraryTemperature
     public class Temperature
     {
         private const float ABSOLUTE_ZERO = -273.15f;
-        private const float PLANCK_TEMPERATURE = 141683196372900000000000000000000f;
+        private const float MAX_TEMPERATURE = 1000000000f;
 
         public float TemperatureInCelsius
         {
@@ -20,8 +20,8 @@ namespace ClassLibraryTemperature
 
         public Temperature(float _temperature)
         {
-            if (_temperature < ABSOLUTE_ZERO || _temperature > PLANCK_TEMPERATURE)
-                throw new ImpossibleTemperatureException("This temperature doesn't exists");
+            if (_temperature < ABSOLUTE_ZERO || _temperature > MAX_TEMPERATURE)
+                throw new ImpossibleTemperatureException("This temperature doesn't exists in classical physic");
             TemperatureInCelsius = _temperature;
         }
 
@@ -39,15 +39,17 @@ namespace ClassLibraryTemperature
 
         public void IncreaseTemperature(float _temperature)
         {
+            float delta;
+            if (TemperatureInCelsius < 0f)
+                delta = MAX_TEMPERATURE + Math.Abs(TemperatureInCelsius);
+            else
+                delta = MAX_TEMPERATURE - TemperatureInCelsius;
+
             if (_temperature <= 0)
                 throw new WrongTemperatureArgumentException("You can't increase the temperature with a negative value");
-            if (TemperatureInCelsius >= PLANCK_TEMPERATURE)
-                throw new ImpossibleTemperatureIncreasingException("The current temperature has already reached the Planck temperature");
-            Console.WriteLine($"PLANCK_TEMPERATURE                        : {PLANCK_TEMPERATURE}");
-            Console.WriteLine($"TemperatureInCelsius                      : {TemperatureInCelsius}");
-            Console.WriteLine($"PLANCK_TEMPERATURE - TemperatureInCelsius : {PLANCK_TEMPERATURE - TemperatureInCelsius}");
-            Console.WriteLine($"_temperature                              : {_temperature}");
-            if (TemperatureInCelsius >= 0 && PLANCK_TEMPERATURE - TemperatureInCelsius < _temperature)
+            if (TemperatureInCelsius >= MAX_TEMPERATURE)
+                throw new ImpossibleTemperatureIncreasingException("The current temperature has already reached the Max temperature");
+            if (delta < _temperature)
                 throw new ImpossibleTemperatureIncreasingException($"Can't increase this value : {_temperature}. Too high value");
             TemperatureInCelsius += _temperature;
             CheckTemperature();
@@ -55,11 +57,17 @@ namespace ClassLibraryTemperature
 
         public void DecreaseTemperature(float _temperature)
         {
+            float delta;
+            if (TemperatureInCelsius < 0f)
+                delta = Math.Abs(ABSOLUTE_ZERO) - Math.Abs(TemperatureInCelsius);
+            else
+                delta = Math.Abs(ABSOLUTE_ZERO) + TemperatureInCelsius;
+
             if (_temperature <= 0)
                 throw new WrongTemperatureArgumentException("You can't decrease the temperature with a negative value");
             if (TemperatureInCelsius <= ABSOLUTE_ZERO)
                 throw new ImpossibleTemperatureDecreasingException("The current temperature has already reached the absolute zero");
-            if (_temperature > PLANCK_TEMPERATURE + Math.Abs(ABSOLUTE_ZERO)|| TemperatureInCelsius - _temperature < ABSOLUTE_ZERO)
+            if (delta < _temperature)
                 throw new ImpossibleTemperatureDecreasingException($"Can't decrease this value : {_temperature}. Too high value");
             TemperatureInCelsius -= _temperature;
             CheckTemperature();
