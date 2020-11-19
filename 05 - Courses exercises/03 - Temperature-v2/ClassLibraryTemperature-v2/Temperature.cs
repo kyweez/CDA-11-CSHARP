@@ -1,41 +1,45 @@
 ﻿using ClassLibraryTemperature_v2.Exceptions;
 using System;
+using System.Collections.Generic;
 
 namespace ClassLibraryTemperature_v2
 {
     public class Temperature
     {
+        #region ############### CONSTANTS ###############
         private const float ABSOLUTE_ZERO = -273.15f;
         private const float MAX_TEMPERATURE = 1000000000f;
+        #endregion
 
+        #region ############### PROPERTIES ###############
         public float TemperatureInCelsius
         {
             get;
             private set;
         }
 
-        public delegate void DelegateTemperature(Temperature sender);
-        public event DelegateTemperature FreezingTemperature;
-        public event DelegateTemperature FeverTemperature;
+        public Dictionary<float, string> TemperatureDictionary
+        {
+            get;
+            private set;
+        }
+        #endregion
 
-        public Temperature(float _temperature)
+        #region ############### EVENTS ###############
+        public delegate void DelegateTemperature(KeyValuePair<float, string> keyValuePair);
+        public event DelegateTemperature SpecificTemperatureEvent;
+        #endregion
+
+        #region ############### CONSTRUCTORS ###############
+        public Temperature(float _temperature, Dictionary<float, string> _temperatureDictionnary)
         {
             if (_temperature < ABSOLUTE_ZERO || _temperature > MAX_TEMPERATURE)
                 throw new ImpossibleTemperatureException("This temperature doesn't exists in classical physic");
+            if (_temperatureDictionnary == null)
+                throw new ArgumentNullException("The temperature dictionnary is null");
             TemperatureInCelsius = _temperature;
         }
-
-        public Temperature() : this(1f)
-        {
-        }
-
-        private void CheckTemperature()
-        {
-            if (TemperatureInCelsius <= 0f && FreezingTemperature != null)
-                FreezingTemperature(this);
-            if (TemperatureInCelsius >= 38f && FeverTemperature != null)
-                FeverTemperature(this);
-        }
+        #endregion
 
         public void IncreaseTemperature(float _temperature)
         {
@@ -52,7 +56,8 @@ namespace ClassLibraryTemperature_v2
             if (delta < _temperature)
                 throw new ImpossibleTemperatureIncreasingException($"Can't increase this value : {_temperature}. Too high value");
             TemperatureInCelsius += _temperature;
-            CheckTemperature();
+            if (TemperatureDictionary.ContainsKey(TemperatureInCelsius))
+                SpecificTemperatureEvent(new KeyValuePair<float, string>(TemperatureInCelsius, TemperatureDictionary[TemperatureInCelsius]));
         }
 
         public void DecreaseTemperature(float _temperature)
@@ -70,7 +75,8 @@ namespace ClassLibraryTemperature_v2
             if (delta < _temperature)
                 throw new ImpossibleTemperatureDecreasingException($"Can't decrease this value : {_temperature}. Too high value");
             TemperatureInCelsius -= _temperature;
-            CheckTemperature();
+            if (TemperatureDictionary.ContainsKey(TemperatureInCelsius))
+                SpecificTemperatureEvent(new KeyValuePair<float, string>(TemperatureInCelsius, TemperatureDictionary[TemperatureInCelsius]));
         }
 
     }
