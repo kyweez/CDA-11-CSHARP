@@ -15,16 +15,12 @@ namespace WinFormAppMDI
     {
         public MDIForm()
         {
-            //Thread trd = new Thread(new ThreadStart(StartSplashScreenForm));
-            //trd.Start();
-            //Thread.Sleep(6000);
             InitializeComponent();
-            //trd.Abort();
         }
 
-        private void StartSplashScreenForm()
+        private void Login_Click(object sender, EventArgs e)
         {
-            Application.Run(new SplashScreenForm());
+
         }
     }
 }

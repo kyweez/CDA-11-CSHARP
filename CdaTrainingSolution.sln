@@ -143,9 +143,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryTemperature", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Temperature-v2", "03 - Temperature-v2", "{A94611C8-3DD3-445E-8FCB-79E6755D4338}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppPhysic", "05 - Courses exercises\03 - Temperature-v2\ConsoleAppEvaportation\ConsoleAppPhysic.csproj", "{B1E095E2-B436-45EE-B7AF-E904E83E9C00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppPhysic", "05 - Courses exercises\03 - Temperature-v2\ConsoleAppEvaportation\ConsoleAppPhysic.csproj", "{B1E095E2-B436-45EE-B7AF-E904E83E9C00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryTemperature-v2", "05 - Courses exercises\03 - Temperature-v2\ClassLibraryTemperature-v2\ClassLibraryTemperature-v2.csproj", "{4D312389-41EB-4AAA-A825-82ED9F7AAD4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryTemperature-v2", "05 - Courses exercises\03 - Temperature-v2\ClassLibraryTemperature-v2\ClassLibraryTemperature-v2.csproj", "{4D312389-41EB-4AAA-A825-82ED9F7AAD4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryLogin", "04 - MDI\ClassLibraryLogin\ClassLibraryLogin.csproj", "{40B7C0C0-6CD3-4B12-95C9-F0038B117195}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -301,6 +303,10 @@ Global
 		{4D312389-41EB-4AAA-A825-82ED9F7AAD4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D312389-41EB-4AAA-A825-82ED9F7AAD4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D312389-41EB-4AAA-A825-82ED9F7AAD4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40B7C0C0-6CD3-4B12-95C9-F0038B117195}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40B7C0C0-6CD3-4B12-95C9-F0038B117195}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40B7C0C0-6CD3-4B12-95C9-F0038B117195}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40B7C0C0-6CD3-4B12-95C9-F0038B117195}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -367,6 +373,7 @@ Global
 		{A94611C8-3DD3-445E-8FCB-79E6755D4338} = {0B88BD9E-58E1-4E2D-AD08-6D07C1138817}
 		{B1E095E2-B436-45EE-B7AF-E904E83E9C00} = {A94611C8-3DD3-445E-8FCB-79E6755D4338}
 		{4D312389-41EB-4AAA-A825-82ED9F7AAD4F} = {A94611C8-3DD3-445E-8FCB-79E6755D4338}
+		{40B7C0C0-6CD3-4B12-95C9-F0038B117195} = {BC924AC4-4346-4475-BD59-58F06349D2A7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {74CB25AE-1A47-47C8-BE16-CABB6D564B95}
