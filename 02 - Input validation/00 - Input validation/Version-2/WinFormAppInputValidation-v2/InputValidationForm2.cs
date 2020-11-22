@@ -80,8 +80,9 @@ namespace WinFormAppInputValidation_v2
         /// </summary>
         /// <param name="sender">object</param>
         /// <param name="e">EventArgs</param>
-        private void InputValidation_FormClosing(object sender, FormClosingEventArgs e)
+        private void InputValidation_FormClosing(object sender, EventArgs e)
         {
+            FormClosingEventArgs _e = (FormClosingEventArgs)e;
             DialogResult dialogResult = MessageBox.Show
             (
                 "Do you want to quit the program ?",
@@ -90,9 +91,8 @@ namespace WinFormAppInputValidation_v2
                 MessageBoxIcon.Question,
                 MessageBoxDefaultButton.Button1
             );
-
             if (dialogResult == DialogResult.No)
-                e.Cancel = true;
+                _e.Cancel = true;
         }
     }
 }

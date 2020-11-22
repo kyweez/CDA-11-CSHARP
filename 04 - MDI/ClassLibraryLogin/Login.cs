@@ -2,15 +2,60 @@
 
 namespace ClassLibraryLogin
 {
-    public static class Login
+    public class Login
     {
-        public static bool isValidConnection(string _login, string _password)
+        #region ############### PROPERTIES ###############
+        private string LoginString
+        {
+            get;
+            set;
+        }
+
+        private string PasswordString
+        {
+            get;
+            set;
+        }
+
+        public bool IsValidLogin
+        {
+            get;
+            private set;
+        }
+        #endregion
+
+        #region ############### EVENT ###############
+        public delegate void DelegateLogin();
+        public event DelegateLogin AuthenticationSuccess;
+        #endregion
+
+        #region ############### CONSTRUCTOR ###############
+        public Login()
+        {
+            LoginString = "admin";
+            PasswordString = "admin";
+            IsValidLogin = false;
+        }
+        #endregion
+
+        #region ############### METHOD ###############
+        /// <summary>
+        /// This method compares the login/password pair to the current object properties and set a new value to IsValidLogin property
+        /// If IsValidLogin is set to true, send an AuthenticationSuccess event.
+        /// </summary>
+        /// <param name="_login">string</param>
+        /// <param name="_password">string</param>
+        /// <exception cref="ArgumentNullException">Triggers if either login or password is null</exception>
+        public void ConnectionAttempt(string _login, string _password)
         {
             if (_login == null)
                 throw new ArgumentNullException("The input login is null");
             if (_password == null)
                 throw new ArgumentNullException("The input password is null");
-            return (_login == "admin" && _password == "admin");
+            IsValidLogin = (_login == LoginString && _password == PasswordString);
+            if (IsValidLogin && AuthenticationSuccess != null)
+                AuthenticationSuccess();
         }
+        #endregion
     }
 }
