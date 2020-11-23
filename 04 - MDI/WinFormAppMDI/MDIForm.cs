@@ -7,7 +7,6 @@ namespace WinFormAppMDI
     public partial class MDIForm : Form
     {
         Login login;
-        MDI mdi;
 
         public MDIForm()
         {

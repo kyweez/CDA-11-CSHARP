@@ -20,6 +20,11 @@ namespace WinFormAppMDI
             InitializeComponent();
             CurrentLogin = _login;
         }
+
+        public LoginForm()
+        {
+            InitializeComponent();
+        }
         #endregion
 
         #region ############### METHODS ###############

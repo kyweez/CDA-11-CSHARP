@@ -103,7 +103,7 @@
       <Name>ClassLibraryLogin</Name>
     </ProjectReference>
     <ProjectReference Include="..\ClassLibraryMDI\ClassLibraryMDI.csproj">
-      <Project>{22b415ac-58f3-4a0d-96ce-60e7d7138a09}</Project>
+      <Project>{73304cf3-6f6f-4c3a-b82e-1859f7760992}</Project>
       <Name>ClassLibraryMDI</Name>
     </ProjectReference>
   </ItemGroup>
