@@ -73,6 +73,12 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.coursesExercisesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fractionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eventsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.temperatureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.version1ToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.version2ToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -86,6 +92,7 @@
             this.firstStepsToolStripMenuItem,
             this.inputValidationToolStripMenuItem,
             this.graphicalObjectsToolStripMenuItem,
+            this.coursesExercisesToolStripMenuItem,
             this.windowsToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
@@ -128,6 +135,7 @@
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
             this.quitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.quitToolStripMenuItem.Text = "Quit";
+            this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
             // consoleApplicationsToolStripMenuItem
             // 
@@ -342,19 +350,19 @@
             // checkBoxToolStripMenuItem1
             // 
             this.checkBoxToolStripMenuItem1.Name = "checkBoxToolStripMenuItem1";
-            this.checkBoxToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.checkBoxToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
             this.checkBoxToolStripMenuItem1.Text = "Check box";
             // 
             // listBoxToolStripMenuItem1
             // 
             this.listBoxToolStripMenuItem1.Name = "listBoxToolStripMenuItem1";
-            this.listBoxToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.listBoxToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
             this.listBoxToolStripMenuItem1.Text = "List box";
             // 
             // comboBoxToolStripMenuItem1
             // 
             this.comboBoxToolStripMenuItem1.Name = "comboBoxToolStripMenuItem1";
-            this.comboBoxToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.comboBoxToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
             this.comboBoxToolStripMenuItem1.Text = "Combo box";
             // 
             // scrollingToolStripMenuItem1
@@ -363,7 +371,7 @@
             this.version1ToolStripMenuItem3,
             this.version2ToolStripMenuItem2});
             this.scrollingToolStripMenuItem1.Name = "scrollingToolStripMenuItem1";
-            this.scrollingToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.scrollingToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
             this.scrollingToolStripMenuItem1.Text = "Scrolling";
             // 
             // version1ToolStripMenuItem3
@@ -384,7 +392,7 @@
             this.version1ToolStripMenuItem4,
             this.version2ToolStripMenuItem3});
             this.loanToolStripMenuItem1.Name = "loanToolStripMenuItem1";
-            this.loanToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.loanToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
             this.loanToolStripMenuItem1.Text = "Loan";
             // 
             // version1ToolStripMenuItem4
@@ -422,6 +430,50 @@
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(92, 17);
             this.toolStripStatusLabel2.Text = "Last Application";
             // 
+            // coursesExercisesToolStripMenuItem
+            // 
+            this.coursesExercisesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fractionToolStripMenuItem,
+            this.eventsToolStripMenuItem,
+            this.temperatureToolStripMenuItem});
+            this.coursesExercisesToolStripMenuItem.Enabled = false;
+            this.coursesExercisesToolStripMenuItem.Name = "coursesExercisesToolStripMenuItem";
+            this.coursesExercisesToolStripMenuItem.Size = new System.Drawing.Size(111, 20);
+            this.coursesExercisesToolStripMenuItem.Text = "Courses exercises";
+            // 
+            // fractionToolStripMenuItem
+            // 
+            this.fractionToolStripMenuItem.Name = "fractionToolStripMenuItem";
+            this.fractionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fractionToolStripMenuItem.Text = "Fraction";
+            // 
+            // eventsToolStripMenuItem
+            // 
+            this.eventsToolStripMenuItem.Name = "eventsToolStripMenuItem";
+            this.eventsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eventsToolStripMenuItem.Text = "Events";
+            // 
+            // temperatureToolStripMenuItem
+            // 
+            this.temperatureToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.version1ToolStripMenuItem5,
+            this.version2ToolStripMenuItem4});
+            this.temperatureToolStripMenuItem.Name = "temperatureToolStripMenuItem";
+            this.temperatureToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.temperatureToolStripMenuItem.Text = "Temperature";
+            // 
+            // version1ToolStripMenuItem5
+            // 
+            this.version1ToolStripMenuItem5.Name = "version1ToolStripMenuItem5";
+            this.version1ToolStripMenuItem5.Size = new System.Drawing.Size(180, 22);
+            this.version1ToolStripMenuItem5.Text = "Version 1";
+            // 
+            // version2ToolStripMenuItem4
+            // 
+            this.version2ToolStripMenuItem4.Name = "version2ToolStripMenuItem4";
+            this.version2ToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
+            this.version2ToolStripMenuItem4.Text = "Version 2";
+            // 
             // MDIForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -437,6 +489,7 @@
             this.Name = "MDIForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create forms";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.toolStrip.ResumeLayout(false);
@@ -495,6 +548,12 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripMenuItem disconnectToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem coursesExercisesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fractionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eventsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem temperatureToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem version1ToolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem version2ToolStripMenuItem4;
     }
 }
 

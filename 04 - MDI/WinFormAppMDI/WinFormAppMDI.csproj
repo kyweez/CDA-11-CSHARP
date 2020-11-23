@@ -102,6 +102,10 @@
       <Project>{40b7c0c0-6cd3-4b12-95c9-f0038b117195}</Project>
       <Name>ClassLibraryLogin</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ClassLibraryMDI\ClassLibraryMDI.csproj">
+      <Project>{22b415ac-58f3-4a0d-96ce-60e7d7138a09}</Project>
+      <Name>ClassLibraryMDI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
