@@ -25,6 +25,20 @@ namespace WinFormAppCheckBox
                 gbxCase
             };
         }
+
+        public CheckBoxForm(int instanceNumber)
+        {
+            InitializeComponent();
+
+            radioButtonGroupBoxes = new List<GroupBox>
+            {
+                gbxBackgroundColor,
+                gbxFontColor,
+                gbxCase
+            };
+            Text = $"Checkbox application number : {instanceNumber}";
+        }
+
         #endregion
 
         #region ############### METHODS ###############

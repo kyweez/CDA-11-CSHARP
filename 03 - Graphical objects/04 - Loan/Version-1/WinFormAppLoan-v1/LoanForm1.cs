@@ -30,6 +30,17 @@ namespace WinFormAppLoan_v1
             lbRepaymentPeriodicity.DataSource = CurrentRepaymentPeriodicityBindingList;
             UpdateHMI_All();
         }
+
+        public LoanForm1(int instanceNumber)
+        {
+            InitializeComponent();
+            CurrentLoan = new Loan();
+            CurrentRepaymentPeriodicityBindingList = new BindingList<RepaymentPeriodicity>(Enum.GetValues(typeof(RepaymentPeriodicity)).OfType<RepaymentPeriodicity>().ToList());
+            lbRepaymentPeriodicity.DataSource = CurrentRepaymentPeriodicityBindingList;
+            Text = $"Loan application number : {instanceNumber}";
+            UpdateHMI_All();
+        }
+
         #endregion
 
         #region ############### METHODS ###############

@@ -17,6 +17,13 @@ namespace WinFormAppInputValidation_v1
             currentBill = new Bill();
         }
 
+        public InputValidationForm1(int instanceNumber)
+        {
+            InitializeComponent();
+            currentBill = new Bill();
+            Text = $"Input validation version 1 number : {instanceNumber}";
+        }
+
         public Bill CurrentBill
         {
             get => currentBill;
@@ -107,20 +114,23 @@ namespace WinFormAppInputValidation_v1
         /// Display a window to validate the exit
         /// </summary>
         /// <param name="sender">object</param>
-        /// <param name="e">EventArgs</param>
+        /// <param name="e">FormClosingEventArgs</param>
         private void InputValidation_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show
-            (
-                "Do you want to quit the program ?",
-                "END OF PROGRAM",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question,
-                MessageBoxDefaultButton.Button1
-            );
+            if (MdiParent == null)
+            {
+                DialogResult dialogResult = MessageBox.Show
+                (
+                    "Do you want to quit the program ?",
+                    "END OF PROGRAM",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question,
+                    MessageBoxDefaultButton.Button1
+                );
 
-            if (dialogResult == DialogResult.No)
-                e.Cancel = true;
+                if (dialogResult == DialogResult.No)
+                    e.Cancel = true;
+            }
         }
     }
 }

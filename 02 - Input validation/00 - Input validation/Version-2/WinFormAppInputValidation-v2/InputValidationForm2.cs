@@ -15,6 +15,12 @@ namespace WinFormAppInputValidation_v2
             InitializeComponent();
         }
 
+        public InputValidationForm2(int instanceNumber)
+        {
+            InitializeComponent();
+            Text = $"Input validation version 2 number : {instanceNumber}";
+        }
+
         /// <summary>
         ///     This method is triggered when the "delete" button is clicked
         ///     Clear all the textboxes and the errorProvider
@@ -79,20 +85,23 @@ namespace WinFormAppInputValidation_v2
         ///     Display a window to validate the exit
         /// </summary>
         /// <param name="sender">object</param>
-        /// <param name="e">EventArgs</param>
-        private void InputValidation_FormClosing(object sender, EventArgs e)
+        /// <param name="e">FormClosedEventArgs</param>
+        private void InputValidation_FormClosing(object sender, FormClosingEventArgs e)
         {
-            FormClosingEventArgs _e = (FormClosingEventArgs)e;
-            DialogResult dialogResult = MessageBox.Show
-            (
-                "Do you want to quit the program ?",
-                "END OF PROGRAM",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question,
-                MessageBoxDefaultButton.Button1
-            );
-            if (dialogResult == DialogResult.No)
-                _e.Cancel = true;
+            if (MdiParent == null)
+            {
+                DialogResult dialogResult = MessageBox.Show
+                (
+                    "Do you want to quit the program ?",
+                    "END OF PROGRAM",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question,
+                    MessageBoxDefaultButton.Button1
+                );
+
+                if (dialogResult == DialogResult.No)
+                    e.Cancel = true;
+            }
         }
     }
 }

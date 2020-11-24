@@ -17,6 +17,13 @@ namespace WinFormAppListBox
             InitializeComponent();
             studentTab = new StudentList();
         }
+
+        public ListBoxForm(int instanceNumber)
+        {
+            InitializeComponent();
+            studentTab = new StudentList();
+            Text = $"Listbox application number : {instanceNumber}";
+        }
         #endregion
 
         #region ############### PROPERTIES ###############

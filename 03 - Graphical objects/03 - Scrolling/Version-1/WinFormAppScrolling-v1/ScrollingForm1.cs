@@ -16,6 +16,14 @@ namespace WinFormAppScrolling_v1
             InitializeComponent();
             finalColor = new Color();
             finalColor = Color.FromArgb(0, 0, 0);
+        }        
+        
+        public ScrollingForm1(int instanceNumber)
+        {
+            InitializeComponent();
+            finalColor = new Color();
+            finalColor = Color.FromArgb(0, 0, 0);
+            Text = $"Scrolling application number : {instanceNumber}";
         }
         #endregion
 

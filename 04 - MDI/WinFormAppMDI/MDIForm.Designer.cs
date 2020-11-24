@@ -35,32 +35,18 @@
             this.disconnectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consoleApplicationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.butterflyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.zooToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.forestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.firstStepsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inputValidationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.version1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.version2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inputValidationV1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inputValidationV2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.graphicalObjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comboBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.scrollingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.version1ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.vesrion2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.version1ToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.version2ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.coursesExercisesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fractionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eventsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.temperatureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.version1ToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.version2ToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.windowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.displayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cascadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.horizontalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verticalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,15 +58,15 @@
             this.listBoxToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.comboBoxToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.scrollingToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.version1ToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.version2ToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.version1InputValidationToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.version2InputValidationToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.loanToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.version1ToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.version2ToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.version1InputValidationToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.version2InputValidationToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelCurrentDate = new System.Windows.Forms.ToolStripStatusLabel();
-            this.timerStatusBar = new System.Windows.Forms.Timer(this.components);
             this.toolStripStatusLabelLastApplication = new System.Windows.Forms.ToolStripStatusLabel();
+            this.timerStatusBar = new System.Windows.Forms.Timer(this.components);
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -90,12 +76,10 @@
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.connectionToolStripMenuItem,
-            this.consoleApplicationsToolStripMenuItem,
             this.firstStepsToolStripMenuItem,
             this.inputValidationToolStripMenuItem,
             this.graphicalObjectsToolStripMenuItem,
-            this.coursesExercisesToolStripMenuItem,
-            this.windowsToolStripMenuItem});
+            this.displayToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(1122, 24);
@@ -139,35 +123,6 @@
             this.quitToolStripMenuItem.Text = "Quit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
-            // consoleApplicationsToolStripMenuItem
-            // 
-            this.consoleApplicationsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.butterflyToolStripMenuItem,
-            this.zooToolStripMenuItem,
-            this.forestToolStripMenuItem});
-            this.consoleApplicationsToolStripMenuItem.Enabled = false;
-            this.consoleApplicationsToolStripMenuItem.Name = "consoleApplicationsToolStripMenuItem";
-            this.consoleApplicationsToolStripMenuItem.Size = new System.Drawing.Size(129, 20);
-            this.consoleApplicationsToolStripMenuItem.Text = "Console applications";
-            // 
-            // butterflyToolStripMenuItem
-            // 
-            this.butterflyToolStripMenuItem.Name = "butterflyToolStripMenuItem";
-            this.butterflyToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
-            this.butterflyToolStripMenuItem.Text = "Butterfly";
-            // 
-            // zooToolStripMenuItem
-            // 
-            this.zooToolStripMenuItem.Name = "zooToolStripMenuItem";
-            this.zooToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
-            this.zooToolStripMenuItem.Text = "Zoo";
-            // 
-            // forestToolStripMenuItem
-            // 
-            this.forestToolStripMenuItem.Name = "forestToolStripMenuItem";
-            this.forestToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
-            this.forestToolStripMenuItem.Text = "Forest";
-            // 
             // firstStepsToolStripMenuItem
             // 
             this.firstStepsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -182,28 +137,31 @@
             this.calculatorToolStripMenuItem.Name = "calculatorToolStripMenuItem";
             this.calculatorToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.calculatorToolStripMenuItem.Text = "Calculator";
+            this.calculatorToolStripMenuItem.Click += new System.EventHandler(this.calculatorToolStripMenuItem_Click);
             // 
             // inputValidationToolStripMenuItem
             // 
             this.inputValidationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.version1ToolStripMenuItem,
-            this.version2ToolStripMenuItem});
+            this.inputValidationV1ToolStripMenuItem,
+            this.inputValidationV2ToolStripMenuItem});
             this.inputValidationToolStripMenuItem.Enabled = false;
             this.inputValidationToolStripMenuItem.Name = "inputValidationToolStripMenuItem";
             this.inputValidationToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
             this.inputValidationToolStripMenuItem.Text = "Input validation";
             // 
-            // version1ToolStripMenuItem
+            // inputValidationV1ToolStripMenuItem
             // 
-            this.version1ToolStripMenuItem.Name = "version1ToolStripMenuItem";
-            this.version1ToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
-            this.version1ToolStripMenuItem.Text = "Version 1";
+            this.inputValidationV1ToolStripMenuItem.Name = "inputValidationV1ToolStripMenuItem";
+            this.inputValidationV1ToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.inputValidationV1ToolStripMenuItem.Text = "Input validation v1";
+            this.inputValidationV1ToolStripMenuItem.Click += new System.EventHandler(this.inputValidationV1ToolStripMenuItem_Click);
             // 
-            // version2ToolStripMenuItem
+            // inputValidationV2ToolStripMenuItem
             // 
-            this.version2ToolStripMenuItem.Name = "version2ToolStripMenuItem";
-            this.version2ToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
-            this.version2ToolStripMenuItem.Text = "Version 2";
+            this.inputValidationV2ToolStripMenuItem.Name = "inputValidationV2ToolStripMenuItem";
+            this.inputValidationV2ToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.inputValidationV2ToolStripMenuItem.Text = "Input validation v2";
+            this.inputValidationV2ToolStripMenuItem.Click += new System.EventHandler(this.inputValidationV2ToolStripMenuItem_Click);
             // 
             // graphicalObjectsToolStripMenuItem
             // 
@@ -223,133 +181,67 @@
             this.checkBoxToolStripMenuItem.Name = "checkBoxToolStripMenuItem";
             this.checkBoxToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.checkBoxToolStripMenuItem.Text = "Check box";
+            this.checkBoxToolStripMenuItem.Click += new System.EventHandler(this.checkBoxToolStripMenuItem_Click);
             // 
             // listBoxToolStripMenuItem
             // 
             this.listBoxToolStripMenuItem.Name = "listBoxToolStripMenuItem";
             this.listBoxToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.listBoxToolStripMenuItem.Text = "List box";
+            this.listBoxToolStripMenuItem.Click += new System.EventHandler(this.listBoxToolStripMenuItem_Click);
             // 
             // comboBoxToolStripMenuItem
             // 
             this.comboBoxToolStripMenuItem.Name = "comboBoxToolStripMenuItem";
             this.comboBoxToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.comboBoxToolStripMenuItem.Text = "Combo box";
+            this.comboBoxToolStripMenuItem.Click += new System.EventHandler(this.comboBoxToolStripMenuItem_Click);
             // 
             // scrollingToolStripMenuItem
             // 
-            this.scrollingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.version1ToolStripMenuItem1,
-            this.vesrion2ToolStripMenuItem});
             this.scrollingToolStripMenuItem.Name = "scrollingToolStripMenuItem";
             this.scrollingToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.scrollingToolStripMenuItem.Text = "Scrolling";
-            // 
-            // version1ToolStripMenuItem1
-            // 
-            this.version1ToolStripMenuItem1.Name = "version1ToolStripMenuItem1";
-            this.version1ToolStripMenuItem1.Size = new System.Drawing.Size(121, 22);
-            this.version1ToolStripMenuItem1.Text = "Version 1";
-            // 
-            // vesrion2ToolStripMenuItem
-            // 
-            this.vesrion2ToolStripMenuItem.Name = "vesrion2ToolStripMenuItem";
-            this.vesrion2ToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
-            this.vesrion2ToolStripMenuItem.Text = "Vesrion 2";
+            this.scrollingToolStripMenuItem.Click += new System.EventHandler(this.scrollingToolStripMenuItem_Click);
             // 
             // loanToolStripMenuItem
             // 
-            this.loanToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.version1ToolStripMenuItem2,
-            this.version2ToolStripMenuItem1});
             this.loanToolStripMenuItem.Name = "loanToolStripMenuItem";
             this.loanToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.loanToolStripMenuItem.Text = "Loan";
+            this.loanToolStripMenuItem.Click += new System.EventHandler(this.loanToolStripMenuItem_Click);
             // 
-            // version1ToolStripMenuItem2
+            // displayToolStripMenuItem
             // 
-            this.version1ToolStripMenuItem2.Name = "version1ToolStripMenuItem2";
-            this.version1ToolStripMenuItem2.Size = new System.Drawing.Size(121, 22);
-            this.version1ToolStripMenuItem2.Text = "Version 1";
-            // 
-            // version2ToolStripMenuItem1
-            // 
-            this.version2ToolStripMenuItem1.Name = "version2ToolStripMenuItem1";
-            this.version2ToolStripMenuItem1.Size = new System.Drawing.Size(121, 22);
-            this.version2ToolStripMenuItem1.Text = "Version 2";
-            // 
-            // coursesExercisesToolStripMenuItem
-            // 
-            this.coursesExercisesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fractionToolStripMenuItem,
-            this.eventsToolStripMenuItem,
-            this.temperatureToolStripMenuItem});
-            this.coursesExercisesToolStripMenuItem.Enabled = false;
-            this.coursesExercisesToolStripMenuItem.Name = "coursesExercisesToolStripMenuItem";
-            this.coursesExercisesToolStripMenuItem.Size = new System.Drawing.Size(111, 20);
-            this.coursesExercisesToolStripMenuItem.Text = "Courses exercises";
-            // 
-            // fractionToolStripMenuItem
-            // 
-            this.fractionToolStripMenuItem.Name = "fractionToolStripMenuItem";
-            this.fractionToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.fractionToolStripMenuItem.Text = "Fraction";
-            // 
-            // eventsToolStripMenuItem
-            // 
-            this.eventsToolStripMenuItem.Name = "eventsToolStripMenuItem";
-            this.eventsToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.eventsToolStripMenuItem.Text = "Events";
-            // 
-            // temperatureToolStripMenuItem
-            // 
-            this.temperatureToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.version1ToolStripMenuItem5,
-            this.version2ToolStripMenuItem4});
-            this.temperatureToolStripMenuItem.Name = "temperatureToolStripMenuItem";
-            this.temperatureToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.temperatureToolStripMenuItem.Text = "Temperature";
-            // 
-            // version1ToolStripMenuItem5
-            // 
-            this.version1ToolStripMenuItem5.Name = "version1ToolStripMenuItem5";
-            this.version1ToolStripMenuItem5.Size = new System.Drawing.Size(121, 22);
-            this.version1ToolStripMenuItem5.Text = "Version 1";
-            // 
-            // version2ToolStripMenuItem4
-            // 
-            this.version2ToolStripMenuItem4.Name = "version2ToolStripMenuItem4";
-            this.version2ToolStripMenuItem4.Size = new System.Drawing.Size(121, 22);
-            this.version2ToolStripMenuItem4.Text = "Version 2";
-            // 
-            // windowsToolStripMenuItem
-            // 
-            this.windowsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.displayToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cascadeToolStripMenuItem,
             this.horizontalToolStripMenuItem,
             this.verticalToolStripMenuItem});
-            this.windowsToolStripMenuItem.Enabled = false;
-            this.windowsToolStripMenuItem.Name = "windowsToolStripMenuItem";
-            this.windowsToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
-            this.windowsToolStripMenuItem.Text = "Windows";
+            this.displayToolStripMenuItem.Enabled = false;
+            this.displayToolStripMenuItem.Name = "displayToolStripMenuItem";
+            this.displayToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.displayToolStripMenuItem.Text = "Display";
             // 
             // cascadeToolStripMenuItem
             // 
             this.cascadeToolStripMenuItem.Name = "cascadeToolStripMenuItem";
-            this.cascadeToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.cascadeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cascadeToolStripMenuItem.Text = "Cascade";
+            this.cascadeToolStripMenuItem.Click += new System.EventHandler(this.cascadeToolStripMenuItem_Click);
             // 
             // horizontalToolStripMenuItem
             // 
             this.horizontalToolStripMenuItem.Name = "horizontalToolStripMenuItem";
-            this.horizontalToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.horizontalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.horizontalToolStripMenuItem.Text = "Horizontal";
+            this.horizontalToolStripMenuItem.Click += new System.EventHandler(this.horizontalToolStripMenuItem_Click);
             // 
             // verticalToolStripMenuItem
             // 
             this.verticalToolStripMenuItem.Name = "verticalToolStripMenuItem";
-            this.verticalToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.verticalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.verticalToolStripMenuItem.Text = "Vertical";
+            this.verticalToolStripMenuItem.Click += new System.EventHandler(this.verticalToolStripMenuItem_Click);
             // 
             // toolStrip
             // 
@@ -414,44 +306,44 @@
             // scrollingToolStripMenuItem1
             // 
             this.scrollingToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.version1ToolStripMenuItem3,
-            this.version2ToolStripMenuItem2});
+            this.version1InputValidationToolStripMenuItem3,
+            this.version2InputValidationToolStripMenuItem2});
             this.scrollingToolStripMenuItem1.Name = "scrollingToolStripMenuItem1";
             this.scrollingToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
             this.scrollingToolStripMenuItem1.Text = "Scrolling";
             // 
-            // version1ToolStripMenuItem3
+            // version1InputValidationToolStripMenuItem3
             // 
-            this.version1ToolStripMenuItem3.Name = "version1ToolStripMenuItem3";
-            this.version1ToolStripMenuItem3.Size = new System.Drawing.Size(121, 22);
-            this.version1ToolStripMenuItem3.Text = "Version 1";
+            this.version1InputValidationToolStripMenuItem3.Name = "version1InputValidationToolStripMenuItem3";
+            this.version1InputValidationToolStripMenuItem3.Size = new System.Drawing.Size(121, 22);
+            this.version1InputValidationToolStripMenuItem3.Text = "Version 1";
             // 
-            // version2ToolStripMenuItem2
+            // version2InputValidationToolStripMenuItem2
             // 
-            this.version2ToolStripMenuItem2.Name = "version2ToolStripMenuItem2";
-            this.version2ToolStripMenuItem2.Size = new System.Drawing.Size(121, 22);
-            this.version2ToolStripMenuItem2.Text = "Version 2";
+            this.version2InputValidationToolStripMenuItem2.Name = "version2InputValidationToolStripMenuItem2";
+            this.version2InputValidationToolStripMenuItem2.Size = new System.Drawing.Size(121, 22);
+            this.version2InputValidationToolStripMenuItem2.Text = "Version 2";
             // 
             // loanToolStripMenuItem1
             // 
             this.loanToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.version1ToolStripMenuItem4,
-            this.version2ToolStripMenuItem3});
+            this.version1InputValidationToolStripMenuItem4,
+            this.version2InputValidationToolStripMenuItem3});
             this.loanToolStripMenuItem1.Name = "loanToolStripMenuItem1";
             this.loanToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
             this.loanToolStripMenuItem1.Text = "Loan";
             // 
-            // version1ToolStripMenuItem4
+            // version1InputValidationToolStripMenuItem4
             // 
-            this.version1ToolStripMenuItem4.Name = "version1ToolStripMenuItem4";
-            this.version1ToolStripMenuItem4.Size = new System.Drawing.Size(121, 22);
-            this.version1ToolStripMenuItem4.Text = "Version 1";
+            this.version1InputValidationToolStripMenuItem4.Name = "version1InputValidationToolStripMenuItem4";
+            this.version1InputValidationToolStripMenuItem4.Size = new System.Drawing.Size(121, 22);
+            this.version1InputValidationToolStripMenuItem4.Text = "Version 1";
             // 
-            // version2ToolStripMenuItem3
+            // version2InputValidationToolStripMenuItem3
             // 
-            this.version2ToolStripMenuItem3.Name = "version2ToolStripMenuItem3";
-            this.version2ToolStripMenuItem3.Size = new System.Drawing.Size(121, 22);
-            this.version2ToolStripMenuItem3.Text = "Version 2";
+            this.version2InputValidationToolStripMenuItem3.Name = "version2InputValidationToolStripMenuItem3";
+            this.version2InputValidationToolStripMenuItem3.Size = new System.Drawing.Size(121, 22);
+            this.version2InputValidationToolStripMenuItem3.Text = "Version 2";
             // 
             // statusStrip1
             // 
@@ -470,11 +362,6 @@
             this.toolStripStatusLabelCurrentDate.Size = new System.Drawing.Size(74, 17);
             this.toolStripStatusLabelCurrentDate.Text = "Current Date";
             // 
-            // timerStatusBar
-            // 
-            this.timerStatusBar.Interval = 1000;
-            this.timerStatusBar.Tick += new System.EventHandler(this.timerStatusBar_Tick);
-            // 
             // toolStripStatusLabelLastApplication
             // 
             this.toolStripStatusLabelLastApplication.Name = "toolStripStatusLabelLastApplication";
@@ -482,6 +369,11 @@
             this.toolStripStatusLabelLastApplication.Size = new System.Drawing.Size(112, 17);
             this.toolStripStatusLabelLastApplication.Text = "Last Application";
             this.toolStripStatusLabelLastApplication.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // timerStatusBar
+            // 
+            this.timerStatusBar.Interval = 1000;
+            this.timerStatusBar.Tick += new System.EventHandler(this.timerStatusBar_Tick);
             // 
             // MDIForm
             // 
@@ -514,32 +406,9 @@
 
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem connectionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consoleApplicationsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem firstStepsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem inputValidationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem graphicalObjectsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem windowsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logInToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem butterflyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem zooToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem forestToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem calculatorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem version1ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem version2ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem checkBoxToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listBoxToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem comboBoxToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem scrollingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem version1ToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem vesrion2ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem loanToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem version1ToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem version2ToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem cascadeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem horizontalToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verticalToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip;
         private System.Windows.Forms.ToolStripButton toolStripButtonLogin;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
@@ -548,22 +417,31 @@
         private System.Windows.Forms.ToolStripMenuItem listBoxToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem comboBoxToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem scrollingToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem version1ToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem version2ToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem version1InputValidationToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem version2InputValidationToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem loanToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem version1ToolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem version2ToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem version1InputValidationToolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem version2InputValidationToolStripMenuItem3;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelCurrentDate;
         private System.Windows.Forms.ToolStripMenuItem disconnectToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem coursesExercisesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem fractionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eventsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem temperatureToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem version1ToolStripMenuItem5;
-        private System.Windows.Forms.ToolStripMenuItem version2ToolStripMenuItem4;
         private System.Windows.Forms.Timer timerStatusBar;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelLastApplication;
+        private System.Windows.Forms.ToolStripMenuItem firstStepsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem calculatorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem inputValidationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem inputValidationV1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem inputValidationV2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem graphicalObjectsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem checkBoxToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listBoxToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem comboBoxToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem scrollingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem loanToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem displayToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cascadeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem horizontalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verticalToolStripMenuItem;
     }
 }
 

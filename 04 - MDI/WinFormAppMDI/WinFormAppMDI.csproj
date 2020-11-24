@@ -98,6 +98,38 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\01 - First steps\00 - Calculator\WinFormAppCalculator\WinFormAppCalculator.csproj">
+      <Project>{1c1e7e4b-c258-42b3-92ca-378cbfa822ae}</Project>
+      <Name>WinFormAppCalculator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\02 - Input validation\00 - Input validation\Version-1\WinFormAppInputValidation-v1\WinFormAppInputValidation-v1.csproj">
+      <Project>{27b7a373-5a44-4967-bbc9-bfeeb0870a69}</Project>
+      <Name>WinFormAppInputValidation-v1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\02 - Input validation\00 - Input validation\Version-2\WinFormAppInputValidation-v2\WinFormAppInputValidation-v2.csproj">
+      <Project>{eb5757dc-99d8-40ee-86fb-64e5ab9ba7e6}</Project>
+      <Name>WinFormAppInputValidation-v2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\03 - Graphical objects\00 - Check box\WinFormAppCheckBox\WinFormAppCheckBox.csproj">
+      <Project>{89300198-f387-4f40-9af6-a1bc69418ed2}</Project>
+      <Name>WinFormAppCheckBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\03 - Graphical objects\01 - List box\WinFormAppListBox\WinFormAppListBox.csproj">
+      <Project>{846fd307-d381-4d63-8168-4a5d817bfd75}</Project>
+      <Name>WinFormAppListBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\03 - Graphical objects\02 - Combo box\WinFormAppComboBox\WinFormAppComboBox.csproj">
+      <Project>{1653e821-6e1f-43c0-84ce-776162498a50}</Project>
+      <Name>WinFormAppComboBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\03 - Graphical objects\03 - Scrolling\Version-1\WinFormAppScrolling-v1\WinFormAppScrolling-v1.csproj">
+      <Project>{efdc67df-b274-41b6-b99e-4188aa12fb71}</Project>
+      <Name>WinFormAppScrolling-v1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\03 - Graphical objects\04 - Loan\Version-1\WinFormAppLoan-v1\WinFormAppLoan-v1.csproj">
+      <Project>{0462d316-3dba-444c-ba05-6b8e2f582476}</Project>
+      <Name>WinFormAppLoan-v1</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ClassLibraryLogin\ClassLibraryLogin.csproj">
       <Project>{40b7c0c0-6cd3-4b12-95c9-f0038b117195}</Project>
       <Name>ClassLibraryLogin</Name>

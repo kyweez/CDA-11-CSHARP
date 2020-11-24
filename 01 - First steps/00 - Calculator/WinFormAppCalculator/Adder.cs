@@ -20,6 +20,13 @@ namespace WinFormAppCalculator
             result = 0;
         }
 
+        public Adder(int instanceNumber)
+        {
+            InitializeComponent();
+            result = 0;
+            Text = $"Adder number : {instanceNumber}";
+        }
+
         /// <summary>
         ///     This method is triggered when the user clik on a number
         ///     This print the adding in the textBox then store the new result

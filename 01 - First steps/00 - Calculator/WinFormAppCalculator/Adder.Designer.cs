@@ -168,7 +168,7 @@
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(106, 40);
             this.btnReset.TabIndex = 11;
-            this.btnReset.Text = "Vider";
+            this.btnReset.Text = "Empty";
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.BtnReset_Click);
             // 
@@ -178,7 +178,7 @@
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(106, 40);
             this.btnCalculate.TabIndex = 12;
-            this.btnCalculate.Text = "Calculer";
+            this.btnCalculate.Text = "Calculate";
             this.btnCalculate.UseVisualStyleBackColor = true;
             this.btnCalculate.Click += new System.EventHandler(this.BtnCalculate_Click);
             // 
@@ -203,7 +203,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Adder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Additionneur";
+            this.Text = "Adder";
             this.ResumeLayout(false);
             this.PerformLayout();
 

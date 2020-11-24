@@ -22,6 +22,15 @@ namespace WinFormAppComboBox
             foreach (string country in countryTab)
                 cbSource.Items.Add(country);
         }
+        public ComboBoxForm(int instanceNumber)
+        {
+            InitializeComponent();
+            countryTab = new List<string> { "France", "Belgique", "Allemagne", "Japon", "Portugal", "Grece", "Bulgarie", "Espagne" };
+            countryTab.Sort();
+            foreach (string country in countryTab)
+                cbSource.Items.Add(country);
+            Text = $"Combobox application number : {instanceNumber}";
+        }
         #endregion
 
         #region ############### METHODS ###############
