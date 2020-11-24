@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.connectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,6 +54,12 @@
             this.loanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.version1ToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.version2ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.coursesExercisesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fractionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eventsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.temperatureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.version1ToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.version2ToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.windowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cascadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.horizontalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,14 +78,9 @@
             this.version1ToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.version2ToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.coursesExercisesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fractionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eventsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.temperatureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.version1ToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.version2ToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripStatusLabelCurrentDate = new System.Windows.Forms.ToolStripStatusLabel();
+            this.timerStatusBar = new System.Windows.Forms.Timer(this.components);
+            this.toolStripStatusLabelLastApplication = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -114,7 +116,7 @@
             // logInToolStripMenuItem
             // 
             this.logInToolStripMenuItem.Name = "logInToolStripMenuItem";
-            this.logInToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logInToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.logInToolStripMenuItem.Text = "Log in";
             this.logInToolStripMenuItem.Click += new System.EventHandler(this.Login_Click);
             // 
@@ -122,18 +124,18 @@
             // 
             this.disconnectToolStripMenuItem.Enabled = false;
             this.disconnectToolStripMenuItem.Name = "disconnectToolStripMenuItem";
-            this.disconnectToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.disconnectToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.disconnectToolStripMenuItem.Text = "Disconnect";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(130, 6);
             // 
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.quitToolStripMenuItem.Text = "Quit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
@@ -276,6 +278,50 @@
             this.version2ToolStripMenuItem1.Size = new System.Drawing.Size(121, 22);
             this.version2ToolStripMenuItem1.Text = "Version 2";
             // 
+            // coursesExercisesToolStripMenuItem
+            // 
+            this.coursesExercisesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fractionToolStripMenuItem,
+            this.eventsToolStripMenuItem,
+            this.temperatureToolStripMenuItem});
+            this.coursesExercisesToolStripMenuItem.Enabled = false;
+            this.coursesExercisesToolStripMenuItem.Name = "coursesExercisesToolStripMenuItem";
+            this.coursesExercisesToolStripMenuItem.Size = new System.Drawing.Size(111, 20);
+            this.coursesExercisesToolStripMenuItem.Text = "Courses exercises";
+            // 
+            // fractionToolStripMenuItem
+            // 
+            this.fractionToolStripMenuItem.Name = "fractionToolStripMenuItem";
+            this.fractionToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.fractionToolStripMenuItem.Text = "Fraction";
+            // 
+            // eventsToolStripMenuItem
+            // 
+            this.eventsToolStripMenuItem.Name = "eventsToolStripMenuItem";
+            this.eventsToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.eventsToolStripMenuItem.Text = "Events";
+            // 
+            // temperatureToolStripMenuItem
+            // 
+            this.temperatureToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.version1ToolStripMenuItem5,
+            this.version2ToolStripMenuItem4});
+            this.temperatureToolStripMenuItem.Name = "temperatureToolStripMenuItem";
+            this.temperatureToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.temperatureToolStripMenuItem.Text = "Temperature";
+            // 
+            // version1ToolStripMenuItem5
+            // 
+            this.version1ToolStripMenuItem5.Name = "version1ToolStripMenuItem5";
+            this.version1ToolStripMenuItem5.Size = new System.Drawing.Size(121, 22);
+            this.version1ToolStripMenuItem5.Text = "Version 1";
+            // 
+            // version2ToolStripMenuItem4
+            // 
+            this.version2ToolStripMenuItem4.Name = "version2ToolStripMenuItem4";
+            this.version2ToolStripMenuItem4.Size = new System.Drawing.Size(121, 22);
+            this.version2ToolStripMenuItem4.Text = "Version 2";
+            // 
             // windowsToolStripMenuItem
             // 
             this.windowsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -410,69 +456,32 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.toolStripStatusLabel2});
+            this.toolStripStatusLabelCurrentDate,
+            this.toolStripStatusLabelLastApplication});
             this.statusStrip1.Location = new System.Drawing.Point(0, 600);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1122, 22);
             this.statusStrip1.TabIndex = 5;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // toolStripStatusLabel1
+            // toolStripStatusLabelCurrentDate
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(74, 17);
-            this.toolStripStatusLabel1.Text = "Current Date";
+            this.toolStripStatusLabelCurrentDate.Name = "toolStripStatusLabelCurrentDate";
+            this.toolStripStatusLabelCurrentDate.Size = new System.Drawing.Size(74, 17);
+            this.toolStripStatusLabelCurrentDate.Text = "Current Date";
             // 
-            // toolStripStatusLabel2
+            // timerStatusBar
             // 
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(92, 17);
-            this.toolStripStatusLabel2.Text = "Last Application";
+            this.timerStatusBar.Interval = 1000;
+            this.timerStatusBar.Tick += new System.EventHandler(this.timerStatusBar_Tick);
             // 
-            // coursesExercisesToolStripMenuItem
+            // toolStripStatusLabelLastApplication
             // 
-            this.coursesExercisesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fractionToolStripMenuItem,
-            this.eventsToolStripMenuItem,
-            this.temperatureToolStripMenuItem});
-            this.coursesExercisesToolStripMenuItem.Enabled = false;
-            this.coursesExercisesToolStripMenuItem.Name = "coursesExercisesToolStripMenuItem";
-            this.coursesExercisesToolStripMenuItem.Size = new System.Drawing.Size(111, 20);
-            this.coursesExercisesToolStripMenuItem.Text = "Courses exercises";
-            // 
-            // fractionToolStripMenuItem
-            // 
-            this.fractionToolStripMenuItem.Name = "fractionToolStripMenuItem";
-            this.fractionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.fractionToolStripMenuItem.Text = "Fraction";
-            // 
-            // eventsToolStripMenuItem
-            // 
-            this.eventsToolStripMenuItem.Name = "eventsToolStripMenuItem";
-            this.eventsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.eventsToolStripMenuItem.Text = "Events";
-            // 
-            // temperatureToolStripMenuItem
-            // 
-            this.temperatureToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.version1ToolStripMenuItem5,
-            this.version2ToolStripMenuItem4});
-            this.temperatureToolStripMenuItem.Name = "temperatureToolStripMenuItem";
-            this.temperatureToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.temperatureToolStripMenuItem.Text = "Temperature";
-            // 
-            // version1ToolStripMenuItem5
-            // 
-            this.version1ToolStripMenuItem5.Name = "version1ToolStripMenuItem5";
-            this.version1ToolStripMenuItem5.Size = new System.Drawing.Size(180, 22);
-            this.version1ToolStripMenuItem5.Text = "Version 1";
-            // 
-            // version2ToolStripMenuItem4
-            // 
-            this.version2ToolStripMenuItem4.Name = "version2ToolStripMenuItem4";
-            this.version2ToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
-            this.version2ToolStripMenuItem4.Text = "Version 2";
+            this.toolStripStatusLabelLastApplication.Name = "toolStripStatusLabelLastApplication";
+            this.toolStripStatusLabelLastApplication.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.toolStripStatusLabelLastApplication.Size = new System.Drawing.Size(112, 17);
+            this.toolStripStatusLabelLastApplication.Text = "Last Application";
+            this.toolStripStatusLabelLastApplication.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // MDIForm
             // 
@@ -545,8 +554,7 @@
         private System.Windows.Forms.ToolStripMenuItem version1ToolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem version2ToolStripMenuItem3;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelCurrentDate;
         private System.Windows.Forms.ToolStripMenuItem disconnectToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem coursesExercisesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fractionToolStripMenuItem;
@@ -554,6 +562,8 @@
         private System.Windows.Forms.ToolStripMenuItem temperatureToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem version1ToolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem version2ToolStripMenuItem4;
+        private System.Windows.Forms.Timer timerStatusBar;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelLastApplication;
     }
 }
 

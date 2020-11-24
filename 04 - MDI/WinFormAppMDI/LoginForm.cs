@@ -7,10 +7,10 @@ namespace WinFormAppMDI
     public partial class LoginForm : Form
     {
         #region ############### PROPERTY ###############
-        private Login CurrentLogin
+        public Login CurrentLogin
         {
             get;
-            set;
+            private set;
         }
         #endregion
 

@@ -12,11 +12,11 @@ namespace WinFormAppMDI
 
         private void timerSplashScreen_Tick(object sender, EventArgs e)
         {
-            progressBarSplashScreen.Increment(5);
+            progressBarSplashScreen.Increment(10);
             if (progressBarSplashScreen.Value == 100)
             {
                 timerSplashScreen.Stop();
-                this.Close();
+                Close();
             }
         }
 

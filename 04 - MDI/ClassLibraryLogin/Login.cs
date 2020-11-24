@@ -24,11 +24,6 @@ namespace ClassLibraryLogin
         }
         #endregion
 
-        #region ############### EVENT ###############
-        public delegate void DelegateLogin();
-        public event DelegateLogin AuthenticationSuccess;
-        #endregion
-
         #region ############### CONSTRUCTOR ###############
         public Login()
         {
@@ -53,8 +48,6 @@ namespace ClassLibraryLogin
             if (_password == null)
                 throw new ArgumentNullException("The input password is null");
             IsValidLogin = (_login == LoginString && _password == PasswordString);
-            if (IsValidLogin && AuthenticationSuccess != null)
-                AuthenticationSuccess();
         }
         #endregion
     }
