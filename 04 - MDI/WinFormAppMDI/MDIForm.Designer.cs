@@ -63,6 +63,8 @@
             this.toolStripStatusLabelCurrentDate = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelLastApplication = new System.Windows.Forms.ToolStripStatusLabel();
             this.timerStatusBar = new System.Windows.Forms.Timer(this.components);
+            this.closeAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripDisplaySeparator = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -77,6 +79,7 @@
             this.graphicalObjectsToolStripMenuItem,
             this.displayToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.MdiWindowListItem = this.displayToolStripMenuItem;
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(1122, 24);
             this.menuStrip.TabIndex = 1;
@@ -132,7 +135,7 @@
             // calculatorToolStripMenuItem
             // 
             this.calculatorToolStripMenuItem.Name = "calculatorToolStripMenuItem";
-            this.calculatorToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.calculatorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.calculatorToolStripMenuItem.Text = "Calculator";
             this.calculatorToolStripMenuItem.Click += new System.EventHandler(this.calculatorToolStripMenuItem_Click);
             // 
@@ -176,35 +179,35 @@
             // checkBoxToolStripMenuItem
             // 
             this.checkBoxToolStripMenuItem.Name = "checkBoxToolStripMenuItem";
-            this.checkBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.checkBoxToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.checkBoxToolStripMenuItem.Text = "Check box";
             this.checkBoxToolStripMenuItem.Click += new System.EventHandler(this.stripAndMenuCheckBox_Click);
             // 
             // listBoxToolStripMenuItem
             // 
             this.listBoxToolStripMenuItem.Name = "listBoxToolStripMenuItem";
-            this.listBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listBoxToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.listBoxToolStripMenuItem.Text = "List box";
             this.listBoxToolStripMenuItem.Click += new System.EventHandler(this.stripAndMenuListBox_Click);
             // 
             // comboBoxToolStripMenuItem
             // 
             this.comboBoxToolStripMenuItem.Name = "comboBoxToolStripMenuItem";
-            this.comboBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.comboBoxToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.comboBoxToolStripMenuItem.Text = "Combo box";
             this.comboBoxToolStripMenuItem.Click += new System.EventHandler(this.stripAndMenuComboBox_Click);
             // 
             // scrollingToolStripMenuItem
             // 
             this.scrollingToolStripMenuItem.Name = "scrollingToolStripMenuItem";
-            this.scrollingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.scrollingToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.scrollingToolStripMenuItem.Text = "Scrolling";
             this.scrollingToolStripMenuItem.Click += new System.EventHandler(this.stripAndMenuScrolling_Click);
             // 
             // loanToolStripMenuItem
             // 
             this.loanToolStripMenuItem.Name = "loanToolStripMenuItem";
-            this.loanToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loanToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.loanToolStripMenuItem.Text = "Loan";
             this.loanToolStripMenuItem.Click += new System.EventHandler(this.stripAndMenuLoan_Click);
             // 
@@ -213,7 +216,9 @@
             this.displayToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cascadeToolStripMenuItem,
             this.horizontalToolStripMenuItem,
-            this.verticalToolStripMenuItem});
+            this.verticalToolStripMenuItem,
+            this.closeAllToolStripMenuItem,
+            this.toolStripDisplaySeparator});
             this.displayToolStripMenuItem.Enabled = false;
             this.displayToolStripMenuItem.Name = "displayToolStripMenuItem";
             this.displayToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
@@ -222,21 +227,21 @@
             // cascadeToolStripMenuItem
             // 
             this.cascadeToolStripMenuItem.Name = "cascadeToolStripMenuItem";
-            this.cascadeToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.cascadeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cascadeToolStripMenuItem.Text = "Cascade";
             this.cascadeToolStripMenuItem.Click += new System.EventHandler(this.cascadeToolStripMenuItem_Click);
             // 
             // horizontalToolStripMenuItem
             // 
             this.horizontalToolStripMenuItem.Name = "horizontalToolStripMenuItem";
-            this.horizontalToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.horizontalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.horizontalToolStripMenuItem.Text = "Horizontal";
             this.horizontalToolStripMenuItem.Click += new System.EventHandler(this.horizontalToolStripMenuItem_Click);
             // 
             // verticalToolStripMenuItem
             // 
             this.verticalToolStripMenuItem.Name = "verticalToolStripMenuItem";
-            this.verticalToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.verticalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.verticalToolStripMenuItem.Text = "Vertical";
             this.verticalToolStripMenuItem.Click += new System.EventHandler(this.verticalToolStripMenuItem_Click);
             // 
@@ -285,35 +290,35 @@
             // stripCheckBox
             // 
             this.stripCheckBox.Name = "stripCheckBox";
-            this.stripCheckBox.Size = new System.Drawing.Size(180, 22);
+            this.stripCheckBox.Size = new System.Drawing.Size(137, 22);
             this.stripCheckBox.Text = "Check box";
             this.stripCheckBox.Click += new System.EventHandler(this.stripAndMenuCheckBox_Click);
             // 
             // stripListBox
             // 
             this.stripListBox.Name = "stripListBox";
-            this.stripListBox.Size = new System.Drawing.Size(180, 22);
+            this.stripListBox.Size = new System.Drawing.Size(137, 22);
             this.stripListBox.Text = "List box";
             this.stripListBox.Click += new System.EventHandler(this.stripAndMenuListBox_Click);
             // 
             // stripComboBox
             // 
             this.stripComboBox.Name = "stripComboBox";
-            this.stripComboBox.Size = new System.Drawing.Size(180, 22);
+            this.stripComboBox.Size = new System.Drawing.Size(137, 22);
             this.stripComboBox.Text = "Combo box";
             this.stripComboBox.Click += new System.EventHandler(this.stripAndMenuComboBox_Click);
             // 
             // stripScrolling
             // 
             this.stripScrolling.Name = "stripScrolling";
-            this.stripScrolling.Size = new System.Drawing.Size(180, 22);
+            this.stripScrolling.Size = new System.Drawing.Size(137, 22);
             this.stripScrolling.Text = "Scrolling";
             this.stripScrolling.Click += new System.EventHandler(this.stripAndMenuScrolling_Click);
             // 
             // stripLoan
             // 
             this.stripLoan.Name = "stripLoan";
-            this.stripLoan.Size = new System.Drawing.Size(180, 22);
+            this.stripLoan.Size = new System.Drawing.Size(137, 22);
             this.stripLoan.Text = "Loan";
             this.stripLoan.Click += new System.EventHandler(this.stripAndMenuLoan_Click);
             // 
@@ -344,8 +349,20 @@
             // 
             // timerStatusBar
             // 
-            this.timerStatusBar.Interval = 1000;
+            this.timerStatusBar.Interval = 500;
             this.timerStatusBar.Tick += new System.EventHandler(this.timerStatusBar_Tick);
+            // 
+            // closeAllToolStripMenuItem
+            // 
+            this.closeAllToolStripMenuItem.Name = "closeAllToolStripMenuItem";
+            this.closeAllToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.closeAllToolStripMenuItem.Text = "Close all";
+            this.closeAllToolStripMenuItem.Click += new System.EventHandler(this.closeAllToolStripMenuItem_Click);
+            // 
+            // toolStripDisplaySeparator
+            // 
+            this.toolStripDisplaySeparator.Name = "toolStripDisplaySeparator";
+            this.toolStripDisplaySeparator.Size = new System.Drawing.Size(177, 6);
             // 
             // MDIForm
             // 
@@ -409,6 +426,8 @@
         private System.Windows.Forms.ToolStripMenuItem cascadeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem horizontalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verticalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem closeAllToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripDisplaySeparator;
     }
 }
 

@@ -26,7 +26,7 @@ namespace WinFormAppCheckBox
             };
         }
 
-        public CheckBoxForm(int instanceNumber)
+        public CheckBoxForm(int instanceNumber, string str)
         {
             InitializeComponent();
 
@@ -37,6 +37,7 @@ namespace WinFormAppCheckBox
                 gbxCase
             };
             Text = $"Checkbox application number : {instanceNumber}";
+            tbInput.Text = str;
         }
 
         #endregion

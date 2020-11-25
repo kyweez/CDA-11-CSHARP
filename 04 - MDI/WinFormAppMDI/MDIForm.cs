@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using System.Windows.Forms;
 using ClassLibraryLogin;
 using ClassLibraryMDI;
@@ -43,11 +44,16 @@ namespace WinFormAppMDI
             InitializeComponent();
             timerStatusBar.Start();
             InstanceNumberDictionaryCreation();
+            toolStripDisplaySeparator.Visible = false;
         }
         #endregion
 
-
         #region ############### METHODS ###############
+        private void CloseAllChildrenForms()
+        {
+            foreach (Form frm in MdiChildren)
+                frm.Close();
+        }
 
         private void InstanceNumberDictionaryCreation()
         {
@@ -56,13 +62,22 @@ namespace WinFormAppMDI
                 if (name != 0)
                     instanceNumberDictionnary.Add(name.ToString(), 0);
             }
-            instanceNumberDictionnary.Add("Total", 0);
         }
 
         private int GetInstanceNumber(ProgramNameEnum programName)
         {
-            instanceNumberDictionnary["Total"]++;
             return ++instanceNumberDictionnary[programName.ToString()];
+        }
+
+        private void Login_AuthenticationSuccess()
+        {
+            foreach (ToolStripMenuItem item in menuStrip.Items)
+                item.Enabled = true;
+            toolStripButtonLogin.Enabled = false;
+            logInToolStripMenuItem.Enabled = false;
+            disconnectToolStripMenuItem.Enabled = true;
+            toolStripSplitButtonLastItem.Visible = true;
+            toolStripSplitButtonLastItem.Enabled = true;
         }
 
         private void UpdateHMI()
@@ -73,15 +88,9 @@ namespace WinFormAppMDI
         #endregion
 
         #region ############### EVENTS ###############
-        private void Login_AuthenticationSuccess()
+        void ChildClosed(object sender, FormClosedEventArgs e)
         {
-            foreach (ToolStripMenuItem item in menuStrip.Items)
-                item.Enabled = true;
-            toolStripButtonLogin.Enabled = false;
-            logInToolStripMenuItem.Enabled = false;
-            disconnectToolStripMenuItem.Enabled = true;
-            toolStripSplitButtonLastItem.Visible = true;
-            toolStripSplitButtonLastItem.Enabled = true;
+            toolStripDisplaySeparator.Visible = false;
         }
 
         private void Login_Click(object sender, EventArgs e)
@@ -107,11 +116,12 @@ namespace WinFormAppMDI
 
         #endregion
 
-        #region ############### TOOLBAR EVENT METHODS ###############
-        private void CheckBoxProgramLaunch()
+        #region ############### MENU EVENT METHODS ###############
+        private void CheckBoxProgramLaunch(int _instanceNumber, string _str)
         {
-            CheckBoxForm checkBoxForm = new CheckBoxForm(GetInstanceNumber(ProgramNameEnum.CheckBox));
+            CheckBoxForm checkBoxForm = new CheckBoxForm(_instanceNumber, _str);
             checkBoxForm.MdiParent = this;
+            checkBoxForm.FormClosed += ChildClosed;
             checkBoxForm.Show();
             CurrentMdi.UpdateLastProgramLaunched(ProgramNameEnum.CheckBox);
         }
@@ -120,6 +130,7 @@ namespace WinFormAppMDI
         {
             ListBoxForm listBoxForm = new ListBoxForm(GetInstanceNumber(ProgramNameEnum.ListBox));
             listBoxForm.MdiParent = this;
+            listBoxForm.FormClosed += ChildClosed;
             listBoxForm.Show();
             CurrentMdi.UpdateLastProgramLaunched(ProgramNameEnum.ListBox);
         }
@@ -128,6 +139,7 @@ namespace WinFormAppMDI
         {
             ComboBoxForm comboBoxForm = new ComboBoxForm(GetInstanceNumber(ProgramNameEnum.ComboBox));
             comboBoxForm.MdiParent = this;
+            comboBoxForm.FormClosed += ChildClosed;
             comboBoxForm.Show();
             CurrentMdi.UpdateLastProgramLaunched(ProgramNameEnum.ComboBox);
         }
@@ -136,6 +148,7 @@ namespace WinFormAppMDI
         {
             ScrollingForm1 scrollingForm1 = new ScrollingForm1(GetInstanceNumber(ProgramNameEnum.Scrolling_v1));
             scrollingForm1.MdiParent = this;
+            scrollingForm1.FormClosed += ChildClosed;
             scrollingForm1.Show();
             CurrentMdi.UpdateLastProgramLaunched(ProgramNameEnum.Scrolling_v1);
         }
@@ -144,6 +157,7 @@ namespace WinFormAppMDI
         {
             LoanForm1 loanForm1 = new LoanForm1(GetInstanceNumber(ProgramNameEnum.Loan_v1));
             loanForm1.MdiParent = this;
+            loanForm1.FormClosed += ChildClosed;
             loanForm1.Show();
             CurrentMdi.UpdateLastProgramLaunched(ProgramNameEnum.Loan_v1);
         }
@@ -155,49 +169,93 @@ namespace WinFormAppMDI
         {
             Adder calculator = new Adder(GetInstanceNumber(ProgramNameEnum.Calculator));
             calculator.MdiParent = this;
+            calculator.FormClosed += ChildClosed;
             calculator.Show();
             CurrentMdi.UpdateLastProgramLaunched(ProgramNameEnum.Calculator);
+            toolStripDisplaySeparator.Visible = true;
         }
 
         private void inputValidationV1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             InputValidationForm1 inputValidationForm1 = new InputValidationForm1(GetInstanceNumber(ProgramNameEnum.InputValidation_v1));
             inputValidationForm1.MdiParent = this;
+            inputValidationForm1.FormClosed += ChildClosed;
             inputValidationForm1.Show();
             CurrentMdi.UpdateLastProgramLaunched(ProgramNameEnum.InputValidation_v1);
+            toolStripDisplaySeparator.Visible = true;
         }
 
         private void inputValidationV2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             InputValidationForm2 inputValidationForm2 = new InputValidationForm2(GetInstanceNumber(ProgramNameEnum.InputValidation_v2));
             inputValidationForm2.MdiParent = this;
+            inputValidationForm2.FormClosed += ChildClosed;
             inputValidationForm2.Show();
             CurrentMdi.UpdateLastProgramLaunched(ProgramNameEnum.InputValidation_v2);
+            toolStripDisplaySeparator.Visible = true;
         }
 
         private void stripAndMenuCheckBox_Click(object sender, EventArgs e)
         {
-            CheckBoxProgramLaunch();
+            InputForm inputForm = new InputForm(GetInstanceNumber(ProgramNameEnum.CheckBox));
+            inputForm.MdiParent = this;
+            inputForm.FormClosed += ChildClosed;
+            inputForm.ValidInput += InputForm_ValidInput;
+            inputForm.CancelInput += InputForm_CancelInput;
+            inputForm.Show();
+            toolStripDisplaySeparator.Visible = true;
+        }
+
+        private void InputForm_CancelInput()
+        {
+            instanceNumberDictionnary[ProgramNameEnum.CheckBox.ToString()]--;
+        }
+
+        private void InputForm_ValidInput(int instanceNumber, string input)
+        {
+            CheckBoxProgramLaunch(instanceNumber, input);
+
         }
 
         private void stripAndMenuListBox_Click(object sender, EventArgs e)
         {
             ListBoxProgramLaunch();
+            toolStripDisplaySeparator.Visible = true;
         }
 
         private void stripAndMenuComboBox_Click(object sender, EventArgs e)
         {
             ComboBoxProgramLaunch();
+            toolStripDisplaySeparator.Visible = true;
         }
 
         private void stripAndMenuScrolling_Click(object sender, EventArgs e)
         {
             ScrollingProgramLaunch();
+            toolStripDisplaySeparator.Visible = true;
         }
 
         private void stripAndMenuLoan_Click(object sender, EventArgs e)
         {
             LoanProgramLaunch();
+            toolStripDisplaySeparator.Visible = true;
+        }
+
+        private void disconnectToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CloseAllChildrenForms();
+            foreach (ToolStripMenuItem item in menuStrip.Items)
+                item.Enabled = false;
+            menuStrip.Items[0].Enabled = true;
+            toolStripButtonLogin.Enabled = true;
+            logInToolStripMenuItem.Enabled = true;
+            disconnectToolStripMenuItem.Enabled = false;
+            toolStripSplitButtonLastItem.Visible = false;
+            toolStripSplitButtonLastItem.Enabled = false;
+            CurrentSessionLogin.Disconnect();
+            instanceNumberDictionnary.Clear();
+            InstanceNumberDictionaryCreation();
+            CurrentMdi.UpdateLastProgramLaunched(0);
         }
 
         #endregion
@@ -217,26 +275,11 @@ namespace WinFormAppMDI
         {
             LayoutMdi(MdiLayout.TileVertical);
         }
-        #endregion
 
-        private void disconnectToolStripMenuItem_Click(object sender, EventArgs e)
+        private void closeAllToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CloseAllChildrenForms();
-            foreach (ToolStripMenuItem item in menuStrip.Items)
-                item.Enabled = false;
-            menuStrip.Items[0].Enabled = true;
-            toolStripButtonLogin.Enabled = true;
-            logInToolStripMenuItem.Enabled = true;
-            disconnectToolStripMenuItem.Enabled = false;
-            toolStripSplitButtonLastItem.Visible = false;
-            toolStripSplitButtonLastItem.Enabled = false;
-            CurrentSessionLogin.Disconnect();
         }
-
-        private void CloseAllChildrenForms()
-        {
-            foreach (Form frm in MdiChildren)
-                frm.Close();
-        }
+        #endregion
     }
 }
