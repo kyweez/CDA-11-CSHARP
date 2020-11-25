@@ -54,15 +54,11 @@
             this.toolStripButtonLogin = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSplitButtonLastItem = new System.Windows.Forms.ToolStripSplitButton();
-            this.checkBoxToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.listBoxToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.comboBoxToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.scrollingToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.version1InputValidationToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.version2InputValidationToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.loanToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.version1InputValidationToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.version2InputValidationToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.stripCheckBox = new System.Windows.Forms.ToolStripMenuItem();
+            this.stripListBox = new System.Windows.Forms.ToolStripMenuItem();
+            this.stripComboBox = new System.Windows.Forms.ToolStripMenuItem();
+            this.stripScrolling = new System.Windows.Forms.ToolStripMenuItem();
+            this.stripLoan = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelCurrentDate = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelLastApplication = new System.Windows.Forms.ToolStripStatusLabel();
@@ -110,6 +106,7 @@
             this.disconnectToolStripMenuItem.Name = "disconnectToolStripMenuItem";
             this.disconnectToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.disconnectToolStripMenuItem.Text = "Disconnect";
+            this.disconnectToolStripMenuItem.Click += new System.EventHandler(this.disconnectToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -179,37 +176,37 @@
             // checkBoxToolStripMenuItem
             // 
             this.checkBoxToolStripMenuItem.Name = "checkBoxToolStripMenuItem";
-            this.checkBoxToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.checkBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.checkBoxToolStripMenuItem.Text = "Check box";
-            this.checkBoxToolStripMenuItem.Click += new System.EventHandler(this.checkBoxToolStripMenuItem_Click);
+            this.checkBoxToolStripMenuItem.Click += new System.EventHandler(this.stripAndMenuCheckBox_Click);
             // 
             // listBoxToolStripMenuItem
             // 
             this.listBoxToolStripMenuItem.Name = "listBoxToolStripMenuItem";
-            this.listBoxToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.listBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listBoxToolStripMenuItem.Text = "List box";
-            this.listBoxToolStripMenuItem.Click += new System.EventHandler(this.listBoxToolStripMenuItem_Click);
+            this.listBoxToolStripMenuItem.Click += new System.EventHandler(this.stripAndMenuListBox_Click);
             // 
             // comboBoxToolStripMenuItem
             // 
             this.comboBoxToolStripMenuItem.Name = "comboBoxToolStripMenuItem";
-            this.comboBoxToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.comboBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.comboBoxToolStripMenuItem.Text = "Combo box";
-            this.comboBoxToolStripMenuItem.Click += new System.EventHandler(this.comboBoxToolStripMenuItem_Click);
+            this.comboBoxToolStripMenuItem.Click += new System.EventHandler(this.stripAndMenuComboBox_Click);
             // 
             // scrollingToolStripMenuItem
             // 
             this.scrollingToolStripMenuItem.Name = "scrollingToolStripMenuItem";
-            this.scrollingToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.scrollingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.scrollingToolStripMenuItem.Text = "Scrolling";
-            this.scrollingToolStripMenuItem.Click += new System.EventHandler(this.scrollingToolStripMenuItem_Click);
+            this.scrollingToolStripMenuItem.Click += new System.EventHandler(this.stripAndMenuScrolling_Click);
             // 
             // loanToolStripMenuItem
             // 
             this.loanToolStripMenuItem.Name = "loanToolStripMenuItem";
-            this.loanToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.loanToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.loanToolStripMenuItem.Text = "Loan";
-            this.loanToolStripMenuItem.Click += new System.EventHandler(this.loanToolStripMenuItem_Click);
+            this.loanToolStripMenuItem.Click += new System.EventHandler(this.stripAndMenuLoan_Click);
             // 
             // displayToolStripMenuItem
             // 
@@ -225,21 +222,21 @@
             // cascadeToolStripMenuItem
             // 
             this.cascadeToolStripMenuItem.Name = "cascadeToolStripMenuItem";
-            this.cascadeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cascadeToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.cascadeToolStripMenuItem.Text = "Cascade";
             this.cascadeToolStripMenuItem.Click += new System.EventHandler(this.cascadeToolStripMenuItem_Click);
             // 
             // horizontalToolStripMenuItem
             // 
             this.horizontalToolStripMenuItem.Name = "horizontalToolStripMenuItem";
-            this.horizontalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.horizontalToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.horizontalToolStripMenuItem.Text = "Horizontal";
             this.horizontalToolStripMenuItem.Click += new System.EventHandler(this.horizontalToolStripMenuItem_Click);
             // 
             // verticalToolStripMenuItem
             // 
             this.verticalToolStripMenuItem.Name = "verticalToolStripMenuItem";
-            this.verticalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verticalToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.verticalToolStripMenuItem.Text = "Vertical";
             this.verticalToolStripMenuItem.Click += new System.EventHandler(this.verticalToolStripMenuItem_Click);
             // 
@@ -273,11 +270,11 @@
             // 
             this.toolStripSplitButtonLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripSplitButtonLastItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.checkBoxToolStripMenuItem1,
-            this.listBoxToolStripMenuItem1,
-            this.comboBoxToolStripMenuItem1,
-            this.scrollingToolStripMenuItem1,
-            this.loanToolStripMenuItem1});
+            this.stripCheckBox,
+            this.stripListBox,
+            this.stripComboBox,
+            this.stripScrolling,
+            this.stripLoan});
             this.toolStripSplitButtonLastItem.Enabled = false;
             this.toolStripSplitButtonLastItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSplitButtonLastItem.Name = "toolStripSplitButtonLastItem";
@@ -285,65 +282,40 @@
             this.toolStripSplitButtonLastItem.Text = "Graphical objects";
             this.toolStripSplitButtonLastItem.Visible = false;
             // 
-            // checkBoxToolStripMenuItem1
+            // stripCheckBox
             // 
-            this.checkBoxToolStripMenuItem1.Name = "checkBoxToolStripMenuItem1";
-            this.checkBoxToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
-            this.checkBoxToolStripMenuItem1.Text = "Check box";
+            this.stripCheckBox.Name = "stripCheckBox";
+            this.stripCheckBox.Size = new System.Drawing.Size(180, 22);
+            this.stripCheckBox.Text = "Check box";
+            this.stripCheckBox.Click += new System.EventHandler(this.stripAndMenuCheckBox_Click);
             // 
-            // listBoxToolStripMenuItem1
+            // stripListBox
             // 
-            this.listBoxToolStripMenuItem1.Name = "listBoxToolStripMenuItem1";
-            this.listBoxToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
-            this.listBoxToolStripMenuItem1.Text = "List box";
+            this.stripListBox.Name = "stripListBox";
+            this.stripListBox.Size = new System.Drawing.Size(180, 22);
+            this.stripListBox.Text = "List box";
+            this.stripListBox.Click += new System.EventHandler(this.stripAndMenuListBox_Click);
             // 
-            // comboBoxToolStripMenuItem1
+            // stripComboBox
             // 
-            this.comboBoxToolStripMenuItem1.Name = "comboBoxToolStripMenuItem1";
-            this.comboBoxToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
-            this.comboBoxToolStripMenuItem1.Text = "Combo box";
+            this.stripComboBox.Name = "stripComboBox";
+            this.stripComboBox.Size = new System.Drawing.Size(180, 22);
+            this.stripComboBox.Text = "Combo box";
+            this.stripComboBox.Click += new System.EventHandler(this.stripAndMenuComboBox_Click);
             // 
-            // scrollingToolStripMenuItem1
+            // stripScrolling
             // 
-            this.scrollingToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.version1InputValidationToolStripMenuItem3,
-            this.version2InputValidationToolStripMenuItem2});
-            this.scrollingToolStripMenuItem1.Name = "scrollingToolStripMenuItem1";
-            this.scrollingToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
-            this.scrollingToolStripMenuItem1.Text = "Scrolling";
+            this.stripScrolling.Name = "stripScrolling";
+            this.stripScrolling.Size = new System.Drawing.Size(180, 22);
+            this.stripScrolling.Text = "Scrolling";
+            this.stripScrolling.Click += new System.EventHandler(this.stripAndMenuScrolling_Click);
             // 
-            // version1InputValidationToolStripMenuItem3
+            // stripLoan
             // 
-            this.version1InputValidationToolStripMenuItem3.Name = "version1InputValidationToolStripMenuItem3";
-            this.version1InputValidationToolStripMenuItem3.Size = new System.Drawing.Size(121, 22);
-            this.version1InputValidationToolStripMenuItem3.Text = "Version 1";
-            // 
-            // version2InputValidationToolStripMenuItem2
-            // 
-            this.version2InputValidationToolStripMenuItem2.Name = "version2InputValidationToolStripMenuItem2";
-            this.version2InputValidationToolStripMenuItem2.Size = new System.Drawing.Size(121, 22);
-            this.version2InputValidationToolStripMenuItem2.Text = "Version 2";
-            // 
-            // loanToolStripMenuItem1
-            // 
-            this.loanToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.version1InputValidationToolStripMenuItem4,
-            this.version2InputValidationToolStripMenuItem3});
-            this.loanToolStripMenuItem1.Name = "loanToolStripMenuItem1";
-            this.loanToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
-            this.loanToolStripMenuItem1.Text = "Loan";
-            // 
-            // version1InputValidationToolStripMenuItem4
-            // 
-            this.version1InputValidationToolStripMenuItem4.Name = "version1InputValidationToolStripMenuItem4";
-            this.version1InputValidationToolStripMenuItem4.Size = new System.Drawing.Size(121, 22);
-            this.version1InputValidationToolStripMenuItem4.Text = "Version 1";
-            // 
-            // version2InputValidationToolStripMenuItem3
-            // 
-            this.version2InputValidationToolStripMenuItem3.Name = "version2InputValidationToolStripMenuItem3";
-            this.version2InputValidationToolStripMenuItem3.Size = new System.Drawing.Size(121, 22);
-            this.version2InputValidationToolStripMenuItem3.Text = "Version 2";
+            this.stripLoan.Name = "stripLoan";
+            this.stripLoan.Size = new System.Drawing.Size(180, 22);
+            this.stripLoan.Text = "Loan";
+            this.stripLoan.Click += new System.EventHandler(this.stripAndMenuLoan_Click);
             // 
             // statusStrip1
             // 
@@ -386,7 +358,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
-            this.MaximizeBox = false;
             this.Name = "MDIForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create forms";
@@ -413,15 +384,11 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonLogin;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripSplitButton toolStripSplitButtonLastItem;
-        private System.Windows.Forms.ToolStripMenuItem checkBoxToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem listBoxToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem comboBoxToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem scrollingToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem version1InputValidationToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem version2InputValidationToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem loanToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem version1InputValidationToolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem version2InputValidationToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem stripCheckBox;
+        private System.Windows.Forms.ToolStripMenuItem stripListBox;
+        private System.Windows.Forms.ToolStripMenuItem stripComboBox;
+        private System.Windows.Forms.ToolStripMenuItem stripScrolling;
+        private System.Windows.Forms.ToolStripMenuItem stripLoan;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelCurrentDate;
         private System.Windows.Forms.ToolStripMenuItem disconnectToolStripMenuItem;

@@ -49,6 +49,11 @@ namespace ClassLibraryLogin
                 throw new ArgumentNullException("The input password is null");
             IsValidLogin = (_login == LoginString && _password == PasswordString);
         }
+
+        public void Disconnect()
+        {
+            IsValidLogin = false;
+        }
         #endregion
     }
 }

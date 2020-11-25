@@ -60,6 +60,7 @@
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(10);
             this.textBoxPassword.MaxLength = 30;
             this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '•';
             this.textBoxPassword.Size = new System.Drawing.Size(211, 24);
             this.textBoxPassword.TabIndex = 1;
             this.textBoxPassword.TextChanged += new System.EventHandler(this.textBox_TextChanged);
