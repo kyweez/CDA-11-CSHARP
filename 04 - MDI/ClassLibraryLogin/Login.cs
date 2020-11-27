@@ -50,6 +50,9 @@ namespace ClassLibraryLogin
             IsValidLogin = (_login == LoginString && _password == PasswordString);
         }
 
+        /// <summary>
+        /// This method sets the IsValidLogin property to false
+        /// </summary>
         public void Disconnect()
         {
             IsValidLogin = false;
