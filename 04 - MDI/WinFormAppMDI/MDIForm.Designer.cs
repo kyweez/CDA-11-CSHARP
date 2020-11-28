@@ -137,7 +137,7 @@
             this.calculatorToolStripMenuItem.Name = "calculatorToolStripMenuItem";
             this.calculatorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.calculatorToolStripMenuItem.Text = "Calculator";
-            this.calculatorToolStripMenuItem.Click += new System.EventHandler(this.calculatorToolStripMenuItem_Click);
+            this.calculatorToolStripMenuItem.Click += new System.EventHandler(this.Calculator_Click);
             // 
             // inputValidationToolStripMenuItem
             // 
@@ -154,14 +154,14 @@
             this.inputValidationV1ToolStripMenuItem.Name = "inputValidationV1ToolStripMenuItem";
             this.inputValidationV1ToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.inputValidationV1ToolStripMenuItem.Text = "Input validation v1";
-            this.inputValidationV1ToolStripMenuItem.Click += new System.EventHandler(this.inputValidationV1ToolStripMenuItem_Click);
+            this.inputValidationV1ToolStripMenuItem.Click += new System.EventHandler(this.InputValidationV1_Click);
             // 
             // inputValidationV2ToolStripMenuItem
             // 
             this.inputValidationV2ToolStripMenuItem.Name = "inputValidationV2ToolStripMenuItem";
             this.inputValidationV2ToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.inputValidationV2ToolStripMenuItem.Text = "Input validation v2";
-            this.inputValidationV2ToolStripMenuItem.Click += new System.EventHandler(this.inputValidationV2ToolStripMenuItem_Click);
+            this.inputValidationV2ToolStripMenuItem.Click += new System.EventHandler(this.InputValidationV2_Click);
             // 
             // graphicalObjectsToolStripMenuItem
             // 
@@ -181,35 +181,35 @@
             this.checkBoxToolStripMenuItem.Name = "checkBoxToolStripMenuItem";
             this.checkBoxToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.checkBoxToolStripMenuItem.Text = "Check box";
-            this.checkBoxToolStripMenuItem.Click += new System.EventHandler(this.stripAndMenuCheckBox_Click);
+            this.checkBoxToolStripMenuItem.Click += new System.EventHandler(this.CheckBox_Click);
             // 
             // listBoxToolStripMenuItem
             // 
             this.listBoxToolStripMenuItem.Name = "listBoxToolStripMenuItem";
             this.listBoxToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.listBoxToolStripMenuItem.Text = "List box";
-            this.listBoxToolStripMenuItem.Click += new System.EventHandler(this.stripAndMenuListBox_Click);
+            this.listBoxToolStripMenuItem.Click += new System.EventHandler(this.ListBox_Click);
             // 
             // comboBoxToolStripMenuItem
             // 
             this.comboBoxToolStripMenuItem.Name = "comboBoxToolStripMenuItem";
             this.comboBoxToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.comboBoxToolStripMenuItem.Text = "Combo box";
-            this.comboBoxToolStripMenuItem.Click += new System.EventHandler(this.stripAndMenuComboBox_Click);
+            this.comboBoxToolStripMenuItem.Click += new System.EventHandler(this.ComboBox_Click);
             // 
             // scrollingToolStripMenuItem
             // 
             this.scrollingToolStripMenuItem.Name = "scrollingToolStripMenuItem";
             this.scrollingToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.scrollingToolStripMenuItem.Text = "Scrolling";
-            this.scrollingToolStripMenuItem.Click += new System.EventHandler(this.stripAndMenuScrolling_Click);
+            this.scrollingToolStripMenuItem.Click += new System.EventHandler(this.Scrolling_Click);
             // 
             // loanToolStripMenuItem
             // 
             this.loanToolStripMenuItem.Name = "loanToolStripMenuItem";
             this.loanToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.loanToolStripMenuItem.Text = "Loan";
-            this.loanToolStripMenuItem.Click += new System.EventHandler(this.stripAndMenuLoan_Click);
+            this.loanToolStripMenuItem.Click += new System.EventHandler(this.Loan_Click);
             // 
             // displayToolStripMenuItem
             // 
@@ -292,35 +292,35 @@
             this.stripCheckBox.Name = "stripCheckBox";
             this.stripCheckBox.Size = new System.Drawing.Size(137, 22);
             this.stripCheckBox.Text = "Check box";
-            this.stripCheckBox.Click += new System.EventHandler(this.stripAndMenuCheckBox_Click);
+            this.stripCheckBox.Click += new System.EventHandler(this.CheckBox_Click);
             // 
             // stripListBox
             // 
             this.stripListBox.Name = "stripListBox";
             this.stripListBox.Size = new System.Drawing.Size(137, 22);
             this.stripListBox.Text = "List box";
-            this.stripListBox.Click += new System.EventHandler(this.stripAndMenuListBox_Click);
+            this.stripListBox.Click += new System.EventHandler(this.ListBox_Click);
             // 
             // stripComboBox
             // 
             this.stripComboBox.Name = "stripComboBox";
             this.stripComboBox.Size = new System.Drawing.Size(137, 22);
             this.stripComboBox.Text = "Combo box";
-            this.stripComboBox.Click += new System.EventHandler(this.stripAndMenuComboBox_Click);
+            this.stripComboBox.Click += new System.EventHandler(this.ComboBox_Click);
             // 
             // stripScrolling
             // 
             this.stripScrolling.Name = "stripScrolling";
             this.stripScrolling.Size = new System.Drawing.Size(137, 22);
             this.stripScrolling.Text = "Scrolling";
-            this.stripScrolling.Click += new System.EventHandler(this.stripAndMenuScrolling_Click);
+            this.stripScrolling.Click += new System.EventHandler(this.Scrolling_Click);
             // 
             // stripLoan
             // 
             this.stripLoan.Name = "stripLoan";
             this.stripLoan.Size = new System.Drawing.Size(137, 22);
             this.stripLoan.Text = "Loan";
-            this.stripLoan.Click += new System.EventHandler(this.stripAndMenuLoan_Click);
+            this.stripLoan.Click += new System.EventHandler(this.Loan_Click);
             // 
             // statusStrip1
             // 
