@@ -56,7 +56,7 @@ namespace WinFormAppMDI
         private void TryToConnect()
         {
             CurrentLogin.ConnectionAttempt(textBoxLogin.Text, textBoxPassword.Text);
-            if (!CurrentLogin.IsValidLogin)
+            if (!CurrentLogin.IsValidConnection)
             {
                 MessageBox.Show("Authentication failure, try again !", "Authentication", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxLogin.ResetText();

@@ -17,7 +17,7 @@ namespace ClassLibraryLogin
             set;
         }
 
-        public bool IsValidLogin
+        public bool IsValidConnection
         {
             get;
             private set;
@@ -29,7 +29,7 @@ namespace ClassLibraryLogin
         {
             LoginString = "admin";
             PasswordString = "admin";
-            IsValidLogin = false;
+            IsValidConnection = false;
         }
         #endregion
 
@@ -47,7 +47,7 @@ namespace ClassLibraryLogin
                 throw new ArgumentNullException("The input login is null");
             if (_password == null)
                 throw new ArgumentNullException("The input password is null");
-            IsValidLogin = (_login == LoginString && _password == PasswordString);
+            IsValidConnection = (_login == LoginString && _password == PasswordString);
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace ClassLibraryLogin
         /// </summary>
         public void Disconnect()
         {
-            IsValidLogin = false;
+            IsValidConnection = false;
         }
         #endregion
     }
