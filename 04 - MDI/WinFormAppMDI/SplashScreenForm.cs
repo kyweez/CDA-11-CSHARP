@@ -10,7 +10,12 @@ namespace WinFormAppMDI
             InitializeComponent();
         }
 
-        private void timerSplashScreen_Tick(object sender, EventArgs e)
+        /// <summary>
+        /// Trigger on each tick of the splash screen timer
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="e">EventArgs</param>
+        private void TimerSplashScreen_Tick(object sender, EventArgs e)
         {
             progressBarSplashScreen.Increment(10);
             if (progressBarSplashScreen.Value == 100)
@@ -20,6 +25,11 @@ namespace WinFormAppMDI
             }
         }
 
+        /// <summary>
+        /// Triggered when the splash screen is load
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="e">EventArgs</param>
         private void SplashScreenForm_Load(object sender, EventArgs e)
         {
             timerSplashScreen.Start();

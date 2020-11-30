@@ -111,7 +111,7 @@
             this.disconnectToolStripMenuItem.Name = "disconnectToolStripMenuItem";
             this.disconnectToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.disconnectToolStripMenuItem.Text = "Disconnect";
-            this.disconnectToolStripMenuItem.Click += new System.EventHandler(this.disconnectToolStripMenuItem_Click);
+            this.disconnectToolStripMenuItem.Click += new System.EventHandler(this.DisconnectToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -123,7 +123,7 @@
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
             this.quitToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.quitToolStripMenuItem.Text = "Quit";
-            this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
+            this.quitToolStripMenuItem.Click += new System.EventHandler(this.QuitToolStripMenuItem_Click);
             // 
             // firstStepsToolStripMenuItem
             // 
@@ -232,28 +232,28 @@
             this.cascadeToolStripMenuItem.Name = "cascadeToolStripMenuItem";
             this.cascadeToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.cascadeToolStripMenuItem.Text = "Cascade";
-            this.cascadeToolStripMenuItem.Click += new System.EventHandler(this.cascadeToolStripMenuItem_Click);
+            this.cascadeToolStripMenuItem.Click += new System.EventHandler(this.CascadeToolStripMenuItem_Click);
             // 
             // horizontalToolStripMenuItem
             // 
             this.horizontalToolStripMenuItem.Name = "horizontalToolStripMenuItem";
             this.horizontalToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.horizontalToolStripMenuItem.Text = "Horizontal";
-            this.horizontalToolStripMenuItem.Click += new System.EventHandler(this.horizontalToolStripMenuItem_Click);
+            this.horizontalToolStripMenuItem.Click += new System.EventHandler(this.HorizontalToolStripMenuItem_Click);
             // 
             // verticalToolStripMenuItem
             // 
             this.verticalToolStripMenuItem.Name = "verticalToolStripMenuItem";
             this.verticalToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.verticalToolStripMenuItem.Text = "Vertical";
-            this.verticalToolStripMenuItem.Click += new System.EventHandler(this.verticalToolStripMenuItem_Click);
+            this.verticalToolStripMenuItem.Click += new System.EventHandler(this.VerticalToolStripMenuItem_Click);
             // 
             // closeAllToolStripMenuItem
             // 
             this.closeAllToolStripMenuItem.Name = "closeAllToolStripMenuItem";
             this.closeAllToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.closeAllToolStripMenuItem.Text = "Close all";
-            this.closeAllToolStripMenuItem.Click += new System.EventHandler(this.closeAllToolStripMenuItem_Click);
+            this.closeAllToolStripMenuItem.Click += new System.EventHandler(this.CloseAllToolStripMenuItem_Click);
             // 
             // toolStripDisplaySeparator
             // 
@@ -302,7 +302,7 @@
             this.toolStripSplitButtonGraphicalObjects.Size = new System.Drawing.Size(114, 22);
             this.toolStripSplitButtonGraphicalObjects.Text = "Graphical objects";
             this.toolStripSplitButtonGraphicalObjects.Visible = false;
-            this.toolStripSplitButtonGraphicalObjects.ButtonClick += new System.EventHandler(this.toolStripSplitButtonLastItem_ButtonClick);
+            this.toolStripSplitButtonGraphicalObjects.ButtonClick += new System.EventHandler(this.ToolStripSplitButtonLastItem_ButtonClick);
             // 
             // stripCheckBox
             // 
@@ -367,7 +367,7 @@
             // timerStatusBar
             // 
             this.timerStatusBar.Interval = 500;
-            this.timerStatusBar.Tick += new System.EventHandler(this.timerStatusBar_Tick);
+            this.timerStatusBar.Tick += new System.EventHandler(this.TimerStatusBar_Tick);
             // 
             // toolStripSeparator3
             // 
@@ -447,4 +447,3 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
     }
 }
-

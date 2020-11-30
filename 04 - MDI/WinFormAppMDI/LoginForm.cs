@@ -15,39 +15,19 @@ namespace WinFormAppMDI
         #endregion
 
         #region ############### CONSTRUCTOR ###############
+        public LoginForm()
+        {
+            InitializeComponent();
+        }
+
         public LoginForm(Login _login)
         {
             InitializeComponent();
             CurrentLogin = _login;
         }
-
-        public LoginForm()
-        {
-            InitializeComponent();
-        }
         #endregion
 
         #region ############### METHODS ###############
-        /// <summary>
-        /// This method makes the current form unmovable
-        /// </summary>
-        /// <param name="m">Message</param>
-        protected override void WndProc(ref Message m)
-        {
-            const int WM_SYSCOMMAND = 0x0112;
-            const int SC_MOVE = 0xF010;
-
-            switch (m.Msg)
-            {
-                case WM_SYSCOMMAND:
-                    int command = m.WParam.ToInt32() & 0xfff0;
-                    if (command == SC_MOVE)
-                        return;
-                    break;
-            }
-            base.WndProc(ref m);
-        }
-
         /// <summary>
         /// This method tries to connect with the login and password textboxes information given by user
         /// If the authentication failed, inform and reset the form.
@@ -69,34 +49,36 @@ namespace WinFormAppMDI
                 Close();
             }
         }
+
+        /// <summary>
+        /// This method makes the current form unmovable
+        /// </summary>
+        /// <param name="m">Message</param>
+        protected override void WndProc(ref Message m)
+        {
+            const int WM_SYSCOMMAND = 0x0112;
+            const int SC_MOVE = 0xF010;
+
+            switch (m.Msg)
+            {
+                case WM_SYSCOMMAND:
+                    int command = m.WParam.ToInt32() & 0xfff0;
+                    if (command == SC_MOVE)
+                        return;
+                    break;
+            }
+            base.WndProc(ref m);
+        }
         #endregion
 
         #region ############### EVENTS ###############
-        /// <summary>
-        /// This event is triggered when a textbox content changes.
-        /// Reset the linked erroprovider and enable/disable the OK button
-        /// </summary>
-        /// <param name="sender">object</param>
-        /// <param name="e">EventArgs</param>
-        private void textBox_TextChanged(object sender, EventArgs e)
-        {
-            if ((TextBox)sender == textBoxLogin)
-                errorProviderLogin.Clear();
-            if ((TextBox)sender == textBoxPassword)
-                errorProviderPassword.Clear();
-            if (textBoxLogin.Text.Length == 0 || textBoxPassword.Text.Length == 0)
-                buttonValidate.Enabled = false;
-            else
-                buttonValidate.Enabled = true;
-        }
-
         /// <summary>
         /// This event is triggered when the OK button is clicked.
         /// Try to connect with the login and password textboxes information given by user
         /// </summary>
         /// <param name="sender">object</param>
         /// <param name="e">EventArgs</param>
-        private void buttonValidate_Click(object sender, EventArgs e)
+        private void ButtonValidate_Click(object sender, EventArgs e)
         {
             TryToConnect();
         }
@@ -108,7 +90,7 @@ namespace WinFormAppMDI
         /// </summary>
         /// <param name="sender">object</param>
         /// <param name="e">KeyPressEventArgs</param
-        private void textBox_KeyPress(object sender, KeyPressEventArgs e)
+        private void TextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Return)
             {
@@ -120,6 +102,24 @@ namespace WinFormAppMDI
                     TryToConnect();
             }
         }
+
+        /// <summary>
+        /// This event is triggered when a textbox content changes.
+        /// Reset the linked erroprovider and enable/disable the OK button
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="e">EventArgs</param>
+        private void TextBox_TextChanged(object sender, EventArgs e)
+        {
+            if ((TextBox)sender == textBoxLogin)
+                errorProviderLogin.Clear();
+            if ((TextBox)sender == textBoxPassword)
+                errorProviderPassword.Clear();
+            if (textBoxLogin.Text.Length == 0 || textBoxPassword.Text.Length == 0)
+                buttonValidate.Enabled = false;
+            else
+                buttonValidate.Enabled = true;
+        }
+        #endregion
     }
-    #endregion
 }

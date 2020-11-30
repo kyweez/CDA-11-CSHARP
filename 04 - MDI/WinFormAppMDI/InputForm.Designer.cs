@@ -44,8 +44,8 @@
             this.textBoxInput.Name = "textBoxInput";
             this.textBoxInput.Size = new System.Drawing.Size(219, 24);
             this.textBoxInput.TabIndex = 0;
-            this.textBoxInput.TextChanged += new System.EventHandler(this.textBoxInput_TextChanged);
-            this.textBoxInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxInput_KeyPress);
+            this.textBoxInput.TextChanged += new System.EventHandler(this.TextBoxInput_TextChanged);
+            this.textBoxInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxInput_KeyPress);
             // 
             // buttonValidate
             // 
@@ -57,7 +57,7 @@
             this.buttonValidate.TabIndex = 1;
             this.buttonValidate.Text = "Validate";
             this.buttonValidate.UseVisualStyleBackColor = true;
-            this.buttonValidate.Click += new System.EventHandler(this.buttonValidate_Click);
+            this.buttonValidate.Click += new System.EventHandler(this.ButtonValidate_Click);
             // 
             // buttonCancel
             // 
@@ -68,7 +68,7 @@
             this.buttonCancel.TabIndex = 2;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
-            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            this.buttonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
             // 
             // errorProviderInput
             // 

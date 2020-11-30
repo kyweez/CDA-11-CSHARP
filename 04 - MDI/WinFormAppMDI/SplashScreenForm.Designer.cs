@@ -43,7 +43,7 @@
             // 
             // timerSplashScreen
             // 
-            this.timerSplashScreen.Tick += new System.EventHandler(this.timerSplashScreen_Tick);
+            this.timerSplashScreen.Tick += new System.EventHandler(this.TimerSplashScreen_Tick);
             // 
             // SplashScreenForm
             // 

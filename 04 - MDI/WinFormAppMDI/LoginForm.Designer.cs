@@ -50,8 +50,8 @@
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(211, 24);
             this.textBoxLogin.TabIndex = 0;
-            this.textBoxLogin.TextChanged += new System.EventHandler(this.textBox_TextChanged);
-            this.textBoxLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBoxLogin.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
+            this.textBoxLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
             // 
             // textBoxPassword
             // 
@@ -63,8 +63,8 @@
             this.textBoxPassword.PasswordChar = '•';
             this.textBoxPassword.Size = new System.Drawing.Size(211, 24);
             this.textBoxPassword.TabIndex = 1;
-            this.textBoxPassword.TextChanged += new System.EventHandler(this.textBox_TextChanged);
-            this.textBoxPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBoxPassword.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
+            this.textBoxPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
             // 
             // buttonCancel
             // 
@@ -89,7 +89,7 @@
             this.buttonValidate.TabIndex = 3;
             this.buttonValidate.Text = "OK";
             this.buttonValidate.UseVisualStyleBackColor = true;
-            this.buttonValidate.Click += new System.EventHandler(this.buttonValidate_Click);
+            this.buttonValidate.Click += new System.EventHandler(this.ButtonValidate_Click);
             // 
             // labelLogin
             // 
