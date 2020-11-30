@@ -33,7 +33,7 @@ namespace ClassLibraryLogin
         }
         #endregion
 
-        #region ############### METHOD ###############
+        #region ############### METHODS ###############
         /// <summary>
         /// This method compares the login/password pair to the current object properties and set a new value to IsValidLogin property
         /// If IsValidLogin is set to true, send an AuthenticationSuccess event.

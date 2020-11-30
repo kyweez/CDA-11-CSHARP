@@ -29,16 +29,10 @@ namespace ClassLibraryMDI
         #endregion
 
         #region ############### METHODS ###############
-        public void UpdateCurrentDateTime()
-        {
-            CurrentDateTime = DateTime.Now;
-        }
-
-        public void UpdateLastProgramLaunched(ProgramNameEnum _lastProgramLaunched)
-        {
-            LastProgramLaunched = _lastProgramLaunched;
-        }
-
+        /// <summary>
+        /// This method helps the user to find the description of an enum an returns it
+        /// </summary>
+        /// <returns>string</returns>
         public string GetLastProgramLaunchedDescription()
         {
             FieldInfo fi = LastProgramLaunched.GetType().GetField(LastProgramLaunched.ToString());
@@ -48,6 +42,23 @@ namespace ClassLibraryMDI
                 return attributes[0].Description;
             else
                 return LastProgramLaunched.ToString();
+        }
+
+        /// <summary>
+        /// This method updates the current date
+        /// </summary>
+        public void UpdateCurrentDateTime()
+        {
+            CurrentDateTime = DateTime.Now;
+        }
+
+        /// <summary>
+        /// This method updates the LastProgramLaunched property
+        /// </summary>
+        /// <param name="_lastProgramLaunched">ProgramNameEnum</param>
+        public void UpdateLastProgramLaunched(ProgramNameEnum _lastProgramLaunched)
+        {
+            LastProgramLaunched = _lastProgramLaunched;
         }
         #endregion
     }
