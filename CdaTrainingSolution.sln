@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Input validation", "02
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Graphical objects", "03 - Graphical objects", "{819EEFE9-99B4-412F-BD1B-D2595B6E6DFA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Tout embal", "04 - Tout embal", "{FFA73FED-9B28-4EB6-A180-1BB48CB359FD}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06 - Tout embal", "06 - Tout embal", "{FFA73FED-9B28-4EB6-A180-1BB48CB359FD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 - Butterfly", "00 - Butterfly", "{E37B387B-88B1-415E-8E9A-7D4212E43203}"
 EndProject
@@ -148,6 +148,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryLogin", "04 - MDI\ClassLibraryLogin\ClassLibraryLogin.csproj", "{40B7C0C0-6CD3-4B12-95C9-F0038B117195}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryMDI", "04 - MDI\ClassLibraryMDI\ClassLibraryMDI.csproj", "{73304CF3-6F6F-4C3A-B82E-1859F7760992}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormAppToutEmbal-v1", "06 - ToutEmbal\Version 1\WinFormAppToutEmbal-v1\WinFormAppToutEmbal-v1.csproj", "{B2C89D55-8CA0-44A5-AE3C-C7A4857E68E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -307,6 +309,10 @@ Global
 		{73304CF3-6F6F-4C3A-B82E-1859F7760992}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73304CF3-6F6F-4C3A-B82E-1859F7760992}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73304CF3-6F6F-4C3A-B82E-1859F7760992}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2C89D55-8CA0-44A5-AE3C-C7A4857E68E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2C89D55-8CA0-44A5-AE3C-C7A4857E68E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2C89D55-8CA0-44A5-AE3C-C7A4857E68E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2C89D55-8CA0-44A5-AE3C-C7A4857E68E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -374,6 +380,7 @@ Global
 		{4D312389-41EB-4AAA-A825-82ED9F7AAD4F} = {A94611C8-3DD3-445E-8FCB-79E6755D4338}
 		{40B7C0C0-6CD3-4B12-95C9-F0038B117195} = {BC924AC4-4346-4475-BD59-58F06349D2A7}
 		{73304CF3-6F6F-4C3A-B82E-1859F7760992} = {BC924AC4-4346-4475-BD59-58F06349D2A7}
+		{B2C89D55-8CA0-44A5-AE3C-C7A4857E68E5} = {57697CB9-6B17-41B6-BD51-EA2A782BA3FF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {74CB25AE-1A47-47C8-BE16-CABB6D564B95}
