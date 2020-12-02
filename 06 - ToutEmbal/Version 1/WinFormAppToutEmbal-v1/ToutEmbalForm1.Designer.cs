@@ -499,7 +499,7 @@
             this.MainMenuStrip = this.menuStrip;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ToutEmbalForm1";
-            this.Text = "Wood crates productions";
+            this.Text = " ";
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.tabControlProduction.ResumeLayout(false);
