@@ -16,7 +16,7 @@ namespace WinFormAppToutEmbal_v1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ToutEmbalForm());
+            Application.Run(new ToutEmbalForm1());
         }
     }
 }

@@ -151,6 +151,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryMDI", "04 - MDI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormAppToutEmbal-v1", "06 - ToutEmbal\Version 1\WinFormAppToutEmbal-v1\WinFormAppToutEmbal-v1.csproj", "{B2C89D55-8CA0-44A5-AE3C-C7A4857E68E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryCrateProduction-v1", "06 - ToutEmbal\Version 1\ClassLibraryCrateProduction-v1\ClassLibraryCrateProduction-v1.csproj", "{58E9B77C-2CA0-4E51-AF9F-71EDA3FB95F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -313,6 +315,10 @@ Global
 		{B2C89D55-8CA0-44A5-AE3C-C7A4857E68E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2C89D55-8CA0-44A5-AE3C-C7A4857E68E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2C89D55-8CA0-44A5-AE3C-C7A4857E68E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58E9B77C-2CA0-4E51-AF9F-71EDA3FB95F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58E9B77C-2CA0-4E51-AF9F-71EDA3FB95F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58E9B77C-2CA0-4E51-AF9F-71EDA3FB95F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58E9B77C-2CA0-4E51-AF9F-71EDA3FB95F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -381,6 +387,7 @@ Global
 		{40B7C0C0-6CD3-4B12-95C9-F0038B117195} = {BC924AC4-4346-4475-BD59-58F06349D2A7}
 		{73304CF3-6F6F-4C3A-B82E-1859F7760992} = {BC924AC4-4346-4475-BD59-58F06349D2A7}
 		{B2C89D55-8CA0-44A5-AE3C-C7A4857E68E5} = {57697CB9-6B17-41B6-BD51-EA2A782BA3FF}
+		{58E9B77C-2CA0-4E51-AF9F-71EDA3FB95F7} = {57697CB9-6B17-41B6-BD51-EA2A782BA3FF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {74CB25AE-1A47-47C8-BE16-CABB6D564B95}
