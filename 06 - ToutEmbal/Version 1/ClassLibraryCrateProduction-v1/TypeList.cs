@@ -62,6 +62,26 @@ namespace ClassLibraryCrateProduction_v1
         }
 
         /// <summary>
+        /// Checks if the Types list contains the given argument
+        /// </summary>
+        /// <param name="_type">Type</param>
+        /// <returns>boolean</returns>
+        /// <exception cref="ArgumentNullException">Thrown if the given argument is null</exception>
+        public bool Contains(Type _type)
+        {
+            try
+            {
+                if (!Types.Contains(_type))
+                    return false;
+                return true;
+            }
+            catch (Exception e)
+            {
+                throw new ArgumentNullException("The argument given in the Contains method is null", e);
+            }
+        }
+
+        /// <summary>
         /// Checks if a typeName already exists in the Types list
         /// </summary>
         /// <param name="_typeName">string</param>
