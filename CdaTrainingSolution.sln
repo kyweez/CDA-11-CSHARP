@@ -153,6 +153,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormAppToutEmbal-v1", "0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryCrateProduction-v1", "06 - ToutEmbal\Version 1\ClassLibraryCrateProduction-v1\ClassLibraryCrateProduction-v1.csproj", "{58E9B77C-2CA0-4E51-AF9F-71EDA3FB95F7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Version-2", "Version-2", "{509E89AF-539D-4E96-ABC4-2FF8768AFB58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormAppToutEmbal-v2", "06 - ToutEmbal\Version 2\WinFormAppToutEmbal-v2\WinFormAppToutEmbal-v2.csproj", "{81174D1F-8FAC-4432-93A7-38A70B096F64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -319,6 +323,10 @@ Global
 		{58E9B77C-2CA0-4E51-AF9F-71EDA3FB95F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58E9B77C-2CA0-4E51-AF9F-71EDA3FB95F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58E9B77C-2CA0-4E51-AF9F-71EDA3FB95F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81174D1F-8FAC-4432-93A7-38A70B096F64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81174D1F-8FAC-4432-93A7-38A70B096F64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81174D1F-8FAC-4432-93A7-38A70B096F64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81174D1F-8FAC-4432-93A7-38A70B096F64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -388,6 +396,8 @@ Global
 		{73304CF3-6F6F-4C3A-B82E-1859F7760992} = {BC924AC4-4346-4475-BD59-58F06349D2A7}
 		{B2C89D55-8CA0-44A5-AE3C-C7A4857E68E5} = {57697CB9-6B17-41B6-BD51-EA2A782BA3FF}
 		{58E9B77C-2CA0-4E51-AF9F-71EDA3FB95F7} = {57697CB9-6B17-41B6-BD51-EA2A782BA3FF}
+		{509E89AF-539D-4E96-ABC4-2FF8768AFB58} = {FFA73FED-9B28-4EB6-A180-1BB48CB359FD}
+		{81174D1F-8FAC-4432-93A7-38A70B096F64} = {509E89AF-539D-4E96-ABC4-2FF8768AFB58}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {74CB25AE-1A47-47C8-BE16-CABB6D564B95}
