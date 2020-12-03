@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Crate.cs" />
+    <Compile Include="CrateProduction.cs" />
     <Compile Include="Exceptions\ImpossibleCrateInstanciation.cs" />
     <Compile Include="ProductionStatusEnum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
