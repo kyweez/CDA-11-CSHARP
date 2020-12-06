@@ -161,9 +161,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryCrateProduction
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Thread", "04 - Thread", "{9D359607-7D7C-4684-84C7-E38E39ABF649}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryCooking", "05 - Courses exercises\04 - Thread\ClassLibraryCooking\ClassLibraryCooking.csproj", "{B2132757-BA08-4788-9024-C4648B5757E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryCooking", "05 - Courses exercises\04 - Thread\ClassLibraryCooking\ClassLibraryCooking.csproj", "{B2132757-BA08-4788-9024-C4648B5757E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppThread", "05 - Courses exercises\04 - Thread\ConsoleAppThread\ConsoleAppThread.csproj", "{9DC98034-1BEA-4E1E-BA39-B616286A33AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppThread", "05 - Courses exercises\04 - Thread\ConsoleAppThread\ConsoleAppThread.csproj", "{9DC98034-1BEA-4E1E-BA39-B616286A33AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 - Demo Tim", "05 - Demo Tim", "{90AD240E-C3BD-46F5-A48A-C15825030C30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppDemoTim", "05 - Courses exercises\05 -Demo Tim\ConsoleAppDemoTim\ConsoleAppDemoTim.csproj", "{812C7D9C-B51C-458F-AE01-C3749C547381}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryCar", "05 - Courses exercises\05 -Demo Tim\ClassLibraryCar\ClassLibraryCar.csproj", "{435EF0EE-59FC-4EF8-B3EA-398234FD3E2E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -347,6 +353,14 @@ Global
 		{9DC98034-1BEA-4E1E-BA39-B616286A33AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DC98034-1BEA-4E1E-BA39-B616286A33AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DC98034-1BEA-4E1E-BA39-B616286A33AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{812C7D9C-B51C-458F-AE01-C3749C547381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{812C7D9C-B51C-458F-AE01-C3749C547381}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{812C7D9C-B51C-458F-AE01-C3749C547381}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{812C7D9C-B51C-458F-AE01-C3749C547381}.Release|Any CPU.Build.0 = Release|Any CPU
+		{435EF0EE-59FC-4EF8-B3EA-398234FD3E2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{435EF0EE-59FC-4EF8-B3EA-398234FD3E2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{435EF0EE-59FC-4EF8-B3EA-398234FD3E2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{435EF0EE-59FC-4EF8-B3EA-398234FD3E2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -422,6 +436,9 @@ Global
 		{9D359607-7D7C-4684-84C7-E38E39ABF649} = {0B88BD9E-58E1-4E2D-AD08-6D07C1138817}
 		{B2132757-BA08-4788-9024-C4648B5757E5} = {9D359607-7D7C-4684-84C7-E38E39ABF649}
 		{9DC98034-1BEA-4E1E-BA39-B616286A33AD} = {9D359607-7D7C-4684-84C7-E38E39ABF649}
+		{90AD240E-C3BD-46F5-A48A-C15825030C30} = {0B88BD9E-58E1-4E2D-AD08-6D07C1138817}
+		{812C7D9C-B51C-458F-AE01-C3749C547381} = {90AD240E-C3BD-46F5-A48A-C15825030C30}
+		{435EF0EE-59FC-4EF8-B3EA-398234FD3E2E} = {90AD240E-C3BD-46F5-A48A-C15825030C30}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {74CB25AE-1A47-47C8-BE16-CABB6D564B95}
