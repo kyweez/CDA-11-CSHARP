@@ -66,22 +66,50 @@ namespace ClassLibraryCrateProduction_v2
             ProductionName = _productionName;
             NumberOfValidCratesToProduce = _numberOfValidCratesToProduce;
             HourlyOutputOfCrates = _hourlyOutputOfCrates;
-            //Thread t = new Thread();
+            ProductionStatusChange += CrateProduction_ProductionStatusChange;
         }
         #endregion
 
         #region ############### EVENTS ###############
+        public delegate void DelegateProduction(CrateProduction sender); //A voir si on laisse le sender
+        public event DelegateProduction ProductionStatusChange;
+        public delegate void DelegateCreatedCrate(int crateNumber);
+        public event DelegateCreatedCrate FaultyCrateAdded;
+        public event DelegateCreatedCrate ValidCrateAdded;
+
+
+
+        private void CrateProduction_ProductionStatusChange(CrateProduction sender)
+        {
+            if (ProductionStatus == ProductionStatusEnum.started || ProductionStatus == ProductionStatusEnum.restarted)
+            {
+                ProduceThread = new Thread(new ThreadStart(RunProduction));
+                ProduceThread.Start();
+            }
+        }
         #endregion
 
-        #region ############### STATUS CHANGE METHODS ###############
-        public bool StartProduction()
+        #region ############### METHODS ###############
+        private void CreateCrate()
         {
-            if (ProductionStatus != 0)
-                return false;
-            ProduceThread = new Thread(new ThreadStart(RunProduction));
-            ProduceThread.Start();
-            return true;
-            
+            Random random = new Random();
+            int randomNumber = random.Next(0, 100);
+            if (!isFinished())
+            {
+                if (randomNumber > 2 && CurrentNumberOfValidCrates < NumberOfValidCratesToProduce)
+                {
+                    ValidCrateAdded(++CurrentNumberOfValidCrates);
+                    if (isFinished())
+                        ChangeStatusToFinished();
+                }
+                else
+                    FaultyCrateAdded(++CurrentNumberOfFaultyCrates);
+            }
+        }
+
+        private bool isFinished()
+        {
+            return (CurrentNumberOfValidCrates == NumberOfValidCratesToProduce);
         }
 
         private void RunProduction()
@@ -94,12 +122,53 @@ namespace ClassLibraryCrateProduction_v2
                 CreateCrate();
             }
         }
+        #endregion
 
-        private void CreateCrate()
+        #region ############### STATUS CHANGE METHODS ###############
+        private void ChangeStatusToFinished()
         {
-            Random random = new Random();
-            int randomNumber = random.Next(0, 100);
+            if (ProductionStatus != ProductionStatusEnum.notStarted)
+            {
+                ProductionStatus = ProductionStatusEnum.finished;
+                ProductionStatusChange(this);
+            }
+            // else
+            // Create an exception
         }
+
+        private void ChangeStatusToPaused()
+        {
+            if (ProductionStatus == ProductionStatusEnum.started || ProductionStatus == ProductionStatusEnum.restarted)
+            {
+                ProductionStatus = ProductionStatusEnum.paused;
+                ProductionStatusChange(this);
+            }
+            // else
+            // Create an exception
+        }
+
+        private void ChangeStatusToRestarted()
+        {
+            if (ProductionStatus == ProductionStatusEnum.paused)
+            {
+                ProductionStatus = ProductionStatusEnum.restarted;
+                ProductionStatusChange(this);
+            }
+            // else
+            // Create an exception
+        }
+
+            private void ChangeStatusToStarted()
+        {
+            if (ProductionStatus == ProductionStatusEnum.notStarted)
+            {
+                ProductionStatus = ProductionStatusEnum.started;
+                ProductionStatusChange(this);
+            }
+            // else
+            // Create an exception
+        }
+
 
 
         #endregion
