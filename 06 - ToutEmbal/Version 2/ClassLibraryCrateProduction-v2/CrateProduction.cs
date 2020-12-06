@@ -4,7 +4,7 @@ using System.Threading;
 
 namespace ClassLibraryCrateProduction_v2
 {
-    class CrateProduction
+    public class CrateProduction
     {
         #region ############### PROPERTIES ###############
         public ProductionStatusEnum ProductionStatus
