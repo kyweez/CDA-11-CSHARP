@@ -72,11 +72,48 @@
             this.labelProductionA = new System.Windows.Forms.Label();
             this.labelProductionB = new System.Windows.Forms.Label();
             this.labelProductionC = new System.Windows.Forms.Label();
+            this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusA = new System.Windows.Forms.ToolStripStatusLabel();
+            this.currentStatusA = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusB = new System.Windows.Forms.ToolStripStatusLabel();
+            this.currentStatusB = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusC = new System.Windows.Forms.ToolStripStatusLabel();
+            this.currentStatusC = new System.Windows.Forms.ToolStripStatusLabel();
+            this.startAllProduction = new System.Windows.Forms.ToolStripMenuItem();
+            this.pauseAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBoxA = new System.Windows.Forms.PictureBox();
+            this.pictureBoxB = new System.Windows.Forms.PictureBox();
+            this.pictureBoxC = new System.Windows.Forms.PictureBox();
+            this.trafficLightGreenA = new System.Windows.Forms.PictureBox();
+            this.trafficLightOrangeA = new System.Windows.Forms.PictureBox();
+            this.trafficLightRedA = new System.Windows.Forms.PictureBox();
+            this.trafficLightRedB = new System.Windows.Forms.PictureBox();
+            this.trafficLightOrangeB = new System.Windows.Forms.PictureBox();
+            this.trafficLightGreenB = new System.Windows.Forms.PictureBox();
+            this.trafficLightRedC = new System.Windows.Forms.PictureBox();
+            this.trafficLightOrangeC = new System.Windows.Forms.PictureBox();
+            this.trafficLightGreenC = new System.Windows.Forms.PictureBox();
+            this.labelTrafficLightA = new System.Windows.Forms.Label();
+            this.labelTrafficLightC = new System.Windows.Forms.Label();
+            this.labelTrafficLightB = new System.Windows.Forms.Label();
             this.menuStrip.SuspendLayout();
             this.tabControlProduction.SuspendLayout();
             this.tabPageProductionA.SuspendLayout();
             this.tabPageProductionB.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.statusStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trafficLightGreenA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trafficLightOrangeA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trafficLightRedA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trafficLightRedB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trafficLightOrangeB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trafficLightGreenB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trafficLightRedC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trafficLightOrangeC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trafficLightGreenC)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -87,7 +124,7 @@
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menuStrip.Size = new System.Drawing.Size(712, 25);
+            this.menuStrip.Size = new System.Drawing.Size(796, 25);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -103,8 +140,9 @@
             // quitItem
             // 
             this.quitItem.Name = "quitItem";
-            this.quitItem.Size = new System.Drawing.Size(97, 22);
+            this.quitItem.Size = new System.Drawing.Size(180, 22);
             this.quitItem.Text = "Quit";
+            this.quitItem.Click += new System.EventHandler(this.quitItem_Click);
             // 
             // productionMenu
             // 
@@ -121,56 +159,68 @@
             this.startItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.startProductionA,
             this.startProductionB,
-            this.startProductionC});
+            this.startProductionC,
+            this.startAllProduction});
             this.startItem.Name = "startItem";
-            this.startItem.Size = new System.Drawing.Size(105, 22);
+            this.startItem.Size = new System.Drawing.Size(180, 22);
             this.startItem.Text = "Start";
             // 
             // startProductionA
             // 
             this.startProductionA.Name = "startProductionA";
-            this.startProductionA.Size = new System.Drawing.Size(144, 22);
+            this.startProductionA.Size = new System.Drawing.Size(180, 22);
             this.startProductionA.Text = "Production A";
+            this.startProductionA.Click += new System.EventHandler(this.startProductionA_Click);
             // 
             // startProductionB
             // 
             this.startProductionB.Name = "startProductionB";
-            this.startProductionB.Size = new System.Drawing.Size(144, 22);
+            this.startProductionB.Size = new System.Drawing.Size(180, 22);
             this.startProductionB.Text = "Production B";
+            this.startProductionB.Click += new System.EventHandler(this.startProductionB_Click);
             // 
             // startProductionC
             // 
             this.startProductionC.Name = "startProductionC";
-            this.startProductionC.Size = new System.Drawing.Size(144, 22);
+            this.startProductionC.Size = new System.Drawing.Size(180, 22);
             this.startProductionC.Text = "Production C";
+            this.startProductionC.Click += new System.EventHandler(this.startProductionC_Click);
             // 
             // pauseItem
             // 
             this.pauseItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pauseProductionA,
             this.pauseProductionB,
-            this.pauseProductionC});
+            this.pauseProductionC,
+            this.pauseAllToolStripMenuItem});
+            this.pauseItem.Enabled = false;
             this.pauseItem.Name = "pauseItem";
-            this.pauseItem.Size = new System.Drawing.Size(105, 22);
+            this.pauseItem.Size = new System.Drawing.Size(180, 22);
             this.pauseItem.Text = "Pause";
             // 
             // pauseProductionA
             // 
+            this.pauseProductionA.Enabled = false;
             this.pauseProductionA.Name = "pauseProductionA";
-            this.pauseProductionA.Size = new System.Drawing.Size(144, 22);
+            this.pauseProductionA.Size = new System.Drawing.Size(180, 22);
             this.pauseProductionA.Text = "Production A";
+            this.pauseProductionA.Click += new System.EventHandler(this.pauseProductionA_Click);
             // 
             // pauseProductionB
             // 
+            this.pauseProductionB.Enabled = false;
             this.pauseProductionB.Name = "pauseProductionB";
-            this.pauseProductionB.Size = new System.Drawing.Size(144, 22);
+            this.pauseProductionB.Size = new System.Drawing.Size(180, 22);
             this.pauseProductionB.Text = "Production B";
+            this.pauseProductionB.Click += new System.EventHandler(this.pauseProductionB_Click);
             // 
             // pauseProductionC
             // 
+            this.pauseProductionC.Enabled = false;
             this.pauseProductionC.Name = "pauseProductionC";
-            this.pauseProductionC.Size = new System.Drawing.Size(144, 22);
+            this.pauseProductionC.Size = new System.Drawing.Size(180, 22);
             this.pauseProductionC.Text = "Production C";
+            this.pauseProductionC.Click += new System.EventHandler(this.pauseProductionC_Click);
             // 
             // stopItem
             // 
@@ -178,34 +228,41 @@
             this.stopProductionA,
             this.stopProductionB,
             this.stopProductionC});
+            this.stopItem.Enabled = false;
             this.stopItem.Name = "stopItem";
-            this.stopItem.Size = new System.Drawing.Size(105, 22);
+            this.stopItem.Size = new System.Drawing.Size(180, 22);
             this.stopItem.Text = "Stop";
             // 
             // stopProductionA
             // 
+            this.stopProductionA.Enabled = false;
             this.stopProductionA.Name = "stopProductionA";
-            this.stopProductionA.Size = new System.Drawing.Size(144, 22);
+            this.stopProductionA.Size = new System.Drawing.Size(180, 22);
             this.stopProductionA.Text = "Production A";
+            this.stopProductionA.Click += new System.EventHandler(this.stopProductionA_Click);
             // 
             // stopProductionB
             // 
+            this.stopProductionB.Enabled = false;
             this.stopProductionB.Name = "stopProductionB";
-            this.stopProductionB.Size = new System.Drawing.Size(144, 22);
+            this.stopProductionB.Size = new System.Drawing.Size(180, 22);
             this.stopProductionB.Text = "Production B";
+            this.stopProductionB.Click += new System.EventHandler(this.stopProductionB_Click);
             // 
             // stopProductionC
             // 
+            this.stopProductionC.Enabled = false;
             this.stopProductionC.Name = "stopProductionC";
-            this.stopProductionC.Size = new System.Drawing.Size(144, 22);
+            this.stopProductionC.Size = new System.Drawing.Size(180, 22);
             this.stopProductionC.Text = "Production C";
+            this.stopProductionC.Click += new System.EventHandler(this.stopProductionC_Click);
             // 
             // tabControlProduction
             // 
             this.tabControlProduction.Controls.Add(this.tabPageProductionA);
             this.tabControlProduction.Controls.Add(this.tabPageProductionB);
             this.tabControlProduction.Controls.Add(this.tabPage1);
-            this.tabControlProduction.Location = new System.Drawing.Point(159, 52);
+            this.tabControlProduction.Location = new System.Drawing.Point(274, 49);
             this.tabControlProduction.Margin = new System.Windows.Forms.Padding(45, 42, 45, 42);
             this.tabControlProduction.Name = "tabControlProduction";
             this.tabControlProduction.SelectedIndex = 0;
@@ -427,7 +484,7 @@
             // progressBarA
             // 
             this.progressBarA.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.progressBarA.Location = new System.Drawing.Point(165, 258);
+            this.progressBarA.Location = new System.Drawing.Point(284, 241);
             this.progressBarA.Margin = new System.Windows.Forms.Padding(15, 14, 15, 14);
             this.progressBarA.Name = "progressBarA";
             this.progressBarA.Size = new System.Drawing.Size(486, 32);
@@ -436,7 +493,7 @@
             // progressBarB
             // 
             this.progressBarB.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.progressBarB.Location = new System.Drawing.Point(165, 317);
+            this.progressBarB.Location = new System.Drawing.Point(284, 300);
             this.progressBarB.Margin = new System.Windows.Forms.Padding(15, 14, 15, 14);
             this.progressBarB.Name = "progressBarB";
             this.progressBarB.Size = new System.Drawing.Size(486, 32);
@@ -445,7 +502,7 @@
             // progressBarC
             // 
             this.progressBarC.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.progressBarC.Location = new System.Drawing.Point(165, 377);
+            this.progressBarC.Location = new System.Drawing.Point(284, 360);
             this.progressBarC.Margin = new System.Windows.Forms.Padding(15, 14, 15, 14);
             this.progressBarC.Name = "progressBarC";
             this.progressBarC.Size = new System.Drawing.Size(486, 32);
@@ -454,7 +511,7 @@
             // labelProductionA
             // 
             this.labelProductionA.AutoSize = true;
-            this.labelProductionA.Location = new System.Drawing.Point(34, 265);
+            this.labelProductionA.Location = new System.Drawing.Point(153, 248);
             this.labelProductionA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelProductionA.Name = "labelProductionA";
             this.labelProductionA.Size = new System.Drawing.Size(93, 18);
@@ -464,7 +521,7 @@
             // labelProductionB
             // 
             this.labelProductionB.AutoSize = true;
-            this.labelProductionB.Location = new System.Drawing.Point(34, 326);
+            this.labelProductionB.Location = new System.Drawing.Point(153, 309);
             this.labelProductionB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelProductionB.Name = "labelProductionB";
             this.labelProductionB.Size = new System.Drawing.Size(94, 18);
@@ -474,19 +531,304 @@
             // labelProductionC
             // 
             this.labelProductionC.AutoSize = true;
-            this.labelProductionC.Location = new System.Drawing.Point(34, 386);
+            this.labelProductionC.Location = new System.Drawing.Point(153, 369);
             this.labelProductionC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelProductionC.Name = "labelProductionC";
             this.labelProductionC.Size = new System.Drawing.Size(95, 18);
             this.labelProductionC.TabIndex = 7;
             this.labelProductionC.Text = "Production C";
             // 
+            // statusStrip
+            // 
+            this.statusStrip.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusA,
+            this.currentStatusA,
+            this.toolStripStatusB,
+            this.currentStatusB,
+            this.toolStripStatusC,
+            this.currentStatusC});
+            this.statusStrip.Location = new System.Drawing.Point(0, 420);
+            this.statusStrip.Name = "statusStrip";
+            this.statusStrip.Size = new System.Drawing.Size(796, 22);
+            this.statusStrip.TabIndex = 8;
+            this.statusStrip.Text = "statusStrip1";
+            // 
+            // toolStripStatusA
+            // 
+            this.toolStripStatusA.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.toolStripStatusA.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripStatusA.DoubleClickEnabled = true;
+            this.toolStripStatusA.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripStatusA.Name = "toolStripStatusA";
+            this.toolStripStatusA.Size = new System.Drawing.Size(97, 17);
+            this.toolStripStatusA.Text = "Production A :";
+            this.toolStripStatusA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripStatusA.Click += new System.EventHandler(this.toolStripStatusA_Click);
+            // 
+            // currentStatusA
+            // 
+            this.currentStatusA.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.currentStatusA.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.currentStatusA.DoubleClickEnabled = true;
+            this.currentStatusA.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.currentStatusA.Name = "currentStatusA";
+            this.currentStatusA.Padding = new System.Windows.Forms.Padding(0, 0, 60, 0);
+            this.currentStatusA.Size = new System.Drawing.Size(135, 17);
+            this.currentStatusA.Text = "Not started";
+            this.currentStatusA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // toolStripStatusB
+            // 
+            this.toolStripStatusB.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.toolStripStatusB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripStatusB.DoubleClickEnabled = true;
+            this.toolStripStatusB.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripStatusB.Name = "toolStripStatusB";
+            this.toolStripStatusB.Size = new System.Drawing.Size(96, 17);
+            this.toolStripStatusB.Text = "Production B :";
+            this.toolStripStatusB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripStatusB.Click += new System.EventHandler(this.toolStripStatusB_Click);
+            // 
+            // currentStatusB
+            // 
+            this.currentStatusB.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.currentStatusB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.currentStatusB.DoubleClickEnabled = true;
+            this.currentStatusB.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.currentStatusB.Name = "currentStatusB";
+            this.currentStatusB.Padding = new System.Windows.Forms.Padding(0, 0, 60, 0);
+            this.currentStatusB.Size = new System.Drawing.Size(135, 17);
+            this.currentStatusB.Text = "Not started";
+            this.currentStatusB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // toolStripStatusC
+            // 
+            this.toolStripStatusC.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.toolStripStatusC.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripStatusC.DoubleClickEnabled = true;
+            this.toolStripStatusC.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripStatusC.Name = "toolStripStatusC";
+            this.toolStripStatusC.Size = new System.Drawing.Size(96, 17);
+            this.toolStripStatusC.Text = "Production C :";
+            this.toolStripStatusC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripStatusC.Click += new System.EventHandler(this.toolStripStatusC_Click);
+            // 
+            // currentStatusC
+            // 
+            this.currentStatusC.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.currentStatusC.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.currentStatusC.DoubleClickEnabled = true;
+            this.currentStatusC.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.currentStatusC.Name = "currentStatusC";
+            this.currentStatusC.Padding = new System.Windows.Forms.Padding(0, 0, 60, 0);
+            this.currentStatusC.Size = new System.Drawing.Size(135, 17);
+            this.currentStatusC.Text = "Not started";
+            this.currentStatusC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // startAllProduction
+            // 
+            this.startAllProduction.Name = "startAllProduction";
+            this.startAllProduction.Size = new System.Drawing.Size(180, 22);
+            this.startAllProduction.Text = "Start All";
+            // 
+            // pauseAllToolStripMenuItem
+            // 
+            this.pauseAllToolStripMenuItem.Enabled = false;
+            this.pauseAllToolStripMenuItem.Name = "pauseAllToolStripMenuItem";
+            this.pauseAllToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pauseAllToolStripMenuItem.Text = "Pause All";
+            // 
+            // pictureBoxA
+            // 
+            this.pictureBoxA.BackColor = System.Drawing.SystemColors.Highlight;
+            this.pictureBoxA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxA.Location = new System.Drawing.Point(136, 51);
+            this.pictureBoxA.Name = "pictureBoxA";
+            this.pictureBoxA.Size = new System.Drawing.Size(90, 30);
+            this.pictureBoxA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxA.TabIndex = 9;
+            this.pictureBoxA.TabStop = false;
+            // 
+            // pictureBoxB
+            // 
+            this.pictureBoxB.BackColor = System.Drawing.SystemColors.Highlight;
+            this.pictureBoxB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxB.Location = new System.Drawing.Point(136, 99);
+            this.pictureBoxB.Name = "pictureBoxB";
+            this.pictureBoxB.Size = new System.Drawing.Size(90, 30);
+            this.pictureBoxB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxB.TabIndex = 10;
+            this.pictureBoxB.TabStop = false;
+            // 
+            // pictureBoxC
+            // 
+            this.pictureBoxC.BackColor = System.Drawing.SystemColors.Highlight;
+            this.pictureBoxC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxC.Location = new System.Drawing.Point(136, 147);
+            this.pictureBoxC.Name = "pictureBoxC";
+            this.pictureBoxC.Size = new System.Drawing.Size(90, 30);
+            this.pictureBoxC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxC.TabIndex = 11;
+            this.pictureBoxC.TabStop = false;
+            // 
+            // trafficLightGreenA
+            // 
+            this.trafficLightGreenA.BackColor = System.Drawing.Color.PaleGreen;
+            this.trafficLightGreenA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.trafficLightGreenA.Location = new System.Drawing.Point(144, 57);
+            this.trafficLightGreenA.Name = "trafficLightGreenA";
+            this.trafficLightGreenA.Size = new System.Drawing.Size(18, 18);
+            this.trafficLightGreenA.TabIndex = 12;
+            this.trafficLightGreenA.TabStop = false;
+            this.trafficLightGreenA.Click += new System.EventHandler(this.trafficLightGreenA_Click);
+            // 
+            // trafficLightOrangeA
+            // 
+            this.trafficLightOrangeA.BackColor = System.Drawing.Color.PeachPuff;
+            this.trafficLightOrangeA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.trafficLightOrangeA.Enabled = false;
+            this.trafficLightOrangeA.Location = new System.Drawing.Point(173, 57);
+            this.trafficLightOrangeA.Name = "trafficLightOrangeA";
+            this.trafficLightOrangeA.Size = new System.Drawing.Size(18, 18);
+            this.trafficLightOrangeA.TabIndex = 13;
+            this.trafficLightOrangeA.TabStop = false;
+            this.trafficLightOrangeA.Click += new System.EventHandler(this.trafficLightOrangeA_Click);
+            // 
+            // trafficLightRedA
+            // 
+            this.trafficLightRedA.BackColor = System.Drawing.Color.Red;
+            this.trafficLightRedA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.trafficLightRedA.Enabled = false;
+            this.trafficLightRedA.Location = new System.Drawing.Point(200, 57);
+            this.trafficLightRedA.Name = "trafficLightRedA";
+            this.trafficLightRedA.Size = new System.Drawing.Size(18, 18);
+            this.trafficLightRedA.TabIndex = 14;
+            this.trafficLightRedA.TabStop = false;
+            this.trafficLightRedA.Click += new System.EventHandler(this.trafficLightRedA_Click);
+            // 
+            // trafficLightRedB
+            // 
+            this.trafficLightRedB.BackColor = System.Drawing.Color.Red;
+            this.trafficLightRedB.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.trafficLightRedB.Enabled = false;
+            this.trafficLightRedB.Location = new System.Drawing.Point(200, 105);
+            this.trafficLightRedB.Name = "trafficLightRedB";
+            this.trafficLightRedB.Size = new System.Drawing.Size(18, 18);
+            this.trafficLightRedB.TabIndex = 17;
+            this.trafficLightRedB.TabStop = false;
+            this.trafficLightRedB.Click += new System.EventHandler(this.trafficLightRedB_Click);
+            // 
+            // trafficLightOrangeB
+            // 
+            this.trafficLightOrangeB.BackColor = System.Drawing.Color.PeachPuff;
+            this.trafficLightOrangeB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.trafficLightOrangeB.Enabled = false;
+            this.trafficLightOrangeB.Location = new System.Drawing.Point(173, 105);
+            this.trafficLightOrangeB.Name = "trafficLightOrangeB";
+            this.trafficLightOrangeB.Size = new System.Drawing.Size(18, 18);
+            this.trafficLightOrangeB.TabIndex = 16;
+            this.trafficLightOrangeB.TabStop = false;
+            this.trafficLightOrangeB.Click += new System.EventHandler(this.trafficLightOrangeB_Click);
+            // 
+            // trafficLightGreenB
+            // 
+            this.trafficLightGreenB.BackColor = System.Drawing.Color.PaleGreen;
+            this.trafficLightGreenB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.trafficLightGreenB.Location = new System.Drawing.Point(144, 105);
+            this.trafficLightGreenB.Name = "trafficLightGreenB";
+            this.trafficLightGreenB.Size = new System.Drawing.Size(18, 18);
+            this.trafficLightGreenB.TabIndex = 15;
+            this.trafficLightGreenB.TabStop = false;
+            this.trafficLightGreenB.Click += new System.EventHandler(this.trafficLightGreenB_Click);
+            // 
+            // trafficLightRedC
+            // 
+            this.trafficLightRedC.BackColor = System.Drawing.Color.Red;
+            this.trafficLightRedC.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.trafficLightRedC.Enabled = false;
+            this.trafficLightRedC.Location = new System.Drawing.Point(200, 153);
+            this.trafficLightRedC.Name = "trafficLightRedC";
+            this.trafficLightRedC.Size = new System.Drawing.Size(18, 18);
+            this.trafficLightRedC.TabIndex = 20;
+            this.trafficLightRedC.TabStop = false;
+            this.trafficLightRedC.Click += new System.EventHandler(this.trafficLightRedC_Click);
+            // 
+            // trafficLightOrangeC
+            // 
+            this.trafficLightOrangeC.BackColor = System.Drawing.Color.PeachPuff;
+            this.trafficLightOrangeC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.trafficLightOrangeC.Enabled = false;
+            this.trafficLightOrangeC.Location = new System.Drawing.Point(173, 153);
+            this.trafficLightOrangeC.Name = "trafficLightOrangeC";
+            this.trafficLightOrangeC.Size = new System.Drawing.Size(18, 18);
+            this.trafficLightOrangeC.TabIndex = 19;
+            this.trafficLightOrangeC.TabStop = false;
+            this.trafficLightOrangeC.Click += new System.EventHandler(this.trafficLightOrangeC_Click);
+            // 
+            // trafficLightGreenC
+            // 
+            this.trafficLightGreenC.BackColor = System.Drawing.Color.PaleGreen;
+            this.trafficLightGreenC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.trafficLightGreenC.Location = new System.Drawing.Point(144, 153);
+            this.trafficLightGreenC.Name = "trafficLightGreenC";
+            this.trafficLightGreenC.Size = new System.Drawing.Size(18, 18);
+            this.trafficLightGreenC.TabIndex = 18;
+            this.trafficLightGreenC.TabStop = false;
+            this.trafficLightGreenC.Click += new System.EventHandler(this.trafficLightGreenC_Click);
+            // 
+            // labelTrafficLightA
+            // 
+            this.labelTrafficLightA.AutoSize = true;
+            this.labelTrafficLightA.Location = new System.Drawing.Point(25, 57);
+            this.labelTrafficLightA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTrafficLightA.Name = "labelTrafficLightA";
+            this.labelTrafficLightA.Size = new System.Drawing.Size(93, 18);
+            this.labelTrafficLightA.TabIndex = 21;
+            this.labelTrafficLightA.Text = "Production A";
+            // 
+            // labelTrafficLightC
+            // 
+            this.labelTrafficLightC.AutoSize = true;
+            this.labelTrafficLightC.Location = new System.Drawing.Point(25, 153);
+            this.labelTrafficLightC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTrafficLightC.Name = "labelTrafficLightC";
+            this.labelTrafficLightC.Size = new System.Drawing.Size(95, 18);
+            this.labelTrafficLightC.TabIndex = 22;
+            this.labelTrafficLightC.Text = "Production C";
+            // 
+            // labelTrafficLightB
+            // 
+            this.labelTrafficLightB.AutoSize = true;
+            this.labelTrafficLightB.Location = new System.Drawing.Point(25, 105);
+            this.labelTrafficLightB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTrafficLightB.Name = "labelTrafficLightB";
+            this.labelTrafficLightB.Size = new System.Drawing.Size(94, 18);
+            this.labelTrafficLightB.TabIndex = 23;
+            this.labelTrafficLightB.Text = "Production B";
+            // 
             // ToutEmbalForm2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(712, 449);
+            this.ClientSize = new System.Drawing.Size(796, 442);
+            this.Controls.Add(this.labelTrafficLightB);
+            this.Controls.Add(this.labelTrafficLightC);
+            this.Controls.Add(this.labelTrafficLightA);
+            this.Controls.Add(this.trafficLightRedC);
+            this.Controls.Add(this.trafficLightOrangeC);
+            this.Controls.Add(this.trafficLightGreenC);
+            this.Controls.Add(this.trafficLightRedB);
+            this.Controls.Add(this.trafficLightOrangeB);
+            this.Controls.Add(this.trafficLightGreenB);
+            this.Controls.Add(this.trafficLightRedA);
+            this.Controls.Add(this.trafficLightOrangeA);
+            this.Controls.Add(this.trafficLightGreenA);
+            this.Controls.Add(this.pictureBoxC);
+            this.Controls.Add(this.pictureBoxB);
+            this.Controls.Add(this.pictureBoxA);
+            this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.labelProductionC);
             this.Controls.Add(this.labelProductionB);
             this.Controls.Add(this.labelProductionA);
@@ -512,6 +854,20 @@
             this.tabPageProductionB.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.statusStrip.ResumeLayout(false);
+            this.statusStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trafficLightGreenA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trafficLightOrangeA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trafficLightRedA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trafficLightRedB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trafficLightOrangeB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trafficLightGreenB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trafficLightRedC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trafficLightOrangeC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trafficLightGreenC)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -563,6 +919,30 @@
         private System.Windows.Forms.ToolStripMenuItem stopProductionA;
         private System.Windows.Forms.ToolStripMenuItem stopProductionB;
         private System.Windows.Forms.ToolStripMenuItem stopProductionC;
+        private System.Windows.Forms.StatusStrip statusStrip;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusA;
+        private System.Windows.Forms.ToolStripStatusLabel currentStatusA;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusB;
+        private System.Windows.Forms.ToolStripStatusLabel currentStatusB;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusC;
+        private System.Windows.Forms.ToolStripStatusLabel currentStatusC;
+        private System.Windows.Forms.ToolStripMenuItem startAllProduction;
+        private System.Windows.Forms.ToolStripMenuItem pauseAllToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBoxA;
+        private System.Windows.Forms.PictureBox pictureBoxB;
+        private System.Windows.Forms.PictureBox pictureBoxC;
+        private System.Windows.Forms.PictureBox trafficLightGreenA;
+        private System.Windows.Forms.PictureBox trafficLightOrangeA;
+        private System.Windows.Forms.PictureBox trafficLightRedA;
+        private System.Windows.Forms.PictureBox trafficLightRedB;
+        private System.Windows.Forms.PictureBox trafficLightOrangeB;
+        private System.Windows.Forms.PictureBox trafficLightGreenB;
+        private System.Windows.Forms.PictureBox trafficLightRedC;
+        private System.Windows.Forms.PictureBox trafficLightOrangeC;
+        private System.Windows.Forms.PictureBox trafficLightGreenC;
+        private System.Windows.Forms.Label labelTrafficLightA;
+        private System.Windows.Forms.Label labelTrafficLightC;
+        private System.Windows.Forms.Label labelTrafficLightB;
     }
 }
 
